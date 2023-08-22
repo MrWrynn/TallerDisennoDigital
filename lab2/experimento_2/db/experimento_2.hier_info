@@ -1,4 +1,84 @@
-|oneBitFullAdder
+|fourBitFullAdder
+sum[0] <= oneBitFullAdder:adderBit0.sum
+sum[1] <= oneBitFullAdder:adderBit1.sum
+sum[2] <= oneBitFullAdder:adderBit2.sum
+sum[3] <= oneBitFullAdder:adderBit3.sum
+carryOut <= oneBitFullAdder:adderBit3.carryOut
+a[0] => oneBitFullAdder:adderBit0.a
+a[1] => oneBitFullAdder:adderBit1.a
+a[2] => oneBitFullAdder:adderBit2.a
+a[3] => oneBitFullAdder:adderBit3.a
+b[0] => oneBitFullAdder:adderBit0.b
+b[1] => oneBitFullAdder:adderBit1.b
+b[2] => oneBitFullAdder:adderBit2.b
+b[3] => oneBitFullAdder:adderBit3.b
+carryIn => oneBitFullAdder:adderBit0.carryIn
+
+
+|fourBitFullAdder|oneBitFullAdder:adderBit0
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+a => sum.IN0
+a => sum.IN0
+a => carryOut.IN0
+a => sum.IN0
+a => sum.IN0
+b => sum.IN1
+b => sum.IN1
+b => carryOut.IN0
+b => carryOut.IN1
+b => sum.IN1
+b => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+
+
+|fourBitFullAdder|oneBitFullAdder:adderBit1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+a => sum.IN0
+a => sum.IN0
+a => carryOut.IN0
+a => sum.IN0
+a => sum.IN0
+b => sum.IN1
+b => sum.IN1
+b => carryOut.IN0
+b => carryOut.IN1
+b => sum.IN1
+b => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+
+
+|fourBitFullAdder|oneBitFullAdder:adderBit2
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+a => sum.IN0
+a => sum.IN0
+a => carryOut.IN0
+a => sum.IN0
+a => sum.IN0
+b => sum.IN1
+b => sum.IN1
+b => carryOut.IN0
+b => carryOut.IN1
+b => sum.IN1
+b => sum.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+carryIn => carryOut.IN1
+carryIn => sum.IN1
+carryIn => sum.IN1
+
+
+|fourBitFullAdder|oneBitFullAdder:adderBit3
 sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
 a => sum.IN0

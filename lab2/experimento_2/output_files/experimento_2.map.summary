@@ -1,5 +1,5 @@
-Analysis & Elaboration Status : Failed - Mon Aug 21 20:33:17 2023
-Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Analysis & Elaboration Status : Successful - Tue Aug 22 08:11:11 2023
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : experimento_2
 Top-level Entity Name : fourBitFullAdder
 Family : Cyclone V

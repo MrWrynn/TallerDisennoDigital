@@ -1,37 +1,38 @@
-# Reading D:/modelsim_ase/tcl/vsim/pref.tcl
+# Reading pref.tcl
 # do experimento_2_run_msim_rtl_vhdl.do
 # if ![file isdirectory vhdl_libs] {
 # 	file mkdir vhdl_libs
 # }
 # 
 # vlib vhdl_libs/altera
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/altera".
 # vmap altera ./vhdl_libs/altera
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap altera ./vhdl_libs/altera 
-# Copying D:/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# vcom -93 -work altera {d:/quartus/quartus/eda/sim_lib/altera_syn_attributes.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:23 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work altera d:/quartus/quartus/eda/sim_lib/altera_syn_attributes.vhd 
+# vcom -93 -work altera {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_syn_attributes.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:03 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work altera c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_syn_attributes.vhd 
 # -- Loading package STANDARD
 # -- Compiling package altera_syn_attributes
-# End time: 19:54:23 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:03 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work altera {d:/quartus/quartus/eda/sim_lib/altera_standard_functions.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:24 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work altera d:/quartus/quartus/eda/sim_lib/altera_standard_functions.vhd 
+# vcom -93 -work altera {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_standard_functions.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:03 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work altera c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_standard_functions.vhd 
 # -- Loading package STANDARD
 # -- Compiling package altera_standard_functions
 # -- Compiling package body altera_standard_functions
 # -- Loading package altera_standard_functions
-# End time: 19:54:24 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:03 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work altera {d:/quartus/quartus/eda/sim_lib/alt_dspbuilder_package.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:24 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work altera d:/quartus/quartus/eda/sim_lib/alt_dspbuilder_package.vhd 
+# vcom -93 -work altera {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/alt_dspbuilder_package.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:03 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work altera c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/alt_dspbuilder_package.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -39,12 +40,12 @@
 # -- Compiling package alt_dspbuilder_package
 # -- Compiling package body alt_dspbuilder_package
 # -- Loading package alt_dspbuilder_package
-# End time: 19:54:24 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:03 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work altera {d:/quartus/quartus/eda/sim_lib/altera_europa_support_lib.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:24 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work altera d:/quartus/quartus/eda/sim_lib/altera_europa_support_lib.vhd 
+# vcom -93 -work altera {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_europa_support_lib.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:03 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work altera c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_europa_support_lib.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -54,12 +55,12 @@
 # -- Compiling package altera_europa_support_lib
 # -- Compiling package body altera_europa_support_lib
 # -- Loading package altera_europa_support_lib
-# End time: 19:54:24 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:04 on Aug 22,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work altera {d:/quartus/quartus/eda/sim_lib/altera_primitives_components.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:25 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work altera d:/quartus/quartus/eda/sim_lib/altera_primitives_components.vhd 
+# vcom -93 -work altera {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives_components.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:04 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work altera c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -68,12 +69,12 @@
 # -- Compiling package dffeas_pack
 # -- Loading package dffeas_pack
 # -- Compiling package altera_primitives_components
-# End time: 19:54:25 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:04 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work altera {d:/quartus/quartus/eda/sim_lib/altera_primitives.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:25 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work altera d:/quartus/quartus/eda/sim_lib/altera_primitives.vhd 
+# vcom -93 -work altera {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:04 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work altera c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -160,28 +161,29 @@
 # -- Compiling architecture BEHAVIOR of alt_bidir_diff
 # -- Compiling entity alt_bidir_buf
 # -- Compiling architecture BEHAVIOR of alt_bidir_buf
-# End time: 19:54:25 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:04 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib vhdl_libs/lpm
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/lpm".
 # vmap lpm ./vhdl_libs/lpm
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap lpm ./vhdl_libs/lpm 
 # Modifying modelsim.ini
-# vcom -93 -work lpm {d:/quartus/quartus/eda/sim_lib/220pack.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:25 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work lpm d:/quartus/quartus/eda/sim_lib/220pack.vhd 
+# vcom -93 -work lpm {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220pack.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:04 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work lpm c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220pack.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package LPM_COMPONENTS
-# End time: 19:54:25 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:04 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work lpm {d:/quartus/quartus/eda/sim_lib/220model.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:25 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work lpm d:/quartus/quartus/eda/sim_lib/220model.vhd 
+# vcom -93 -work lpm {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:04 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work lpm c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -276,30 +278,31 @@
 # -- Compiling architecture LPM_SYN of LPM_OUTpad
 # -- Compiling entity LPM_BIpad
 # -- Compiling architecture LPM_SYN of LPM_BIpad
-# End time: 19:54:26 on Aug 21,2023, Elapsed time: 0:00:01
+# End time: 08:13:05 on Aug 22,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib vhdl_libs/sgate
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/sgate".
 # vmap sgate ./vhdl_libs/sgate
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap sgate ./vhdl_libs/sgate 
 # Modifying modelsim.ini
-# vcom -93 -work sgate {d:/quartus/quartus/eda/sim_lib/sgate_pack.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:26 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work sgate d:/quartus/quartus/eda/sim_lib/sgate_pack.vhd 
+# vcom -93 -work sgate {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate_pack.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:05 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work sgate c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate_pack.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package sgate_pack
 # -- Compiling package body sgate_pack
 # -- Loading package sgate_pack
-# End time: 19:54:26 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:05 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work sgate {d:/quartus/quartus/eda/sim_lib/sgate.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:26 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work sgate d:/quartus/quartus/eda/sim_lib/sgate.vhd 
+# vcom -93 -work sgate {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:05 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work sgate c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -348,28 +351,29 @@
 # -- Compiling architecture sim_arch of oper_bus_mux
 # -- Compiling entity oper_latch
 # -- Compiling architecture sim_arch of oper_latch
-# End time: 19:54:27 on Aug 21,2023, Elapsed time: 0:00:01
+# End time: 08:13:06 on Aug 22,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib vhdl_libs/altera_mf
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/altera_mf".
 # vmap altera_mf ./vhdl_libs/altera_mf
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap altera_mf ./vhdl_libs/altera_mf 
 # Modifying modelsim.ini
-# vcom -93 -work altera_mf {d:/quartus/quartus/eda/sim_lib/altera_mf_components.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:27 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work altera_mf d:/quartus/quartus/eda/sim_lib/altera_mf_components.vhd 
+# vcom -93 -work altera_mf {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf_components.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:06 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work altera_mf c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package altera_mf_components
-# End time: 19:54:27 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:06 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work altera_mf {d:/quartus/quartus/eda/sim_lib/altera_mf.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:27 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work altera_mf d:/quartus/quartus/eda/sim_lib/altera_mf.vhd 
+# vcom -93 -work altera_mf {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:06 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work altera_mf c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -607,42 +611,44 @@
 # -- Compiling architecture sim_sld_virtual_jtag_basic of sld_virtual_jtag_basic
 # -- Compiling entity altsource_probe
 # -- Compiling architecture sim_altsource_probe of altsource_probe
-# End time: 19:54:29 on Aug 21,2023, Elapsed time: 0:00:02
+# End time: 08:13:08 on Aug 22,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib vhdl_libs/altera_lnsim
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/altera_lnsim".
 # vmap altera_lnsim ./vhdl_libs/altera_lnsim
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap altera_lnsim ./vhdl_libs/altera_lnsim 
 # Modifying modelsim.ini
-# vlog -sv -work altera_lnsim {d:/quartus/quartus/eda/sim_lib/mentor/altera_lnsim_for_vhdl.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:29 on Aug 21,2023
-# vlog -reportprogress 300 -sv -work altera_lnsim d:/quartus/quartus/eda/sim_lib/mentor/altera_lnsim_for_vhdl.sv 
+# vlog -sv -work altera_lnsim {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/altera_lnsim_for_vhdl.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:09 on Aug 22,2023
+# vlog -reportprogress 300 -sv -work altera_lnsim c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/altera_lnsim_for_vhdl.sv 
 # 
 # Top level modules:
-# End time: 19:54:31 on Aug 21,2023, Elapsed time: 0:00:02
+# End time: 08:13:10 on Aug 22,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work altera_lnsim {d:/quartus/quartus/eda/sim_lib/altera_lnsim_components.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:31 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work altera_lnsim d:/quartus/quartus/eda/sim_lib/altera_lnsim_components.vhd 
+# vcom -93 -work altera_lnsim {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim_components.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:10 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work altera_lnsim c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package altera_lnsim_components
-# End time: 19:54:31 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:10 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib vhdl_libs/cyclonev
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/cyclonev".
 # vmap cyclonev ./vhdl_libs/cyclonev
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap cyclonev ./vhdl_libs/cyclonev 
 # Modifying modelsim.ini
-# vlog -vlog01compat -work cyclonev {d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:32 on Aug 21,2023
-# vlog -reportprogress 300 -vlog01compat -work cyclonev d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
+# vlog -vlog01compat -work cyclonev {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:11 on Aug 22,2023
+# vlog -reportprogress 300 -vlog01compat -work cyclonev c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -655,12 +661,12 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 19:54:35 on Aug 21,2023, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 20
-# vcom -93 -work cyclonev {d:/quartus/quartus/eda/sim_lib/cyclonev_atoms.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:35 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work cyclonev d:/quartus/quartus/eda/sim_lib/cyclonev_atoms.vhd 
+# End time: 08:13:14 on Aug 22,2023, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 10
+# vcom -93 -work cyclonev {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:14 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work cyclonev c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -690,7 +696,7 @@
 # -- Compiling entity cyclonev_lcell_comb
 # -- Compiling architecture vital_lcell_comb of cyclonev_lcell_comb
 # -- Compiling entity cyclonev_routing_wire
-# ** Warning: d:/quartus/quartus/eda/sim_lib/cyclonev_atoms.vhd(2331): (vcom-1288) VITAL timing generic "tpd_datainglitch_dataout" port specification "datainglitch" does not denote a port.
+# ** Warning: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.vhd(2331): (vcom-1288) VITAL timing generic "tpd_datainglitch_dataout" port specification "datainglitch" does not denote a port.
 # (1076.4 section 4.3.2.1.3)
 # -- Compiling architecture behave of cyclonev_routing_wire
 # -- Loading package altera_lnsim_components
@@ -799,12 +805,12 @@
 # -- Compiling architecture behavior of cyclonev_ir_fifo_userdes
 # -- Compiling entity cyclonev_oscillator
 # -- Compiling architecture behavior of cyclonev_oscillator
-# End time: 19:54:35 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:15 on Aug 22,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
-# vcom -93 -work cyclonev {d:/quartus/quartus/eda/sim_lib/cyclonev_components.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:35 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work cyclonev d:/quartus/quartus/eda/sim_lib/cyclonev_components.vhd 
+# vcom -93 -work cyclonev {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_components.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:15 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work cyclonev c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -812,38 +818,39 @@
 # -- Loading package VITAL_Primitives
 # -- Loading package cyclonev_atom_pack
 # -- Compiling package cyclonev_components
-# End time: 19:54:36 on Aug 21,2023, Elapsed time: 0:00:01
+# End time: 08:13:15 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib vhdl_libs/cyclonev_hssi
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/cyclonev_hssi".
 # vmap cyclonev_hssi ./vhdl_libs/cyclonev_hssi
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap cyclonev_hssi ./vhdl_libs/cyclonev_hssi 
 # Modifying modelsim.ini
-# vcom -93 -work cyclonev_hssi {d:/quartus/quartus/eda/sim_lib/cyclonev_hssi_components.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:36 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work cyclonev_hssi d:/quartus/quartus/eda/sim_lib/cyclonev_hssi_components.vhd 
+# vcom -93 -work cyclonev_hssi {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_components.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:15 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work cyclonev_hssi c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_components.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package CYCLONEV_HSSI_COMPONENTS
 # -- Compiling package body CYCLONEV_HSSI_COMPONENTS
 # -- Loading package CYCLONEV_HSSI_COMPONENTS
-# End time: 19:54:36 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:15 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work cyclonev_hssi {d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:36 on Aug 21,2023
-# vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
+# vlog -vlog01compat -work cyclonev_hssi {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:15 on Aug 22,2023
+# vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 19:54:38 on Aug 21,2023, Elapsed time: 0:00:02
+# End time: 08:13:18 on Aug 22,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
-# vcom -93 -work cyclonev_hssi {d:/quartus/quartus/eda/sim_lib/cyclonev_hssi_atoms.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:38 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work cyclonev_hssi d:/quartus/quartus/eda/sim_lib/cyclonev_hssi_atoms.vhd 
+# vcom -93 -work cyclonev_hssi {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:18 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work cyclonev_hssi c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -896,7 +903,7 @@
 # -- Compiling architecture behavior of cyclonev_hssi_pma_hi_pmaif
 # -- Compiling entity cyclonev_hssi_pma_hi_xcvrif
 # -- Compiling architecture behavior of cyclonev_hssi_pma_hi_xcvrif
-# End time: 19:54:38 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:18 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -904,52 +911,75 @@
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:38 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work work C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd 
+# vcom -93 -work work {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:19 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity oneBitFullAdder
 # -- Compiling architecture arch of oneBitFullAdder
-# End time: 19:54:38 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:19 on Aug 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:19 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fourBitFullAdder
+# -- Compiling architecture arch of fourBitFullAdder
+# End time: 08:13:19 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:38 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work work C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd 
+# vcom -93 -work work {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:19 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fourBitFullAdder
+# -- Compiling architecture arch of fourBitFullAdder
+# End time: 08:13:19 on Aug 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:19 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fourBitFullAdder_tb
+# -- Compiling architecture arch of fourBitFullAdder_tb
+# End time: 08:13:19 on Aug 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 08:13:19 on Aug 22,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity oneBitFullAdder
 # -- Compiling architecture arch of oneBitFullAdder
-# End time: 19:54:38 on Aug 21,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder_tb.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:38 on Aug 21,2023
-# vcom -reportprogress 300 -93 -work work C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity oneBitFullAdder_tb
-# -- Compiling architecture arch of oneBitFullAdder_tb
-# End time: 19:54:38 on Aug 21,2023, Elapsed time: 0:00:00
+# End time: 08:13:19 on Aug 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  oneBitFullAdder_tb
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs=""+acc"" oneBitFullAdder_tb 
-# Start time: 19:54:38 on Aug 21,2023
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  fourBitFullAdder_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs=""+acc"" fourBitFullAdder_tb 
+# Start time: 08:13:20 on Aug 22,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.onebitfulladder_tb(arch)
+# Loading work.fourbitfulladder_tb(arch)
+# Loading work.fourbitfulladder(arch)
 # Loading work.onebitfulladder(arch)
 # 
 # add wave *
@@ -958,5 +988,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 19:56:41 on Aug 21,2023, Elapsed time: 0:02:03
+# End time: 08:15:25 on Aug 22,2023, Elapsed time: 0:02:05
 # Errors: 0, Warnings: 0

@@ -1,6 +1,6 @@
 Analysis & Elaboration report for experimento_2
-Mon Aug 21 20:33:17 2023
-Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Tue Aug 22 08:11:11 2023
+Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,8 +37,8 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Mon Aug 21 20:33:17 2023              ;
-; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Analysis & Elaboration Status ; Successful - Tue Aug 22 08:11:11 2023          ;
+; Quartus Prime Version         ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                 ; experimento_2                                  ;
 ; Top-level Entity Name         ; fourBitFullAdder                               ;
 ; Family                        ; Cyclone V                                      ;
@@ -57,8 +57,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -160,30 +160,29 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Mon Aug 21 20:32:59 2023
+    Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+    Info: Processing started: Tue Aug 22 08:11:01 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off experimento_2 -c experimento_2 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file onebitfulladder.vhd
-    Info (12022): Found design unit 1: oneBitFullAdder-arch File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd Line: 12
-    Info (12023): Found entity 1: oneBitFullAdder File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd Line: 5
+    Info (12022): Found design unit 1: oneBitFullAdder-arch File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd Line: 12
+    Info (12023): Found entity 1: oneBitFullAdder File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file onebitfulladder_tb.vhd
-    Info (12022): Found design unit 1: oneBitFullAdder_tb-arch File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder_tb.vhd Line: 8
-    Info (12023): Found entity 1: oneBitFullAdder_tb File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder_tb.vhd Line: 5
-Error (10500): VHDL syntax error at fourBitFullAdder.vhd(14) near text "process";  expecting "begin", or a declaration statement File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd Line: 14
-Error (10500): VHDL syntax error at fourBitFullAdder.vhd(18) near text "component";  expecting "end", or "(", or an identifier ("component" is a reserved keyword), or a concurrent statement File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd Line: 18
-Error (10500): VHDL syntax error at fourBitFullAdder.vhd(20) near text ":";  expecting ")", or "," File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd Line: 20
-Error (10500): VHDL syntax error at fourBitFullAdder.vhd(21) near text ":";  expecting ")", or "," File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd Line: 21
-Error (10500): VHDL syntax error at fourBitFullAdder.vhd(56) near text "process";  expecting ";", or an identifier ("process" is a reserved keyword), or "architecture" File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd Line: 56
-Info (12021): Found 0 design units, including 0 entities, in source file fourbitfulladder.vhd
+    Info (12022): Found design unit 1: oneBitFullAdder_tb-arch File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder_tb.vhd Line: 8
+    Info (12023): Found entity 1: oneBitFullAdder_tb File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder_tb.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file fourbitfulladder.vhd
+    Info (12022): Found design unit 1: fourBitFullAdder-arch File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd Line: 14
+    Info (12023): Found entity 1: fourBitFullAdder File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fourbitfulladder_tb.vhd
-    Info (12022): Found design unit 1: fourBitFullAdder_tb-arch File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder_tb.vhd Line: 8
-    Info (12023): Found entity 1: fourBitFullAdder_tb File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder_tb.vhd Line: 5
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 5 errors, 1 warning
-    Error: Peak virtual memory: 4865 megabytes
-    Error: Processing ended: Mon Aug 21 20:33:17 2023
-    Error: Elapsed time: 00:00:18
-    Error: Total CPU time (on all processors): 00:00:28
+    Info (12022): Found design unit 1: fourBitFullAdder_tb-arch File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder_tb.vhd Line: 8
+    Info (12023): Found entity 1: fourBitFullAdder_tb File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder_tb.vhd Line: 5
+Info (12127): Elaborating entity "fourBitFullAdder" for the top level hierarchy
+Info (12128): Elaborating entity "oneBitFullAdder" for hierarchy "oneBitFullAdder:adderBit0" File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd Line: 25
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Tue Aug 22 08:11:11 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 

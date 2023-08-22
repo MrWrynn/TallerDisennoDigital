@@ -4,16 +4,14 @@ use IEEE.std_logic_1164.all;
 
 entity fourBitFullAdder is
     port (
-        sum, carryOut : out std_logic;
+        sum : out std_logic_vector (3 downto 0);
+		  carryOut : out std_logic;
         a, b : in std_logic_vector (3 downto 0);
 		  carryIn : in std_logic
     );
 end entity;
 
 architecture arch of fourBitFullAdder is
-begin 
-process("all")
-
 	signal carry1, carry2, carry3 : std_logic;
 	
    component oneBitFullAdder is
@@ -22,9 +20,10 @@ process("all")
             a, b, carryIn : in std_logic
         );
     end component oneBitFullAdder;
+begin
 
     adderBit0: oneBitFullAdder port map (
-        sum => carryOut(0),
+        sum => sum(0),
         carryOut => carry1,
         carryIn => carryIn,
         a => a(0),
@@ -32,7 +31,7 @@ process("all")
     );
 	 
 	 adderBit1: oneBitFullAdder port map (
-        sum => carryOut(1),
+        sum => sum(1),
         carryOut => carry2,
         carryIn => carry1,
         a => a(1),
@@ -40,7 +39,7 @@ process("all")
     );
 	 
 	 adderBit2: oneBitFullAdder port map (
-        sum => carryOut(2),
+        sum => sum(2),
         carryOut => carry3,
         carryIn => carry2,
         a => a(2),
@@ -48,11 +47,10 @@ process("all")
     );
 	 
 	 adderBit3: oneBitFullAdder port map (
-        sum => carryOut(3),
+        sum => sum(3),
         carryOut => carryOut,
         carryIn => carry3,
         a => a(3),
         b => b(3)
     );
-end process;
 end architecture;

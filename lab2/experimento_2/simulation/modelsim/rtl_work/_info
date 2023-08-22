@@ -1,42 +1,45 @@
 m255
 K4
 z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/simulation/modelsim
-Eonebitfulladder
-Z1 w1692668993
+Z0 dC:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/simulation/modelsim
+Efourbitfulladder
+Z1 w1692713269
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
 R0
-Z4 8C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd
-Z5 FC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd
+Z4 8C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd
+Z5 FC:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd
 l0
-L5
-Vc6R:FLLY7Qo33NSXX:Ucg3
-!s100 :<0Q9=489mVZl4LiL@3?b3
-Z6 OV;C;10.5b;63
+L5 1
+ViPP?fnD:;Vbb1mVOlcf<a3
+!s100 <=dfEe005HMHPj`eOan390
+Z6 OV;C;2020.1;71
 31
-Z7 !s110 1692669278
+Z7 !s110 1692713599
 !i10b 1
-Z8 !s108 1692669278.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd|
-Z10 !s107 C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd|
+Z8 !s108 1692713599.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd|
+Z10 !s107 C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder.vhd|
 !i113 1
 Z11 o-93 -work work
 Z12 tExplicit 1 CvgOpt 0
 Aarch
 R2
 R3
-DEx4 work 15 onebitfulladder 0 22 c6R:FLLY7Qo33NSXX:Ucg3
-l13
-L12
-VdLU`lD5<K@G0h0H?AL9mK0
-!s100 9IKlMW3e6_6`g;kbJiJYm2
+DEx4 work 16 fourbitfulladder 0 22 iPP?fnD:;Vbb1mVOlcf<a3
+!i122 2
+l23
+L14 43
+V3mQ1a8O]n]bGY^4X^aXkB0
+!s100 [`fAM6d_U4OghhX82=Z8:1
 R6
 31
 R7
@@ -47,35 +50,37 @@ R10
 !i113 1
 R11
 R12
-Eonebitfulladder_tb
-Z13 w1692669042
+Efourbitfulladder_tb
+Z13 w1692713459
 R2
 R3
+!i122 3
 R0
-Z14 8C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder_tb.vhd
-Z15 FC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder_tb.vhd
+Z14 8C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder_tb.vhd
+Z15 FC:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder_tb.vhd
 l0
-L5
-VYVN]TM2fIM=VUQQ=Qb_m<0
-!s100 1?lKTIIoj8EY=iK?dmAze0
+L5 1
+Vb668KGHc_JF2[[KlW>AkI2
+!s100 [W53I>`:k0V`>l=VnaiNZ2
 R6
 31
 R7
 !i10b 1
 R8
-Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder_tb.vhd|
-Z17 !s107 C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder_tb.vhd|
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder_tb.vhd|
+Z17 !s107 C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/fourBitFullAdder_tb.vhd|
 !i113 1
 R11
 R12
 Aarch
 R2
 R3
-DEx4 work 18 onebitfulladder_tb 0 22 YVN]TM2fIM=VUQQ=Qb_m<0
-l20
-L8
-V2=1_JcM?@^i?m8AHlJc=l2
-!s100 @d_;T87gWJ`YkB1>E=K<h3
+DEx4 work 19 fourbitfulladder_tb 0 22 b668KGHc_JF2[[KlW>AkI2
+!i122 3
+l22
+L8 39
+VcZZgbXEc4UfieT9I_Hd_b0
+!s100 IDMlf[MBB8R9f_zT2Kjch2
 R6
 31
 R7
@@ -83,6 +88,47 @@ R7
 R8
 R16
 R17
+!i113 1
+R11
+R12
+Eonebitfulladder
+Z18 w1692712988
+R2
+R3
+!i122 4
+R0
+Z19 8C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd
+Z20 FC:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd
+l0
+L5 1
+Vc6R:FLLY7Qo33NSXX:Ucg3
+!s100 :<0Q9=489mVZl4LiL@3?b3
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd|
+Z22 !s107 C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_2/oneBitFullAdder.vhd|
+!i113 1
+R11
+R12
+Aarch
+R2
+R3
+Z23 DEx4 work 15 onebitfulladder 0 22 c6R:FLLY7Qo33NSXX:Ucg3
+!i122 4
+l13
+Z24 L12 11
+Z25 VdLU`lD5<K@G0h0H?AL9mK0
+Z26 !s100 9IKlMW3e6_6`g;kbJiJYm2
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
 !i113 1
 R11
 R12
