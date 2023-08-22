@@ -10,11 +10,11 @@ cModel Technology
 Z0 dC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3/simulation/modelsim
 vContadorRegresivo
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1692668321
+Z2 !s110 1692723696
 !i10b 1
 !s100 QQXNJC1mJgdT0zzh<Wlnm2
 I1OoD_1DE7?SGE[K_6b5[f3
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 ContadorRegresivo_sv_unit
 S1
 R0
@@ -22,41 +22,41 @@ w1692666066
 8C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3/ContadorRegresivo.sv
 FC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3/ContadorRegresivo.sv
 L0 1
-Z3 OV;L;10.5b;63
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1692668321.000000
+!s108 1692723695.000000
 !s107 C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3/ContadorRegresivo.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3|C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3/ContadorRegresivo.sv|
 !i113 1
-Z4 o-sv -work work
-Z5 !s92 -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3
-Z6 tCvgOpt 0
+Z5 o-sv -work work
+Z6 !s92 -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3
+Z7 tCvgOpt 0
 n@contador@regresivo
 vContadorRegresivo_tb
 R1
-!s110 1692668322
-!i10b 1
-!s100 ?<1b30<n;7R0?lPMKa<Wg2
-I;DiSNP@07P3aOQATGV@M20
 R2
+!i10b 1
+!s100 S80m]8je@@9XF:EnEWkR23
+Im=R2V@O_74BA]WoMgj4M93
+R3
 !s105 ContadorRegresivo_tb_sv_unit
 S1
 R0
-w1692668094
+w1692723643
 8C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3/ContadorRegresivo_tb.sv
 FC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3/ContadorRegresivo_tb.sv
 L0 2
-R3
+R4
 r1
 !s85 0
 31
-!s108 1692668322.000000
+!s108 1692723696.000000
 !s107 C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3/ContadorRegresivo_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3|C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_3/ContadorRegresivo_tb.sv|
 !i113 1
-R4
 R5
 R6
+R7
 n@contador@regresivo_tb

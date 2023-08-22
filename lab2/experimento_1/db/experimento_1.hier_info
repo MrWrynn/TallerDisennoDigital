@@ -3,12 +3,12 @@ binario[0] => Decoder0.IN3
 binario[1] => Decoder0.IN2
 binario[2] => Decoder0.IN1
 binario[3] => Decoder0.IN0
-bcd[6] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-bcd[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-bcd[4] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-bcd[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-bcd[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-bcd[1] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
-bcd[0] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[6] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+bcd[5] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+bcd[4] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+bcd[3] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+bcd[2] << Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+bcd[1] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[0] << bcd.DB_MAX_OUTPUT_PORT_TYPE
 
 

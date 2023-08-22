@@ -1,4 +1,30 @@
-|fourBitFullAdder
+|FPGAInterface
+sum[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+sum[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+sum[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+sum[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+carryOut[0] <= <VCC>
+carryOut[1] <= fourBitFullAdder:adder.carryOut
+carryOut[2] <= fourBitFullAdder:adder.carryOut
+carryOut[3] <= fourBitFullAdder:adder.carryOut
+carryOut[4] <= <GND>
+carryOut[5] <= <GND>
+carryOut[6] <= fourBitFullAdder:adder.carryOut
+a[0] => fourBitFullAdder:adder.a[0]
+a[1] => fourBitFullAdder:adder.a[1]
+a[2] => fourBitFullAdder:adder.a[2]
+a[3] => fourBitFullAdder:adder.a[3]
+b[0] => fourBitFullAdder:adder.b[0]
+b[1] => fourBitFullAdder:adder.b[1]
+b[2] => fourBitFullAdder:adder.b[2]
+b[3] => fourBitFullAdder:adder.b[3]
+carryIn => fourBitFullAdder:adder.carryIn
+
+
+|FPGAInterface|fourBitFullAdder:adder
 sum[0] <= oneBitFullAdder:adderBit0.sum
 sum[1] <= oneBitFullAdder:adderBit1.sum
 sum[2] <= oneBitFullAdder:adderBit2.sum
@@ -15,7 +41,7 @@ b[3] => oneBitFullAdder:adderBit3.b
 carryIn => oneBitFullAdder:adderBit0.carryIn
 
 
-|fourBitFullAdder|oneBitFullAdder:adderBit0
+|FPGAInterface|fourBitFullAdder:adder|oneBitFullAdder:adderBit0
 sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
 a => sum.IN0
@@ -36,7 +62,7 @@ carryIn => sum.IN1
 carryIn => sum.IN1
 
 
-|fourBitFullAdder|oneBitFullAdder:adderBit1
+|FPGAInterface|fourBitFullAdder:adder|oneBitFullAdder:adderBit1
 sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
 a => sum.IN0
@@ -57,7 +83,7 @@ carryIn => sum.IN1
 carryIn => sum.IN1
 
 
-|fourBitFullAdder|oneBitFullAdder:adderBit2
+|FPGAInterface|fourBitFullAdder:adder|oneBitFullAdder:adderBit2
 sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
 a => sum.IN0
@@ -78,7 +104,7 @@ carryIn => sum.IN1
 carryIn => sum.IN1
 
 
-|fourBitFullAdder|oneBitFullAdder:adderBit3
+|FPGAInterface|fourBitFullAdder:adder|oneBitFullAdder:adderBit3
 sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
 a => sum.IN0

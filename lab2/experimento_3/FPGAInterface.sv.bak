@@ -1,0 +1,41 @@
+module FPGAInterface (
+	input logic clk,
+	input logic reset,
+	output logic [0:6] hex1,
+	output logic [0:6] hex0
+);
+
+logic [5:0] count6;
+
+ContadorRegresivo #(6) test6 (clk,reset,count6);
+
+always @(count6) begin
+	case(count6[3:0])
+		4'b0000:hex0=7'b0000001;
+		4'b0001:hex0=7'b1001111;
+		4'b0010:hex0=7'b0010010;
+		4'b0011:hex0=7'b0000110;
+		4'b0100:hex0=7'b1001100;
+		4'b0101:hex0=7'b0100100;
+		4'b0110:hex0=7'b0100000;
+		4'b0111:hex0=7'b0001111;
+		4'b1000:hex0=7'b0000000;
+		4'b1001:hex0=7'b0000100;
+		default:hex0=7'b0000001;
+	endcase
+	case(count6[5:4])
+		4'b0000:hex0=7'b0000001;
+		4'b0001:hex0=7'b1001111;
+		4'b0010:hex0=7'b0010010;
+		4'b0011:hex0=7'b0000110;
+		4'b0100:hex0=7'b1001100;
+		4'b0101:hex0=7'b0100100;
+		4'b0110:hex0=7'b0100000;
+		4'b0111:hex0=7'b0001111;
+		4'b1000:hex0=7'b0000000;
+		4'b1001:hex0=7'b0000100;
+		default:hex0=7'b0000001;
+	endcase
+end
+
+endmodule

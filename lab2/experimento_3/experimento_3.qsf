@@ -39,10 +39,10 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY ContadorRegresivo
+set_global_assignment -name TOP_LEVEL_ENTITY FPGAInterface
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:25:34  AUGUST 21, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name BOARD "DE1-SoC Board"
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (SystemVerilog)"
@@ -54,9 +54,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name SYSTEMVERILOG_FILE ContadorRegresivo.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ContadorRegresivo_tb.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
@@ -65,8 +62,28 @@ set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -sectio
 set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH ContadorRegresivo_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME ContadorRegresivo_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ContadorRegresivo_tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id ContadorRegresivo_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "4 us" -section_id ContadorRegresivo_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ContadorRegresivo_tb -section_id ContadorRegresivo_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ContadorRegresivo.sv -section_id ContadorRegresivo_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ContadorRegresivo_tb.sv -section_id ContadorRegresivo_tb
+set_global_assignment -name SYSTEMVERILOG_FILE FPGAInterface.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AA14 -to clk
+set_location_assignment PIN_AE12 -to reset
+set_location_assignment PIN_AE26 -to hex0[0]
+set_location_assignment PIN_AE27 -to hex0[1]
+set_location_assignment PIN_AE28 -to hex0[2]
+set_location_assignment PIN_AG27 -to hex0[3]
+set_location_assignment PIN_AF28 -to hex0[4]
+set_location_assignment PIN_AG28 -to hex0[5]
+set_location_assignment PIN_AH28 -to hex0[6]
+set_location_assignment PIN_AJ29 -to hex1[0]
+set_location_assignment PIN_AH29 -to hex1[1]
+set_location_assignment PIN_AH30 -to hex1[2]
+set_location_assignment PIN_AG30 -to hex1[3]
+set_location_assignment PIN_AF29 -to hex1[4]
+set_location_assignment PIN_AF30 -to hex1[5]
+set_location_assignment PIN_AD27 -to hex1[6]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

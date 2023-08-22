@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY binaryToBCD
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:19:43  AUGUST 22, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.0 Lite Edition"
 set_global_assignment -name SYSTEMVERILOG_FILE binaryToBCD_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE binaryToBCD.sv
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
@@ -68,4 +68,15 @@ set_global_assignment -name EDA_TEST_BENCH_FILE binaryToBCD_tb.sv -section_id bi
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AE26 -to bcd[0]
+set_location_assignment PIN_AE27 -to bcd[1]
+set_location_assignment PIN_AE28 -to bcd[2]
+set_location_assignment PIN_AG27 -to bcd[3]
+set_location_assignment PIN_AF28 -to bcd[4]
+set_location_assignment PIN_AG28 -to bcd[5]
+set_location_assignment PIN_AH28 -to bcd[6]
+set_location_assignment PIN_AB12 -to binario[0]
+set_location_assignment PIN_AC12 -to binario[1]
+set_location_assignment PIN_AF9 -to binario[2]
+set_location_assignment PIN_AF10 -to binario[3]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

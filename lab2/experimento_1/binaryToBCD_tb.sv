@@ -6,25 +6,25 @@ logic [6:0] bcd;
 binaryToBCD test(binario, bcd);
 initial begin
 binario=4'b0000;
-#40;
+#5;
 binario=4'b0001;
-#40;
+#5;
 binario=4'b0010;
-#40;
+#5;
 binario=4'b0011;
-#40;
+#5;
 binario=4'b0100;
-#40;
+#5;
 binario=4'b0101;
-#40;
+#5;
 binario=4'b0110;
-#40;
+#5;
 binario=4'b0111;
-#40;
+#5;
 binario=4'b1000;
-#40;
+#5;
 binario=4'b1001;
-#40;
+#5;
 end
 
 endmodule

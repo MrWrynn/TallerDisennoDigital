@@ -1,65 +1,62 @@
 m255
 K4
 z2
-!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_1/simulation/modelsim
+Z0 dC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_1/simulation/modelsim
 vbinaryToBCD
-Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1692714197
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1692719561
 !i10b 1
-!s100 ];D@6Yz5IOgZZh0;H7i2Q2
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IJBl1KV:YN7^F:XWEiIAW[3
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s100 TJic5@27R6?nHVNh8jo:70
+I7Xje0=oz_NS_ahbSU92Pi2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 binaryToBCD_sv_unit
 S1
 R0
-w1692713838
-8C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD.sv
-FC:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD.sv
-!i122 1
-L0 1 19
-Z5 OV;L;2020.1;71
+Z4 w1692718889
+8C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD.sv
+FC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD.sv
+L0 1
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1692714197.000000
-!s107 C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_1|C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD.sv|
+!s108 1692719560.000000
+!s107 C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_1|C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work {+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_1}
-Z9 tCvgOpt 0
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_1
+Z8 tCvgOpt 0
 nbinary@to@b@c@d
 vbinaryToBCD_tb
 R1
 R2
 !i10b 1
-!s100 <XVim__c[N<h[LbQmH_EK2
+!s100 =Ak7<fX[mZH:]m9]`ESV42
+I9_^;gXzToQ8F3CPica?jd1
 R3
-I0TnF<P4zDlD_16:_NIB3>1
-R4
+!s105 binaryToBCD_tb_sv_unit
 S1
 R0
-w1692714149
-8C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD_tb.sv
-FC:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD_tb.sv
-!i122 2
-L0 2 29
+R4
+8C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD_tb.sv
+FC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD_tb.sv
+L0 2
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_1|C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD_tb.sv|
+!s108 1692719561.000000
+!s107 C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_1|C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/lab2/experimento_1/binaryToBCD_tb.sv|
 !i113 1
+R6
 R7
 R8
-R9
 nbinary@to@b@c@d_tb
