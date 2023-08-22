@@ -1,0 +1,19 @@
+module ContadorRegresivo #(parameter N = 4) (
+    input wire clk,      // Entrada de reloj
+    input wire rst_n,    // Entrada de reset asincrónico activo bajo
+    output reg [N-1:0] count // Salida del contador
+);
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        count <= 0; // Reset cuando rst_n es bajo
+    end else begin
+        if (count == 0) begin
+            count <= {N{1'b0}}; // Reiniciar el contador al valor máximo
+        end else begin
+            count <= count - 1; // Contar hacia abajo
+        end
+    end
+end
+
+endmodule
