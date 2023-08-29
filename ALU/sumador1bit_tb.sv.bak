@@ -1,0 +1,3 @@
+module sumador1bit_tb();
+	logic a, b, cIn, cOut, c;
+	sumador1bit test (a, b, cIn, c, cOut)

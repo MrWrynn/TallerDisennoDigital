@@ -1,0 +1,11 @@
+|sumador1bit
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
