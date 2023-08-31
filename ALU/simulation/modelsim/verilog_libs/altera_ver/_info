@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/simulation/modelsim
 valt_bidir_buf
-Z1 !s110 1693327028
+Z1 !s110 1693498491
 !i10b 1
 !s100 `k9N_NNE[omlCfHHm=PO53
 IZMT]7033;hHkz1N@SR2ng0
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1693327027.000000
+Z7 !s108 1693498490.000000
 Z8 !s107 d:/quartus/quartus/eda/sim_lib/altera_primitives.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|altera_ver|d:/quartus/quartus/eda/sim_lib/altera_primitives.v|
 !i113 1
@@ -618,7 +618,7 @@ R9
 R10
 R11
 UPRIM_GDFF_HIGH
-Z12 !s110 1693327029
+Z12 !s110 1693498492
 !i10b 1
 !s100 SScBZ?gdYFgRTOVYmj^Jh2
 IAKR`DDmo;K=>E?;M=zVIW2

@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/simulation/modelsim
 valtera_arriav_pll
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1693327034
+Z2 !s110 1693498498
 !i10b 1
 !s100 =P7CDUZSG9W8kBfd_h_CR2
 IX?[RmJ8PhaRBEGeXC<Il13
@@ -26,7 +26,7 @@ Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1693327033.000000
+Z9 !s108 1693498497.000000
 Z10 !s107 d:/quartus/quartus/eda/sim_lib/altera_lnsim.sv|
 Z11 !s90 -reportprogress|300|-sv|-work|altera_lnsim_ver|d:/quartus/quartus/eda/sim_lib/altera_lnsim.sv|
 !i113 1
@@ -82,7 +82,7 @@ R12
 R13
 Xaltera_generic_pll_functions
 R1
-Z14 !s110 1693327033
+Z14 !s110 1693498497
 !i10b 1
 !s100 mD8bbQ0]E6AUDh:Z`2gV<3
 I0C970P[N47O9WOR4@1LkS3
@@ -394,7 +394,7 @@ R12
 R13
 vama_adder_function
 R1
-R2
+R14
 !i10b 1
 !s100 6QMdalan?zoeg6gl8=[dL0
 I]Ro6;6HIaJT]H[[G?cIO>0
@@ -418,7 +418,7 @@ R12
 R13
 vama_chainout_adder_accumulator_function
 R1
-R2
+R14
 !i10b 1
 !s100 57QR;AnJ]o9_oP@P^`<`_3
 IPh60aS??7QnonB1oDh3h@3
@@ -442,7 +442,7 @@ R12
 R13
 vama_coef_reg_ext_function
 R1
-R2
+R14
 !i10b 1
 !s100 [>CkFafV^;VidM;4NPe>G0
 IQgTVIh[cjL[UNcCOji03Z1
@@ -538,7 +538,7 @@ R12
 R13
 vama_multiplier_function
 R1
-R2
+R14
 !i10b 1
 !s100 PnJ2SG;7f9S9LA_G45McK1
 IUc8?@k?Ld;HIiijmaF2YN2
@@ -562,7 +562,7 @@ R12
 R13
 vama_preadder_function
 R1
-R2
+R14
 !i10b 1
 !s100 j^04kGPXC[@hlfj@n^TDm3
 IaAOP1Vc5nk]RckL2C66B92
@@ -634,7 +634,7 @@ R12
 R13
 vama_scanchain
 R1
-R2
+R14
 !i10b 1
 !s100 Odk2P<15ERAUMI2>3njlR1
 I]XkIi^b9JCfWTn8B7^_eR2
@@ -682,7 +682,7 @@ R12
 R13
 vama_systolic_adder_function
 R1
-R2
+R14
 !i10b 1
 !s100 ?Pi9_Q0zT0UKEf1m=U:LX1
 Il1Z>PJf1]k1?:HAQT2^7=0

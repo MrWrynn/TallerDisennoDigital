@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ALU
-Tue Aug 29 11:12:02 2023
+Thu Aug 31 10:14:16 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -9,8 +9,9 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |sumadorNbits
+  5. Analysis & Elaboration Settings
+  6. Analysis & Elaboration Messages
 
 
 
@@ -37,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Tue Aug 29 11:12:02 2023              ;
+; Analysis & Elaboration Status ; Successful - Thu Aug 31 10:14:16 2023          ;
 ; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                 ; ALU                                            ;
 ; Top-level Entity Name         ; sumadorNbits                                   ;
@@ -66,6 +67,16 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 +----------------------------+-------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |sumadorNbits ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 4     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -161,7 +172,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Tue Aug 29 11:11:50 2023
+    Info: Processing started: Thu Aug 31 10:14:03 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -169,17 +180,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file sumador
     Info (12023): Found entity 1: sumador1bit File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumador1bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sumador1bit_tb.sv
     Info (12023): Found entity 1: sumador1bit_tb File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumador1bit_tb.sv Line: 2
-Error (10170): Verilog HDL syntax error at sumadorNbits.sv(12) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv Line: 12
-Error (10149): Verilog HDL Declaration error at sumadorNbits.sv(12): identifier "carr" is already declared in the present scope File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv Line: 12
-Error (10170): Verilog HDL syntax error at sumadorNbits.sv(12) near text: ")";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv Line: 12
-Error (10112): Ignored design unit "sumadorNbits" at sumadorNbits.sv(1) due to previous errors File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file sumadornbits.sv
+Info (12021): Found 1 design units, including 1 entities, in source file sumadornbits.sv
+    Info (12023): Found entity 1: sumadorNbits File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sumadornbits_tb.sv
     Info (12023): Found entity 1: sumadorNbits_tb File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits_tb.sv Line: 2
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 4 errors, 1 warning
-    Error: Peak virtual memory: 4790 megabytes
-    Error: Processing ended: Tue Aug 29 11:12:02 2023
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:20
+Info (12127): Elaborating entity "sumadorNbits" for the top level hierarchy
+Info (12128): Elaborating entity "sumador1bit" for hierarchy "sumador1bit:sum" File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv Line: 15
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Thu Aug 31 10:14:16 2023
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:17
 
 
