@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/simulation/modelsim
 valtera_arriav_pll
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1693498498
+Z2 !s110 1693934116
 !i10b 1
 !s100 =P7CDUZSG9W8kBfd_h_CR2
 IX?[RmJ8PhaRBEGeXC<Il13
@@ -26,7 +26,7 @@ Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1693498497.000000
+Z9 !s108 1693934115.000000
 Z10 !s107 d:/quartus/quartus/eda/sim_lib/altera_lnsim.sv|
 Z11 !s90 -reportprogress|300|-sv|-work|altera_lnsim_ver|d:/quartus/quartus/eda/sim_lib/altera_lnsim.sv|
 !i113 1
@@ -82,7 +82,7 @@ R12
 R13
 Xaltera_generic_pll_functions
 R1
-Z14 !s110 1693498497
+Z14 !s110 1693934115
 !i10b 1
 !s100 mD8bbQ0]E6AUDh:Z`2gV<3
 I0C970P[N47O9WOR4@1LkS3
@@ -176,7 +176,7 @@ R12
 R13
 vALTERA_LNSIM_MEMORY_INITIALIZATION
 R1
-R2
+R14
 !i10b 1
 !s100 l3WEnHj3]m?8hUT7ndTdH1
 IL;elQYXZ7UR5cAeLzejel1
@@ -298,7 +298,7 @@ R12
 R13
 valtera_pll_reconfig_tasks
 R1
-R2
+R14
 !i10b 1
 !s100 6Y]K7z27@cfSeONmWWeXR0
 IWD9m^lbCIN71E0n=SWE>32
@@ -346,7 +346,7 @@ R12
 R13
 valtera_syncram
 R1
-R2
+R14
 !i10b 1
 !s100 :D8=Ign@6kNmY=_Z0bg9L2
 I5H84Cl62<oIN4;Nz6E:4:3
@@ -370,7 +370,7 @@ R12
 R13
 valtera_syncram_forwarding_logic
 R1
-R2
+R14
 !i10b 1
 !s100 0KLY=4A<Gi?ZV^h9?TZUS0
 I;<5OPc3>XVg4<TMbfC5>a2
@@ -514,7 +514,7 @@ R12
 R13
 vama_latency_function
 R1
-R2
+R14
 !i10b 1
 !s100 I[Z@R1Ao0izQW<FMg3>[22
 IA[JTMh5k;Df1o3QKkBhz60

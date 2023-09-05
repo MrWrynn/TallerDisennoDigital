@@ -1,4 +1,31 @@
-|sumadorNbits
+|restadorNbits
+aIn[0] => aIn[0].IN1
+aIn[1] => aIn[1].IN1
+aIn[2] => aIn[2].IN1
+aIn[3] => aIn[3].IN1
+bIn[0] => bIn[0].IN1
+bIn[1] => bIn[1].IN1
+bIn[2] => bIn[2].IN1
+bIn[3] => bIn[3].IN1
+cOut[0] << cOut.DB_MAX_OUTPUT_PORT_TYPE
+cOut[1] << cOut.DB_MAX_OUTPUT_PORT_TYPE
+cOut[2] << cOut.DB_MAX_OUTPUT_PORT_TYPE
+cOut[3] << cOut.DB_MAX_OUTPUT_PORT_TYPE
+NegFlag << sumadorNbits:sum1.port4
+
+
+|restadorNbits|complemento:comp2b
+aIn[0] => bOut[0].DATAIN
+aIn[1] => bOut[1].DATAIN
+aIn[2] => bOut[2].DATAIN
+aIn[3] => bOut[3].DATAIN
+bOut[0] <= aIn[0].DB_MAX_OUTPUT_PORT_TYPE
+bOut[1] <= aIn[1].DB_MAX_OUTPUT_PORT_TYPE
+bOut[2] <= aIn[2].DB_MAX_OUTPUT_PORT_TYPE
+bOut[3] <= aIn[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restadorNbits|sumadorNbits:sum1
 aIn[0] => aIn[0].IN1
 aIn[1] => aIn[1].IN1
 aIn[2] => aIn[2].IN1
@@ -8,14 +35,14 @@ bIn[1] => bIn[1].IN1
 bIn[2] => bIn[2].IN1
 bIn[3] => bIn[3].IN1
 cIn => carr[0].IN1
-c[0] << sumador1bit:sum.c
-c[1] << sumador1bit:sum_creator[1].sum.c
-c[2] << sumador1bit:sum_creator[2].sum.c
-c[3] << sumador1bit:sum_creator[3].sum.c
-cOut << sumador1bit:sum_creator[3].sum.carryOut
+c[0] <= sumador1bit:sum.c
+c[1] <= sumador1bit:sum_creator[1].sum.c
+c[2] <= sumador1bit:sum_creator[2].sum.c
+c[3] <= sumador1bit:sum_creator[3].sum.c
+cOut <= sumador1bit:sum_creator[3].sum.carryOut
 
 
-|sumadorNbits|sumador1bit:sum
+|restadorNbits|sumadorNbits:sum1|sumador1bit:sum
 a => c.IN0
 a => carryOut.IN0
 b => c.IN1
@@ -26,7 +53,7 @@ c <= c.DB_MAX_OUTPUT_PORT_TYPE
 carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sumadorNbits|sumador1bit:sum_creator[1].sum
+|restadorNbits|sumadorNbits:sum1|sumador1bit:sum_creator[1].sum
 a => c.IN0
 a => carryOut.IN0
 b => c.IN1
@@ -37,7 +64,7 @@ c <= c.DB_MAX_OUTPUT_PORT_TYPE
 carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sumadorNbits|sumador1bit:sum_creator[2].sum
+|restadorNbits|sumadorNbits:sum1|sumador1bit:sum_creator[2].sum
 a => c.IN0
 a => carryOut.IN0
 b => c.IN1
@@ -48,7 +75,7 @@ c <= c.DB_MAX_OUTPUT_PORT_TYPE
 carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sumadorNbits|sumador1bit:sum_creator[3].sum
+|restadorNbits|sumadorNbits:sum1|sumador1bit:sum_creator[3].sum
 a => c.IN0
 a => carryOut.IN0
 b => c.IN1
@@ -57,5 +84,77 @@ carryIn => c.IN1
 carryIn => carryOut.IN1
 c <= c.DB_MAX_OUTPUT_PORT_TYPE
 carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restadorNbits|sumadorNbits:sum2
+aIn[0] => aIn[0].IN1
+aIn[1] => aIn[1].IN1
+aIn[2] => aIn[2].IN1
+aIn[3] => aIn[3].IN1
+bIn[0] => bIn[0].IN1
+bIn[1] => bIn[1].IN1
+bIn[2] => bIn[2].IN1
+bIn[3] => bIn[3].IN1
+cIn => carr[0].IN1
+c[0] <= sumador1bit:sum.c
+c[1] <= sumador1bit:sum_creator[1].sum.c
+c[2] <= sumador1bit:sum_creator[2].sum.c
+c[3] <= sumador1bit:sum_creator[3].sum.c
+cOut <= sumador1bit:sum_creator[3].sum.carryOut
+
+
+|restadorNbits|sumadorNbits:sum2|sumador1bit:sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restadorNbits|sumadorNbits:sum2|sumador1bit:sum_creator[1].sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restadorNbits|sumadorNbits:sum2|sumador1bit:sum_creator[2].sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restadorNbits|sumadorNbits:sum2|sumador1bit:sum_creator[3].sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restadorNbits|complemento:comp2c
+aIn[0] => bOut[0].DATAIN
+aIn[1] => bOut[1].DATAIN
+aIn[2] => bOut[2].DATAIN
+aIn[3] => bOut[3].DATAIN
+bOut[0] <= aIn[0].DB_MAX_OUTPUT_PORT_TYPE
+bOut[1] <= aIn[1].DB_MAX_OUTPUT_PORT_TYPE
+bOut[2] <= aIn[2].DB_MAX_OUTPUT_PORT_TYPE
+bOut[3] <= aIn[3].DB_MAX_OUTPUT_PORT_TYPE
 
 

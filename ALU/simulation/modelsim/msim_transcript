@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {d:/quartus/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:14:50 on Aug 31,2023
+# Start time: 11:15:11 on Sep 05,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_ver d:/quartus/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 10:14:52 on Aug 31,2023, Elapsed time: 0:00:02
+# End time: 11:15:12 on Sep 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {d:/quartus/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:14:53 on Aug 31,2023
+# Start time: 11:15:13 on Sep 05,2023
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver d:/quartus/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 10:14:53 on Aug 31,2023, Elapsed time: 0:00:00
+# End time: 11:15:13 on Sep 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {d:/quartus/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:14:53 on Aug 31,2023
+# Start time: 11:15:13 on Sep 05,2023
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver d:/quartus/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 10:14:54 on Aug 31,2023, Elapsed time: 0:00:01
+# End time: 11:15:13 on Sep 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {d:/quartus/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:14:54 on Aug 31,2023
+# Start time: 11:15:14 on Sep 05,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver d:/quartus/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 10:14:56 on Aug 31,2023, Elapsed time: 0:00:02
+# End time: 11:15:15 on Sep 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {d:/quartus/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:14:57 on Aug 31,2023
+# Start time: 11:15:15 on Sep 05,2023
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver d:/quartus/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 10:14:58 on Aug 31,2023, Elapsed time: 0:00:01
+# End time: 11:15:16 on Sep 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_ver {d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:14:58 on Aug 31,2023
+# Start time: 11:15:16 on Sep 05,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -483,19 +483,19 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 10:15:02 on Aug 31,2023, Elapsed time: 0:00:04
+# End time: 11:15:19 on Sep 05,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 20
 # vlog -vlog01compat -work cyclonev_ver {d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:03 on Aug 31,2023
+# Start time: 11:15:19 on Sep 05,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 10:15:05 on Aug 31,2023, Elapsed time: 0:00:02
+# End time: 11:15:20 on Sep 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_ver {d:/quartus/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:05 on Aug 31,2023
+# Start time: 11:15:20 on Sep 05,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver d:/quartus/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
@@ -635,7 +635,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 10:15:06 on Aug 31,2023, Elapsed time: 0:00:01
+# End time: 11:15:21 on Sep 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -646,15 +646,15 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_hssi_ver {d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:06 on Aug 31,2023
+# Start time: 11:15:21 on Sep 05,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 10:15:09 on Aug 31,2023, Elapsed time: 0:00:03
+# End time: 11:15:23 on Sep 05,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi_ver {d:/quartus/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:09 on Aug 31,2023
+# Start time: 11:15:23 on Sep 05,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver d:/quartus/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
@@ -754,7 +754,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 10:15:09 on Aug 31,2023, Elapsed time: 0:00:00
+# End time: 11:15:24 on Sep 05,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -765,7 +765,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:09 on Aug 31,2023
+# Start time: 11:15:24 on Sep 05,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -775,18 +775,18 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 10:15:13 on Aug 31,2023, Elapsed time: 0:00:04
+# End time: 11:15:26 on Sep 05,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 12
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {d:/quartus/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:13 on Aug 31,2023
+# Start time: 11:15:27 on Sep 05,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver d:/quartus/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 10:15:14 on Aug 31,2023, Elapsed time: 0:00:01
+# End time: 11:15:27 on Sep 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -800,63 +800,108 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumador1bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:14 on Aug 31,2023
+# Start time: 11:15:27 on Sep 05,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU" C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumador1bit.sv 
 # -- Compiling module sumador1bit
 # 
 # Top level modules:
 # 	sumador1bit
-# End time: 10:15:14 on Aug 31,2023, Elapsed time: 0:00:00
+# End time: 11:15:27 on Sep 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:14 on Aug 31,2023
+# Start time: 11:15:27 on Sep 05,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU" C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv 
 # -- Compiling module sumadorNbits
 # 
 # Top level modules:
 # 	sumadorNbits
-# End time: 10:15:14 on Aug 31,2023, Elapsed time: 0:00:00
+# End time: 11:15:27 on Sep 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/complemento.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:15:27 on Sep 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU" C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/complemento.sv 
+# -- Compiling module complemento
+# 
+# Top level modules:
+# 	complemento
+# End time: 11:15:27 on Sep 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:15:27 on Sep 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU" C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits.sv 
+# -- Compiling module restadorNbits
+# 
+# Top level modules:
+# 	restadorNbits
+# End time: 11:15:27 on Sep 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
+# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/complemento.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:15:27 on Sep 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU" C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/complemento.sv 
+# -- Compiling module complemento
+# 
+# Top level modules:
+# 	complemento
+# End time: 11:15:27 on Sep 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:15:27 on Sep 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU" C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits.sv 
+# -- Compiling module restadorNbits
+# 
+# Top level modules:
+# 	restadorNbits
+# End time: 11:15:27 on Sep 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumador1bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:14 on Aug 31,2023
+# Start time: 11:15:27 on Sep 05,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU" C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumador1bit.sv 
 # -- Compiling module sumador1bit
 # 
 # Top level modules:
 # 	sumador1bit
-# End time: 10:15:14 on Aug 31,2023, Elapsed time: 0:00:00
+# End time: 11:15:27 on Sep 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:14 on Aug 31,2023
+# Start time: 11:15:27 on Sep 05,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU" C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv 
 # -- Compiling module sumadorNbits
 # 
 # Top level modules:
 # 	sumadorNbits
-# End time: 10:15:14 on Aug 31,2023, Elapsed time: 0:00:00
+# End time: 11:15:27 on Sep 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:15:14 on Aug 31,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU" C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits_tb.sv 
-# -- Compiling module sumadorNbits_tb
+# Start time: 11:15:28 on Sep 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU" C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits_tb.sv 
+# -- Compiling module restadorNbits_tb
 # 
 # Top level modules:
-# 	sumadorNbits_tb
-# End time: 10:15:14 on Aug 31,2023, Elapsed time: 0:00:00
+# 	restadorNbits_tb
+# End time: 11:15:28 on Sep 05,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  sumadorNbits_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" sumadorNbits_tb 
-# Start time: 10:15:15 on Aug 31,2023
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  restadorNbits_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" restadorNbits_tb 
+# Start time: 11:15:28 on Sep 05,2023
 # Loading sv_std.std
-# Loading work.sumadorNbits_tb
+# Loading work.restadorNbits_tb
+# Loading work.restadorNbits
+# Loading work.complemento
 # Loading work.sumadorNbits
 # Loading work.sumador1bit
+# ** Warning: (vsim-3017) C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits.sv(12): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /restadorNbits_tb/test/sum2 File: C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv
+# ** Warning: (vsim-3722) C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits.sv(12): [TFMPC] - Missing connection for port 'cOut'.
 # 
 # add wave *
 # view structure
@@ -864,5 +909,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 10:17:46 on Aug 31,2023, Elapsed time: 0:02:31
-# Errors: 0, Warnings: 0
+# End time: 11:16:28 on Sep 05,2023, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 2

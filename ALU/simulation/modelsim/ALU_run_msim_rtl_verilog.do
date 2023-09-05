@@ -47,12 +47,16 @@ vmap work rtl_work
 
 vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumador1bit.sv}
 vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv}
+vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/complemento.sv}
+vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits.sv}
 
+vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/complemento.sv}
+vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits.sv}
 vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumador1bit.sv}
 vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv}
-vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits_tb.sv}
+vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU {C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits_tb.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  sumadorNbits_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  restadorNbits_tb
 
 add wave *
 view structure

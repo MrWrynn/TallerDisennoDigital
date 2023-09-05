@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Thu Aug 31 10:14:16 2023
+Analysis & Elaboration Status : Successful - Tue Sep  5 11:13:11 2023
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : ALU
-Top-level Entity Name : sumadorNbits
+Top-level Entity Name : restadorNbits
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
