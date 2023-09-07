@@ -1,138 +1,63 @@
 m255
 K4
 z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/simulation/modelsim
-vcomplemento
-Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1693934127
+Z0 dC:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/simulation/modelsim
+vpruebas
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1694045561
 !i10b 1
-!s100 gQN9E4P[lj;kaDVP3H5;n2
-IGHI11V2N:ccRlEF7NX7^H0
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 complemento_sv_unit
+!s100 j[zZ@<ghz2A2;o]mT7H<D3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I6Czc76Ji0oz5<J@?45:cb1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1693930902
-8C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/complemento.sv
-FC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/complemento.sv
-L0 1
-Z4 OV;L;10.5b;63
+w1694044862
+8C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas.sv
+FC:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas.sv
+!i122 1
+L0 1 8
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1693934127.000000
-!s107 C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/complemento.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU|C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/complemento.sv|
+Z6 !s108 1694045561.000000
+!s107 C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU|C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU
-Z8 tCvgOpt 0
-vrestadorNbits
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU}
+Z9 tCvgOpt 0
+vpruebas_tb
 R1
 R2
 !i10b 1
-!s100 n:]>e0^j86H5NN5f6]ga>0
-IKj_9a2ho_@9]F73U3PXRU1
+!s100 ?^_>2?j]49P6Ak69e<?222
 R3
-!s105 restadorNbits_sv_unit
+I9AG1`HOm1hH]anF>VCBmR0
+R4
 S1
 R0
-w1693933792
-8C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits.sv
-FC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits.sv
-L0 1
-R4
-r1
-!s85 0
-31
+w1694045515
+8C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas_tb.sv
+FC:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas_tb.sv
+!i122 2
+L0 2 17
 R5
-!s107 C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU|C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits.sv|
-!i113 1
-R6
-R7
-R8
-nrestador@nbits
-vrestadorNbits_tb
-R1
-!s110 1693934128
-!i10b 1
-!s100 7eOHcCMoo8T_P050KDRec2
-I?;IC=X^W4Qz<KYBB?cAoT0
-R3
-!s105 restadorNbits_tb_sv_unit
-S1
-R0
-w1693933825
-8C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits_tb.sv
-FC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits_tb.sv
-L0 2
-R4
 r1
 !s85 0
 31
-!s108 1693934128.000000
-!s107 C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU|C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/restadorNbits_tb.sv|
-!i113 1
 R6
+!s107 C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU|C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas_tb.sv|
+!i113 1
 R7
 R8
-nrestador@nbits_tb
-vsumador1bit
-R1
-R2
-!i10b 1
-!s100 GQkB?[l]mDITb`:lF3c=@3
-IMV5>lPkiQ^6F[=9zN5=Xe1
-R3
-!s105 sumador1bit_sv_unit
-S1
-R0
-w1693326981
-8C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumador1bit.sv
-FC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumador1bit.sv
-L0 1
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumador1bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU|C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumador1bit.sv|
-!i113 1
-R6
-R7
-R8
-vsumadorNbits
-R1
-R2
-!i10b 1
-!s100 0QdZP1jQhWemX<O]8ja=E3
-I5IRnCm^2eMo5=>U[z9OjZ2
-R3
-!s105 sumadorNbits_sv_unit
-S1
-R0
-w1693498441
-8C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv
-FC:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv
-L0 1
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU|C:/Users/joedu/OneDrive/Documentos/TallerDisennoDigital/ALU/sumadorNbits.sv|
-!i113 1
-R6
-R7
-R8
-nsumador@nbits
+R9
