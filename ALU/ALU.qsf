@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY pruebas
+set_global_assignment -name TOP_LEVEL_ENTITY shiftRightNbits
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:53:31  AUGUST 29, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
@@ -52,40 +52,54 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name SYSTEMVERILOG_FILE sumador1bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE sumador1bit_tb.sv
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH pruebas_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH shiftRightNbits_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME sumador1bit_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id sumador1bit_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME sumador1bit_tb -section_id sumador1bit_tb
-set_global_assignment -name SYSTEMVERILOG_FILE sumadorNbits.sv
-set_global_assignment -name SYSTEMVERILOG_FILE sumadorNbits_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME sumadorNbits_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id sumadorNbits_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME sumadorNbits_tb -section_id sumadorNbits_tb
-set_global_assignment -name SYSTEMVERILOG_FILE complemento.sv
-set_global_assignment -name SYSTEMVERILOG_FILE complemento_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME complemento_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id complemento_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME complemento_tb -section_id complemento_tb
-set_global_assignment -name SYSTEMVERILOG_FILE restadorNbits.sv
-set_global_assignment -name SYSTEMVERILOG_FILE restadorNbits_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME restadorNbits_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id restadorNbits_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME restadorNbits_tb -section_id restadorNbits_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME pruebas_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id pruebas_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME pruebas_tb -section_id pruebas_tb
+set_global_assignment -name SYSTEMVERILOG_FILE sumador1bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sumador1bit_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sumadorNbits.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sumadorNbits_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shiftLeftNbits_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shiftLeftNbits.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shift1bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE complemento.sv
+set_global_assignment -name SYSTEMVERILOG_FILE complemento_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE restadorNbits.sv
+set_global_assignment -name SYSTEMVERILOG_FILE restadorNbits_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE andNbits.sv
 set_global_assignment -name SYSTEMVERILOG_FILE orNbits.sv
 set_global_assignment -name SYSTEMVERILOG_FILE xorNbits.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pruebas.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pruebas_tb.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME shiftLeftNbits_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id shiftLeftNbits_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME shiftLeftNbits_tb -section_id shiftLeftNbits_tb
+set_global_assignment -name SYSTEMVERILOG_FILE shiftRightNbits.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shiftRightNbits_tb.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_NAME shiftRightNbits_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id shiftRightNbits_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME shiftRightNbits_tb -section_id shiftRightNbits_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE sumador1bit.sv -section_id sumador1bit_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE sumador1bit_tb.sv -section_id sumador1bit_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE sumador1bit.sv -section_id sumadorNbits_tb
@@ -98,9 +112,12 @@ set_global_assignment -name EDA_TEST_BENCH_FILE restadorNbits.sv -section_id res
 set_global_assignment -name EDA_TEST_BENCH_FILE sumador1bit.sv -section_id restadorNbits_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE sumadorNbits.sv -section_id restadorNbits_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE restadorNbits_tb.sv -section_id restadorNbits_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME pruebas_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id pruebas_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME pruebas_tb -section_id pruebas_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE pruebas.sv -section_id pruebas_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE pruebas_tb.sv -section_id pruebas_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shift1bit.sv -section_id shiftLeftNbits_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shiftLeftNbits.sv -section_id shiftLeftNbits_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shiftLeftNbits_tb.sv -section_id shiftLeftNbits_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shift1bit.sv -section_id shiftRightNbits_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shiftRightNbits.sv -section_id shiftRightNbits_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shiftRightNbits_tb.sv -section_id shiftRightNbits_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

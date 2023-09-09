@@ -1,0 +1,29 @@
+`timescale 10ns/1ns
+module shiftLeftNbits_tb();
+
+logic [3:0] a, b, shamt;
+
+shiftLeftNbits #(4) test (a, shamt, b);
+
+initial begin
+
+a=4'b0101;
+
+
+shamt=1;
+#5;
+assert (b === 4'b1010) else $error("Error en shamt 1");
+
+
+shamt=2;
+#5;
+assert (b === 4'b0100) else $error("Error en shamt 2");
+
+
+shamt=3;
+#5;
+assert (b === 4'b1000) else $error("Error en shamt 3");
+
+end
+
+endmodule

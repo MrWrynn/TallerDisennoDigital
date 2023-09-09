@@ -1,0 +1,16 @@
+module shiftLeftNbits #(N=4) (
+			input logic [N-1:0] aIn,
+			input logic [N-1:0] shamt,
+			output logic [N-1:0] bOut);
+			
+logic [0:2*N] temp = 0;
+genvar i;
+generate
+	for (i = 0; i < N; i++)  begin : shift_creator
+		shift1bit sll (aIn[i], temp[i]);
+	end
+endgenerate	
+
+assign bOut = temp[shamt-1 +: N];
+
+endmodule
