@@ -1,47 +1,224 @@
-|shiftRightNbits
-aIn[0] => shift1bit:shift_creator[0].sll.In
-aIn[1] => shift1bit:shift_creator[1].sll.In
-aIn[2] => shift1bit:shift_creator[2].sll.In
-aIn[3] => shift1bit:shift_creator[3].sll.In
-shamt[0] => LessThan0.IN8
-shamt[0] => Mux0.IN6
-shamt[0] => Mux1.IN7
-shamt[0] => Mux2.IN8
-shamt[0] => Mux3.IN9
-shamt[1] => LessThan0.IN7
-shamt[1] => Mux0.IN5
-shamt[1] => Mux1.IN6
-shamt[1] => Mux2.IN7
-shamt[1] => Mux3.IN8
-shamt[2] => LessThan0.IN6
-shamt[2] => Mux0.IN4
-shamt[2] => Mux1.IN5
-shamt[2] => Mux2.IN6
-shamt[2] => Mux3.IN7
-shamt[3] => LessThan0.IN5
-bOut[0] << bOut.DB_MAX_OUTPUT_PORT_TYPE
-bOut[1] << bOut.DB_MAX_OUTPUT_PORT_TYPE
-bOut[2] << bOut.DB_MAX_OUTPUT_PORT_TYPE
-bOut[3] << bOut.DB_MAX_OUTPUT_PORT_TYPE
+|multiplicador
+aIn[0] => andOutput.IN0
+aIn[0] => andOutput.IN0
+aIn[0] => andOutput.IN0
+aIn[0] => andOutput.IN0
+aIn[1] => andOutput.IN0
+aIn[1] => andOutput.IN0
+aIn[1] => andOutput.IN0
+aIn[1] => andOutput.IN0
+aIn[2] => andOutput.IN0
+aIn[2] => andOutput.IN0
+aIn[2] => andOutput.IN0
+aIn[2] => andOutput.IN0
+aIn[3] => andOutput.IN0
+aIn[3] => andOutput.IN0
+aIn[3] => andOutput.IN0
+aIn[3] => andOutput.IN0
+bIn[0] => andOutput.IN1
+bIn[0] => andOutput.IN1
+bIn[0] => andOutput.IN1
+bIn[0] => andOutput.IN1
+bIn[1] => andOutput.IN1
+bIn[1] => andOutput.IN1
+bIn[1] => andOutput.IN1
+bIn[1] => andOutput.IN1
+bIn[2] => andOutput.IN1
+bIn[2] => andOutput.IN1
+bIn[2] => andOutput.IN1
+bIn[2] => andOutput.IN1
+bIn[3] => andOutput.IN1
+bIn[3] => andOutput.IN1
+bIn[3] => andOutput.IN1
+bIn[3] => andOutput.IN1
+cOut[0] <= andOutput.DB_MAX_OUTPUT_PORT_TYPE
+cOut[1] <= sumadorNbits:sums_generator[0].sum.port3
+cOut[2] <= sumadorNbits:sums_generator[1].sum.port3
+cOut[3] <= sumadorNbits:sums_generator[2].sum.port3
+OFlag <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+CFlag <= sumadorNbits:sums_generator[2].sum.port3
 
 
-|shiftRightNbits|shift1bit:shift_creator[0].sll
-In => Out.DATAIN
-Out <= In.DB_MAX_OUTPUT_PORT_TYPE
+|multiplicador|sumadorNbits:sums_generator[0].sum
+aIn[0] => aIn[0].IN1
+aIn[1] => aIn[1].IN1
+aIn[2] => aIn[2].IN1
+aIn[3] => aIn[3].IN1
+bIn[0] => bIn[0].IN1
+bIn[1] => bIn[1].IN1
+bIn[2] => bIn[2].IN1
+bIn[3] => bIn[3].IN1
+cIn => carr[0].IN1
+c[0] <= sumador1bit:sum.c
+c[1] <= sumador1bit:sum_creator[1].sum.c
+c[2] <= sumador1bit:sum_creator[2].sum.c
+c[3] <= sumador1bit:sum_creator[3].sum.c
+cOut <= sumador1bit:sum_creator[3].sum.carryOut
 
 
-|shiftRightNbits|shift1bit:shift_creator[1].sll
-In => Out.DATAIN
-Out <= In.DB_MAX_OUTPUT_PORT_TYPE
+|multiplicador|sumadorNbits:sums_generator[0].sum|sumador1bit:sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|shiftRightNbits|shift1bit:shift_creator[2].sll
-In => Out.DATAIN
-Out <= In.DB_MAX_OUTPUT_PORT_TYPE
+|multiplicador|sumadorNbits:sums_generator[0].sum|sumador1bit:sum_creator[1].sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|shiftRightNbits|shift1bit:shift_creator[3].sll
-In => Out.DATAIN
-Out <= In.DB_MAX_OUTPUT_PORT_TYPE
+|multiplicador|sumadorNbits:sums_generator[0].sum|sumador1bit:sum_creator[2].sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplicador|sumadorNbits:sums_generator[0].sum|sumador1bit:sum_creator[3].sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplicador|sumadorNbits:sums_generator[1].sum
+aIn[0] => aIn[0].IN1
+aIn[1] => aIn[1].IN1
+aIn[2] => aIn[2].IN1
+aIn[3] => aIn[3].IN1
+bIn[0] => bIn[0].IN1
+bIn[1] => bIn[1].IN1
+bIn[2] => bIn[2].IN1
+bIn[3] => bIn[3].IN1
+cIn => carr[0].IN1
+c[0] <= sumador1bit:sum.c
+c[1] <= sumador1bit:sum_creator[1].sum.c
+c[2] <= sumador1bit:sum_creator[2].sum.c
+c[3] <= sumador1bit:sum_creator[3].sum.c
+cOut <= sumador1bit:sum_creator[3].sum.carryOut
+
+
+|multiplicador|sumadorNbits:sums_generator[1].sum|sumador1bit:sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplicador|sumadorNbits:sums_generator[1].sum|sumador1bit:sum_creator[1].sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplicador|sumadorNbits:sums_generator[1].sum|sumador1bit:sum_creator[2].sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplicador|sumadorNbits:sums_generator[1].sum|sumador1bit:sum_creator[3].sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplicador|sumadorNbits:sums_generator[2].sum
+aIn[0] => aIn[0].IN1
+aIn[1] => aIn[1].IN1
+aIn[2] => aIn[2].IN1
+aIn[3] => aIn[3].IN1
+bIn[0] => bIn[0].IN1
+bIn[1] => bIn[1].IN1
+bIn[2] => bIn[2].IN1
+bIn[3] => bIn[3].IN1
+cIn => carr[0].IN1
+c[0] <= sumador1bit:sum.c
+c[1] <= sumador1bit:sum_creator[1].sum.c
+c[2] <= sumador1bit:sum_creator[2].sum.c
+c[3] <= sumador1bit:sum_creator[3].sum.c
+cOut <= sumador1bit:sum_creator[3].sum.carryOut
+
+
+|multiplicador|sumadorNbits:sums_generator[2].sum|sumador1bit:sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplicador|sumadorNbits:sums_generator[2].sum|sumador1bit:sum_creator[1].sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplicador|sumadorNbits:sums_generator[2].sum|sumador1bit:sum_creator[2].sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplicador|sumadorNbits:sums_generator[2].sum|sumador1bit:sum_creator[3].sum
+a => c.IN0
+a => carryOut.IN0
+b => c.IN1
+b => carryOut.IN1
+carryIn => c.IN1
+carryIn => carryOut.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+carryOut <= carryOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
