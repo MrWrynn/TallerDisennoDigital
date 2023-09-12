@@ -1,0 +1,4 @@
+module alu #(N=4) (
+			input logic [3:0] sel,
+			input logic [N-1:0] aIn,
+			input logic [N-1:0] bIn

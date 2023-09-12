@@ -1,0 +1,3908 @@
+// Copyright (C) 2023  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition"
+
+// DATE "09/12/2023 09:20:15"
+
+// 
+// Device: Altera 5CSEMA5F31C6 Package FBGA896
+// 
+
+// 
+// This Verilog file should be used for ModelSim (SystemVerilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module FPGAInterface (
+	aIn,
+	bIn,
+	sel,
+	hex,
+	flags);
+input 	[3:0] aIn;
+input 	[3:0] bIn;
+input 	[5:0] sel;
+output 	[6:0] hex;
+output 	[3:0] flags;
+
+// Design Ports Information
+// hex[0]	=>  Location: PIN_AE26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hex[1]	=>  Location: PIN_AE27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hex[2]	=>  Location: PIN_AE28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hex[3]	=>  Location: PIN_AG27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hex[4]	=>  Location: PIN_AF28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hex[5]	=>  Location: PIN_AG28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// hex[6]	=>  Location: PIN_AH28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// flags[0]	=>  Location: PIN_V16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// flags[1]	=>  Location: PIN_W16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// flags[2]	=>  Location: PIN_V17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// flags[3]	=>  Location: PIN_V18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// bIn[1]	=>  Location: PIN_AD12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// bIn[2]	=>  Location: PIN_AE11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// bIn[3]	=>  Location: PIN_AC9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// bIn[0]	=>  Location: PIN_AD11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// aIn[0]	=>  Location: PIN_AB12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// aIn[2]	=>  Location: PIN_AF9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// aIn[1]	=>  Location: PIN_AC12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// aIn[3]	=>  Location: PIN_AF10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sel[4]	=>  Location: PIN_AD10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sel[0]	=>  Location: PIN_Y16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sel[1]	=>  Location: PIN_W15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sel[2]	=>  Location: PIN_AA15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sel[3]	=>  Location: PIN_AA14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sel[5]	=>  Location: PIN_AE12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \sel[5]~input_o ;
+wire \sel[2]~input_o ;
+wire \sel[4]~input_o ;
+wire \sel[3]~input_o ;
+wire \sel[0]~input_o ;
+wire \sel[1]~input_o ;
+wire \fpgaMuxi|WideOr2~0_combout ;
+wire \fpgaMuxi|WideOr7~0_combout ;
+wire \fpgaMuxi|WideOr5~0_combout ;
+wire \fpgaMuxi|WideOr3~0_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux0~0_combout ;
+wire \bIn[3]~input_o ;
+wire \bIn[1]~input_o ;
+wire \aIn[3]~input_o ;
+wire \bIn[2]~input_o ;
+wire \bIn[0]~input_o ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~2 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~3 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[1]~5_sumout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1_sumout ;
+wire \aIn[2]~input_o ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~6 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~7 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~10 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~11 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9_sumout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1_combout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2_combout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5_sumout ;
+wire \aIn[1]~input_o ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~6 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~7 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~10 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~11 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13_sumout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~14 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~15 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3_combout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0_combout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5_sumout ;
+wire \aIn[0]~input_o ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~22_cout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~6 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~10 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~14 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~17_sumout ;
+wire \fpgaAlu|aluMuxInstance|Mux0~1_combout ;
+wire \fpgaAlu|aluSl|Mux0~2_combout ;
+wire \fpgaAlu|aluSl|LessThan0~0_combout ;
+wire \fpgaAlu|aluSl|Mux0~1_combout ;
+wire \fpgaAlu|aluSl|Mux0~0_combout ;
+wire \fpgaAlu|aluSl|Mux0~3_combout ;
+wire \fpgaAlu|aluSl|Mux0~4_combout ;
+wire \fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0_combout ;
+wire \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c~combout ;
+wire \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout ;
+wire \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c~combout ;
+wire \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|c~combout ;
+wire \fpgaAlu|aluMul|sums_generator[2].sum|sum|c~0_combout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~6 ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~7 ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[1]~1_sumout ;
+wire \fpgaAlu|aluMuxInstance|Mux0~3_combout ;
+wire \fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout ;
+wire \fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0_combout ;
+wire \fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ;
+wire \fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout ;
+wire \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0_combout ;
+wire \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout ;
+wire \fpgaAlu|aluRes|cOut[3]~2_combout ;
+wire \fpgaAlu|aluSum|sum_creator[1].sum|carryOut~combout ;
+wire \fpgaAlu|aluSum|sum_creator[2].sum|carryOut~combout ;
+wire \fpgaAlu|aluMuxInstance|Mux0~2_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux0~4_combout ;
+wire \fpgaAlu|aluSl|Mux2~0_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux2~6_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux0~5_combout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~18 ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout ;
+wire \fpgaAlu|aluMuxInstance|Mux0~6_combout ;
+wire \fpgaAlu|aluSr|Mux0~0_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux3~1_combout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~5_sumout ;
+wire \fpgaAlu|aluMuxInstance|Mux3~2_combout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5_sumout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1_combout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~10 ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~11 ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~6 ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~7 ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5_sumout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9_sumout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~14 ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~15 ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~10 ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~11 ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~5_sumout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~6 ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~7 ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~0_combout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~2_combout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[4]~3_combout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~13_sumout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~22_cout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~18_cout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~14_cout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~10_cout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~6_cout ;
+wire \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~1_sumout ;
+wire \fpgaAlu|aluMuxInstance|Mux3~0_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux3~3_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux3~4_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux2~1_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux2~0_combout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~9_sumout ;
+wire \fpgaAlu|aluMuxInstance|Mux2~2_combout ;
+wire \fpgaAlu|aluMul|sums_generator[0].sum|sum|c~0_combout ;
+wire \fpgaAlu|aluSl|Mux2~1_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux2~4_combout ;
+wire \fpgaAlu|aluRes|cOut[1]~0_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux2~3_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux2~5_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux1~4_combout ;
+wire \fpgaAlu|aluRes|cOut[2]~1_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux1~2_combout ;
+wire \fpgaAlu|aluSl|Mux1~0_combout ;
+wire \fpgaAlu|aluMul|sums_generator[1].sum|sum|c~0_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux1~1_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux1~3_combout ;
+wire \fpgaAlu|aluMuxInstance|Mux1~0_combout ;
+wire \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~13_sumout ;
+wire \fpgaAlu|aluMuxInstance|Mux1~5_combout ;
+wire \hexSeg|WideOr6~0_combout ;
+wire \hexSeg|WideOr5~0_combout ;
+wire \hexSeg|WideOr4~0_combout ;
+wire \hexSeg|WideOr3~0_combout ;
+wire \hexSeg|WideOr2~0_combout ;
+wire \hexSeg|WideOr1~0_combout ;
+wire \hexSeg|WideOr0~0_combout ;
+wire \fpgaAlu|aluRes|WideOr0~0_combout ;
+wire \fpgaAlu|Flags[0]~0_combout ;
+wire \fpgaAlu|Equal1~0_combout ;
+wire \fpgaAlu|aluMul|andOutput[3][1]~combout ;
+wire \fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0_combout ;
+wire \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c~combout ;
+wire \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut~combout ;
+wire \fpgaAlu|Flags[2]~1_combout ;
+wire \fpgaAlu|Flags[2]~2_combout ;
+wire \fpgaAlu|Flags[2]~3_combout ;
+wire \fpgaAlu|aluMul|LessThan0~0_combout ;
+wire \fpgaAlu|aluMul|LessThan0~1_combout ;
+wire \fpgaAlu|aluMul|LessThan0~2_combout ;
+wire \fpgaAlu|Flags[3]~4_combout ;
+wire [3:0] \fpgaAlu|aluMul|cOut ;
+wire [19:0] \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose ;
+wire [3:0] \fpgaAlu|aluAnd|cOut ;
+wire [19:0] \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose ;
+wire [3:0] \fpgaMuxi|result ;
+
+
+// Location: IOOBUF_X89_Y8_N39
+cyclonev_io_obuf \hex[0]~output (
+	.i(\hexSeg|WideOr6~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hex[0]),
+	.obar());
+// synopsys translate_off
+defparam \hex[0]~output .bus_hold = "false";
+defparam \hex[0]~output .open_drain_output = "false";
+defparam \hex[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y11_N79
+cyclonev_io_obuf \hex[1]~output (
+	.i(\hexSeg|WideOr5~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hex[1]),
+	.obar());
+// synopsys translate_off
+defparam \hex[1]~output .bus_hold = "false";
+defparam \hex[1]~output .open_drain_output = "false";
+defparam \hex[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y11_N96
+cyclonev_io_obuf \hex[2]~output (
+	.i(\hexSeg|WideOr4~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hex[2]),
+	.obar());
+// synopsys translate_off
+defparam \hex[2]~output .bus_hold = "false";
+defparam \hex[2]~output .open_drain_output = "false";
+defparam \hex[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y4_N79
+cyclonev_io_obuf \hex[3]~output (
+	.i(\hexSeg|WideOr3~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hex[3]),
+	.obar());
+// synopsys translate_off
+defparam \hex[3]~output .bus_hold = "false";
+defparam \hex[3]~output .open_drain_output = "false";
+defparam \hex[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y13_N56
+cyclonev_io_obuf \hex[4]~output (
+	.i(\hexSeg|WideOr2~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hex[4]),
+	.obar());
+// synopsys translate_off
+defparam \hex[4]~output .bus_hold = "false";
+defparam \hex[4]~output .open_drain_output = "false";
+defparam \hex[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y13_N39
+cyclonev_io_obuf \hex[5]~output (
+	.i(\hexSeg|WideOr1~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hex[5]),
+	.obar());
+// synopsys translate_off
+defparam \hex[5]~output .bus_hold = "false";
+defparam \hex[5]~output .open_drain_output = "false";
+defparam \hex[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y4_N96
+cyclonev_io_obuf \hex[6]~output (
+	.i(!\hexSeg|WideOr0~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(hex[6]),
+	.obar());
+// synopsys translate_off
+defparam \hex[6]~output .bus_hold = "false";
+defparam \hex[6]~output .open_drain_output = "false";
+defparam \hex[6]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X52_Y0_N2
+cyclonev_io_obuf \flags[0]~output (
+	.i(!\fpgaAlu|Flags[0]~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(flags[0]),
+	.obar());
+// synopsys translate_off
+defparam \flags[0]~output .bus_hold = "false";
+defparam \flags[0]~output .open_drain_output = "false";
+defparam \flags[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X52_Y0_N19
+cyclonev_io_obuf \flags[1]~output (
+	.i(\fpgaAlu|Equal1~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(flags[1]),
+	.obar());
+// synopsys translate_off
+defparam \flags[1]~output .bus_hold = "false";
+defparam \flags[1]~output .open_drain_output = "false";
+defparam \flags[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X60_Y0_N2
+cyclonev_io_obuf \flags[2]~output (
+	.i(\fpgaAlu|Flags[2]~3_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(flags[2]),
+	.obar());
+// synopsys translate_off
+defparam \flags[2]~output .bus_hold = "false";
+defparam \flags[2]~output .open_drain_output = "false";
+defparam \flags[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X80_Y0_N2
+cyclonev_io_obuf \flags[3]~output (
+	.i(\fpgaAlu|Flags[3]~4_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(flags[3]),
+	.obar());
+// synopsys translate_off
+defparam \flags[3]~output .bus_hold = "false";
+defparam \flags[3]~output .open_drain_output = "false";
+defparam \flags[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X2_Y0_N58
+cyclonev_io_ibuf \sel[5]~input (
+	.i(sel[5]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\sel[5]~input_o ));
+// synopsys translate_off
+defparam \sel[5]~input .bus_hold = "false";
+defparam \sel[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X36_Y0_N18
+cyclonev_io_ibuf \sel[2]~input (
+	.i(sel[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\sel[2]~input_o ));
+// synopsys translate_off
+defparam \sel[2]~input .bus_hold = "false";
+defparam \sel[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X4_Y0_N18
+cyclonev_io_ibuf \sel[4]~input (
+	.i(sel[4]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\sel[4]~input_o ));
+// synopsys translate_off
+defparam \sel[4]~input .bus_hold = "false";
+defparam \sel[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X36_Y0_N1
+cyclonev_io_ibuf \sel[3]~input (
+	.i(sel[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\sel[3]~input_o ));
+// synopsys translate_off
+defparam \sel[3]~input .bus_hold = "false";
+defparam \sel[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X40_Y0_N18
+cyclonev_io_ibuf \sel[0]~input (
+	.i(sel[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\sel[0]~input_o ));
+// synopsys translate_off
+defparam \sel[0]~input .bus_hold = "false";
+defparam \sel[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X40_Y0_N1
+cyclonev_io_ibuf \sel[1]~input (
+	.i(sel[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\sel[1]~input_o ));
+// synopsys translate_off
+defparam \sel[1]~input .bus_hold = "false";
+defparam \sel[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: MLABCELL_X39_Y1_N36
+cyclonev_lcell_comb \fpgaMuxi|WideOr2~0 (
+// Equation(s):
+// \fpgaMuxi|WideOr2~0_combout  = ( \sel[0]~input_o  & ( \sel[1]~input_o  & ( (!\sel[2]~input_o  & (\sel[4]~input_o  & \sel[3]~input_o )) # (\sel[2]~input_o  & (!\sel[4]~input_o  $ (!\sel[3]~input_o ))) ) ) ) # ( !\sel[0]~input_o  & ( \sel[1]~input_o  & ( 
+// (\sel[2]~input_o  & (\sel[4]~input_o  & \sel[3]~input_o )) ) ) ) # ( \sel[0]~input_o  & ( !\sel[1]~input_o  & ( (\sel[2]~input_o  & (\sel[4]~input_o  & \sel[3]~input_o )) ) ) )
+
+	.dataa(gnd),
+	.datab(!\sel[2]~input_o ),
+	.datac(!\sel[4]~input_o ),
+	.datad(!\sel[3]~input_o ),
+	.datae(!\sel[0]~input_o ),
+	.dataf(!\sel[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaMuxi|WideOr2~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaMuxi|WideOr2~0 .extended_lut = "off";
+defparam \fpgaMuxi|WideOr2~0 .lut_mask = 64'h000000030003033C;
+defparam \fpgaMuxi|WideOr2~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X39_Y1_N33
+cyclonev_lcell_comb \fpgaMuxi|result[3] (
+// Equation(s):
+// \fpgaMuxi|result [3] = ( \fpgaMuxi|WideOr2~0_combout  & ( \fpgaMuxi|result [3] & ( \sel[5]~input_o  ) ) ) # ( !\fpgaMuxi|WideOr2~0_combout  & ( \fpgaMuxi|result [3] ) ) # ( \fpgaMuxi|WideOr2~0_combout  & ( !\fpgaMuxi|result [3] & ( \sel[5]~input_o  ) ) )
+
+	.dataa(!\sel[5]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\fpgaMuxi|WideOr2~0_combout ),
+	.dataf(!\fpgaMuxi|result [3]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaMuxi|result [3]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaMuxi|result[3] .extended_lut = "off";
+defparam \fpgaMuxi|result[3] .lut_mask = 64'h00005555FFFF5555;
+defparam \fpgaMuxi|result[3] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X39_Y1_N24
+cyclonev_lcell_comb \fpgaMuxi|WideOr7~0 (
+// Equation(s):
+// \fpgaMuxi|WideOr7~0_combout  = ( \sel[3]~input_o  & ( \sel[0]~input_o  & ( (\sel[2]~input_o  & (\sel[4]~input_o  & !\sel[1]~input_o )) ) ) ) # ( !\sel[3]~input_o  & ( \sel[0]~input_o  & ( (\sel[2]~input_o  & (\sel[4]~input_o  & \sel[1]~input_o )) ) ) )
+
+	.dataa(gnd),
+	.datab(!\sel[2]~input_o ),
+	.datac(!\sel[4]~input_o ),
+	.datad(!\sel[1]~input_o ),
+	.datae(!\sel[3]~input_o ),
+	.dataf(!\sel[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaMuxi|WideOr7~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaMuxi|WideOr7~0 .extended_lut = "off";
+defparam \fpgaMuxi|WideOr7~0 .lut_mask = 64'h0000000000030300;
+defparam \fpgaMuxi|WideOr7~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X39_Y1_N18
+cyclonev_lcell_comb \fpgaMuxi|result[0] (
+// Equation(s):
+// \fpgaMuxi|result [0] = ( \fpgaMuxi|WideOr2~0_combout  & ( \fpgaMuxi|WideOr7~0_combout  ) ) # ( !\fpgaMuxi|WideOr2~0_combout  & ( \fpgaMuxi|WideOr7~0_combout  & ( \fpgaMuxi|result [0] ) ) ) # ( !\fpgaMuxi|WideOr2~0_combout  & ( !\fpgaMuxi|WideOr7~0_combout 
+//  & ( \fpgaMuxi|result [0] ) ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\fpgaMuxi|result [0]),
+	.datad(gnd),
+	.datae(!\fpgaMuxi|WideOr2~0_combout ),
+	.dataf(!\fpgaMuxi|WideOr7~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaMuxi|result [0]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaMuxi|result[0] .extended_lut = "off";
+defparam \fpgaMuxi|result[0] .lut_mask = 64'h0F0F00000F0FFFFF;
+defparam \fpgaMuxi|result[0] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X39_Y1_N57
+cyclonev_lcell_comb \fpgaMuxi|WideOr5~0 (
+// Equation(s):
+// \fpgaMuxi|WideOr5~0_combout  = ( \sel[3]~input_o  & ( \sel[0]~input_o  & ( (\sel[4]~input_o  & (!\sel[2]~input_o  $ (!\sel[1]~input_o ))) ) ) )
+
+	.dataa(!\sel[4]~input_o ),
+	.datab(!\sel[2]~input_o ),
+	.datac(!\sel[1]~input_o ),
+	.datad(gnd),
+	.datae(!\sel[3]~input_o ),
+	.dataf(!\sel[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaMuxi|WideOr5~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaMuxi|WideOr5~0 .extended_lut = "off";
+defparam \fpgaMuxi|WideOr5~0 .lut_mask = 64'h0000000000001414;
+defparam \fpgaMuxi|WideOr5~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X39_Y1_N0
+cyclonev_lcell_comb \fpgaMuxi|result[1] (
+// Equation(s):
+// \fpgaMuxi|result [1] = ( \fpgaMuxi|result [1] & ( \fpgaMuxi|WideOr5~0_combout  ) ) # ( !\fpgaMuxi|result [1] & ( \fpgaMuxi|WideOr5~0_combout  & ( \fpgaMuxi|WideOr2~0_combout  ) ) ) # ( \fpgaMuxi|result [1] & ( !\fpgaMuxi|WideOr5~0_combout  & ( 
+// !\fpgaMuxi|WideOr2~0_combout  ) ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\fpgaMuxi|WideOr2~0_combout ),
+	.datad(gnd),
+	.datae(!\fpgaMuxi|result [1]),
+	.dataf(!\fpgaMuxi|WideOr5~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaMuxi|result [1]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaMuxi|result[1] .extended_lut = "off";
+defparam \fpgaMuxi|result[1] .lut_mask = 64'h0000F0F00F0FFFFF;
+defparam \fpgaMuxi|result[1] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X39_Y1_N51
+cyclonev_lcell_comb \fpgaMuxi|WideOr3~0 (
+// Equation(s):
+// \fpgaMuxi|WideOr3~0_combout  = ( \sel[3]~input_o  & ( \sel[0]~input_o  & ( (!\sel[4]~input_o  & (\sel[2]~input_o  & \sel[1]~input_o )) # (\sel[4]~input_o  & (!\sel[2]~input_o  $ (!\sel[1]~input_o ))) ) ) ) # ( !\sel[3]~input_o  & ( \sel[0]~input_o  & ( 
+// (\sel[4]~input_o  & (\sel[2]~input_o  & \sel[1]~input_o )) ) ) )
+
+	.dataa(!\sel[4]~input_o ),
+	.datab(!\sel[2]~input_o ),
+	.datac(!\sel[1]~input_o ),
+	.datad(gnd),
+	.datae(!\sel[3]~input_o ),
+	.dataf(!\sel[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaMuxi|WideOr3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaMuxi|WideOr3~0 .extended_lut = "off";
+defparam \fpgaMuxi|WideOr3~0 .lut_mask = 64'h0000000001011616;
+defparam \fpgaMuxi|WideOr3~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X39_Y1_N45
+cyclonev_lcell_comb \fpgaMuxi|result[2] (
+// Equation(s):
+// \fpgaMuxi|result [2] = ( !\fpgaMuxi|WideOr2~0_combout  & ( \fpgaMuxi|WideOr3~0_combout  & ( \fpgaMuxi|result [2] ) ) ) # ( \fpgaMuxi|WideOr2~0_combout  & ( !\fpgaMuxi|WideOr3~0_combout  ) ) # ( !\fpgaMuxi|WideOr2~0_combout  & ( 
+// !\fpgaMuxi|WideOr3~0_combout  & ( \fpgaMuxi|result [2] ) ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\fpgaMuxi|result [2]),
+	.datad(gnd),
+	.datae(!\fpgaMuxi|WideOr2~0_combout ),
+	.dataf(!\fpgaMuxi|WideOr3~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaMuxi|result [2]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaMuxi|result[2] .extended_lut = "off";
+defparam \fpgaMuxi|result[2] .lut_mask = 64'h0F0FFFFF0F0F0000;
+defparam \fpgaMuxi|result[2] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N21
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux0~0 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux0~0_combout  = ( \fpgaMuxi|result [2] & ( (!\fpgaMuxi|result [3] & (!\fpgaMuxi|result [0] & !\fpgaMuxi|result [1])) ) )
+
+	.dataa(gnd),
+	.datab(!\fpgaMuxi|result [3]),
+	.datac(!\fpgaMuxi|result [0]),
+	.datad(!\fpgaMuxi|result [1]),
+	.datae(gnd),
+	.dataf(!\fpgaMuxi|result [2]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux0~0 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux0~0 .lut_mask = 64'h00000000C000C000;
+defparam \fpgaAlu|aluMuxInstance|Mux0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X4_Y0_N1
+cyclonev_io_ibuf \bIn[3]~input (
+	.i(bIn[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\bIn[3]~input_o ));
+// synopsys translate_off
+defparam \bIn[3]~input .bus_hold = "false";
+defparam \bIn[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X16_Y0_N18
+cyclonev_io_ibuf \bIn[1]~input (
+	.i(bIn[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\bIn[1]~input_o ));
+// synopsys translate_off
+defparam \bIn[1]~input .bus_hold = "false";
+defparam \bIn[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X4_Y0_N52
+cyclonev_io_ibuf \aIn[3]~input (
+	.i(aIn[3]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\aIn[3]~input_o ));
+// synopsys translate_off
+defparam \aIn[3]~input .bus_hold = "false";
+defparam \aIn[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X4_Y0_N35
+cyclonev_io_ibuf \bIn[2]~input (
+	.i(bIn[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\bIn[2]~input_o ));
+// synopsys translate_off
+defparam \bIn[2]~input .bus_hold = "false";
+defparam \bIn[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X2_Y0_N41
+cyclonev_io_ibuf \bIn[0]~input (
+	.i(bIn[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\bIn[0]~input_o ));
+// synopsys translate_off
+defparam \bIn[0]~input .bus_hold = "false";
+defparam \bIn[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N0
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1_sumout  = SUM(( !\bIn[0]~input_o  $ (!\aIn[3]~input_o ) ) + ( !VCC ) + ( !VCC ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~2  = CARRY(( !\bIn[0]~input_o  $ (!\aIn[3]~input_o ) ) + ( !VCC ) + ( !VCC ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~3  = SHARE((!\bIn[0]~input_o ) # (\aIn[3]~input_o ))
+
+	.dataa(!\bIn[0]~input_o ),
+	.datab(!\aIn[3]~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1_sumout ),
+	.cout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~2 ),
+	.shareout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~3 ));
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1 .lut_mask = 64'h0000BBBB00006666;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N3
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[1]~5 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[1]~5_sumout  = SUM(( VCC ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~3  ) + ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~2  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~2 ),
+	.sharein(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~3 ),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[1]~5_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[1]~5 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[1]~5 .lut_mask = 64'h000000000000FFFF;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[1]~5 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N12
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose[0] (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [0] = ( \bIn[1]~input_o  ) # ( !\bIn[1]~input_o  & ( ((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[1]~5_sumout ) # (\bIn[3]~input_o )) # (\bIn[2]~input_o ) ) )
+
+	.dataa(!\bIn[2]~input_o ),
+	.datab(!\bIn[3]~input_o ),
+	.datac(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[1]~5_sumout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\bIn[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [0]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose[0] .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose[0] .lut_mask = 64'h7F7F7F7FFFFFFFFF;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose[0] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X8_Y0_N35
+cyclonev_io_ibuf \aIn[2]~input (
+	.i(aIn[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\aIn[2]~input_o ));
+// synopsys translate_off
+defparam \aIn[2]~input .bus_hold = "false";
+defparam \aIn[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N30
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5_sumout  = SUM(( !\aIn[2]~input_o  $ (!\bIn[0]~input_o ) ) + ( !VCC ) + ( !VCC ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~6  = CARRY(( !\aIn[2]~input_o  $ (!\bIn[0]~input_o ) ) + ( !VCC ) + ( !VCC ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~7  = SHARE((!\bIn[0]~input_o ) # (\aIn[2]~input_o ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\aIn[2]~input_o ),
+	.datad(!\bIn[0]~input_o ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5_sumout ),
+	.cout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~6 ),
+	.shareout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~7 ));
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5 .lut_mask = 64'h0000FF0F00000FF0;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N33
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9_sumout  = SUM(( !\bIn[1]~input_o  $ (((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [0] & 
+// ((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1_sumout ))) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [0] & (\aIn[3]~input_o )))) ) + ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~7  ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~6  ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~10  = CARRY(( !\bIn[1]~input_o  $ (((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [0] & 
+// ((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1_sumout ))) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [0] & (\aIn[3]~input_o )))) ) + ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~7  ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~6  ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~11  = SHARE((!\bIn[1]~input_o  & ((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [0] & 
+// ((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1_sumout ))) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [0] & (\aIn[3]~input_o )))))
+
+	.dataa(!\bIn[1]~input_o ),
+	.datab(!\aIn[3]~input_o ),
+	.datac(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [0]),
+	.datad(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1_sumout ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~6 ),
+	.sharein(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~7 ),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9_sumout ),
+	.cout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~10 ),
+	.shareout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~11 ));
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9 .lut_mask = 64'h000002A20000A959;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N36
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout  = SUM(( VCC ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~11  ) + ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~10  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~10 ),
+	.sharein(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~11 ),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1 .lut_mask = 64'h000000000000FFFF;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N36
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1_combout  = ( !\bIn[2]~input_o  & ( (!\bIn[3]~input_o  & (!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout  & 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9_sumout )) ) )
+
+	.dataa(gnd),
+	.datab(!\bIn[3]~input_o ),
+	.datac(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ),
+	.datad(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9_sumout ),
+	.datae(gnd),
+	.dataf(!\bIn[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1 .lut_mask = 64'h00C000C000000000;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N42
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2_combout  = ( \bIn[1]~input_o  & ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1_sumout  & ( \aIn[3]~input_o  ) ) ) # ( !\bIn[1]~input_o  & ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1_sumout  & ( ((!\bIn[2]~input_o  & (!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[1]~5_sumout  & !\bIn[3]~input_o ))) # (\aIn[3]~input_o ) ) ) ) # ( 
+// \bIn[1]~input_o  & ( !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1_sumout  & ( \aIn[3]~input_o  ) ) ) # ( !\bIn[1]~input_o  & ( !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1_sumout  & ( 
+// (\aIn[3]~input_o  & (((\bIn[3]~input_o ) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[1]~5_sumout )) # (\bIn[2]~input_o ))) ) ) )
+
+	.dataa(!\bIn[2]~input_o ),
+	.datab(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[1]~5_sumout ),
+	.datac(!\aIn[3]~input_o ),
+	.datad(!\bIn[3]~input_o ),
+	.datae(!\bIn[1]~input_o ),
+	.dataf(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_0_result_int[0]~1_sumout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2 .lut_mask = 64'h070F0F0F8F0F0F0F;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N51
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose[5] (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] = ((\bIn[3]~input_o ) # (\bIn[2]~input_o )) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout )
+
+	.dataa(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ),
+	.datab(!\bIn[2]~input_o ),
+	.datac(!\bIn[3]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose[5] .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose[5] .lut_mask = 64'h7F7F7F7F7F7F7F7F;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose[5] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X16_Y0_N1
+cyclonev_io_ibuf \aIn[1]~input (
+	.i(aIn[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\aIn[1]~input_o ));
+// synopsys translate_off
+defparam \aIn[1]~input .bus_hold = "false";
+defparam \aIn[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N0
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5_sumout  = SUM(( !\aIn[1]~input_o  $ (!\bIn[0]~input_o ) ) + ( !VCC ) + ( !VCC ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~6  = CARRY(( !\aIn[1]~input_o  $ (!\bIn[0]~input_o ) ) + ( !VCC ) + ( !VCC ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~7  = SHARE((!\bIn[0]~input_o ) # (\aIn[1]~input_o ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\aIn[1]~input_o ),
+	.datad(!\bIn[0]~input_o ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5_sumout ),
+	.cout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~6 ),
+	.shareout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~7 ));
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5 .lut_mask = 64'h0000FF0F00000FF0;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N3
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout  = SUM(( !\bIn[1]~input_o  $ (((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] & 
+// (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5_sumout )) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] & ((\aIn[2]~input_o ))))) ) + ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~7  ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~6  ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~10  = CARRY(( !\bIn[1]~input_o  $ (((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] & 
+// (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5_sumout )) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] & ((\aIn[2]~input_o ))))) ) + ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~7  ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~6  ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~11  = SHARE((!\bIn[1]~input_o  & ((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] & 
+// (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5_sumout )) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] & ((\aIn[2]~input_o ))))))
+
+	.dataa(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5]),
+	.datab(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5_sumout ),
+	.datac(!\aIn[2]~input_o ),
+	.datad(!\bIn[1]~input_o ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~6 ),
+	.sharein(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~7 ),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout ),
+	.cout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~10 ),
+	.shareout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~11 ));
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9 .lut_mask = 64'h000027000000D827;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N6
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13_sumout  = SUM(( !\bIn[2]~input_o  $ (((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] & 
+// ((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9_sumout ))) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] & (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2_combout )))) ) + ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~11  ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~10  ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~14  = CARRY(( !\bIn[2]~input_o  $ (((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] & 
+// ((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9_sumout ))) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] & (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2_combout )))) ) + ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~11  ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~10  ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~15  = SHARE((!\bIn[2]~input_o  & ((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] & 
+// ((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9_sumout ))) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5] & (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2_combout )))))
+
+	.dataa(!\bIn[2]~input_o ),
+	.datab(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2_combout ),
+	.datac(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [5]),
+	.datad(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[1]~9_sumout ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~10 ),
+	.sharein(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~11 ),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13_sumout ),
+	.cout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~14 ),
+	.shareout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~15 ));
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13 .lut_mask = 64'h000002A20000A959;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N9
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  = SUM(( VCC ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~15  ) + ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~14  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~14 ),
+	.sharein(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~15 ),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1 .lut_mask = 64'h000000000000FFFF;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N33
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose[10] (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [10] = (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ) # (\bIn[3]~input_o )
+
+	.dataa(!\bIn[3]~input_o ),
+	.datab(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [10]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose[10] .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose[10] .lut_mask = 64'h7777777777777777;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose[10] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N39
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3_combout  = ( \bIn[2]~input_o  & ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2_combout  ) ) # ( !\bIn[2]~input_o  & ( 
+// (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2_combout  & ((\bIn[3]~input_o ) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ))) ) )
+
+	.dataa(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[0]~2_combout ),
+	.datad(!\bIn[3]~input_o ),
+	.datae(gnd),
+	.dataf(!\bIn[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3 .lut_mask = 64'h050F050F0F0F0F0F;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N48
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0_combout  = ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5_sumout  & ( 
+// ((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout  & (!\bIn[2]~input_o  & !\bIn[3]~input_o ))) # (\aIn[2]~input_o ) ) ) # ( !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5_sumout  & ( 
+// (\aIn[2]~input_o  & (((\bIn[3]~input_o ) # (\bIn[2]~input_o )) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ))) ) )
+
+	.dataa(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ),
+	.datab(!\bIn[2]~input_o ),
+	.datac(!\aIn[2]~input_o ),
+	.datad(!\bIn[3]~input_o ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_1_result_int[0]~5_sumout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0 .lut_mask = 64'h070F070F8F0F8F0F;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X12_Y0_N18
+cyclonev_io_ibuf \aIn[0]~input (
+	.i(aIn[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\aIn[0]~input_o ));
+// synopsys translate_off
+defparam \aIn[0]~input .bus_hold = "false";
+defparam \aIn[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N12
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~22 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~22_cout  = CARRY(( VCC ) + ( VCC ) + ( !VCC ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(),
+	.cout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~22_cout ),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~22 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~22 .lut_mask = 64'h000000000000FFFF;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~22 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N15
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~5 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~5_sumout  = SUM(( !\bIn[0]~input_o  ) + ( \aIn[0]~input_o  ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~22_cout  ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~6  = CARRY(( !\bIn[0]~input_o  ) + ( \aIn[0]~input_o  ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~22_cout  ))
+
+	.dataa(!\aIn[0]~input_o ),
+	.datab(gnd),
+	.datac(!\bIn[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~22_cout ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~5_sumout ),
+	.cout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~6 ),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~5 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~5 .lut_mask = 64'h0000AAAA0000F0F0;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N18
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~9 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~9_sumout  = SUM(( !\bIn[1]~input_o  ) + ( (!\bIn[3]~input_o  & ((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & 
+// (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5_sumout )) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & ((\aIn[1]~input_o ))))) # (\bIn[3]~input_o  & (((\aIn[1]~input_o )))) ) + ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~6  ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~10  = CARRY(( !\bIn[1]~input_o  ) + ( (!\bIn[3]~input_o  & ((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & 
+// (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5_sumout )) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & ((\aIn[1]~input_o ))))) # (\bIn[3]~input_o  & (((\aIn[1]~input_o )))) ) + ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~6  ))
+
+	.dataa(!\bIn[3]~input_o ),
+	.datab(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ),
+	.datac(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5_sumout ),
+	.datad(!\bIn[1]~input_o ),
+	.datae(gnd),
+	.dataf(!\aIn[1]~input_o ),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~6 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~9_sumout ),
+	.cout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~10 ),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~9 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~9 .lut_mask = 64'h0000F7800000FF00;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~9 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N21
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~13 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~13_sumout  = SUM(( !\bIn[2]~input_o  ) + ( (!\bIn[3]~input_o  & ((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & 
+// (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout )) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & ((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0_combout 
+// ))))) # (\bIn[3]~input_o  & (((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0_combout )))) ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~10  ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~14  = CARRY(( !\bIn[2]~input_o  ) + ( (!\bIn[3]~input_o  & ((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & 
+// (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout )) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & ((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0_combout 
+// ))))) # (\bIn[3]~input_o  & (((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0_combout )))) ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~10  ))
+
+	.dataa(!\bIn[3]~input_o ),
+	.datab(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ),
+	.datac(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout ),
+	.datad(!\bIn[2]~input_o ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0_combout ),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~10 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~13_sumout ),
+	.cout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~14 ),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~13 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~13 .lut_mask = 64'h0000F7800000FF00;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~13 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N24
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~17 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~17_sumout  = SUM(( !\bIn[3]~input_o  ) + ( (!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [10] & 
+// (((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13_sumout )))) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [10] & (((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3_combout )) # 
+// (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1_combout ))) ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~14  ))
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~18  = CARRY(( !\bIn[3]~input_o  ) + ( (!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [10] & (((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13_sumout 
+// )))) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [10] & (((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3_combout )) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1_combout ))) ) + ( 
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~14  ))
+
+	.dataa(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1_combout ),
+	.datab(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13_sumout ),
+	.datac(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|selnose [10]),
+	.datad(!\bIn[3]~input_o ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3_combout ),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~14 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~17_sumout ),
+	.cout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~18 ),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~17 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~17 .lut_mask = 64'h0000CAC00000FF00;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~17 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N54
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux0~1 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux0~1_combout  = ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3_combout  & ( (!\bIn[3]~input_o  & (!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & 
+// !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13_sumout )) ) ) # ( !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3_combout  & ( (!\bIn[3]~input_o  & 
+// ((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & ((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13_sumout ))) # 
+// (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & (!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1_combout )))) # (\bIn[3]~input_o  & 
+// (((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1_combout )))) ) )
+
+	.dataa(!\bIn[3]~input_o ),
+	.datab(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ),
+	.datac(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~1_combout ),
+	.datad(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[2]~13_sumout ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[5]~3_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux0~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux0~1 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux0~1 .lut_mask = 64'hF870F87088008800;
+defparam \fpgaAlu|aluMuxInstance|Mux0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N51
+cyclonev_lcell_comb \fpgaAlu|aluSl|Mux0~2 (
+// Equation(s):
+// \fpgaAlu|aluSl|Mux0~2_combout  = ( !\bIn[2]~input_o  & ( \aIn[1]~input_o  ) )
+
+	.dataa(!\aIn[1]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\bIn[2]~input_o ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluSl|Mux0~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluSl|Mux0~2 .extended_lut = "off";
+defparam \fpgaAlu|aluSl|Mux0~2 .lut_mask = 64'h5555000055550000;
+defparam \fpgaAlu|aluSl|Mux0~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N0
+cyclonev_lcell_comb \fpgaAlu|aluSl|LessThan0~0 (
+// Equation(s):
+// \fpgaAlu|aluSl|LessThan0~0_combout  = ( \bIn[3]~input_o  ) # ( !\bIn[3]~input_o  & ( (\bIn[2]~input_o  & ((\bIn[0]~input_o ) # (\bIn[1]~input_o ))) ) )
+
+	.dataa(!\bIn[1]~input_o ),
+	.datab(!\bIn[2]~input_o ),
+	.datac(!\bIn[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\bIn[3]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluSl|LessThan0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluSl|LessThan0~0 .extended_lut = "off";
+defparam \fpgaAlu|aluSl|LessThan0~0 .lut_mask = 64'h13131313FFFFFFFF;
+defparam \fpgaAlu|aluSl|LessThan0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N9
+cyclonev_lcell_comb \fpgaAlu|aluSl|Mux0~1 (
+// Equation(s):
+// \fpgaAlu|aluSl|Mux0~1_combout  = ( !\bIn[2]~input_o  & ( \aIn[2]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\bIn[2]~input_o ),
+	.dataf(!\aIn[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluSl|Mux0~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluSl|Mux0~1 .extended_lut = "off";
+defparam \fpgaAlu|aluSl|Mux0~1 .lut_mask = 64'h00000000FFFF0000;
+defparam \fpgaAlu|aluSl|Mux0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N27
+cyclonev_lcell_comb \fpgaAlu|aluSl|Mux0~0 (
+// Equation(s):
+// \fpgaAlu|aluSl|Mux0~0_combout  = ( \aIn[0]~input_o  & ( !\bIn[2]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\aIn[0]~input_o ),
+	.dataf(!\bIn[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluSl|Mux0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluSl|Mux0~0 .extended_lut = "off";
+defparam \fpgaAlu|aluSl|Mux0~0 .lut_mask = 64'h0000FFFF00000000;
+defparam \fpgaAlu|aluSl|Mux0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N54
+cyclonev_lcell_comb \fpgaAlu|aluSl|Mux0~3 (
+// Equation(s):
+// \fpgaAlu|aluSl|Mux0~3_combout  = ( \aIn[3]~input_o  & ( !\bIn[2]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\bIn[2]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\aIn[3]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluSl|Mux0~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluSl|Mux0~3 .extended_lut = "off";
+defparam \fpgaAlu|aluSl|Mux0~3 .lut_mask = 64'h00000000F0F0F0F0;
+defparam \fpgaAlu|aluSl|Mux0~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N0
+cyclonev_lcell_comb \fpgaAlu|aluSl|Mux0~4 (
+// Equation(s):
+// \fpgaAlu|aluSl|Mux0~4_combout  = ( !\bIn[0]~input_o  & ( (!\fpgaAlu|aluSl|LessThan0~0_combout  & (((!\bIn[1]~input_o  & ((\fpgaAlu|aluSl|Mux0~3_combout ))) # (\bIn[1]~input_o  & (\fpgaAlu|aluSl|Mux0~2_combout ))))) ) ) # ( \bIn[0]~input_o  & ( 
+// ((!\fpgaAlu|aluSl|LessThan0~0_combout  & ((!\bIn[1]~input_o  & (\fpgaAlu|aluSl|Mux0~1_combout )) # (\bIn[1]~input_o  & ((\fpgaAlu|aluSl|Mux0~0_combout )))))) ) )
+
+	.dataa(!\fpgaAlu|aluSl|Mux0~2_combout ),
+	.datab(!\fpgaAlu|aluSl|LessThan0~0_combout ),
+	.datac(!\fpgaAlu|aluSl|Mux0~1_combout ),
+	.datad(!\fpgaAlu|aluSl|Mux0~0_combout ),
+	.datae(!\bIn[0]~input_o ),
+	.dataf(!\bIn[1]~input_o ),
+	.datag(!\fpgaAlu|aluSl|Mux0~3_combout ),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluSl|Mux0~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluSl|Mux0~4 .extended_lut = "on";
+defparam \fpgaAlu|aluSl|Mux0~4 .lut_mask = 64'h0C0C0C0C444400CC;
+defparam \fpgaAlu|aluSl|Mux0~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N45
+cyclonev_lcell_comb \fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0 (
+// Equation(s):
+// \fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0_combout  = !\bIn[3]~input_o  $ (!\aIn[3]~input_o )
+
+	.dataa(gnd),
+	.datab(!\bIn[3]~input_o ),
+	.datac(!\aIn[3]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0 .extended_lut = "off";
+defparam \fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0 .lut_mask = 64'h3C3C3C3C3C3C3C3C;
+defparam \fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N3
+cyclonev_lcell_comb \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c (
+// Equation(s):
+// \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c~combout  = ( \aIn[0]~input_o  & ( !\bIn[2]~input_o  $ (((!\bIn[1]~input_o ) # ((!\aIn[1]~input_o ) # (\bIn[0]~input_o )))) ) ) # ( !\aIn[0]~input_o  & ( (\bIn[1]~input_o  & \aIn[1]~input_o ) ) )
+
+	.dataa(!\bIn[1]~input_o ),
+	.datab(!\bIn[2]~input_o ),
+	.datac(!\bIn[0]~input_o ),
+	.datad(!\aIn[1]~input_o ),
+	.datae(gnd),
+	.dataf(!\aIn[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c .extended_lut = "off";
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c .lut_mask = 64'h0055005533633363;
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N54
+cyclonev_lcell_comb \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut (
+// Equation(s):
+// \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout  = ( \bIn[1]~input_o  & ( (\aIn[0]~input_o  & (\aIn[1]~input_o  & ((\bIn[2]~input_o ) # (\bIn[0]~input_o )))) ) )
+
+	.dataa(!\aIn[0]~input_o ),
+	.datab(!\aIn[1]~input_o ),
+	.datac(!\bIn[0]~input_o ),
+	.datad(!\bIn[2]~input_o ),
+	.datae(gnd),
+	.dataf(!\bIn[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut .extended_lut = "off";
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut .lut_mask = 64'h0000000001110111;
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N57
+cyclonev_lcell_comb \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c (
+// Equation(s):
+// \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c~combout  = ( \bIn[3]~input_o  & ( !\aIn[0]~input_o  $ (!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout  $ (((\aIn[1]~input_o  & \bIn[2]~input_o )))) ) ) # ( 
+// !\bIn[3]~input_o  & ( !\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout  $ (((!\aIn[1]~input_o ) # (!\bIn[2]~input_o ))) ) )
+
+	.dataa(!\aIn[0]~input_o ),
+	.datab(!\aIn[1]~input_o ),
+	.datac(!\bIn[2]~input_o ),
+	.datad(!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout ),
+	.datae(gnd),
+	.dataf(!\bIn[3]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c .extended_lut = "off";
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c .lut_mask = 64'h03FC03FC56A956A9;
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N15
+cyclonev_lcell_comb \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|c (
+// Equation(s):
+// \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|c~combout  = ( \bIn[1]~input_o  & ( !\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c~combout  $ (((!\aIn[2]~input_o ) # 
+// ((\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c~combout  & \bIn[0]~input_o )))) ) ) # ( !\bIn[1]~input_o  & ( !\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c~combout  $ 
+// (((!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c~combout ) # ((!\aIn[2]~input_o ) # (!\bIn[0]~input_o )))) ) )
+
+	.dataa(!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c~combout ),
+	.datab(!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c~combout ),
+	.datac(!\aIn[2]~input_o ),
+	.datad(!\bIn[0]~input_o ),
+	.datae(gnd),
+	.dataf(!\bIn[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|c~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|c .extended_lut = "off";
+defparam \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|c .lut_mask = 64'h333633363C393C39;
+defparam \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|c .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N42
+cyclonev_lcell_comb \fpgaAlu|aluMul|sums_generator[2].sum|sum|c~0 (
+// Equation(s):
+// \fpgaAlu|aluMul|sums_generator[2].sum|sum|c~0_combout  = ( \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|c~combout  & ( (!\aIn[3]~input_o ) # (!\bIn[0]~input_o ) ) ) # ( !\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|c~combout  & ( 
+// (\aIn[3]~input_o  & \bIn[0]~input_o ) ) )
+
+	.dataa(!\aIn[3]~input_o ),
+	.datab(gnd),
+	.datac(!\bIn[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|c~combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|sums_generator[2].sum|sum|c~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|sums_generator[2].sum|sum|c~0 .extended_lut = "off";
+defparam \fpgaAlu|aluMul|sums_generator[2].sum|sum|c~0 .lut_mask = 64'h05050505FAFAFAFA;
+defparam \fpgaAlu|aluMul|sums_generator[2].sum|sum|c~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N0
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5_sumout  = SUM(( !\aIn[3]~input_o  $ (!\bIn[0]~input_o ) ) + ( !VCC ) + ( !VCC ))
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~6  = CARRY(( !\aIn[3]~input_o  $ (!\bIn[0]~input_o ) ) + ( !VCC ) + ( !VCC ))
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~7  = SHARE((!\bIn[0]~input_o ) # (\aIn[3]~input_o ))
+
+	.dataa(gnd),
+	.datab(!\aIn[3]~input_o ),
+	.datac(!\bIn[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5_sumout ),
+	.cout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~6 ),
+	.shareout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~7 ));
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5 .lut_mask = 64'h0000F3F300003C3C;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N3
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[1]~1 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[1]~1_sumout  = SUM(( VCC ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~7  ) + ( 
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~6  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~6 ),
+	.sharein(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~7 ),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[1]~1_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[1]~1 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[1]~1 .lut_mask = 64'h000000000000FFFF;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[1]~1 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N42
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose[0] (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0] = ( \bIn[2]~input_o  ) # ( !\bIn[2]~input_o  & ( ((\bIn[1]~input_o ) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[1]~1_sumout )) # (\bIn[3]~input_o ) ) )
+
+	.dataa(gnd),
+	.datab(!\bIn[3]~input_o ),
+	.datac(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[1]~1_sumout ),
+	.datad(!\bIn[1]~input_o ),
+	.datae(gnd),
+	.dataf(!\bIn[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose[0] .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose[0] .lut_mask = 64'h3FFF3FFFFFFFFFFF;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose[0] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N54
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux0~3 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux0~3_combout  = ( \fpgaAlu|aluMul|sums_generator[2].sum|sum|c~0_combout  & ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0] & ( (!\fpgaMuxi|result [3] & (((!\fpgaMuxi|result [0])))) # (\fpgaMuxi|result [3] & 
+// ((!\fpgaMuxi|result [0] & ((\fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0_combout ))) # (\fpgaMuxi|result [0] & (\fpgaAlu|aluSl|Mux0~4_combout )))) ) ) ) # ( !\fpgaAlu|aluMul|sums_generator[2].sum|sum|c~0_combout  & ( 
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0] & ( (\fpgaMuxi|result [3] & ((!\fpgaMuxi|result [0] & ((\fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0_combout ))) # (\fpgaMuxi|result [0] & (\fpgaAlu|aluSl|Mux0~4_combout )))) ) ) ) # ( 
+// \fpgaAlu|aluMul|sums_generator[2].sum|sum|c~0_combout  & ( !\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0] & ( (!\fpgaMuxi|result [3]) # ((!\fpgaMuxi|result [0] & ((\fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0_combout ))) # 
+// (\fpgaMuxi|result [0] & (\fpgaAlu|aluSl|Mux0~4_combout ))) ) ) ) # ( !\fpgaAlu|aluMul|sums_generator[2].sum|sum|c~0_combout  & ( !\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0] & ( (!\fpgaMuxi|result [3] & (((\fpgaMuxi|result [0])))) # 
+// (\fpgaMuxi|result [3] & ((!\fpgaMuxi|result [0] & ((\fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0_combout ))) # (\fpgaMuxi|result [0] & (\fpgaAlu|aluSl|Mux0~4_combout )))) ) ) )
+
+	.dataa(!\fpgaMuxi|result [3]),
+	.datab(!\fpgaAlu|aluSl|Mux0~4_combout ),
+	.datac(!\fpgaMuxi|result [0]),
+	.datad(!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0_combout ),
+	.datae(!\fpgaAlu|aluMul|sums_generator[2].sum|sum|c~0_combout ),
+	.dataf(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux0~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux0~3 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux0~3 .lut_mask = 64'h0B5BABFB0151A1F1;
+defparam \fpgaAlu|aluMuxInstance|Mux0~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N57
+cyclonev_lcell_comb \fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut (
+// Equation(s):
+// \fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout  = ( \bIn[0]~input_o  & ( (!\bIn[1]~input_o  & \aIn[1]~input_o ) ) ) # ( !\bIn[0]~input_o  & ( (!\bIn[1]~input_o  & ((\aIn[0]~input_o ) # (\aIn[1]~input_o ))) # (\bIn[1]~input_o  & (\aIn[1]~input_o  
+// & \aIn[0]~input_o )) ) )
+
+	.dataa(!\bIn[1]~input_o ),
+	.datab(!\aIn[1]~input_o ),
+	.datac(!\aIn[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\bIn[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut .extended_lut = "off";
+defparam \fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut .lut_mask = 64'h2B2B2B2B22222222;
+defparam \fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N48
+cyclonev_lcell_comb \fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0 (
+// Equation(s):
+// \fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0_combout  = ( \fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0_combout  & ( (!\bIn[2]~input_o  & (!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout  & !\aIn[2]~input_o )) # (\bIn[2]~input_o  & 
+// ((!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout ) # (!\aIn[2]~input_o ))) ) ) # ( !\fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0_combout  & ( (!\bIn[2]~input_o  & ((\aIn[2]~input_o ) # (\fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout 
+// ))) # (\bIn[2]~input_o  & (\fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout  & \aIn[2]~input_o )) ) )
+
+	.dataa(!\bIn[2]~input_o ),
+	.datab(!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout ),
+	.datac(!\aIn[2]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|c~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0 .extended_lut = "off";
+defparam \fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0 .lut_mask = 64'h2B2B2B2BD4D4D4D4;
+defparam \fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N15
+cyclonev_lcell_comb \fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut (
+// Equation(s):
+// \fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout  = ( \aIn[2]~input_o  & ( (!\bIn[3]~input_o  & ((!\bIn[2]~input_o ) # ((\aIn[3]~input_o ) # (\fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout )))) # (\bIn[3]~input_o  & (\aIn[3]~input_o  & 
+// ((!\bIn[2]~input_o ) # (\fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout )))) ) ) # ( !\aIn[2]~input_o  & ( (!\bIn[3]~input_o  & (((!\bIn[2]~input_o  & \fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout )) # (\aIn[3]~input_o ))) # 
+// (\bIn[3]~input_o  & (!\bIn[2]~input_o  & (\fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout  & \aIn[3]~input_o ))) ) )
+
+	.dataa(!\bIn[2]~input_o ),
+	.datab(!\bIn[3]~input_o ),
+	.datac(!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout ),
+	.datad(!\aIn[3]~input_o ),
+	.datae(gnd),
+	.dataf(!\aIn[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut .extended_lut = "off";
+defparam \fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut .lut_mask = 64'h08CE08CE8CEF8CEF;
+defparam \fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N54
+cyclonev_lcell_comb \fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0 (
+// Equation(s):
+// \fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout  = !\bIn[1]~input_o  $ (!\aIn[1]~input_o )
+
+	.dataa(!\bIn[1]~input_o ),
+	.datab(!\aIn[1]~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0 .extended_lut = "off";
+defparam \fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0 .lut_mask = 64'h6666666666666666;
+defparam \fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N18
+cyclonev_lcell_comb \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0 (
+// Equation(s):
+// \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0_combout  = ( \aIn[2]~input_o  & ( !\bIn[2]~input_o  ) ) # ( !\aIn[2]~input_o  & ( \bIn[2]~input_o  ) )
+
+	.dataa(!\bIn[2]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\aIn[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0 .extended_lut = "off";
+defparam \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0 .lut_mask = 64'h55555555AAAAAAAA;
+defparam \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N51
+cyclonev_lcell_comb \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c (
+// Equation(s):
+// \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout  = ( \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0_combout  & ( !\fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout  ) ) # ( !\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0_combout  & ( 
+// \fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout  ) )
+
+	.dataa(gnd),
+	.datab(!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|carryOut~combout ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c .extended_lut = "off";
+defparam \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c .lut_mask = 64'h33333333CCCCCCCC;
+defparam \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N18
+cyclonev_lcell_comb \fpgaAlu|aluRes|cOut[3]~2 (
+// Equation(s):
+// \fpgaAlu|aluRes|cOut[3]~2_combout  = ( \aIn[0]~input_o  & ( \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout  & ( !\fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0_combout  $ (!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ) ) ) ) # ( 
+// !\aIn[0]~input_o  & ( \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout  & ( !\fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0_combout  $ (!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ) ) ) ) # ( \aIn[0]~input_o  & ( 
+// !\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout  & ( !\fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0_combout  $ (((!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ) # ((!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout  & \bIn[0]~input_o )))) 
+// ) ) ) # ( !\aIn[0]~input_o  & ( !\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout  & ( !\fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0_combout  $ (((!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ) # 
+// ((!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout  & !\bIn[0]~input_o )))) ) ) )
+
+	.dataa(!\fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0_combout ),
+	.datab(!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ),
+	.datac(!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout ),
+	.datad(!\bIn[0]~input_o ),
+	.datae(!\aIn[0]~input_o ),
+	.dataf(!\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluRes|cOut[3]~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluRes|cOut[3]~2 .extended_lut = "off";
+defparam \fpgaAlu|aluRes|cOut[3]~2 .lut_mask = 64'h5666665666666666;
+defparam \fpgaAlu|aluRes|cOut[3]~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N33
+cyclonev_lcell_comb \fpgaAlu|aluMul|cOut[0] (
+// Equation(s):
+// \fpgaAlu|aluMul|cOut [0] = ( \bIn[0]~input_o  & ( \aIn[0]~input_o  ) )
+
+	.dataa(!\aIn[0]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\bIn[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|cOut [0]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|cOut[0] .extended_lut = "off";
+defparam \fpgaAlu|aluMul|cOut[0] .lut_mask = 64'h0000000055555555;
+defparam \fpgaAlu|aluMul|cOut[0] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N30
+cyclonev_lcell_comb \fpgaAlu|aluSum|sum_creator[1].sum|carryOut (
+// Equation(s):
+// \fpgaAlu|aluSum|sum_creator[1].sum|carryOut~combout  = ( \fpgaAlu|aluMul|cOut [0] & ( (\bIn[1]~input_o ) # (\aIn[1]~input_o ) ) ) # ( !\fpgaAlu|aluMul|cOut [0] & ( (\aIn[1]~input_o  & \bIn[1]~input_o ) ) )
+
+	.dataa(gnd),
+	.datab(!\aIn[1]~input_o ),
+	.datac(!\bIn[1]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluMul|cOut [0]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluSum|sum_creator[1].sum|carryOut~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluSum|sum_creator[1].sum|carryOut .extended_lut = "off";
+defparam \fpgaAlu|aluSum|sum_creator[1].sum|carryOut .lut_mask = 64'h030303033F3F3F3F;
+defparam \fpgaAlu|aluSum|sum_creator[1].sum|carryOut .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N6
+cyclonev_lcell_comb \fpgaAlu|aluSum|sum_creator[2].sum|carryOut (
+// Equation(s):
+// \fpgaAlu|aluSum|sum_creator[2].sum|carryOut~combout  = ( \aIn[2]~input_o  & ( (\fpgaAlu|aluSum|sum_creator[1].sum|carryOut~combout ) # (\bIn[2]~input_o ) ) ) # ( !\aIn[2]~input_o  & ( (\bIn[2]~input_o  & \fpgaAlu|aluSum|sum_creator[1].sum|carryOut~combout 
+// ) ) )
+
+	.dataa(!\bIn[2]~input_o ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluSum|sum_creator[1].sum|carryOut~combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\aIn[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluSum|sum_creator[2].sum|carryOut~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluSum|sum_creator[2].sum|carryOut .extended_lut = "off";
+defparam \fpgaAlu|aluSum|sum_creator[2].sum|carryOut .lut_mask = 64'h050505055F5F5F5F;
+defparam \fpgaAlu|aluSum|sum_creator[2].sum|carryOut .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N24
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux0~2 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux0~2_combout  = ( \aIn[3]~input_o  & ( \fpgaAlu|aluSum|sum_creator[2].sum|carryOut~combout  & ( (!\fpgaMuxi|result [0] & (((\fpgaMuxi|result [3])) # (\bIn[3]~input_o ))) # (\fpgaMuxi|result [0] & ((!\fpgaMuxi|result [3] & 
+// ((\fpgaAlu|aluRes|cOut[3]~2_combout ))) # (\fpgaMuxi|result [3] & (\bIn[3]~input_o )))) ) ) ) # ( !\aIn[3]~input_o  & ( \fpgaAlu|aluSum|sum_creator[2].sum|carryOut~combout  & ( (!\fpgaMuxi|result [0] & (!\bIn[3]~input_o  $ (((\fpgaMuxi|result [3]))))) # 
+// (\fpgaMuxi|result [0] & (((\fpgaAlu|aluRes|cOut[3]~2_combout  & !\fpgaMuxi|result [3])))) ) ) ) # ( \aIn[3]~input_o  & ( !\fpgaAlu|aluSum|sum_creator[2].sum|carryOut~combout  & ( (!\fpgaMuxi|result [0] & ((!\bIn[3]~input_o ) # ((\fpgaMuxi|result [3])))) # 
+// (\fpgaMuxi|result [0] & ((!\fpgaMuxi|result [3] & ((\fpgaAlu|aluRes|cOut[3]~2_combout ))) # (\fpgaMuxi|result [3] & (\bIn[3]~input_o )))) ) ) ) # ( !\aIn[3]~input_o  & ( !\fpgaAlu|aluSum|sum_creator[2].sum|carryOut~combout  & ( (!\fpgaMuxi|result [0] & 
+// (\bIn[3]~input_o )) # (\fpgaMuxi|result [0] & (((\fpgaAlu|aluRes|cOut[3]~2_combout  & !\fpgaMuxi|result [3])))) ) ) )
+
+	.dataa(!\fpgaMuxi|result [0]),
+	.datab(!\bIn[3]~input_o ),
+	.datac(!\fpgaAlu|aluRes|cOut[3]~2_combout ),
+	.datad(!\fpgaMuxi|result [3]),
+	.datae(!\aIn[3]~input_o ),
+	.dataf(!\fpgaAlu|aluSum|sum_creator[2].sum|carryOut~combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux0~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux0~2 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux0~2 .lut_mask = 64'h27228DBB8D2227BB;
+defparam \fpgaAlu|aluMuxInstance|Mux0~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N12
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux0~4 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux0~4_combout  = ( \fpgaAlu|aluMuxInstance|Mux0~2_combout  & ( (!\fpgaMuxi|result [2] & ((!\fpgaMuxi|result [1]) # (\fpgaAlu|aluMuxInstance|Mux0~3_combout ))) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux0~2_combout  & ( (\fpgaMuxi|result 
+// [1] & (!\fpgaMuxi|result [2] & \fpgaAlu|aluMuxInstance|Mux0~3_combout )) ) )
+
+	.dataa(!\fpgaMuxi|result [1]),
+	.datab(gnd),
+	.datac(!\fpgaMuxi|result [2]),
+	.datad(!\fpgaAlu|aluMuxInstance|Mux0~3_combout ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux0~2_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux0~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux0~4 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux0~4 .lut_mask = 64'h00500050A0F0A0F0;
+defparam \fpgaAlu|aluMuxInstance|Mux0~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N21
+cyclonev_lcell_comb \fpgaAlu|aluSl|Mux2~0 (
+// Equation(s):
+// \fpgaAlu|aluSl|Mux2~0_combout  = ( !\bIn[1]~input_o  & ( (!\bIn[2]~input_o  & !\fpgaAlu|aluSl|LessThan0~0_combout ) ) )
+
+	.dataa(!\bIn[2]~input_o ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluSl|LessThan0~0_combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\bIn[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluSl|Mux2~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluSl|Mux2~0 .extended_lut = "off";
+defparam \fpgaAlu|aluSl|Mux2~0 .lut_mask = 64'hA0A0A0A000000000;
+defparam \fpgaAlu|aluSl|Mux2~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N51
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux2~6 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux2~6_combout  = ( \fpgaMuxi|result [2] & ( (!\fpgaMuxi|result [0] & !\fpgaMuxi|result [1]) ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\fpgaMuxi|result [0]),
+	.datad(!\fpgaMuxi|result [1]),
+	.datae(gnd),
+	.dataf(!\fpgaMuxi|result [2]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux2~6_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux2~6 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux2~6 .lut_mask = 64'h00000000F000F000;
+defparam \fpgaAlu|aluMuxInstance|Mux2~6 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N48
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux0~5 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux0~5_combout  = ( \fpgaAlu|aluMuxInstance|Mux2~6_combout  & ( (!\bIn[0]~input_o  & (\fpgaMuxi|result [3] & (\aIn[3]~input_o  & \fpgaAlu|aluSl|Mux2~0_combout ))) ) )
+
+	.dataa(!\bIn[0]~input_o ),
+	.datab(!\fpgaMuxi|result [3]),
+	.datac(!\aIn[3]~input_o ),
+	.datad(!\fpgaAlu|aluSl|Mux2~0_combout ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux2~6_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux0~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux0~5 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux0~5 .lut_mask = 64'h0000000000020002;
+defparam \fpgaAlu|aluMuxInstance|Mux0~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N27
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  = SUM(( VCC ) + ( GND ) + ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~18  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~18 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1 .lut_mask = 64'h0000FFFF0000FFFF;
+defparam \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y1_N18
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux0~6 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux0~6_combout  = ( !\fpgaAlu|aluMuxInstance|Mux0~5_combout  & ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  & ( (!\fpgaAlu|aluMuxInstance|Mux0~4_combout  & ((!\fpgaAlu|aluMuxInstance|Mux0~0_combout ) # 
+// (\fpgaAlu|aluMuxInstance|Mux0~1_combout ))) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux0~5_combout  & ( !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  & ( (!\fpgaAlu|aluMuxInstance|Mux0~4_combout  & 
+// ((!\fpgaAlu|aluMuxInstance|Mux0~0_combout ) # (!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~17_sumout ))) ) ) )
+
+	.dataa(!\fpgaAlu|aluMuxInstance|Mux0~0_combout ),
+	.datab(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~17_sumout ),
+	.datac(!\fpgaAlu|aluMuxInstance|Mux0~1_combout ),
+	.datad(!\fpgaAlu|aluMuxInstance|Mux0~4_combout ),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux0~5_combout ),
+	.dataf(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux0~6_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux0~6 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux0~6 .lut_mask = 64'hEE000000AF000000;
+defparam \fpgaAlu|aluMuxInstance|Mux0~6 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N12
+cyclonev_lcell_comb \fpgaAlu|aluSr|Mux0~0 (
+// Equation(s):
+// \fpgaAlu|aluSr|Mux0~0_combout  = ( \fpgaAlu|aluSl|Mux0~0_combout  & ( \bIn[1]~input_o  & ( (!\bIn[0]~input_o  & ((\fpgaAlu|aluSl|Mux0~1_combout ))) # (\bIn[0]~input_o  & (\fpgaAlu|aluSl|Mux0~3_combout )) ) ) ) # ( !\fpgaAlu|aluSl|Mux0~0_combout  & ( 
+// \bIn[1]~input_o  & ( (!\bIn[0]~input_o  & ((\fpgaAlu|aluSl|Mux0~1_combout ))) # (\bIn[0]~input_o  & (\fpgaAlu|aluSl|Mux0~3_combout )) ) ) ) # ( \fpgaAlu|aluSl|Mux0~0_combout  & ( !\bIn[1]~input_o  & ( (!\bIn[0]~input_o ) # (\fpgaAlu|aluSl|Mux0~2_combout ) 
+// ) ) ) # ( !\fpgaAlu|aluSl|Mux0~0_combout  & ( !\bIn[1]~input_o  & ( (\fpgaAlu|aluSl|Mux0~2_combout  & \bIn[0]~input_o ) ) ) )
+
+	.dataa(!\fpgaAlu|aluSl|Mux0~2_combout ),
+	.datab(!\bIn[0]~input_o ),
+	.datac(!\fpgaAlu|aluSl|Mux0~3_combout ),
+	.datad(!\fpgaAlu|aluSl|Mux0~1_combout ),
+	.datae(!\fpgaAlu|aluSl|Mux0~0_combout ),
+	.dataf(!\bIn[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluSr|Mux0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluSr|Mux0~0 .extended_lut = "off";
+defparam \fpgaAlu|aluSr|Mux0~0 .lut_mask = 64'h1111DDDD03CF03CF;
+defparam \fpgaAlu|aluSr|Mux0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N57
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux3~1 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux3~1_combout  = ( \fpgaAlu|aluSl|LessThan0~0_combout  & ( (!\fpgaMuxi|result [2] & ((\aIn[0]~input_o ) # (\bIn[0]~input_o ))) ) ) # ( !\fpgaAlu|aluSl|LessThan0~0_combout  & ( (!\fpgaMuxi|result [2] & (((\aIn[0]~input_o )) # 
+// (\bIn[0]~input_o ))) # (\fpgaMuxi|result [2] & (((\fpgaAlu|aluSr|Mux0~0_combout )))) ) )
+
+	.dataa(!\bIn[0]~input_o ),
+	.datab(!\fpgaAlu|aluSr|Mux0~0_combout ),
+	.datac(!\aIn[0]~input_o ),
+	.datad(!\fpgaMuxi|result [2]),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluSl|LessThan0~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux3~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux3~1 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux3~1 .lut_mask = 64'h5F335F335F005F00;
+defparam \fpgaAlu|aluMuxInstance|Mux3~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N30
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux3~2 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux3~2_combout  = ( \fpgaAlu|aluMuxInstance|Mux3~1_combout  & ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~5_sumout  & ( ((\fpgaMuxi|result [2] & ((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout ) 
+// # (\aIn[0]~input_o )))) # (\fpgaMuxi|result [3]) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux3~1_combout  & ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~5_sumout  & ( (!\fpgaMuxi|result [3] & (\fpgaMuxi|result [2] & 
+// ((!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout ) # (\aIn[0]~input_o )))) ) ) ) # ( \fpgaAlu|aluMuxInstance|Mux3~1_combout  & ( !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~5_sumout  & ( ((\aIn[0]~input_o  & 
+// (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  & \fpgaMuxi|result [2]))) # (\fpgaMuxi|result [3]) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux3~1_combout  & ( !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~5_sumout  & ( 
+// (!\fpgaMuxi|result [3] & (\aIn[0]~input_o  & (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  & \fpgaMuxi|result [2]))) ) ) )
+
+	.dataa(!\fpgaMuxi|result [3]),
+	.datab(!\aIn[0]~input_o ),
+	.datac(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout ),
+	.datad(!\fpgaMuxi|result [2]),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux3~1_combout ),
+	.dataf(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~5_sumout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux3~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux3~2 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux3~2 .lut_mask = 64'h0002555700A255F7;
+defparam \fpgaAlu|aluMuxInstance|Mux3~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N24
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1_combout  = ( \aIn[3]~input_o  & ( \bIn[2]~input_o  ) ) # ( \aIn[3]~input_o  & ( !\bIn[2]~input_o  & ( (((\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5_sumout 
+// ) # (\bIn[3]~input_o )) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[1]~1_sumout )) # (\bIn[1]~input_o ) ) ) ) # ( !\aIn[3]~input_o  & ( !\bIn[2]~input_o  & ( (!\bIn[1]~input_o  & 
+// (!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[1]~1_sumout  & (!\bIn[3]~input_o  & \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5_sumout ))) ) ) )
+
+	.dataa(!\bIn[1]~input_o ),
+	.datab(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[1]~1_sumout ),
+	.datac(!\bIn[3]~input_o ),
+	.datad(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5_sumout ),
+	.datae(!\aIn[3]~input_o ),
+	.dataf(!\bIn[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1 .lut_mask = 64'h00807FFF0000FFFF;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N30
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9_sumout  = SUM(( !\aIn[2]~input_o  $ (!\bIn[0]~input_o ) ) + ( !VCC ) + ( !VCC ))
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~10  = CARRY(( !\aIn[2]~input_o  $ (!\bIn[0]~input_o ) ) + ( !VCC ) + ( !VCC ))
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~11  = SHARE((!\bIn[0]~input_o ) # (\aIn[2]~input_o ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\aIn[2]~input_o ),
+	.datad(!\bIn[0]~input_o ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9_sumout ),
+	.cout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~10 ),
+	.shareout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~11 ));
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9 .lut_mask = 64'h0000FF0F00000FF0;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N33
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5_sumout  = SUM(( !\bIn[1]~input_o  $ (((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0] & 
+// ((\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5_sumout ))) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0] & (\aIn[3]~input_o )))) ) + ( 
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~11  ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~10  ))
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~6  = CARRY(( !\bIn[1]~input_o  $ (((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0] & 
+// ((\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5_sumout ))) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0] & (\aIn[3]~input_o )))) ) + ( 
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~11  ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~10  ))
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~7  = SHARE((!\bIn[1]~input_o  & ((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0] & 
+// ((\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5_sumout ))) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0] & (\aIn[3]~input_o )))))
+
+	.dataa(!\bIn[1]~input_o ),
+	.datab(!\aIn[3]~input_o ),
+	.datac(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_0_result_int[0]~5_sumout ),
+	.datad(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [0]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~10 ),
+	.sharein(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~11 ),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5_sumout ),
+	.cout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~6 ),
+	.shareout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~7 ));
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5 .lut_mask = 64'h00000A220000A599;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N36
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout  = SUM(( VCC ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~7  ) + ( 
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~6  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~6 ),
+	.sharein(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~7 ),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1 .lut_mask = 64'h000000000000FFFF;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N9
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose[5] (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] = ( \bIn[3]~input_o  ) # ( !\bIn[3]~input_o  & ( (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ) # (\bIn[2]~input_o ) ) )
+
+	.dataa(!\bIn[2]~input_o ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\bIn[3]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose[5] .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose[5] .lut_mask = 64'h5F5F5F5FFFFFFFFF;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose[5] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N0
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~13 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~13_sumout  = SUM(( !\aIn[1]~input_o  $ (!\bIn[0]~input_o ) ) + ( !VCC ) + ( !VCC ))
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~14  = CARRY(( !\aIn[1]~input_o  $ (!\bIn[0]~input_o ) ) + ( !VCC ) + ( !VCC ))
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~15  = SHARE((!\bIn[0]~input_o ) # (\aIn[1]~input_o ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\aIn[1]~input_o ),
+	.datad(!\bIn[0]~input_o ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~13_sumout ),
+	.cout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~14 ),
+	.shareout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~15 ));
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~13 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~13 .lut_mask = 64'h0000FF0F00000FF0;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~13 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N3
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~9 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout  = SUM(( !\bIn[1]~input_o  $ (((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & 
+// (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9_sumout )) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & ((\aIn[2]~input_o ))))) ) + ( 
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~15  ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~14  ))
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~10  = CARRY(( !\bIn[1]~input_o  $ (((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & 
+// (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9_sumout )) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & ((\aIn[2]~input_o ))))) ) + ( 
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~15  ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~14  ))
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~11  = SHARE((!\bIn[1]~input_o  & ((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & 
+// (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9_sumout )) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & ((\aIn[2]~input_o ))))))
+
+	.dataa(!\bIn[1]~input_o ),
+	.datab(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5]),
+	.datac(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9_sumout ),
+	.datad(!\aIn[2]~input_o ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~14 ),
+	.sharein(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~15 ),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout ),
+	.cout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~10 ),
+	.shareout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~11 ));
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~9 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~9 .lut_mask = 64'h0000082A0000A695;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~9 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N6
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~5 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~5_sumout  = SUM(( !\bIn[2]~input_o  $ (((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & 
+// ((\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5_sumout ))) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1_combout )))) ) + ( 
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~11  ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~10  ))
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~6  = CARRY(( !\bIn[2]~input_o  $ (((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & 
+// ((\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5_sumout ))) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1_combout )))) ) + ( 
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~11  ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~10  ))
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~7  = SHARE((!\bIn[2]~input_o  & ((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & 
+// ((\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5_sumout ))) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1_combout )))))
+
+	.dataa(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1_combout ),
+	.datab(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5]),
+	.datac(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5_sumout ),
+	.datad(!\bIn[2]~input_o ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~10 ),
+	.sharein(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~11 ),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~5_sumout ),
+	.cout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~6 ),
+	.shareout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~7 ));
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~5 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~5 .lut_mask = 64'h00001D000000E21D;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~5 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N9
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  = SUM(( VCC ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~7  ) + ( 
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~6  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~6 ),
+	.sharein(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~7 ),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1 .lut_mask = 64'h000000000000FFFF;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1 .shared_arith = "on";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N15
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose[10] (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [10] = ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  ) # ( !\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & ( 
+// \bIn[3]~input_o  ) )
+
+	.dataa(!\bIn[3]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [10]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose[10] .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose[10] .lut_mask = 64'h55555555FFFFFFFF;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose[10] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N21
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~0 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~0_combout  = ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5_sumout  & ( (!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout 
+//  & (!\bIn[2]~input_o  & !\bIn[3]~input_o )) ) )
+
+	.dataa(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ),
+	.datab(!\bIn[2]~input_o ),
+	.datac(gnd),
+	.datad(!\bIn[3]~input_o ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[1]~5_sumout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~0 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~0 .lut_mask = 64'h0000000088008800;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N12
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~2 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~2_combout  = ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1_combout  & ( ((\bIn[2]~input_o ) # 
+// (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout )) # (\bIn[3]~input_o ) ) )
+
+	.dataa(!\bIn[3]~input_o ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ),
+	.datad(!\bIn[2]~input_o ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[0]~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~2 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~2 .lut_mask = 64'h000000005FFF5FFF;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N18
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[4]~3 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[4]~3_combout  = ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9_sumout  & ( 
+// ((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout  & (!\bIn[2]~input_o  & !\bIn[3]~input_o ))) # (\aIn[2]~input_o ) ) ) # ( !\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9_sumout  & ( 
+// (\aIn[2]~input_o  & (((\bIn[3]~input_o ) # (\bIn[2]~input_o )) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ))) ) )
+
+	.dataa(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[2]~1_sumout ),
+	.datab(!\bIn[2]~input_o ),
+	.datac(!\bIn[3]~input_o ),
+	.datad(!\aIn[2]~input_o ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_1_result_int[0]~9_sumout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[4]~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[4]~3 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[4]~3 .lut_mask = 64'h007F007F80FF80FF;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[4]~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N42
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~22 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~22_cout  = CARRY(( VCC ) + ( VCC ) + ( !VCC ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(),
+	.cout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~22_cout ),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~22 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~22 .lut_mask = 64'h000000000000FFFF;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~22 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N45
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~18 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~18_cout  = CARRY(( !\bIn[0]~input_o  ) + ( \aIn[0]~input_o  ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~22_cout  ))
+
+	.dataa(gnd),
+	.datab(!\bIn[0]~input_o ),
+	.datac(!\aIn[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~22_cout ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(),
+	.cout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~18_cout ),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~18 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~18 .lut_mask = 64'h0000F0F00000CCCC;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~18 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N48
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~14 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~14_cout  = CARRY(( (!\bIn[3]~input_o  & ((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & 
+// (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~13_sumout )) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & ((\aIn[1]~input_o ))))) # (\bIn[3]~input_o  & (((\aIn[1]~input_o )))) ) + 
+// ( !\bIn[1]~input_o  ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~18_cout  ))
+
+	.dataa(!\bIn[3]~input_o ),
+	.datab(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ),
+	.datac(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[0]~13_sumout ),
+	.datad(!\aIn[1]~input_o ),
+	.datae(gnd),
+	.dataf(!\bIn[1]~input_o ),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~18_cout ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(),
+	.cout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~14_cout ),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~14 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~14 .lut_mask = 64'h000000FF0000087F;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~14 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N51
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~10 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~10_cout  = CARRY(( !\bIn[2]~input_o  ) + ( (!\bIn[3]~input_o  & ((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & 
+// (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout )) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & ((\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[4]~3_combout 
+// ))))) # (\bIn[3]~input_o  & (((\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[4]~3_combout )))) ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~14_cout  ))
+
+	.dataa(!\bIn[3]~input_o ),
+	.datab(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ),
+	.datac(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout ),
+	.datad(!\bIn[2]~input_o ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[4]~3_combout ),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~14_cout ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(),
+	.cout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~10_cout ),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~10 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~10 .lut_mask = 64'h0000F7800000FF00;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~10 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N54
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~6 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~6_cout  = CARRY(( !\bIn[3]~input_o  ) + ( (!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [10] & (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~5_sumout 
+// )) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [10] & (((\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~2_combout ) # (\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~0_combout )))) ) + ( 
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~10_cout  ))
+
+	.dataa(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|add_sub_2_result_int[2]~5_sumout ),
+	.datab(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [10]),
+	.datac(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~0_combout ),
+	.datad(!\bIn[3]~input_o ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|StageOut[5]~2_combout ),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~10_cout ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(),
+	.cout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~6_cout ),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~6 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~6 .lut_mask = 64'h0000B8880000FF00;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~6 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X11_Y1_N57
+cyclonev_lcell_comb \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~1 (
+// Equation(s):
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~1_sumout  = SUM(( VCC ) + ( GND ) + ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~6_cout  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~6_cout ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~1_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~1 .extended_lut = "off";
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~1 .lut_mask = 64'h0000FFFF0000FFFF;
+defparam \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N0
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux3~0 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux3~0_combout  = ( \aIn[0]~input_o  & ( \bIn[0]~input_o  & ( (!\fpgaMuxi|result [3] & ((!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~1_sumout ) # (!\fpgaMuxi|result [0]))) ) ) ) # ( !\aIn[0]~input_o  & ( 
+// \bIn[0]~input_o  & ( (!\fpgaMuxi|result [3] & (!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~1_sumout  & \fpgaMuxi|result [0])) # (\fpgaMuxi|result [3] & ((!\fpgaMuxi|result [0]))) ) ) ) # ( \aIn[0]~input_o  & ( !\bIn[0]~input_o  & ( 
+// (!\fpgaMuxi|result [3] & (!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~1_sumout  & ((\fpgaMuxi|result [0])))) # (\fpgaMuxi|result [3] & (((!\fpgaMuxi|result [0]) # (\fpgaAlu|aluSl|Mux2~0_combout )))) ) ) ) # ( !\aIn[0]~input_o  & ( 
+// !\bIn[0]~input_o  & ( (!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~1_sumout  & (!\fpgaMuxi|result [3] & \fpgaMuxi|result [0])) ) ) )
+
+	.dataa(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|op_4~1_sumout ),
+	.datab(!\fpgaMuxi|result [3]),
+	.datac(!\fpgaAlu|aluSl|Mux2~0_combout ),
+	.datad(!\fpgaMuxi|result [0]),
+	.datae(!\aIn[0]~input_o ),
+	.dataf(!\bIn[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux3~0 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux3~0 .lut_mask = 64'h0088338B3388CC88;
+defparam \fpgaAlu|aluMuxInstance|Mux3~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N6
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux3~3 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux3~3_combout  = ( \fpgaMuxi|result [3] & ( (\aIn[0]~input_o  & (\fpgaMuxi|result [0] & \bIn[0]~input_o )) ) ) # ( !\fpgaMuxi|result [3] & ( !\aIn[0]~input_o  $ (!\bIn[0]~input_o ) ) )
+
+	.dataa(!\aIn[0]~input_o ),
+	.datab(!\fpgaMuxi|result [0]),
+	.datac(!\bIn[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\fpgaMuxi|result [3]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux3~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux3~3 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux3~3 .lut_mask = 64'h5A5A5A5A01010101;
+defparam \fpgaAlu|aluMuxInstance|Mux3~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N24
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux3~4 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux3~4_combout  = ( \fpgaAlu|aluMuxInstance|Mux3~0_combout  & ( \fpgaAlu|aluMuxInstance|Mux3~3_combout  & ( (!\fpgaMuxi|result [2]) # ((!\fpgaMuxi|result [0] & (!\fpgaMuxi|result [1] & \fpgaAlu|aluMuxInstance|Mux3~2_combout ))) ) ) 
+// ) # ( !\fpgaAlu|aluMuxInstance|Mux3~0_combout  & ( \fpgaAlu|aluMuxInstance|Mux3~3_combout  & ( (!\fpgaMuxi|result [1] & ((!\fpgaMuxi|result [2]) # ((!\fpgaMuxi|result [0] & \fpgaAlu|aluMuxInstance|Mux3~2_combout )))) ) ) ) # ( 
+// \fpgaAlu|aluMuxInstance|Mux3~0_combout  & ( !\fpgaAlu|aluMuxInstance|Mux3~3_combout  & ( (!\fpgaMuxi|result [1] & (((!\fpgaMuxi|result [0] & \fpgaAlu|aluMuxInstance|Mux3~2_combout )))) # (\fpgaMuxi|result [1] & (!\fpgaMuxi|result [2])) ) ) ) # ( 
+// !\fpgaAlu|aluMuxInstance|Mux3~0_combout  & ( !\fpgaAlu|aluMuxInstance|Mux3~3_combout  & ( (!\fpgaMuxi|result [0] & (!\fpgaMuxi|result [1] & \fpgaAlu|aluMuxInstance|Mux3~2_combout )) ) ) )
+
+	.dataa(!\fpgaMuxi|result [2]),
+	.datab(!\fpgaMuxi|result [0]),
+	.datac(!\fpgaMuxi|result [1]),
+	.datad(!\fpgaAlu|aluMuxInstance|Mux3~2_combout ),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux3~0_combout ),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux3~3_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux3~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux3~4 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux3~4 .lut_mask = 64'h00C00ACAA0E0AAEA;
+defparam \fpgaAlu|aluMuxInstance|Mux3~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N30
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux2~1 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux2~1_combout  = ( \aIn[1]~input_o  & ( ((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5_sumout ) # (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout )) # 
+// (\bIn[3]~input_o ) ) ) # ( !\aIn[1]~input_o  & ( (!\bIn[3]~input_o  & (!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5_sumout )) ) )
+
+	.dataa(!\bIn[3]~input_o ),
+	.datab(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ),
+	.datac(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[0]~5_sumout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\aIn[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux2~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux2~1 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux2~1 .lut_mask = 64'h080808087F7F7F7F;
+defparam \fpgaAlu|aluMuxInstance|Mux2~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N48
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux2~0 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux2~0_combout  = ( \bIn[1]~input_o  & ( (!\bIn[0]~input_o  & \fpgaAlu|aluSl|Mux0~3_combout ) ) ) # ( !\bIn[1]~input_o  & ( (!\bIn[0]~input_o  & ((\fpgaAlu|aluSl|Mux0~2_combout ))) # (\bIn[0]~input_o  & 
+// (\fpgaAlu|aluSl|Mux0~1_combout )) ) )
+
+	.dataa(!\bIn[0]~input_o ),
+	.datab(!\fpgaAlu|aluSl|Mux0~1_combout ),
+	.datac(!\fpgaAlu|aluSl|Mux0~2_combout ),
+	.datad(!\fpgaAlu|aluSl|Mux0~3_combout ),
+	.datae(gnd),
+	.dataf(!\bIn[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux2~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux2~0 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux2~0 .lut_mask = 64'h1B1B1B1B00AA00AA;
+defparam \fpgaAlu|aluMuxInstance|Mux2~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N6
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux2~2 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux2~2_combout  = ( \fpgaMuxi|result [3] & ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  & ( (!\fpgaAlu|aluSl|LessThan0~0_combout  & \fpgaAlu|aluMuxInstance|Mux2~0_combout ) ) ) ) # ( !\fpgaMuxi|result [3] & 
+// ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  & ( \fpgaAlu|aluMuxInstance|Mux2~1_combout  ) ) ) # ( \fpgaMuxi|result [3] & ( !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  & ( 
+// (!\fpgaAlu|aluSl|LessThan0~0_combout  & \fpgaAlu|aluMuxInstance|Mux2~0_combout ) ) ) ) # ( !\fpgaMuxi|result [3] & ( !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  & ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~9_sumout  
+// ) ) )
+
+	.dataa(!\fpgaAlu|aluMuxInstance|Mux2~1_combout ),
+	.datab(!\fpgaAlu|aluSl|LessThan0~0_combout ),
+	.datac(!\fpgaAlu|aluMuxInstance|Mux2~0_combout ),
+	.datad(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~9_sumout ),
+	.datae(!\fpgaMuxi|result [3]),
+	.dataf(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux2~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux2~2 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux2~2 .lut_mask = 64'h00FF0C0C55550C0C;
+defparam \fpgaAlu|aluMuxInstance|Mux2~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N18
+cyclonev_lcell_comb \fpgaAlu|aluMul|sums_generator[0].sum|sum|c~0 (
+// Equation(s):
+// \fpgaAlu|aluMul|sums_generator[0].sum|sum|c~0_combout  = ( \bIn[1]~input_o  & ( !\aIn[0]~input_o  $ (((!\bIn[0]~input_o ) # (!\aIn[1]~input_o ))) ) ) # ( !\bIn[1]~input_o  & ( (\bIn[0]~input_o  & \aIn[1]~input_o ) ) )
+
+	.dataa(!\bIn[0]~input_o ),
+	.datab(gnd),
+	.datac(!\aIn[0]~input_o ),
+	.datad(!\aIn[1]~input_o ),
+	.datae(gnd),
+	.dataf(!\bIn[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|sums_generator[0].sum|sum|c~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum|c~0 .extended_lut = "off";
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum|c~0 .lut_mask = 64'h005500550F5A0F5A;
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum|c~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N9
+cyclonev_lcell_comb \fpgaAlu|aluSl|Mux2~1 (
+// Equation(s):
+// \fpgaAlu|aluSl|Mux2~1_combout  = ( \bIn[0]~input_o  & ( (\aIn[0]~input_o  & \fpgaAlu|aluSl|Mux2~0_combout ) ) ) # ( !\bIn[0]~input_o  & ( (\aIn[1]~input_o  & \fpgaAlu|aluSl|Mux2~0_combout ) ) )
+
+	.dataa(!\aIn[0]~input_o ),
+	.datab(gnd),
+	.datac(!\aIn[1]~input_o ),
+	.datad(!\fpgaAlu|aluSl|Mux2~0_combout ),
+	.datae(gnd),
+	.dataf(!\bIn[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluSl|Mux2~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluSl|Mux2~1 .extended_lut = "off";
+defparam \fpgaAlu|aluSl|Mux2~1 .lut_mask = 64'h000F000F00550055;
+defparam \fpgaAlu|aluSl|Mux2~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N12
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux2~4 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux2~4_combout  = ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [10] & ( \fpgaAlu|aluSl|Mux2~1_combout  & ( (!\fpgaMuxi|result [3] & (\fpgaAlu|aluMul|sums_generator[0].sum|sum|c~0_combout  & ((!\fpgaMuxi|result 
+// [0])))) # (\fpgaMuxi|result [3] & (((\fpgaMuxi|result [0]) # (\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout )))) ) ) ) # ( !\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [10] & ( \fpgaAlu|aluSl|Mux2~1_combout  & ( ((!\fpgaMuxi|result 
+// [3] & (\fpgaAlu|aluMul|sums_generator[0].sum|sum|c~0_combout )) # (\fpgaMuxi|result [3] & ((\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout )))) # (\fpgaMuxi|result [0]) ) ) ) # ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [10] & ( 
+// !\fpgaAlu|aluSl|Mux2~1_combout  & ( (!\fpgaMuxi|result [0] & ((!\fpgaMuxi|result [3] & (\fpgaAlu|aluMul|sums_generator[0].sum|sum|c~0_combout )) # (\fpgaMuxi|result [3] & ((\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout ))))) ) ) ) # ( 
+// !\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [10] & ( !\fpgaAlu|aluSl|Mux2~1_combout  & ( (!\fpgaMuxi|result [3] & (((\fpgaMuxi|result [0])) # (\fpgaAlu|aluMul|sums_generator[0].sum|sum|c~0_combout ))) # (\fpgaMuxi|result [3] & 
+// (((\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout  & !\fpgaMuxi|result [0])))) ) ) )
+
+	.dataa(!\fpgaAlu|aluMul|sums_generator[0].sum|sum|c~0_combout ),
+	.datab(!\fpgaMuxi|result [3]),
+	.datac(!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout ),
+	.datad(!\fpgaMuxi|result [0]),
+	.datae(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [10]),
+	.dataf(!\fpgaAlu|aluSl|Mux2~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux2~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux2~4 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux2~4 .lut_mask = 64'h47CC470047FF4733;
+defparam \fpgaAlu|aluMuxInstance|Mux2~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N45
+cyclonev_lcell_comb \fpgaAlu|aluRes|cOut[1]~0 (
+// Equation(s):
+// \fpgaAlu|aluRes|cOut[1]~0_combout  = ( \bIn[0]~input_o  & ( !\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout  $ (((!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ) # (\aIn[0]~input_o ))) ) ) # ( !\bIn[0]~input_o  & ( 
+// !\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout  $ (((!\aIn[0]~input_o ) # (\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ))) ) )
+
+	.dataa(!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout ),
+	.datab(!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ),
+	.datac(!\aIn[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\bIn[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluRes|cOut[1]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluRes|cOut[1]~0 .extended_lut = "off";
+defparam \fpgaAlu|aluRes|cOut[1]~0 .lut_mask = 64'h5959595965656565;
+defparam \fpgaAlu|aluRes|cOut[1]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N36
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux2~3 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux2~3_combout  = ( \fpgaAlu|aluRes|cOut[1]~0_combout  & ( \fpgaMuxi|result [3] & ( (!\aIn[1]~input_o  & (\bIn[1]~input_o  & !\fpgaMuxi|result [0])) # (\aIn[1]~input_o  & ((!\fpgaMuxi|result [0]) # (\bIn[1]~input_o ))) ) ) ) # ( 
+// !\fpgaAlu|aluRes|cOut[1]~0_combout  & ( \fpgaMuxi|result [3] & ( (!\aIn[1]~input_o  & (\bIn[1]~input_o  & !\fpgaMuxi|result [0])) # (\aIn[1]~input_o  & ((!\fpgaMuxi|result [0]) # (\bIn[1]~input_o ))) ) ) ) # ( \fpgaAlu|aluRes|cOut[1]~0_combout  & ( 
+// !\fpgaMuxi|result [3] & ( (!\fpgaAlu|aluMul|cOut [0] $ (!\aIn[1]~input_o  $ (\bIn[1]~input_o ))) # (\fpgaMuxi|result [0]) ) ) ) # ( !\fpgaAlu|aluRes|cOut[1]~0_combout  & ( !\fpgaMuxi|result [3] & ( (!\fpgaMuxi|result [0] & (!\fpgaAlu|aluMul|cOut [0] $ 
+// (!\aIn[1]~input_o  $ (\bIn[1]~input_o )))) ) ) )
+
+	.dataa(!\fpgaAlu|aluMul|cOut [0]),
+	.datab(!\aIn[1]~input_o ),
+	.datac(!\bIn[1]~input_o ),
+	.datad(!\fpgaMuxi|result [0]),
+	.datae(!\fpgaAlu|aluRes|cOut[1]~0_combout ),
+	.dataf(!\fpgaMuxi|result [3]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux2~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux2~3 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux2~3 .lut_mask = 64'h690069FF3F033F03;
+defparam \fpgaAlu|aluMuxInstance|Mux2~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N42
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux2~5 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux2~5_combout  = ( \fpgaAlu|aluMuxInstance|Mux2~3_combout  & ( \fpgaMuxi|result [0] & ( (!\fpgaMuxi|result [2] & ((!\fpgaMuxi|result [1]) # (\fpgaAlu|aluMuxInstance|Mux2~4_combout ))) ) ) ) # ( 
+// !\fpgaAlu|aluMuxInstance|Mux2~3_combout  & ( \fpgaMuxi|result [0] & ( (!\fpgaMuxi|result [2] & (\fpgaMuxi|result [1] & \fpgaAlu|aluMuxInstance|Mux2~4_combout )) ) ) ) # ( \fpgaAlu|aluMuxInstance|Mux2~3_combout  & ( !\fpgaMuxi|result [0] & ( 
+// (!\fpgaMuxi|result [2] & (((!\fpgaMuxi|result [1]) # (\fpgaAlu|aluMuxInstance|Mux2~4_combout )))) # (\fpgaMuxi|result [2] & (\fpgaAlu|aluMuxInstance|Mux2~2_combout  & (!\fpgaMuxi|result [1]))) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux2~3_combout  & ( 
+// !\fpgaMuxi|result [0] & ( (!\fpgaMuxi|result [2] & (((\fpgaMuxi|result [1] & \fpgaAlu|aluMuxInstance|Mux2~4_combout )))) # (\fpgaMuxi|result [2] & (\fpgaAlu|aluMuxInstance|Mux2~2_combout  & (!\fpgaMuxi|result [1]))) ) ) )
+
+	.dataa(!\fpgaMuxi|result [2]),
+	.datab(!\fpgaAlu|aluMuxInstance|Mux2~2_combout ),
+	.datac(!\fpgaMuxi|result [1]),
+	.datad(!\fpgaAlu|aluMuxInstance|Mux2~4_combout ),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux2~3_combout ),
+	.dataf(!\fpgaMuxi|result [0]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux2~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux2~5 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux2~5 .lut_mask = 64'h101AB0BA000AA0AA;
+defparam \fpgaAlu|aluMuxInstance|Mux2~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X15_Y1_N54
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux1~4 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux1~4_combout  = ( \fpgaAlu|aluSl|Mux2~0_combout  & ( \fpgaAlu|aluMuxInstance|Mux2~6_combout  & ( (\fpgaMuxi|result [3] & ((!\bIn[0]~input_o  & ((\aIn[2]~input_o ))) # (\bIn[0]~input_o  & (\aIn[3]~input_o )))) ) ) )
+
+	.dataa(!\aIn[3]~input_o ),
+	.datab(!\fpgaMuxi|result [3]),
+	.datac(!\bIn[0]~input_o ),
+	.datad(!\aIn[2]~input_o ),
+	.datae(!\fpgaAlu|aluSl|Mux2~0_combout ),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux2~6_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux1~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux1~4 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux1~4 .lut_mask = 64'h0000000000000131;
+defparam \fpgaAlu|aluMuxInstance|Mux1~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N42
+cyclonev_lcell_comb \fpgaAlu|aluRes|cOut[2]~1 (
+// Equation(s):
+// \fpgaAlu|aluRes|cOut[2]~1_combout  = ( \fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout  & ( (!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ) # ((!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout  & (!\bIn[0]~input_o  $ (\aIn[0]~input_o 
+// )))) ) ) # ( !\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout  & ( (\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout  & ((!\bIn[0]~input_o  $ (!\aIn[0]~input_o )) # (\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout ))) ) )
+
+	.dataa(!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout ),
+	.datab(!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ),
+	.datac(!\bIn[0]~input_o ),
+	.datad(!\aIn[0]~input_o ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluRes|cOut[2]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluRes|cOut[2]~1 .extended_lut = "off";
+defparam \fpgaAlu|aluRes|cOut[2]~1 .lut_mask = 64'h13311331ECCEECCE;
+defparam \fpgaAlu|aluRes|cOut[2]~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N30
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux1~2 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux1~2_combout  = ( \fpgaMuxi|result [3] & ( \fpgaAlu|aluSum|sum_creator[1].sum|carryOut~combout  & ( (!\bIn[2]~input_o  & (\aIn[2]~input_o  & !\fpgaMuxi|result [0])) # (\bIn[2]~input_o  & ((!\fpgaMuxi|result [0]) # 
+// (\aIn[2]~input_o ))) ) ) ) # ( !\fpgaMuxi|result [3] & ( \fpgaAlu|aluSum|sum_creator[1].sum|carryOut~combout  & ( (!\fpgaMuxi|result [0] & (!\bIn[2]~input_o  $ ((\aIn[2]~input_o )))) # (\fpgaMuxi|result [0] & (((\fpgaAlu|aluRes|cOut[2]~1_combout )))) ) ) 
+// ) # ( \fpgaMuxi|result [3] & ( !\fpgaAlu|aluSum|sum_creator[1].sum|carryOut~combout  & ( (!\bIn[2]~input_o  & (\aIn[2]~input_o  & !\fpgaMuxi|result [0])) # (\bIn[2]~input_o  & ((!\fpgaMuxi|result [0]) # (\aIn[2]~input_o ))) ) ) ) # ( !\fpgaMuxi|result [3] 
+// & ( !\fpgaAlu|aluSum|sum_creator[1].sum|carryOut~combout  & ( (!\fpgaMuxi|result [0] & (!\bIn[2]~input_o  $ ((!\aIn[2]~input_o )))) # (\fpgaMuxi|result [0] & (((\fpgaAlu|aluRes|cOut[2]~1_combout )))) ) ) )
+
+	.dataa(!\bIn[2]~input_o ),
+	.datab(!\aIn[2]~input_o ),
+	.datac(!\fpgaMuxi|result [0]),
+	.datad(!\fpgaAlu|aluRes|cOut[2]~1_combout ),
+	.datae(!\fpgaMuxi|result [3]),
+	.dataf(!\fpgaAlu|aluSum|sum_creator[1].sum|carryOut~combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux1~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux1~2 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux1~2 .lut_mask = 64'h606F7171909F7171;
+defparam \fpgaAlu|aluMuxInstance|Mux1~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N36
+cyclonev_lcell_comb \fpgaAlu|aluSl|Mux1~0 (
+// Equation(s):
+// \fpgaAlu|aluSl|Mux1~0_combout  = ( \fpgaAlu|aluSl|Mux0~0_combout  & ( \fpgaAlu|aluSl|Mux0~1_combout  & ( (!\fpgaAlu|aluSl|LessThan0~0_combout  & ((!\bIn[0]~input_o ) # ((!\bIn[1]~input_o  & \fpgaAlu|aluSl|Mux0~2_combout )))) ) ) ) # ( 
+// !\fpgaAlu|aluSl|Mux0~0_combout  & ( \fpgaAlu|aluSl|Mux0~1_combout  & ( (!\bIn[1]~input_o  & (!\fpgaAlu|aluSl|LessThan0~0_combout  & ((!\bIn[0]~input_o ) # (\fpgaAlu|aluSl|Mux0~2_combout )))) ) ) ) # ( \fpgaAlu|aluSl|Mux0~0_combout  & ( 
+// !\fpgaAlu|aluSl|Mux0~1_combout  & ( (!\fpgaAlu|aluSl|LessThan0~0_combout  & ((!\bIn[1]~input_o  & (\fpgaAlu|aluSl|Mux0~2_combout  & \bIn[0]~input_o )) # (\bIn[1]~input_o  & ((!\bIn[0]~input_o ))))) ) ) ) # ( !\fpgaAlu|aluSl|Mux0~0_combout  & ( 
+// !\fpgaAlu|aluSl|Mux0~1_combout  & ( (!\bIn[1]~input_o  & (!\fpgaAlu|aluSl|LessThan0~0_combout  & (\fpgaAlu|aluSl|Mux0~2_combout  & \bIn[0]~input_o ))) ) ) )
+
+	.dataa(!\bIn[1]~input_o ),
+	.datab(!\fpgaAlu|aluSl|LessThan0~0_combout ),
+	.datac(!\fpgaAlu|aluSl|Mux0~2_combout ),
+	.datad(!\bIn[0]~input_o ),
+	.datae(!\fpgaAlu|aluSl|Mux0~0_combout ),
+	.dataf(!\fpgaAlu|aluSl|Mux0~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluSl|Mux1~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluSl|Mux1~0 .extended_lut = "off";
+defparam \fpgaAlu|aluSl|Mux1~0 .lut_mask = 64'h000844088808CC08;
+defparam \fpgaAlu|aluSl|Mux1~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X9_Y1_N51
+cyclonev_lcell_comb \fpgaAlu|aluMul|sums_generator[1].sum|sum|c~0 (
+// Equation(s):
+// \fpgaAlu|aluMul|sums_generator[1].sum|sum|c~0_combout  = ( \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c~combout  & ( (!\bIn[0]~input_o ) # (!\aIn[2]~input_o ) ) ) # ( !\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c~combout  & ( 
+// (\bIn[0]~input_o  & \aIn[2]~input_o ) ) )
+
+	.dataa(!\bIn[0]~input_o ),
+	.datab(gnd),
+	.datac(!\aIn[2]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c~combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|sums_generator[1].sum|sum|c~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|sums_generator[1].sum|sum|c~0 .extended_lut = "off";
+defparam \fpgaAlu|aluMul|sums_generator[1].sum|sum|c~0 .lut_mask = 64'h05050505FAFAFAFA;
+defparam \fpgaAlu|aluMul|sums_generator[1].sum|sum|c~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N48
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux1~1 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux1~1_combout  = ( \fpgaMuxi|result [0] & ( \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & ( (\fpgaAlu|aluSl|Mux1~0_combout  & \fpgaMuxi|result [3]) ) ) ) # ( !\fpgaMuxi|result [0] & ( 
+// \fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & ( (!\fpgaMuxi|result [3] & (\fpgaAlu|aluMul|sums_generator[1].sum|sum|c~0_combout )) # (\fpgaMuxi|result [3] & ((\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0_combout ))) ) ) ) # ( 
+// \fpgaMuxi|result [0] & ( !\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & ( (!\fpgaMuxi|result [3]) # (\fpgaAlu|aluSl|Mux1~0_combout ) ) ) ) # ( !\fpgaMuxi|result [0] & ( !\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5] & 
+// ( (!\fpgaMuxi|result [3] & (\fpgaAlu|aluMul|sums_generator[1].sum|sum|c~0_combout )) # (\fpgaMuxi|result [3] & ((\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0_combout ))) ) ) )
+
+	.dataa(!\fpgaAlu|aluSl|Mux1~0_combout ),
+	.datab(!\fpgaMuxi|result [3]),
+	.datac(!\fpgaAlu|aluMul|sums_generator[1].sum|sum|c~0_combout ),
+	.datad(!\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~0_combout ),
+	.datae(!\fpgaMuxi|result [0]),
+	.dataf(!\fpgaAlu|aluDiv|Div0|auto_generated|divider|divider|selnose [5]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux1~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux1~1 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux1~1 .lut_mask = 64'h0C3FDDDD0C3F1111;
+defparam \fpgaAlu|aluMuxInstance|Mux1~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N39
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux1~3 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux1~3_combout  = ( \fpgaMuxi|result [1] & ( \fpgaAlu|aluMuxInstance|Mux1~1_combout  & ( !\fpgaMuxi|result [2] ) ) ) # ( !\fpgaMuxi|result [1] & ( \fpgaAlu|aluMuxInstance|Mux1~1_combout  & ( (!\fpgaMuxi|result [2] & 
+// \fpgaAlu|aluMuxInstance|Mux1~2_combout ) ) ) ) # ( !\fpgaMuxi|result [1] & ( !\fpgaAlu|aluMuxInstance|Mux1~1_combout  & ( (!\fpgaMuxi|result [2] & \fpgaAlu|aluMuxInstance|Mux1~2_combout ) ) ) )
+
+	.dataa(!\fpgaMuxi|result [2]),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluMuxInstance|Mux1~2_combout ),
+	.datad(gnd),
+	.datae(!\fpgaMuxi|result [1]),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux1~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux1~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux1~3 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux1~3 .lut_mask = 64'h0A0A00000A0AAAAA;
+defparam \fpgaAlu|aluMuxInstance|Mux1~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X13_Y1_N57
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux1~0 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux1~0_combout  = ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0_combout  & ( ((\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout ) # 
+// (\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout )) # (\bIn[3]~input_o ) ) ) # ( !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0_combout  & ( (!\bIn[3]~input_o  & 
+// (!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout  & \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout )) ) )
+
+	.dataa(!\bIn[3]~input_o ),
+	.datab(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[3]~1_sumout ),
+	.datac(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|add_sub_2_result_int[1]~9_sumout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|StageOut[4]~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux1~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux1~0 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux1~0 .lut_mask = 64'h080808087F7F7F7F;
+defparam \fpgaAlu|aluMuxInstance|Mux1~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y1_N24
+cyclonev_lcell_comb \fpgaAlu|aluMuxInstance|Mux1~5 (
+// Equation(s):
+// \fpgaAlu|aluMuxInstance|Mux1~5_combout  = ( \fpgaAlu|aluMuxInstance|Mux0~0_combout  & ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  & ( (!\fpgaAlu|aluMuxInstance|Mux1~4_combout  & (!\fpgaAlu|aluMuxInstance|Mux1~3_combout  & 
+// !\fpgaAlu|aluMuxInstance|Mux1~0_combout )) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux0~0_combout  & ( \fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  & ( (!\fpgaAlu|aluMuxInstance|Mux1~4_combout  & !\fpgaAlu|aluMuxInstance|Mux1~3_combout ) 
+// ) ) ) # ( \fpgaAlu|aluMuxInstance|Mux0~0_combout  & ( !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  & ( (!\fpgaAlu|aluMuxInstance|Mux1~4_combout  & (!\fpgaAlu|aluMuxInstance|Mux1~3_combout  & 
+// !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~13_sumout )) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux0~0_combout  & ( !\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout  & ( (!\fpgaAlu|aluMuxInstance|Mux1~4_combout  & 
+// !\fpgaAlu|aluMuxInstance|Mux1~3_combout ) ) ) )
+
+	.dataa(!\fpgaAlu|aluMuxInstance|Mux1~4_combout ),
+	.datab(!\fpgaAlu|aluMuxInstance|Mux1~3_combout ),
+	.datac(!\fpgaAlu|aluMuxInstance|Mux1~0_combout ),
+	.datad(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~13_sumout ),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux0~0_combout ),
+	.dataf(!\fpgaAlu|aluDiv|Mod0|auto_generated|divider|divider|op_4~1_sumout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMuxInstance|Mux1~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMuxInstance|Mux1~5 .extended_lut = "off";
+defparam \fpgaAlu|aluMuxInstance|Mux1~5 .lut_mask = 64'h8888880088888080;
+defparam \fpgaAlu|aluMuxInstance|Mux1~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y1_N39
+cyclonev_lcell_comb \hexSeg|WideOr6~0 (
+// Equation(s):
+// \hexSeg|WideOr6~0_combout  = ( \fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( \fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( (!\fpgaAlu|aluMuxInstance|Mux0~6_combout  & \fpgaAlu|aluMuxInstance|Mux3~4_combout ) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux2~5_combout  
+// & ( \fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( (\fpgaAlu|aluMuxInstance|Mux0~6_combout  & \fpgaAlu|aluMuxInstance|Mux3~4_combout ) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( !\fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( 
+// (!\fpgaAlu|aluMuxInstance|Mux0~6_combout ) # (!\fpgaAlu|aluMuxInstance|Mux3~4_combout ) ) ) )
+
+	.dataa(!\fpgaAlu|aluMuxInstance|Mux0~6_combout ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluMuxInstance|Mux3~4_combout ),
+	.datad(gnd),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux2~5_combout ),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux1~5_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\hexSeg|WideOr6~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \hexSeg|WideOr6~0 .extended_lut = "off";
+defparam \hexSeg|WideOr6~0 .lut_mask = 64'hFAFA000005050A0A;
+defparam \hexSeg|WideOr6~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y1_N45
+cyclonev_lcell_comb \hexSeg|WideOr5~0 (
+// Equation(s):
+// \hexSeg|WideOr5~0_combout  = ( \fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( \fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( (!\fpgaAlu|aluMuxInstance|Mux0~6_combout  & \fpgaAlu|aluMuxInstance|Mux3~4_combout ) ) ) ) # ( \fpgaAlu|aluMuxInstance|Mux2~5_combout  & 
+// ( !\fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( (!\fpgaAlu|aluMuxInstance|Mux0~6_combout ) # (!\fpgaAlu|aluMuxInstance|Mux3~4_combout ) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( !\fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( 
+// !\fpgaAlu|aluMuxInstance|Mux0~6_combout  $ (\fpgaAlu|aluMuxInstance|Mux3~4_combout ) ) ) )
+
+	.dataa(!\fpgaAlu|aluMuxInstance|Mux0~6_combout ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluMuxInstance|Mux3~4_combout ),
+	.datad(gnd),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux2~5_combout ),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux1~5_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\hexSeg|WideOr5~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \hexSeg|WideOr5~0 .extended_lut = "off";
+defparam \hexSeg|WideOr5~0 .lut_mask = 64'hA5A5FAFA00000A0A;
+defparam \hexSeg|WideOr5~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y1_N12
+cyclonev_lcell_comb \hexSeg|WideOr4~0 (
+// Equation(s):
+// \hexSeg|WideOr4~0_combout  = ( \fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( \fpgaAlu|aluMuxInstance|Mux3~4_combout  & ( (!\fpgaAlu|aluMuxInstance|Mux1~5_combout  & !\fpgaAlu|aluMuxInstance|Mux0~6_combout ) ) ) ) # ( \fpgaAlu|aluMuxInstance|Mux2~5_combout  
+// & ( !\fpgaAlu|aluMuxInstance|Mux3~4_combout  & ( !\fpgaAlu|aluMuxInstance|Mux1~5_combout  $ (\fpgaAlu|aluMuxInstance|Mux0~6_combout ) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( !\fpgaAlu|aluMuxInstance|Mux3~4_combout  & ( 
+// (!\fpgaAlu|aluMuxInstance|Mux1~5_combout  & !\fpgaAlu|aluMuxInstance|Mux0~6_combout ) ) ) )
+
+	.dataa(!\fpgaAlu|aluMuxInstance|Mux1~5_combout ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluMuxInstance|Mux0~6_combout ),
+	.datad(gnd),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux2~5_combout ),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux3~4_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\hexSeg|WideOr4~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \hexSeg|WideOr4~0 .extended_lut = "off";
+defparam \hexSeg|WideOr4~0 .lut_mask = 64'hA0A0A5A50000A0A0;
+defparam \hexSeg|WideOr4~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y1_N9
+cyclonev_lcell_comb \hexSeg|WideOr3~0 (
+// Equation(s):
+// \hexSeg|WideOr3~0_combout  = ( \fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( \fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( (!\fpgaAlu|aluMuxInstance|Mux0~6_combout  & !\fpgaAlu|aluMuxInstance|Mux3~4_combout ) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux2~5_combout  
+// & ( \fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( (\fpgaAlu|aluMuxInstance|Mux0~6_combout  & \fpgaAlu|aluMuxInstance|Mux3~4_combout ) ) ) ) # ( \fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( !\fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( 
+// \fpgaAlu|aluMuxInstance|Mux3~4_combout  ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( !\fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( (\fpgaAlu|aluMuxInstance|Mux0~6_combout  & !\fpgaAlu|aluMuxInstance|Mux3~4_combout ) ) ) )
+
+	.dataa(!\fpgaAlu|aluMuxInstance|Mux0~6_combout ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluMuxInstance|Mux3~4_combout ),
+	.datad(gnd),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux2~5_combout ),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux1~5_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\hexSeg|WideOr3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \hexSeg|WideOr3~0 .extended_lut = "off";
+defparam \hexSeg|WideOr3~0 .lut_mask = 64'h50500F0F0505A0A0;
+defparam \hexSeg|WideOr3~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y1_N48
+cyclonev_lcell_comb \hexSeg|WideOr2~0 (
+// Equation(s):
+// \hexSeg|WideOr2~0_combout  = ( \fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( \fpgaAlu|aluMuxInstance|Mux3~4_combout  & ( \fpgaAlu|aluMuxInstance|Mux0~6_combout  ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( \fpgaAlu|aluMuxInstance|Mux3~4_combout  & 
+// ( (\fpgaAlu|aluMuxInstance|Mux0~6_combout ) # (\fpgaAlu|aluMuxInstance|Mux1~5_combout ) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( !\fpgaAlu|aluMuxInstance|Mux3~4_combout  & ( (!\fpgaAlu|aluMuxInstance|Mux1~5_combout  & 
+// \fpgaAlu|aluMuxInstance|Mux0~6_combout ) ) ) )
+
+	.dataa(!\fpgaAlu|aluMuxInstance|Mux1~5_combout ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluMuxInstance|Mux0~6_combout ),
+	.datad(gnd),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux2~5_combout ),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux3~4_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\hexSeg|WideOr2~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \hexSeg|WideOr2~0 .extended_lut = "off";
+defparam \hexSeg|WideOr2~0 .lut_mask = 64'h0A0A00005F5F0F0F;
+defparam \hexSeg|WideOr2~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y1_N33
+cyclonev_lcell_comb \hexSeg|WideOr1~0 (
+// Equation(s):
+// \hexSeg|WideOr1~0_combout  = ( \fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( \fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( \fpgaAlu|aluMuxInstance|Mux0~6_combout  ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( \fpgaAlu|aluMuxInstance|Mux1~5_combout  & 
+// ( (\fpgaAlu|aluMuxInstance|Mux0~6_combout  & \fpgaAlu|aluMuxInstance|Mux3~4_combout ) ) ) ) # ( \fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( !\fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( (\fpgaAlu|aluMuxInstance|Mux0~6_combout  & 
+// \fpgaAlu|aluMuxInstance|Mux3~4_combout ) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( !\fpgaAlu|aluMuxInstance|Mux1~5_combout  & ( !\fpgaAlu|aluMuxInstance|Mux0~6_combout  ) ) )
+
+	.dataa(!\fpgaAlu|aluMuxInstance|Mux0~6_combout ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluMuxInstance|Mux3~4_combout ),
+	.datad(gnd),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux2~5_combout ),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux1~5_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\hexSeg|WideOr1~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \hexSeg|WideOr1~0 .extended_lut = "off";
+defparam \hexSeg|WideOr1~0 .lut_mask = 64'hAAAA050505055555;
+defparam \hexSeg|WideOr1~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y1_N0
+cyclonev_lcell_comb \hexSeg|WideOr0~0 (
+// Equation(s):
+// \hexSeg|WideOr0~0_combout  = ( \fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( \fpgaAlu|aluMuxInstance|Mux3~4_combout  & ( (!\fpgaAlu|aluMuxInstance|Mux0~6_combout ) # (\fpgaAlu|aluMuxInstance|Mux1~5_combout ) ) ) ) # ( !\fpgaAlu|aluMuxInstance|Mux2~5_combout 
+//  & ( \fpgaAlu|aluMuxInstance|Mux3~4_combout  & ( (!\fpgaAlu|aluMuxInstance|Mux1~5_combout ) # (!\fpgaAlu|aluMuxInstance|Mux0~6_combout ) ) ) ) # ( \fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( !\fpgaAlu|aluMuxInstance|Mux3~4_combout  ) ) # ( 
+// !\fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( !\fpgaAlu|aluMuxInstance|Mux3~4_combout  & ( (!\fpgaAlu|aluMuxInstance|Mux1~5_combout ) # (!\fpgaAlu|aluMuxInstance|Mux0~6_combout ) ) ) )
+
+	.dataa(!\fpgaAlu|aluMuxInstance|Mux1~5_combout ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluMuxInstance|Mux0~6_combout ),
+	.datad(gnd),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux2~5_combout ),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux3~4_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\hexSeg|WideOr0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \hexSeg|WideOr0~0 .extended_lut = "off";
+defparam \hexSeg|WideOr0~0 .lut_mask = 64'hFAFAFFFFFAFAF5F5;
+defparam \hexSeg|WideOr0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N24
+cyclonev_lcell_comb \fpgaAlu|aluRes|WideOr0~0 (
+// Equation(s):
+// \fpgaAlu|aluRes|WideOr0~0_combout  = ( \aIn[0]~input_o  & ( !\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout  & ( (!\fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0_combout  & (\bIn[0]~input_o  & (!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout  $ 
+// (\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout )))) ) ) ) # ( !\aIn[0]~input_o  & ( !\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout  & ( (!\fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0_combout  & (!\bIn[0]~input_o  & 
+// (!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout  $ (\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout )))) ) ) )
+
+	.dataa(!\fpgaAlu|aluRes|sum2|sum_creator[3].sum|c~0_combout ),
+	.datab(!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ),
+	.datac(!\fpgaAlu|aluRes|sum1|sum_creator[1].sum|c~0_combout ),
+	.datad(!\bIn[0]~input_o ),
+	.datae(!\aIn[0]~input_o ),
+	.dataf(!\fpgaAlu|aluRes|sum1|sum_creator[2].sum|c~combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluRes|WideOr0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluRes|WideOr0~0 .extended_lut = "off";
+defparam \fpgaAlu|aluRes|WideOr0~0 .lut_mask = 64'h8200008200000000;
+defparam \fpgaAlu|aluRes|WideOr0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X12_Y1_N6
+cyclonev_lcell_comb \fpgaAlu|Flags[0]~0 (
+// Equation(s):
+// \fpgaAlu|Flags[0]~0_combout  = ( \fpgaMuxi|result [2] & ( \fpgaMuxi|result [3] ) ) # ( !\fpgaMuxi|result [2] & ( \fpgaMuxi|result [3] ) ) # ( \fpgaMuxi|result [2] & ( !\fpgaMuxi|result [3] ) ) # ( !\fpgaMuxi|result [2] & ( !\fpgaMuxi|result [3] & ( 
+// (((!\fpgaMuxi|result [0]) # (\fpgaAlu|aluRes|WideOr0~0_combout )) # (\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout )) # (\fpgaMuxi|result [1]) ) ) )
+
+	.dataa(!\fpgaMuxi|result [1]),
+	.datab(!\fpgaAlu|aluRes|sum1|sum_creator[3].sum|carryOut~combout ),
+	.datac(!\fpgaAlu|aluRes|WideOr0~0_combout ),
+	.datad(!\fpgaMuxi|result [0]),
+	.datae(!\fpgaMuxi|result [2]),
+	.dataf(!\fpgaMuxi|result [3]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|Flags[0]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|Flags[0]~0 .extended_lut = "off";
+defparam \fpgaAlu|Flags[0]~0 .lut_mask = 64'hFF7FFFFFFFFFFFFF;
+defparam \fpgaAlu|Flags[0]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X16_Y1_N54
+cyclonev_lcell_comb \fpgaAlu|Equal1~0 (
+// Equation(s):
+// \fpgaAlu|Equal1~0_combout  = ( !\fpgaAlu|aluMuxInstance|Mux2~5_combout  & ( !\fpgaAlu|aluMuxInstance|Mux3~4_combout  & ( (\fpgaAlu|aluMuxInstance|Mux1~5_combout  & \fpgaAlu|aluMuxInstance|Mux0~6_combout ) ) ) )
+
+	.dataa(!\fpgaAlu|aluMuxInstance|Mux1~5_combout ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluMuxInstance|Mux0~6_combout ),
+	.datad(gnd),
+	.datae(!\fpgaAlu|aluMuxInstance|Mux2~5_combout ),
+	.dataf(!\fpgaAlu|aluMuxInstance|Mux3~4_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|Equal1~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|Equal1~0 .extended_lut = "off";
+defparam \fpgaAlu|Equal1~0 .lut_mask = 64'h0505000000000000;
+defparam \fpgaAlu|Equal1~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N18
+cyclonev_lcell_comb \fpgaAlu|aluAnd|cOut[2] (
+// Equation(s):
+// \fpgaAlu|aluAnd|cOut [2] = ( \aIn[2]~input_o  & ( \bIn[2]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\bIn[2]~input_o ),
+	.datae(gnd),
+	.dataf(!\aIn[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluAnd|cOut [2]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluAnd|cOut[2] .extended_lut = "off";
+defparam \fpgaAlu|aluAnd|cOut[2] .lut_mask = 64'h0000000000FF00FF;
+defparam \fpgaAlu|aluAnd|cOut[2] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N45
+cyclonev_lcell_comb \fpgaAlu|aluMul|andOutput[3][1] (
+// Equation(s):
+// \fpgaAlu|aluMul|andOutput[3][1]~combout  = ( \bIn[1]~input_o  & ( \aIn[3]~input_o  ) )
+
+	.dataa(!\aIn[3]~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\bIn[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|andOutput[3][1]~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|andOutput[3][1] .extended_lut = "off";
+defparam \fpgaAlu|aluMul|andOutput[3][1] .lut_mask = 64'h0000000055555555;
+defparam \fpgaAlu|aluMul|andOutput[3][1] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N39
+cyclonev_lcell_comb \fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0 (
+// Equation(s):
+// \fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0_combout  = ( \aIn[3]~input_o  & ( (\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|c~combout  & \bIn[0]~input_o ) ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|c~combout ),
+	.datad(!\bIn[0]~input_o ),
+	.datae(gnd),
+	.dataf(!\aIn[3]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0 .extended_lut = "off";
+defparam \fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0 .lut_mask = 64'h00000000000F000F;
+defparam \fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N36
+cyclonev_lcell_comb \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c (
+// Equation(s):
+// \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c~combout  = ( \bIn[3]~input_o  & ( (!\aIn[0]~input_o  & (\aIn[1]~input_o  & ((!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout ) # (!\bIn[2]~input_o )))) # 
+// (\aIn[0]~input_o  & ((!\aIn[1]~input_o  & (\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout )) # (\aIn[1]~input_o  & (!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout  & !\bIn[2]~input_o )))) ) ) # ( 
+// !\bIn[3]~input_o  & ( (\aIn[1]~input_o  & (\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout  & \bIn[2]~input_o )) ) )
+
+	.dataa(!\aIn[0]~input_o ),
+	.datab(!\aIn[1]~input_o ),
+	.datac(!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout ),
+	.datad(!\bIn[2]~input_o ),
+	.datae(gnd),
+	.dataf(!\bIn[3]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c .extended_lut = "off";
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c .lut_mask = 64'h0003000336243624;
+defparam \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N12
+cyclonev_lcell_comb \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut (
+// Equation(s):
+// \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut~combout  = ( \aIn[2]~input_o  & ( (!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c~combout  & (\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c~combout  & 
+// (\bIn[1]~input_o  & \bIn[0]~input_o ))) # (\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c~combout  & (((\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c~combout  & \bIn[0]~input_o )) # (\bIn[1]~input_o ))) ) )
+
+	.dataa(!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|c~combout ),
+	.datab(!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[2].sum|c~combout ),
+	.datac(!\bIn[1]~input_o ),
+	.datad(!\bIn[0]~input_o ),
+	.datae(gnd),
+	.dataf(!\aIn[2]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut .extended_lut = "off";
+defparam \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut .lut_mask = 64'h0000000003170317;
+defparam \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N21
+cyclonev_lcell_comb \fpgaAlu|Flags[2]~1 (
+// Equation(s):
+// \fpgaAlu|Flags[2]~1_combout  = ( \fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut~combout  & ( !\fpgaAlu|aluAnd|cOut [2] $ (!\fpgaAlu|aluMul|andOutput[3][1]~combout  $ (!\fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0_combout  $ 
+// (\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c~combout ))) ) ) # ( !\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut~combout  & ( !\fpgaAlu|aluAnd|cOut [2] $ (!\fpgaAlu|aluMul|andOutput[3][1]~combout  $ 
+// (!\fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0_combout  $ (!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c~combout ))) ) )
+
+	.dataa(!\fpgaAlu|aluAnd|cOut [2]),
+	.datab(!\fpgaAlu|aluMul|andOutput[3][1]~combout ),
+	.datac(!\fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0_combout ),
+	.datad(!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c~combout ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut~combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|Flags[2]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|Flags[2]~1 .extended_lut = "off";
+defparam \fpgaAlu|Flags[2]~1 .lut_mask = 64'h6996699696699669;
+defparam \fpgaAlu|Flags[2]~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N15
+cyclonev_lcell_comb \fpgaAlu|Flags[2]~2 (
+// Equation(s):
+// \fpgaAlu|Flags[2]~2_combout  = ( \fpgaAlu|aluSum|sum_creator[2].sum|carryOut~combout  & ( (!\fpgaMuxi|result [1] & (((\aIn[3]~input_o )) # (\bIn[3]~input_o ))) # (\fpgaMuxi|result [1] & (((\fpgaAlu|Flags[2]~1_combout )))) ) ) # ( 
+// !\fpgaAlu|aluSum|sum_creator[2].sum|carryOut~combout  & ( (!\fpgaMuxi|result [1] & (\bIn[3]~input_o  & (\aIn[3]~input_o ))) # (\fpgaMuxi|result [1] & (((\fpgaAlu|Flags[2]~1_combout )))) ) )
+
+	.dataa(!\fpgaMuxi|result [1]),
+	.datab(!\bIn[3]~input_o ),
+	.datac(!\aIn[3]~input_o ),
+	.datad(!\fpgaAlu|Flags[2]~1_combout ),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|aluSum|sum_creator[2].sum|carryOut~combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|Flags[2]~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|Flags[2]~2 .extended_lut = "off";
+defparam \fpgaAlu|Flags[2]~2 .lut_mask = 64'h025702572A7F2A7F;
+defparam \fpgaAlu|Flags[2]~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N18
+cyclonev_lcell_comb \fpgaAlu|Flags[2]~3 (
+// Equation(s):
+// \fpgaAlu|Flags[2]~3_combout  = ( \fpgaAlu|Flags[2]~2_combout  & ( (!\fpgaMuxi|result [0] & (!\fpgaMuxi|result [3] & !\fpgaMuxi|result [2])) ) )
+
+	.dataa(!\fpgaMuxi|result [0]),
+	.datab(!\fpgaMuxi|result [3]),
+	.datac(!\fpgaMuxi|result [2]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\fpgaAlu|Flags[2]~2_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|Flags[2]~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|Flags[2]~3 .extended_lut = "off";
+defparam \fpgaAlu|Flags[2]~3 .lut_mask = 64'h0000000080808080;
+defparam \fpgaAlu|Flags[2]~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N24
+cyclonev_lcell_comb \fpgaAlu|aluMul|LessThan0~0 (
+// Equation(s):
+// \fpgaAlu|aluMul|LessThan0~0_combout  = ( \fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout  & ( \bIn[3]~input_o  & ( ((\aIn[1]~input_o  & ((\bIn[2]~input_o ) # (\aIn[0]~input_o )))) # (\aIn[2]~input_o ) ) ) ) # ( 
+// !\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout  & ( \bIn[3]~input_o  & ( ((\aIn[0]~input_o  & (\aIn[1]~input_o  & \bIn[2]~input_o ))) # (\aIn[2]~input_o ) ) ) )
+
+	.dataa(!\aIn[0]~input_o ),
+	.datab(!\aIn[2]~input_o ),
+	.datac(!\aIn[1]~input_o ),
+	.datad(!\bIn[2]~input_o ),
+	.datae(!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[1].sum|carryOut~combout ),
+	.dataf(!\bIn[3]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|LessThan0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|LessThan0~0 .extended_lut = "off";
+defparam \fpgaAlu|aluMul|LessThan0~0 .lut_mask = 64'h000000003337373F;
+defparam \fpgaAlu|aluMul|LessThan0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N42
+cyclonev_lcell_comb \fpgaAlu|aluMul|LessThan0~1 (
+// Equation(s):
+// \fpgaAlu|aluMul|LessThan0~1_combout  = ( \bIn[3]~input_o  & ( (!\aIn[3]~input_o  & !\fpgaAlu|aluMul|LessThan0~0_combout ) ) ) # ( !\bIn[3]~input_o  & ( (!\fpgaAlu|aluMul|LessThan0~0_combout  & ((!\aIn[3]~input_o ) # (!\bIn[2]~input_o ))) ) )
+
+	.dataa(!\aIn[3]~input_o ),
+	.datab(gnd),
+	.datac(!\fpgaAlu|aluMul|LessThan0~0_combout ),
+	.datad(!\bIn[2]~input_o ),
+	.datae(gnd),
+	.dataf(!\bIn[3]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|LessThan0~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|LessThan0~1 .extended_lut = "off";
+defparam \fpgaAlu|aluMul|LessThan0~1 .lut_mask = 64'hF0A0F0A0A0A0A0A0;
+defparam \fpgaAlu|aluMul|LessThan0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X8_Y1_N30
+cyclonev_lcell_comb \fpgaAlu|aluMul|LessThan0~2 (
+// Equation(s):
+// \fpgaAlu|aluMul|LessThan0~2_combout  = ( \fpgaAlu|aluMul|andOutput[3][1]~combout  & ( \fpgaAlu|aluMul|LessThan0~1_combout  & ( (!\fpgaAlu|aluAnd|cOut [2] & (!\fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0_combout  & 
+// (!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c~combout  & !\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut~combout ))) ) ) ) # ( !\fpgaAlu|aluMul|andOutput[3][1]~combout  & ( \fpgaAlu|aluMul|LessThan0~1_combout  & ( 
+// (!\fpgaAlu|aluAnd|cOut [2] & ((!\fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0_combout  & ((!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c~combout ) # (!\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut~combout ))) # 
+// (\fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0_combout  & (!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c~combout  & !\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut~combout )))) # (\fpgaAlu|aluAnd|cOut [2] & 
+// (!\fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0_combout  & (!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c~combout  & !\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut~combout ))) ) ) )
+
+	.dataa(!\fpgaAlu|aluAnd|cOut [2]),
+	.datab(!\fpgaAlu|aluMul|sums_generator[2].sum|sum|carryOut~0_combout ),
+	.datac(!\fpgaAlu|aluMul|sums_generator[0].sum|sum_creator[3].sum|c~combout ),
+	.datad(!\fpgaAlu|aluMul|sums_generator[1].sum|sum_creator[1].sum|carryOut~combout ),
+	.datae(!\fpgaAlu|aluMul|andOutput[3][1]~combout ),
+	.dataf(!\fpgaAlu|aluMul|LessThan0~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|aluMul|LessThan0~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|aluMul|LessThan0~2 .extended_lut = "off";
+defparam \fpgaAlu|aluMul|LessThan0~2 .lut_mask = 64'h00000000E8808000;
+defparam \fpgaAlu|aluMul|LessThan0~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X10_Y1_N21
+cyclonev_lcell_comb \fpgaAlu|Flags[3]~4 (
+// Equation(s):
+// \fpgaAlu|Flags[3]~4_combout  = ( !\fpgaMuxi|result [2] & ( (!\fpgaMuxi|result [0] & (!\fpgaMuxi|result [3] & (!\fpgaAlu|aluMul|LessThan0~2_combout  & \fpgaMuxi|result [1]))) ) )
+
+	.dataa(!\fpgaMuxi|result [0]),
+	.datab(!\fpgaMuxi|result [3]),
+	.datac(!\fpgaAlu|aluMul|LessThan0~2_combout ),
+	.datad(!\fpgaMuxi|result [1]),
+	.datae(gnd),
+	.dataf(!\fpgaMuxi|result [2]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\fpgaAlu|Flags[3]~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \fpgaAlu|Flags[3]~4 .extended_lut = "off";
+defparam \fpgaAlu|Flags[3]~4 .lut_mask = 64'h0080008000000000;
+defparam \fpgaAlu|Flags[3]~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X84_Y1_N0
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule

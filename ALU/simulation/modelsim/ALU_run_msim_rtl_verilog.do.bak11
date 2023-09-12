@@ -45,16 +45,32 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/fpgaMux.sv}
+
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/ALU.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/aluMux.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/andNbits.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/complemento.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/displayHexadecimal.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/divisor.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/FPGAInterface.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/fpgaInterface_tb.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/fpgaMux.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/multiplicador.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/orNbits.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas_tb.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/restadorNbits.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/restadorNbits_tb.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shift1bit.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftLeftNbits.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftLeftNbits_tb.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftRightNbits.sv}
 vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/sumador1bit.sv}
 vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/sumadorNbits.sv}
-vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/multiplicador.sv}
+vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/xorNbits.sv}
 
-vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/multiplicador.sv}
-vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/multiplicador_tb.sv}
-vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/sumador1bit.sv}
-vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/sumadorNbits.sv}
-
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  multiplicador_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  fpgaInterface_tb
 
 add wave *
 view structure

@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:40 on Sep 11,2023
+# Start time: 09:03:26 on Sep 12,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 16:47:42 on Sep 11,2023, Elapsed time: 0:00:02
+# End time: 09:03:28 on Sep 12,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:42 on Sep 11,2023
+# Start time: 09:03:28 on Sep 12,2023
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 16:47:43 on Sep 11,2023, Elapsed time: 0:00:01
+# End time: 09:03:28 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:43 on Sep 11,2023
+# Start time: 09:03:29 on Sep 12,2023
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 16:47:43 on Sep 11,2023, Elapsed time: 0:00:00
+# End time: 09:03:29 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:44 on Sep 11,2023
+# Start time: 09:03:29 on Sep 12,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 16:47:46 on Sep 11,2023, Elapsed time: 0:00:02
+# End time: 09:03:31 on Sep 12,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:47 on Sep 11,2023
+# Start time: 09:03:31 on Sep 12,2023
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 16:47:48 on Sep 11,2023, Elapsed time: 0:00:01
+# End time: 09:03:32 on Sep 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:48 on Sep 11,2023
+# Start time: 09:03:32 on Sep 12,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -483,19 +483,19 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 16:47:52 on Sep 11,2023, Elapsed time: 0:00:04
+# End time: 09:03:36 on Sep 12,2023, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 10
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:52 on Sep 11,2023
+# Start time: 09:03:36 on Sep 12,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 16:47:55 on Sep 11,2023, Elapsed time: 0:00:03
+# End time: 09:03:38 on Sep 12,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:55 on Sep 11,2023
+# Start time: 09:03:38 on Sep 12,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
@@ -635,7 +635,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 16:47:57 on Sep 11,2023, Elapsed time: 0:00:02
+# End time: 09:03:39 on Sep 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -646,15 +646,15 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:57 on Sep 11,2023
+# Start time: 09:03:39 on Sep 12,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 16:48:01 on Sep 11,2023, Elapsed time: 0:00:04
+# End time: 09:03:42 on Sep 12,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:01 on Sep 11,2023
+# Start time: 09:03:42 on Sep 12,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
@@ -754,7 +754,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 16:48:02 on Sep 11,2023, Elapsed time: 0:00:01
+# End time: 09:03:42 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -765,7 +765,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:02 on Sep 11,2023
+# Start time: 09:03:43 on Sep 12,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -775,18 +775,18 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 16:48:06 on Sep 11,2023, Elapsed time: 0:00:04
+# End time: 09:03:47 on Sep 12,2023, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 6
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:06 on Sep 11,2023
+# Start time: 09:03:47 on Sep 12,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 16:48:07 on Sep 11,2023, Elapsed time: 0:00:01
+# End time: 09:03:47 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -800,84 +800,423 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/sumador1bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:07 on Sep 11,2023
+# Start time: 09:03:48 on Sep 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/sumador1bit.sv 
 # -- Compiling module sumador1bit
 # 
 # Top level modules:
 # 	sumador1bit
-# End time: 16:48:07 on Sep 11,2023, Elapsed time: 0:00:00
+# End time: 09:03:48 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/sumadorNbits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:07 on Sep 11,2023
+# Start time: 09:03:48 on Sep 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/sumadorNbits.sv 
 # -- Compiling module sumadorNbits
 # 
 # Top level modules:
 # 	sumadorNbits
-# End time: 16:48:07 on Sep 11,2023, Elapsed time: 0:00:00
+# End time: 09:03:48 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftLeftNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:48 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftLeftNbits.sv 
+# -- Compiling module shiftLeftNbits
+# 
+# Top level modules:
+# 	shiftLeftNbits
+# End time: 09:03:48 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shift1bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:48 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shift1bit.sv 
+# -- Compiling module shift1bit
+# 
+# Top level modules:
+# 	shift1bit
+# End time: 09:03:48 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/complemento.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:48 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/complemento.sv 
+# -- Compiling module complemento
+# 
+# Top level modules:
+# 	complemento
+# End time: 09:03:48 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/restadorNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:48 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/restadorNbits.sv 
+# -- Compiling module restadorNbits
+# 
+# Top level modules:
+# 	restadorNbits
+# End time: 09:03:49 on Sep 12,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/andNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:49 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/andNbits.sv 
+# -- Compiling module andNbits
+# 
+# Top level modules:
+# 	andNbits
+# End time: 09:03:49 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/orNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:49 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/orNbits.sv 
+# -- Compiling module orNbits
+# 
+# Top level modules:
+# 	orNbits
+# End time: 09:03:49 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/xorNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:49 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/xorNbits.sv 
+# -- Compiling module xorNbits
+# 
+# Top level modules:
+# 	xorNbits
+# End time: 09:03:49 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftRightNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:49 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftRightNbits.sv 
+# -- Compiling module shiftRightNbits
+# 
+# Top level modules:
+# 	shiftRightNbits
+# End time: 09:03:49 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/multiplicador.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:07 on Sep 11,2023
+# Start time: 09:03:49 on Sep 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/multiplicador.sv 
 # -- Compiling module multiplicador
 # 
 # Top level modules:
 # 	multiplicador
-# End time: 16:48:07 on Sep 11,2023, Elapsed time: 0:00:00
+# End time: 09:03:50 on Sep 12,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/divisor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/divisor.sv 
+# -- Compiling module divisor
+# 
+# Top level modules:
+# 	divisor
+# End time: 09:03:50 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/ALU.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 09:03:50 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/displayHexadecimal.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/displayHexadecimal.sv 
+# -- Compiling module display_hexadecimal
+# 
+# Top level modules:
+# 	display_hexadecimal
+# End time: 09:03:50 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/aluMux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/aluMux.sv 
+# -- Compiling module aluMux
+# 
+# Top level modules:
+# 	aluMux
+# End time: 09:03:50 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/FPGAInterface.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/FPGAInterface.sv 
+# -- Compiling module FPGAInterface
+# 
+# Top level modules:
+# 	FPGAInterface
+# End time: 09:03:50 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/fpgaMux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/fpgaMux.sv 
+# -- Compiling module fpgaMux
+# 
+# Top level modules:
+# 	fpgaMux
+# End time: 09:03:51 on Sep 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:51 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/ALU.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 09:03:51 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/aluMux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:51 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/aluMux.sv 
+# -- Compiling module aluMux
+# 
+# Top level modules:
+# 	aluMux
+# End time: 09:03:51 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/andNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:51 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/andNbits.sv 
+# -- Compiling module andNbits
+# 
+# Top level modules:
+# 	andNbits
+# End time: 09:03:51 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/complemento.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:51 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/complemento.sv 
+# -- Compiling module complemento
+# 
+# Top level modules:
+# 	complemento
+# End time: 09:03:51 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/displayHexadecimal.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:51 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/displayHexadecimal.sv 
+# -- Compiling module display_hexadecimal
+# 
+# Top level modules:
+# 	display_hexadecimal
+# End time: 09:03:51 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/divisor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:51 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/divisor.sv 
+# -- Compiling module divisor
+# 
+# Top level modules:
+# 	divisor
+# End time: 09:03:51 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/FPGAInterface.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:51 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/FPGAInterface.sv 
+# -- Compiling module FPGAInterface
+# 
+# Top level modules:
+# 	FPGAInterface
+# End time: 09:03:52 on Sep 12,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/fpgaInterface_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:52 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/fpgaInterface_tb.sv 
+# -- Compiling module fpgaInterface_tb
+# 
+# Top level modules:
+# 	fpgaInterface_tb
+# End time: 09:03:52 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/fpgaMux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:52 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/fpgaMux.sv 
+# -- Compiling module fpgaMux
+# 
+# Top level modules:
+# 	fpgaMux
+# End time: 09:03:52 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/multiplicador.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:07 on Sep 11,2023
+# Start time: 09:03:52 on Sep 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/multiplicador.sv 
 # -- Compiling module multiplicador
 # 
 # Top level modules:
 # 	multiplicador
-# End time: 16:48:08 on Sep 11,2023, Elapsed time: 0:00:01
+# End time: 09:03:52 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/multiplicador_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/orNbits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:08 on Sep 11,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/multiplicador_tb.sv 
-# -- Compiling module multiplicador_tb
+# Start time: 09:03:52 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/orNbits.sv 
+# -- Compiling module orNbits
 # 
 # Top level modules:
-# 	multiplicador_tb
-# End time: 16:48:08 on Sep 11,2023, Elapsed time: 0:00:00
+# 	orNbits
+# End time: 09:03:52 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:52 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas.sv 
+# -- Compiling module pruebas
+# 
+# Top level modules:
+# 	pruebas
+# End time: 09:03:52 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:52 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/pruebas_tb.sv 
+# -- Compiling module pruebas_tb
+# 
+# Top level modules:
+# 	pruebas_tb
+# End time: 09:03:53 on Sep 12,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/restadorNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:53 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/restadorNbits.sv 
+# -- Compiling module restadorNbits
+# 
+# Top level modules:
+# 	restadorNbits
+# End time: 09:03:53 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/restadorNbits_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:53 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/restadorNbits_tb.sv 
+# -- Compiling module restadorNbits_tb
+# 
+# Top level modules:
+# 	restadorNbits_tb
+# End time: 09:03:53 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shift1bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:53 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shift1bit.sv 
+# -- Compiling module shift1bit
+# 
+# Top level modules:
+# 	shift1bit
+# End time: 09:03:53 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftLeftNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:53 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftLeftNbits.sv 
+# -- Compiling module shiftLeftNbits
+# 
+# Top level modules:
+# 	shiftLeftNbits
+# End time: 09:03:53 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftLeftNbits_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:53 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftLeftNbits_tb.sv 
+# -- Compiling module shiftLeftNbits_tb
+# 
+# Top level modules:
+# 	shiftLeftNbits_tb
+# End time: 09:03:53 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftRightNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:53 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/shiftRightNbits.sv 
+# -- Compiling module shiftRightNbits
+# 
+# Top level modules:
+# 	shiftRightNbits
+# End time: 09:03:54 on Sep 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/sumador1bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:08 on Sep 11,2023
+# Start time: 09:03:54 on Sep 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/sumador1bit.sv 
 # -- Compiling module sumador1bit
 # 
 # Top level modules:
 # 	sumador1bit
-# End time: 16:48:08 on Sep 11,2023, Elapsed time: 0:00:00
+# End time: 09:03:54 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/sumadorNbits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:08 on Sep 11,2023
+# Start time: 09:03:54 on Sep 12,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/sumadorNbits.sv 
 # -- Compiling module sumadorNbits
 # 
 # Top level modules:
 # 	sumadorNbits
-# End time: 16:48:08 on Sep 11,2023, Elapsed time: 0:00:00
+# End time: 09:03:54 on Sep 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/dario/OneDrive\ -\ Estudiantes\ ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU {C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/xorNbits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:03:54 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU" C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/xorNbits.sv 
+# -- Compiling module xorNbits
+# 
+# Top level modules:
+# 	xorNbits
+# End time: 09:03:54 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  multiplicador_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" multiplicador_tb 
-# Start time: 16:48:08 on Sep 11,2023
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  fpgaInterface_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" fpgaInterface_tb 
+# Start time: 09:03:54 on Sep 12,2023
 # Loading sv_std.std
-# Loading work.multiplicador_tb
-# Loading work.multiplicador
+# Loading work.fpgaInterface_tb
+# Loading work.FPGAInterface
+# Loading work.fpgaMux
+# Loading work.alu
+# Loading work.orNbits
+# Loading work.andNbits
+# Loading work.xorNbits
+# Loading work.shiftLeftNbits
+# Loading work.shiftRightNbits
 # Loading work.sumadorNbits
 # Loading work.sumador1bit
+# Loading work.restadorNbits
+# Loading work.complemento
+# Loading work.multiplicador
+# Loading work.divisor
+# Loading work.aluMux
+# Loading work.display_hexadecimal
+# Loading work.shift1bit
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'sum2'.  Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /fpgaInterface_tb/test/fpgaAlu/aluRes/sum2 File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/restadorNbits.sv Line: 12
+# ** Warning: (vsim-3722) C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/restadorNbits.sv(12): [TFMPC] - Missing connection for port 'cOut'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (8) for port 'seg'. The port definition is at: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/displayHexadecimal.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /fpgaInterface_tb/test/hexSeg File: C:/Users/dario/OneDrive - Estudiantes ITCR/Escritorio/Trabajos/TallerDisennoDigital/ALU/FPGAInterface.sv Line: 11
 # 
 # add wave *
 # view structure
@@ -885,5 +1224,7 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 16:50:55 on Sep 11,2023, Elapsed time: 0:02:47
-# Errors: 0, Warnings: 0
+# temp: 01100000
+# temp: 00000110
+# End time: 09:11:32 on Sep 12,2023, Elapsed time: 0:07:38
+# Errors: 0, Warnings: 3

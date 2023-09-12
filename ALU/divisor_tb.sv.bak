@@ -1,0 +1,9 @@
+module divisor_tb();
+
+logic [3:0] aIn, bIn, cOut, mod;
+
+
+
+
+
+endmodule

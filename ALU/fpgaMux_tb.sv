@@ -1,0 +1,19 @@
+`timescale 10ns/1ns
+module fpgaMux_tb();
+	
+	logic [5:0] sel;
+	logic [3:0] result;
+	fpgaMux test (sel, result);
+	
+	initial begin
+		
+		sel = 6'b001111;
+		#5;
+		sel = 6'b011111;
+		#5;
+		sel = 6'b010111;
+		#5;
+		sel = 6'b011111;
+		#5;
+	end
+endmodule

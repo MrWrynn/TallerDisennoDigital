@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY multiplicador
+set_global_assignment -name TOP_LEVEL_ENTITY FPGAInterface
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:53:31  AUGUST 29, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
@@ -57,7 +57,7 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH multiplicador_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH fpgaInterface_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME sumador1bit_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id sumador1bit_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME sumador1bit_tb -section_id sumador1bit_tb
@@ -99,6 +99,24 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id shiftRightNb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME shiftRightNbits_tb -section_id shiftRightNbits_tb
 set_global_assignment -name SYSTEMVERILOG_FILE multiplicador.sv
 set_global_assignment -name SYSTEMVERILOG_FILE multiplicador_tb.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME multiplicador_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id multiplicador_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME multiplicador_tb -section_id multiplicador_tb
+set_global_assignment -name SYSTEMVERILOG_FILE divisor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE divisor_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ALU.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME divisor_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id divisor_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME divisor_tb -section_id divisor_tb
+set_global_assignment -name SYSTEMVERILOG_FILE displayHexadecimal.sv
+set_global_assignment -name SYSTEMVERILOG_FILE aluMux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE FPGAInterface.sv
+set_global_assignment -name SYSTEMVERILOG_FILE fpgaMux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE fpgaMux_tb.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME fpgaMux_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id fpgaMux_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME fpgaMux_tb -section_id fpgaMux_tb
+set_global_assignment -name SYSTEMVERILOG_FILE fpgaInterface_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_FILE sumador1bit.sv -section_id sumador1bit_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE sumador1bit_tb.sv -section_id sumador1bit_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE sumador1bit.sv -section_id sumadorNbits_tb
@@ -119,15 +137,70 @@ set_global_assignment -name EDA_TEST_BENCH_FILE shiftLeftNbits_tb.sv -section_id
 set_global_assignment -name EDA_TEST_BENCH_FILE shift1bit.sv -section_id shiftRightNbits_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE shiftRightNbits.sv -section_id shiftRightNbits_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE shiftRightNbits_tb.sv -section_id shiftRightNbits_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME multiplicador_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id multiplicador_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME multiplicador_tb -section_id multiplicador_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE multiplicador.sv -section_id multiplicador_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE multiplicador_tb.sv -section_id multiplicador_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE sumador1bit.sv -section_id multiplicador_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE sumadorNbits.sv -section_id multiplicador_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE divisor.sv -section_id divisor_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE divisor_tb.sv -section_id divisor_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE restadorNbits.sv -section_id divisor_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shift1bit.sv -section_id divisor_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shiftLeftNbits.sv -section_id divisor_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE sumador1bit.sv -section_id divisor_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE sumadorNbits.sv -section_id divisor_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE fpgaMux.sv -section_id fpgaMux_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE fpgaMux_tb.sv -section_id fpgaMux_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME fpgaInterface_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME fpgaInterface_tb -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ALU.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE aluMux.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE andNbits.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE complemento.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE displayHexadecimal.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE divisor.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE FPGAInterface.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE fpgaInterface_tb.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE fpgaMux.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE multiplicador.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE orNbits.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE pruebas.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE pruebas_tb.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE restadorNbits.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE restadorNbits_tb.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shift1bit.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shiftLeftNbits.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shiftLeftNbits_tb.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE shiftRightNbits.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE sumador1bit.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE sumadorNbits.sv -section_id fpgaInterface_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE xorNbits.sv -section_id fpgaInterface_tb
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AB12 -to aIn[0]
+set_location_assignment PIN_AC12 -to aIn[1]
+set_location_assignment PIN_AF9 -to aIn[2]
+set_location_assignment PIN_AF10 -to aIn[3]
+set_location_assignment PIN_AD11 -to bIn[0]
+set_location_assignment PIN_AD12 -to bIn[1]
+set_location_assignment PIN_AE11 -to bIn[2]
+set_location_assignment PIN_AC9 -to bIn[3]
+set_location_assignment PIN_V16 -to flags[0]
+set_location_assignment PIN_W16 -to flags[1]
+set_location_assignment PIN_V17 -to flags[2]
+set_location_assignment PIN_V18 -to flags[3]
+set_location_assignment PIN_AE26 -to hex[0]
+set_location_assignment PIN_AE27 -to hex[1]
+set_location_assignment PIN_AE28 -to hex[2]
+set_location_assignment PIN_AG27 -to hex[3]
+set_location_assignment PIN_AF28 -to hex[4]
+set_location_assignment PIN_AG28 -to hex[5]
+set_location_assignment PIN_AH28 -to hex[6]
+set_location_assignment PIN_AE12 -to sel[5]
+set_location_assignment PIN_AD10 -to sel[4]
+set_location_assignment PIN_AA14 -to sel[3]
+set_location_assignment PIN_AA15 -to sel[2]
+set_location_assignment PIN_W15 -to sel[1]
+set_location_assignment PIN_Y16 -to sel[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name SYSTEMVERILOG_FILE divisor.sv

@@ -1,5 +1,5 @@
 Flow report for ALU
-Mon Sep 11 16:34:52 2023
+Tue Sep 12 09:20:15 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -38,24 +38,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Mon Sep 11 16:34:52 2023          ;
-; Quartus Prime Version       ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
-; Revision Name               ; ALU                                            ;
-; Top-level Entity Name       ; multiplicador                                  ;
-; Family                      ; Cyclone V                                      ;
-; Device                      ; 5CSEMA5F31C6                                   ;
-; Timing Models               ; Final                                          ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
-; Total registers             ; N/A until Partition Merge                      ;
-; Total pins                  ; N/A until Partition Merge                      ;
-; Total virtual pins          ; N/A until Partition Merge                      ;
-; Total block memory bits     ; N/A until Partition Merge                      ;
-; Total PLLs                  ; N/A until Partition Merge                      ;
-; Total DLLs                  ; N/A until Partition Merge                      ;
-+-----------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++---------------------------------+------------------------------------------------+
+; Flow Status                     ; Successful - Tue Sep 12 09:20:15 2023          ;
+; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Revision Name                   ; ALU                                            ;
+; Top-level Entity Name           ; FPGAInterface                                  ;
+; Family                          ; Cyclone V                                      ;
+; Device                          ; 5CSEMA5F31C6                                   ;
+; Timing Models                   ; Final                                          ;
+; Logic utilization (in ALMs)     ; 76 / 32,070 ( < 1 % )                          ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 25 / 457 ( 5 % )                               ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                                 ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                                  ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
++---------------------------------+------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/11/2023 16:34:39 ;
+; Start date & time ; 09/12/2023 09:19:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ALU                 ;
 +-------------------+---------------------+
@@ -74,20 +79,23 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+---------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name   ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+---------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 185410942242985.169447167812596        ; --            ; --            ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 185410942242985.169453194213104        ; --            ; --            ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; multiplicador_tb                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; sumadorNbits_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; restadorNbits_tb                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; complemento_tb                    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; pruebas_tb                        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; divisor_tb                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; shiftLeftNbits_tb                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; sumador1bit_tb                    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; fpgaMux_tb                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; shiftRightNbits_tb                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --            ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --            ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --            ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --            ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; multiplicador_tb                       ; --            ; --            ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; fpgaInterface_tb                       ; --            ; --            ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --            ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim (SystemVerilog)               ; <None>        ; --            ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --            ; eda_simulation                    ;
@@ -107,11 +115,42 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_FILE                  ; complemento_tb.sv                      ; --            ; --            ; complemento_tb                    ;
 ; EDA_TEST_BENCH_FILE                  ; pruebas.sv                             ; --            ; --            ; pruebas_tb                        ;
 ; EDA_TEST_BENCH_FILE                  ; pruebas_tb.sv                          ; --            ; --            ; pruebas_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; divisor.sv                             ; --            ; --            ; divisor_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; divisor_tb.sv                          ; --            ; --            ; divisor_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; restadorNbits.sv                       ; --            ; --            ; divisor_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; shift1bit.sv                           ; --            ; --            ; divisor_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; shiftLeftNbits.sv                      ; --            ; --            ; divisor_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; sumador1bit.sv                         ; --            ; --            ; divisor_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; sumadorNbits.sv                        ; --            ; --            ; divisor_tb                        ;
 ; EDA_TEST_BENCH_FILE                  ; shift1bit.sv                           ; --            ; --            ; shiftLeftNbits_tb                 ;
 ; EDA_TEST_BENCH_FILE                  ; shiftLeftNbits.sv                      ; --            ; --            ; shiftLeftNbits_tb                 ;
 ; EDA_TEST_BENCH_FILE                  ; shiftLeftNbits_tb.sv                   ; --            ; --            ; shiftLeftNbits_tb                 ;
 ; EDA_TEST_BENCH_FILE                  ; sumador1bit.sv                         ; --            ; --            ; sumador1bit_tb                    ;
 ; EDA_TEST_BENCH_FILE                  ; sumador1bit_tb.sv                      ; --            ; --            ; sumador1bit_tb                    ;
+; EDA_TEST_BENCH_FILE                  ; ALU.sv                                 ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; aluMux.sv                              ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; andNbits.sv                            ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; complemento.sv                         ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; displayHexadecimal.sv                  ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; divisor.sv                             ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; FPGAInterface.sv                       ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; fpgaInterface_tb.sv                    ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; fpgaMux.sv                             ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; multiplicador.sv                       ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; orNbits.sv                             ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; pruebas.sv                             ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; pruebas_tb.sv                          ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; restadorNbits.sv                       ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; restadorNbits_tb.sv                    ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; shift1bit.sv                           ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; shiftLeftNbits.sv                      ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; shiftLeftNbits_tb.sv                   ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; shiftRightNbits.sv                     ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; sumador1bit.sv                         ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; sumadorNbits.sv                        ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; xorNbits.sv                            ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_FILE                  ; fpgaMux.sv                             ; --            ; --            ; fpgaMux_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; fpgaMux_tb.sv                          ; --            ; --            ; fpgaMux_tb                        ;
 ; EDA_TEST_BENCH_FILE                  ; shift1bit.sv                           ; --            ; --            ; shiftRightNbits_tb                ;
 ; EDA_TEST_BENCH_FILE                  ; shiftRightNbits.sv                     ; --            ; --            ; shiftRightNbits_tb                ;
 ; EDA_TEST_BENCH_FILE                  ; shiftRightNbits_tb.sv                  ; --            ; --            ; shiftRightNbits_tb                ;
@@ -120,8 +159,11 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_MODULE_NAME           ; restadorNbits_tb                       ; --            ; --            ; restadorNbits_tb                  ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; complemento_tb                         ; --            ; --            ; complemento_tb                    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; pruebas_tb                             ; --            ; --            ; pruebas_tb                        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; divisor_tb                             ; --            ; --            ; divisor_tb                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; shiftLeftNbits_tb                      ; --            ; --            ; shiftLeftNbits_tb                 ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; sumador1bit_tb                         ; --            ; --            ; sumador1bit_tb                    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; fpgaInterface_tb                       ; --            ; --            ; fpgaInterface_tb                  ;
+; EDA_TEST_BENCH_MODULE_NAME           ; fpgaMux_tb                             ; --            ; --            ; fpgaMux_tb                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; shiftRightNbits_tb                     ; --            ; --            ; shiftRightNbits_tb                ;
 ; EDA_TEST_BENCH_NAME                  ; sumador1bit_tb                         ; --            ; --            ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; sumadorNbits_tb                        ; --            ; --            ; eda_simulation                    ;
@@ -131,42 +173,57 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_NAME                  ; shiftLeftNbits_tb                      ; --            ; --            ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; shiftRightNbits_tb                     ; --            ; --            ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; multiplicador_tb                       ; --            ; --            ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; divisor_tb                             ; --            ; --            ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; fpgaMux_tb                             ; --            ; --            ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; fpgaInterface_tb                       ; --            ; --            ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --            ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --            ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --            ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; multiplicador ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; multiplicador ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; multiplicador ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; FPGAInterface ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; FPGAInterface ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; FPGAInterface ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --            ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --            ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --            ; --                                ;
-; TOP_LEVEL_ENTITY                     ; multiplicador                          ; ALU           ; --            ; --                                ;
+; TOP_LEVEL_ENTITY                     ; FPGAInterface                          ; ALU           ; --            ; --                                ;
 +--------------------------------------+----------------------------------------+---------------+---------------+-----------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                          ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:14     ; 1.0                     ; 4780 MB             ; 00:00:23                           ;
-; Total                  ; 00:00:14     ; --                      ; --                  ; 00:00:23                           ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4845 MB             ; 00:00:22                           ;
+; Fitter               ; 00:00:39     ; 1.0                     ; 6526 MB             ; 00:00:52                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4875 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.1                     ; 5146 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4739 MB             ; 00:00:01                           ;
+; Total                ; 00:01:09     ; --                      ; --                  ; 00:01:27                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                      ;
-+------------------------+------------------+------------+------------+----------------+
-; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; Ramsenseis-PC    ; Windows 10 ; 10.0       ; x86_64         ;
-+------------------------+------------------+------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; Ramsenseis-PC    ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Ramsenseis-PC    ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Ramsenseis-PC    ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Ramsenseis-PC    ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Ramsenseis-PC    ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
+quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+quartus_fit --read_settings_files=off --write_settings_files=off ALU -c ALU
+quartus_asm --read_settings_files=off --write_settings_files=off ALU -c ALU
+quartus_sta ALU -c ALU
+quartus_eda --read_settings_files=off --write_settings_files=off ALU -c ALU
 
 
 

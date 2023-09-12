@@ -1,0 +1,6 @@
+module fpgaMux_tb();
+fpgaMux (
+  input logic[5:0] sel,
+  inout logic[3:0] result
+);
+endmodule
