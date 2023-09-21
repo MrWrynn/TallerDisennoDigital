@@ -1,0 +1,10 @@
+module regCiclos(
+		input logic clk,
+		input logic rst,
+		input logic rst_ciclos,
+		output logic [7:0] ciclos
+);
+
+
+
+endmodule

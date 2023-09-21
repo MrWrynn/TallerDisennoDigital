@@ -1,0 +1,15 @@
+module regMsj(
+		input logic clk,
+		input logic rst,
+		input logic [7:0] msj
+		output logic [7:0] outMsj
+);
+
+always @(posedge clk or negedge rst) begin
+
+	if (!rst)
+		ou
+
+end
+
+endmodule

@@ -1,0 +1,12 @@
+module regMant(
+		input logic clk,
+		input logic rst,
+		input logic enable_mant,
+		output logic [7:0] ciclos
+);
+
+logic cnt_rst = rst && !rst_ciclos;
+
+contador cont (clk, cnt_rst, ciclos);
+
+endmodule

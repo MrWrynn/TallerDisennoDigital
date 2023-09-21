@@ -1,0 +1,28 @@
+`timescale 10ns/1ns
+module tb_contador();
+
+logic clk, rst;
+logic [7:0] count;
+
+coontador test (clk, rst, count);
+
+initial begin
+clk = 0;
+rst = 1;
+#5;
+rst = 0;
+#5;
+rst = 1;
+#5;
+
+repeat (400) begin
+
+clk = ~clk;
+
+end
+
+assert (count == 200) $display("Exito") else $error("Fallo por manco");
+
+end
+
+endmodule
