@@ -22,10 +22,9 @@ always_comb
 	endcase
 
 //output logic
-assign next = (state == 3'b000);
-assign bomba = (state == 3'b001);
-assign revisar_siguiente = (state == 3'b010);
-assign incremento = (state==3'b100);
-assign ultima_casilla = (state==3'b101);
+assign mover = (state == 3'b010);
+assign bandera = (state == 3'b011);
+assign game_over = (state == 3'b101);
+assign limpia = (state==3'b110);
 
 endmodule
