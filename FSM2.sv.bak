@@ -12,12 +12,11 @@ always_ff @(posedge clk or negedge rst)
 always_comb
 	case(state)
 		3'b000: if (ultima_casilla) next_state = 3'b001;
-		3'b001: if(D) next_state = 3'b010; else if(S) next_state = 3'b100; else if(B) next_state=3'b011
-		3'b010: next_state = 3'b001;
-		3'b011: next_state = 3'b001;
-		3'b100: if(HBO & ~HBA) next_state = 3'b101; else if(~HBO & ~HBA) next_state=3'b110; else if(HBA) next_state=1111;
-		3'b110: next_state = 3'b001;
-		3'b111: next_state = 3'b001;
+		3'b001: if(Q) next_state = 3'b000; else next_state = 3'b010;
+		3'b010: if (B) next_state = 3'b100; else if(~B & ~C) next_state = 3'b010; else if(C) next_state = 3'b011;
+		3'b011: if(F) next_state = 3'b010; else next_state = 3'b101;
+		3'b100: next_state = 3'b010;
+		3'b101: next_state = 3'b101;
 		default: next_state = 3'b000;
 	endcase
 
