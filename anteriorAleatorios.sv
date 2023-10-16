@@ -1,4 +1,4 @@
-module colocarBombas (
+module colocarBombasOficial (
   input wire clk,      // Señal de reloj
   input wire rst,      // Señal de reinicio
   output wire enable_random,
@@ -22,7 +22,3 @@ module colocarBombas (
   //assign enable_random = 1'b1;
   assign randomValue = lfsr; // El valor del registro es el número aleatorio
 endmodule
-
-
-
-
