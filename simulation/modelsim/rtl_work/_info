@@ -1,0 +1,87 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/simulation/modelsim
+vcolocarBombas
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1697523115
+!i10b 1
+!s100 KK9Y2`VGZ>25HNzjZibM83
+I?Y>W4mhgmbBjZKnT<[JaT3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 colocarBombas_sv_unit
+S1
+R0
+w1697522691
+8C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv
+FC:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1697523115.000000
+!s107 C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital|C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital
+Z8 tCvgOpt 0
+ncolocar@bombas
+vcolocarBombas_tb
+R1
+R2
+!i10b 1
+!s100 B?lR1mn2X9MYhIX[ik7cG2
+Ij:kB4`N>lCe_MOBb@18^83
+R3
+!s105 colocarBombas_tb_sv_unit
+S1
+R0
+w1697522967
+8C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas_tb.sv
+FC:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas_tb.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital|C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas_tb.sv|
+!i113 1
+R6
+R7
+R8
+ncolocar@bombas_tb
+vrandom
+R1
+!s110 1697523116
+!i10b 1
+!s100 Y:@MKLTLO5[L7;>oLCoMj3
+IE^9L^_FAJlURPl@4`5ERF2
+R3
+!s105 random_sv_unit
+S1
+R0
+w1697523074
+8C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv
+FC:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital|C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv|
+!i113 1
+R6
+R7
+R8

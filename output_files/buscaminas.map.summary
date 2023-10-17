@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Failed - Thu Oct 12 10:49:34 2023
-Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Analysis & Elaboration Status : Successful - Tue Oct 17 00:11:29 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : buscaminas
-Top-level Entity Name : VGA
+Top-level Entity Name : colocarBombas
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

@@ -1,6 +1,6 @@
 Analysis & Elaboration report for buscaminas
-Thu Oct 12 10:49:34 2023
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Tue Oct 17 00:11:29 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
 ---------------------
@@ -11,13 +11,14 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
   5. Analysis & Elaboration Messages
+  6. Analysis & Elaboration Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,10 +38,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Thu Oct 12 10:49:34 2023              ;
-; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Analysis & Elaboration Status ; Successful - Tue Oct 17 00:11:29 2023          ;
+; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                 ; buscaminas                                     ;
-; Top-level Entity Name         ; VGA                                            ;
+; Top-level Entity Name         ; colocarBombas                                  ;
 ; Family                        ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
 ; Total registers               ; N/A until Partition Merge                      ;
@@ -57,8 +58,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -74,7 +75,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; VGA                ; buscaminas         ;
+; Top-level entity name                                                           ; colocarBombas      ; buscaminas         ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -160,32 +161,72 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Oct 12 10:49:22 2023
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Tue Oct 17 00:11:18 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off buscaminas -c buscaminas --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file colocarbombas_tb.sv
+    Info (12023): Found entity 1: colocarBombas_tb File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file moverse_tb.sv
+    Info (12023): Found entity 1: moverse_tb File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/moverse_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file revisar_bomba.sv
+    Info (12023): Found entity 1: revisar_bomba File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/revisar_bomba.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file moverse.sv
+    Info (12023): Found entity 1: moverse File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/moverse.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rectgen.sv
-    Info (12023): Found entity 1: rectgen File: C:/Users/Usuario/Documents/GitHub/TallerDisennoDigital/rectgen.sv Line: 1
+    Info (12023): Found entity 1: rectgen File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/rectgen.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
-    Info (12023): Found entity 1: vgaController File: C:/Users/Usuario/Documents/GitHub/TallerDisennoDigital/vgaController.sv Line: 1
+    Info (12023): Found entity 1: vgaController File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/vgaController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
-    Info (12023): Found entity 1: VGA File: C:/Users/Usuario/Documents/GitHub/TallerDisennoDigital/VGA.sv Line: 1
+    Info (12023): Found entity 1: VGA File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/VGA.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file videogen.sv
-    Info (12023): Found entity 1: videoGen File: C:/Users/Usuario/Documents/GitHub/TallerDisennoDigital/videoGen.sv Line: 1
+    Info (12023): Found entity 1: videoGen File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/videoGen.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll.sv
-    Info (12023): Found entity 1: pll File: C:/Users/Usuario/Documents/GitHub/TallerDisennoDigital/pll.sv Line: 1
+    Info (12023): Found entity 1: pll File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/pll.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fsm1.sv
-    Info (12023): Found entity 1: FSM1 File: C:/Users/Usuario/Documents/GitHub/TallerDisennoDigital/FSM1.sv Line: 1
-Error (10170): Verilog HDL syntax error at FSM2.sv(16) near text: "3";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Usuario/Documents/GitHub/TallerDisennoDigital/FSM2.sv Line: 16
-Error (10112): Ignored design unit "FSM1" at FSM2.sv(1) due to previous errors File: C:/Users/Usuario/Documents/GitHub/TallerDisennoDigital/FSM2.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file fsm2.sv
+    Info (12023): Found entity 1: FSM1 File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/FSM1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsm2.sv
+    Info (12023): Found entity 1: FSM2 File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/FSM2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file colocarbombas.sv
-    Info (12023): Found entity 1: colocarBombas File: C:/Users/Usuario/Documents/GitHub/TallerDisennoDigital/colocarBombas.sv Line: 1
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 4774 megabytes
-    Error: Processing ended: Thu Oct 12 10:49:34 2023
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:24
+    Info (12023): Found entity 1: colocarBombas File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file gamelogic.sv
+    Info (12023): Found entity 1: gameLogic File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file random.sv
+    Info (12023): Found entity 1: random File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contarbombas.sv
+    Info (12023): Found entity 1: contarBombas File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contarbombas_tb.sv
+    Info (12023): Found entity 1: contarBombas_tb File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas_tb.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at FSM1.sv(24): created implicit net for "next" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/FSM1.sv Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at FSM1.sv(25): created implicit net for "bomba" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/FSM1.sv Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at FSM1.sv(26): created implicit net for "revisar_siguiente" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/FSM1.sv Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at FSM1.sv(27): created implicit net for "incremento" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/FSM1.sv Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at FSM1.sv(28): created implicit net for "ultima_casilla" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/FSM1.sv Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at FSM2.sv(25): created implicit net for "mover" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/FSM2.sv Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at FSM2.sv(26): created implicit net for "bandera" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/FSM2.sv Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at FSM2.sv(27): created implicit net for "game_over" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/FSM2.sv Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at FSM2.sv(28): created implicit net for "limpia" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/FSM2.sv Line: 28
+Info (12127): Elaborating entity "colocarBombas" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at colocarBombas.sv(35): truncated value with size 32 to match size of target (6) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv Line: 35
+Warning (10230): Verilog HDL assignment warning at colocarBombas.sv(39): truncated value with size 32 to match size of target (3) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv Line: 39
+Warning (10230): Verilog HDL assignment warning at colocarBombas.sv(48): truncated value with size 32 to match size of target (3) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv Line: 48
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrizBombastic" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrizBombastic" into its bus
+Info (12128): Elaborating entity "random" for hierarchy "random:ram" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv Line: 18
+Warning (10036): Verilog HDL or VHDL warning at random.sv(9): object "count" assigned a value but never read File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 9
+Warning (10036): Verilog HDL or VHDL warning at random.sv(9): object "count_next" assigned a value but never read File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 9
+Info (144001): Generated suppressed messages file C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/output_files/buscaminas.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Tue Oct 17 00:11:29 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:13
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/output_files/buscaminas.map.smsg.
 
 

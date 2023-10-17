@@ -28,12 +28,12 @@ always @(posedge clk or posedge reset) begin
     izquierda_prev <= izquierda;
     
     // Lógica para mover el objeto en la matriz
-    if (arriba && !arriba_prev) begin
+    if (abajo && !abajo_prev) begin
+		  if (pos_y > 3'b000)
+        pos_y <= pos_y - 1;
+    end else if (arriba && !arriba_prev) begin
       if (pos_y < 3'b111)
         pos_y <= pos_y + 1;
-    end else if (abajo && !abajo_prev) begin
-      if (pos_y > 3'b000)
-        pos_y <= pos_y - 1;
     end else if (derecha && !derecha_prev) begin
       if (pos_x < 3'b111)
         pos_x <= pos_x + 1;

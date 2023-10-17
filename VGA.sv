@@ -1,5 +1,6 @@
 module VGA
 (input logic clk,
+input logic [2:0] pos_x, pos_y,
 output logic vgaclk, hsync, vsync, sync_b, blank_b,
 output logic [7:0] r, g, b);
 
@@ -7,6 +8,6 @@ logic[9:0] x, y;
 
 pll vgapll(.inclk0(clk), .c0(vgaclk));
 vgaController vgaCont(vgaclk, hsync, vsync, sync_b, blank_b,x,y);
-videoGen videoGen(x, y, r, g, b);
+videoGen videoGen(x, y, pos_x, pos_y, r, g, b);
 
 endmodule

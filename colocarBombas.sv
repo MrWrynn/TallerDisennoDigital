@@ -1,26 +1,54 @@
 module colocarBombas (
-  input wire clk,      // Señal de reloj
-  input wire rst,      // Señal de reinicio
-  output wire enable_random,
-  output wire [5:0] randomValue // Valor aleatorio de 6 bits (0-63)
+	input logic clock,
+	input logic reset,
+	input logic [5:0] numero_bombas,
+	output logic [7:0][7:0][3:0] matrizBombastic,
+	output logic Q
 );
-  reg [5:0] lfsr;    // Registro de cambio lineal
 
-  initial begin
-    lfsr <= 6'b111111; // Valor inicial arbitrario
-  end
+logic [2:0] pos_x;
+logic [2:0] pos_y;
+logic rnd;
+logic [5:0] count = 0;
 
-  always @(posedge clk && enable_random) begin
-    if (!rst) begin
-      // Implementación de LFSR solo cuando enable_random es 1
-      lfsr[0] <= lfsr[0] ^ lfsr[1] ^ lfsr[2] ^ lfsr[4];
-      lfsr[5:1] <= lfsr[4:0];
-    end
-  end
+random ram(
+		.clock(clock),
+		.reset(reset),
+		.rnd(rnd)
+	);
 
-  // Puedes asignar enable_random a 1 o 0 según tus necesidades
-  //assign enable_random = 1'b1;
-  assign randomValue = lfsr; // El valor del registro es el número aleatorio
+always @(posedge clock or posedge reset) begin
+
+	if(reset) begin
+		Q <= 1;
+		matrizBombastic <= {8'h00};
+		pos_x = 3'b000;
+		pos_y = 3'b000;
+	end
+	else begin
+		
+		if(numero_bombas == count)
+			Q<=0;
+		else
+		if(!rnd && matrizBombastic[pos_x][pos_y]!=4'hF && Q) begin
+			matrizBombastic[pos_x][pos_y]<=4'hF;
+			count = count + 1;
+		end
+		
+		if(pos_x == 7 && pos_y != 7) begin
+			pos_y<=pos_y+1;
+			pos_x<=0;
+		end
+		else
+		if(pos_y == 7 && pos_x == 7) begin
+			pos_y<=0;
+			pos_x<=0;
+		end
+		else
+			pos_x<=pos_x + 1;
+	end
+end
+
 endmodule
 
 

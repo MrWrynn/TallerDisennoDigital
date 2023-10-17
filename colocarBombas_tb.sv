@@ -1,14 +1,17 @@
 module colocarBombas_tb;
   reg clk;          // Señal de reloj
   reg rst;          // Señal de reinicio
-  wire [5:0] randomValue; // Valor aleatorio de 16 bits
+  logic [5:0] numero_bombas;
+  logic Q; // Valor aleatorio de 16 bits
+  logic [7:0][7:0][3:0] matrizBombastic = {8'h00};
 
   // Instancia del generador de números aleatorios
   colocarBombas uut (
-    .clk(clk),
-    .rst(rst),
-	 .enable_random(enable_random),
-    .randomValue(randomValue)
+    clk,
+    rst,
+	 numero_bombas,
+	 matrizBombastic,
+	 Q
   );
 
   // Simulación del reloj
@@ -20,20 +23,21 @@ module colocarBombas_tb;
   initial begin
     clk = 0;
     rst = 0;
-    #10 rst = 1; // Activa el reinicio después de 10 unidades de tiempo
-	 #10 rst = 0; // Activa el reinicio después de 10 unidades de tiempo
-    #100; // Espera un tiempo para observar los valores aleatorios generados
-
-    // Mostrar los valores aleatorios generados
-    //$display("Valores aleatorios generados:");
-    for (int i = 0; i < 23; i = i + 1) begin
-      #10; // Espera un tiempo entre muestras
-      $display("RandomValue[%0d]: %h", i, randomValue);
-		//$display("enable_random %d", enable_random);
-    end
-		
-    $finish; // Finaliza la simulación
-  end
+	 #10;
+	 rst = 1;
+	 #10;
+	 rst = 0;
+	 numero_bombas=10;
+	 #10;
+	 repeat(100)
+	 #10;
+		for (int i = 0; i < 8; i = i + 1) begin
+				for (int j = 0; j < 8; j = j + 1) begin
+				  $write("%0h ", matrizBombastic[i][j]);
+				end
+				$display(" ");
+		end
+	end
 endmodule
 
 
