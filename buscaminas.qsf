@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY colocarBombas
+set_global_assignment -name TOP_LEVEL_ENTITY gameLogic
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:20:27  SEPTEMBER 26, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.0 Lite Edition"
@@ -86,6 +86,20 @@ set_location_assignment PIN_B11 -to hsync
 set_location_assignment PIN_F10 -to blank_b
 set_location_assignment PIN_C10 -to sync_b
 set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_AA14 -to arriba
+set_location_assignment PIN_AA15 -to abajo
+set_location_assignment PIN_W15 -to derecha
+set_location_assignment PIN_Y16 -to izquierda
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH click_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME colocarBombas_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id colocarBombas_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME colocarBombas_tb -section_id colocarBombas_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME contarBombas_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id contarBombas_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME contarBombas_tb -section_id contarBombas_tb
+set_location_assignment PIN_AC12 -to rst_2
+set_location_assignment PIN_AB12 -to rst_1
 set_global_assignment -name SYSTEMVERILOG_FILE colocarBombas_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE moverse_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE revisar_bomba.sv
@@ -98,28 +112,23 @@ set_global_assignment -name SYSTEMVERILOG_FILE pll.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FSM1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FSM2.sv
 set_global_assignment -name SYSTEMVERILOG_FILE colocarBombas.sv
-set_location_assignment PIN_AA14 -to arriba
-set_location_assignment PIN_AA15 -to abajo
-set_location_assignment PIN_W15 -to derecha
-set_location_assignment PIN_Y16 -to izquierda
-set_location_assignment PIN_AC12 -to reset
 set_global_assignment -name SYSTEMVERILOG_FILE gameLogic.sv
-set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH colocarBombas_tb -section_id eda_simulation
-set_global_assignment -name EDA_TEST_BENCH_NAME colocarBombas_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id colocarBombas_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME colocarBombas_tb -section_id colocarBombas_tb
 set_global_assignment -name SYSTEMVERILOG_FILE random.sv
 set_global_assignment -name SYSTEMVERILOG_FILE contarBombas.sv
 set_global_assignment -name SYSTEMVERILOG_FILE contarBombas_tb.sv
-set_global_assignment -name EDA_TEST_BENCH_NAME contarBombas_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id contarBombas_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME contarBombas_tb -section_id contarBombas_tb
+set_global_assignment -name SYSTEMVERILOG_FILE click.sv
+set_location_assignment PIN_AE12 -to flag
+set_location_assignment PIN_AD10 -to select
+set_global_assignment -name SYSTEMVERILOG_FILE click_tb.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME click_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id click_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME click_tb -section_id click_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE colocarBombas.sv -section_id colocarBombas_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE colocarBombas_tb.sv -section_id colocarBombas_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE random.sv -section_id colocarBombas_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE contarBombas.sv -section_id contarBombas_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE contarBombas_tb.sv -section_id contarBombas_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE click.sv -section_id click_tb
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

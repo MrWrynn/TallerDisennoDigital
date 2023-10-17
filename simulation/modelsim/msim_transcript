@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {d:/quartus/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:37 on Oct 17,2023
+# Start time: 03:00:10 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_ver d:/quartus/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 00:11:37 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 03:00:11 on Oct 17,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {d:/quartus/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:38 on Oct 17,2023
+# Start time: 03:00:11 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver d:/quartus/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 00:11:38 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 03:00:11 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {d:/quartus/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:38 on Oct 17,2023
+# Start time: 03:00:11 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver d:/quartus/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 00:11:38 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 03:00:11 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {d:/quartus/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:38 on Oct 17,2023
+# Start time: 03:00:12 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver d:/quartus/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 00:11:40 on Oct 17,2023, Elapsed time: 0:00:02
+# End time: 03:00:13 on Oct 17,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {d:/quartus/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:42 on Oct 17,2023
+# Start time: 03:00:13 on Oct 17,2023
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver d:/quartus/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 00:11:43 on Oct 17,2023, Elapsed time: 0:00:01
+# End time: 03:00:14 on Oct 17,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_ver {d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:43 on Oct 17,2023
+# Start time: 03:00:14 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -483,19 +483,19 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 00:11:46 on Oct 17,2023, Elapsed time: 0:00:03
+# End time: 03:00:17 on Oct 17,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 20
 # vlog -vlog01compat -work cyclonev_ver {d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:46 on Oct 17,2023
+# Start time: 03:00:19 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 00:11:48 on Oct 17,2023, Elapsed time: 0:00:02
+# End time: 03:00:21 on Oct 17,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_ver {d:/quartus/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:48 on Oct 17,2023
+# Start time: 03:00:21 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver d:/quartus/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
@@ -635,7 +635,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 00:11:49 on Oct 17,2023, Elapsed time: 0:00:01
+# End time: 03:00:21 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -646,15 +646,15 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_hssi_ver {d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:49 on Oct 17,2023
+# Start time: 03:00:22 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 00:11:51 on Oct 17,2023, Elapsed time: 0:00:02
+# End time: 03:00:24 on Oct 17,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi_ver {d:/quartus/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:51 on Oct 17,2023
+# Start time: 03:00:24 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver d:/quartus/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
@@ -754,7 +754,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 00:11:52 on Oct 17,2023, Elapsed time: 0:00:01
+# End time: 03:00:25 on Oct 17,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -765,7 +765,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:52 on Oct 17,2023
+# Start time: 03:00:25 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver d:/quartus/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -775,18 +775,18 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 00:11:55 on Oct 17,2023, Elapsed time: 0:00:03
+# End time: 03:00:27 on Oct 17,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 12
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {d:/quartus/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:55 on Oct 17,2023
+# Start time: 03:00:27 on Oct 17,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver d:/quartus/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 00:11:55 on Oct 17,2023, Elapsed time: 0:00:00
+# End time: 03:00:28 on Oct 17,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -798,67 +798,46 @@
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital {C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv}
+# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital {C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:55 on Oct 17,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital" C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv 
-# -- Compiling module colocarBombas
+# Start time: 03:00:28 on Oct 17,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital" C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv 
+# -- Compiling module click
 # 
 # Top level modules:
-# 	colocarBombas
-# End time: 00:11:55 on Oct 17,2023, Elapsed time: 0:00:00
+# 	click
+# End time: 03:00:28 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital {C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv}
+# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital {C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:55 on Oct 17,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital" C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv 
-# -- Compiling module random
+# Start time: 03:00:28 on Oct 17,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital" C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click_tb.sv 
+# -- Compiling module click_tb
 # 
 # Top level modules:
-# 	random
-# End time: 00:11:55 on Oct 17,2023, Elapsed time: 0:00:00
+# 	click_tb
+# End time: 03:00:28 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital {C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv}
+# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital {C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:55 on Oct 17,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital" C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv 
-# -- Compiling module colocarBombas
+# Start time: 03:00:28 on Oct 17,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital" C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv 
+# -- Compiling module click
 # 
 # Top level modules:
-# 	colocarBombas
-# End time: 00:11:55 on Oct 17,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital {C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas_tb.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:55 on Oct 17,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital" C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas_tb.sv 
-# -- Compiling module colocarBombas_tb
-# 
-# Top level modules:
-# 	colocarBombas_tb
-# End time: 00:11:55 on Oct 17,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital {C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:11:55 on Oct 17,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital" C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv 
-# -- Compiling module random
-# 
-# Top level modules:
-# 	random
-# End time: 00:11:56 on Oct 17,2023, Elapsed time: 0:00:01
+# 	click
+# End time: 03:00:28 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  colocarBombas_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" colocarBombas_tb 
-# Start time: 00:11:56 on Oct 17,2023
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  click_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" click_tb 
+# Start time: 03:00:28 on Oct 17,2023
 # Loading sv_std.std
-# Loading work.colocarBombas_tb
-# Loading work.colocarBombas
-# Loading work.random
-# ** Warning: (vsim-3839) C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas_tb.sv(6): Variable '/colocarBombas_tb/matrizBombastic', driven via a port connection, is multiply driven. See C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas_tb.sv(9).
-#    Time: 0 ps  Iteration: 0  Instance: /colocarBombas_tb File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas_tb.sv
+# Loading work.click_tb
+# Loading work.click
+# ** Warning: (vsim-3839) C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click_tb.sv(8): Variable '/click_tb/matrizJuego', driven via a port connection, is multiply driven. See C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click_tb.sv(11).
+#    Time: 0 ps  Iteration: 0  Instance: /click_tb File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click_tb.sv
 # 
 # add wave *
 # view structure
@@ -866,15 +845,23 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# 0 f f 0 0 0 0 0  
 # 0 0 0 0 0 0 0 0  
-# f 0 f 0 0 0 0 0  
-# 0 0 f 0 0 0 0 0  
-# f f f 0 0 0 0 0  
 # 0 0 0 0 0 0 0 0  
-# 0 f 0 0 0 0 0 0  
-# 0 0 f 0 0 0 0 0  
+# 0 0 0 0 0 0 0 0  
+# 0 0 0 0 2 0 0 0  
+# 0 0 0 0 0 0 0 0  
+# 0 0 0 0 0 0 0 0  
+# 0 0 0 0 0 0 0 0  
+# 0 0 0 0 0 0 0 0  
+# 0 0 0 0 0 0 0 0  
+# 0 0 0 0 0 0 0 0  
+# 0 0 0 0 0 0 0 0  
+# 0 0 0 0 2 0 0 0  
+# 0 0 0 2 0 0 0 0  
+# 0 0 0 0 0 0 0 0  
+# 0 0 0 0 0 0 0 0  
+# 0 0 0 0 0 0 0 0  
 # Break key hit
-# Break in Module colocarBombas_tb at C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas_tb.sv line 19
-# End time: 00:12:28 on Oct 17,2023, Elapsed time: 0:00:32
+# Simulation stop requested.
+# End time: 03:01:23 on Oct 17,2023, Elapsed time: 0:00:55
 # Errors: 0, Warnings: 1

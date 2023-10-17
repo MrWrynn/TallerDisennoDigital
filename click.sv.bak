@@ -1,0 +1,37 @@
+module click(
+input clk,
+input select,
+input flag,
+input pos_x,
+input pos_y,
+output logic [7:0][7:0][3:0] matrizJuego
+);
+
+always @(posedge clock or posedge reset) begin
+
+
+	if(reset) begin
+		matrizBombastic <= {8'h00};
+	end
+	
+	else begin
+		if(flag) begin
+			if(matrizJuego[pos_x][pos_y]==2)
+				matrizJuego[pos_x][pos_y]<=0;
+			end else
+				matrizJuego[pos_x][pos_y]<=2;
+				
+		end
+		else if(select) begin
+			if(matrizJuego[pos_x][pos_y]!=2)
+				matrizJuego[pos_x][pos_y]<=1;
+		end
+		
+	end
+
+
+
+end
+
+
+endmodule

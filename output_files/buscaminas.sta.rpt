@@ -1,5 +1,5 @@
 Timing Analyzer report for buscaminas
-Mon Oct 16 16:49:35 2023
+Tue Oct 17 02:53:13 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -46,15 +46,17 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
  38. Signal Integrity Metrics (Fast 1100mv 85c Model)
  39. Setup Transfers
  40. Hold Transfers
- 41. Report TCCS
- 42. Report RSKM
- 43. Unconstrained Paths Summary
- 44. Clock Status Summary
- 45. Unconstrained Input Ports
- 46. Unconstrained Output Ports
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths Summary
+ 46. Clock Status Summary
  47. Unconstrained Input Ports
  48. Unconstrained Output Ports
- 49. Timing Analyzer Messages
+ 49. Unconstrained Input Ports
+ 50. Unconstrained Output Ports
+ 51. Timing Analyzer Messages
 
 
 
@@ -100,22 +102,22 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.34        ;
+; Average used               ; 1.44        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.5%      ;
-;     Processor 3            ;   3.2%      ;
-;     Processor 4            ;   3.2%      ;
-;     Processor 5            ;   3.0%      ;
-;     Processor 6            ;   3.0%      ;
-;     Processor 7            ;   3.0%      ;
-;     Processor 8            ;   3.0%      ;
-;     Processor 9            ;   3.0%      ;
-;     Processor 10           ;   3.0%      ;
-;     Processor 11           ;   3.0%      ;
-;     Processor 12           ;   3.0%      ;
+;     Processor 2            ;   4.4%      ;
+;     Processor 3            ;   4.3%      ;
+;     Processor 4            ;   4.3%      ;
+;     Processor 5            ;   3.9%      ;
+;     Processor 6            ;   3.9%      ;
+;     Processor 7            ;   3.9%      ;
+;     Processor 8            ;   3.9%      ;
+;     Processor 9            ;   3.9%      ;
+;     Processor 10           ;   3.9%      ;
+;     Processor 11           ;   3.8%      ;
+;     Processor 12           ;   3.8%      ;
 +----------------------------+-------------+
 
 
@@ -125,6 +127,8 @@ https://fpgasoftware.intel.com/eula.
 ; Clock Name            ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                   ;
 +-----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------+
 ; clk                   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                   ;
+; flag                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { flag }                  ;
+; select                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { select }                ;
 ; VGA:vga|pll:vgapll|c0 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA:vga|pll:vgapll|c0 } ;
 +-----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------+
 
@@ -134,8 +138,10 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-----------------------+------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name            ; Note                                                 ;
 +------------+-----------------+-----------------------+------------------------------------------------------+
-; 251.64 MHz ; 251.64 MHz      ; VGA:vga|pll:vgapll|c0 ;                                                      ;
-; 436.87 MHz ; 350.88 MHz      ; clk                   ; limit due to low minimum pulse width violation (tcl) ;
+; 100.28 MHz ; 100.28 MHz      ; flag                  ;                                                      ;
+; 124.36 MHz ; 124.36 MHz      ; select                ;                                                      ;
+; 250.88 MHz ; 250.88 MHz      ; VGA:vga|pll:vgapll|c0 ;                                                      ;
+; 437.83 MHz ; 363.64 MHz      ; clk                   ; limit due to low minimum pulse width violation (tcl) ;
 +------------+-----------------+-----------------------+------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -151,8 +157,10 @@ HTML report is unavailable in plain text report export.
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; clk                   ; -4.135 ; -10.021       ;
-; VGA:vga|pll:vgapll|c0 ; -2.974 ; -65.181       ;
+; flag                  ; -7.917 ; -23.034       ;
+; select                ; -7.509 ; -22.525       ;
+; clk                   ; -3.886 ; -9.760        ;
+; VGA:vga|pll:vgapll|c0 ; -2.986 ; -61.891       ;
 +-----------------------+--------+---------------+
 
 
@@ -161,21 +169,29 @@ HTML report is unavailable in plain text report export.
 +-----------------------+-------+---------------+
 ; Clock                 ; Slack ; End Point TNS ;
 +-----------------------+-------+---------------+
-; clk                   ; 0.388 ; 0.000         ;
-; VGA:vga|pll:vgapll|c0 ; 0.694 ; 0.000         ;
+; clk                   ; 0.373 ; 0.000         ;
+; VGA:vga|pll:vgapll|c0 ; 0.689 ; 0.000         ;
+; select                ; 0.699 ; 0.000         ;
+; flag                  ; 0.731 ; 0.000         ;
 +-----------------------+-------+---------------+
 
 
-------------------------------------------
++----------------------------------------+
 ; Slow 1100mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; select ; -5.492 ; -16.472              ;
++--------+--------+----------------------+
 
 
------------------------------------------
++---------------------------------------+
 ; Slow 1100mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
++--------+-------+----------------------+
+; Clock  ; Slack ; End Point TNS        ;
++--------+-------+----------------------+
+; select ; 1.161 ; 0.000                ;
++--------+-------+----------------------+
 
 
 +---------------------------------------------------+
@@ -183,8 +199,10 @@ No paths to report.
 +-----------------------+--------+------------------+
 ; Clock                 ; Slack  ; End Point TNS    ;
 +-----------------------+--------+------------------+
-; clk                   ; -0.925 ; -6.844           ;
-; VGA:vga|pll:vgapll|c0 ; -0.394 ; -11.337          ;
+; clk                   ; -0.875 ; -6.734           ;
+; VGA:vga|pll:vgapll|c0 ; -0.394 ; -10.771          ;
+; select                ; -0.394 ; -1.618           ;
+; flag                  ; 0.276  ; 0.000            ;
 +-----------------------+--------+------------------+
 
 
@@ -199,8 +217,10 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------------+------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name            ; Note                                                 ;
 +------------+-----------------+-----------------------+------------------------------------------------------+
-; 247.71 MHz ; 247.71 MHz      ; VGA:vga|pll:vgapll|c0 ;                                                      ;
-; 428.45 MHz ; 353.86 MHz      ; clk                   ; limit due to low minimum pulse width violation (tcl) ;
+; 102.21 MHz ; 102.21 MHz      ; flag                  ;                                                      ;
+; 133.37 MHz ; 133.37 MHz      ; select                ;                                                      ;
+; 249.19 MHz ; 249.19 MHz      ; VGA:vga|pll:vgapll|c0 ;                                                      ;
+; 435.54 MHz ; 364.43 MHz      ; clk                   ; limit due to low minimum pulse width violation (tcl) ;
 +------------+-----------------+-----------------------+------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -210,8 +230,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; clk                   ; -4.057 ; -10.109       ;
-; VGA:vga|pll:vgapll|c0 ; -3.037 ; -65.949       ;
+; flag                  ; -7.731 ; -22.619       ;
+; select                ; -7.025 ; -21.075       ;
+; clk                   ; -3.803 ; -9.770        ;
+; VGA:vga|pll:vgapll|c0 ; -3.013 ; -62.575       ;
 +-----------------------+--------+---------------+
 
 
@@ -220,21 +242,29 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------+-------+---------------+
 ; Clock                 ; Slack ; End Point TNS ;
 +-----------------------+-------+---------------+
-; clk                   ; 0.405 ; 0.000         ;
-; VGA:vga|pll:vgapll|c0 ; 0.678 ; 0.000         ;
+; clk                   ; 0.389 ; 0.000         ;
+; select                ; 0.499 ; 0.000         ;
+; VGA:vga|pll:vgapll|c0 ; 0.683 ; 0.000         ;
+; flag                  ; 0.712 ; 0.000         ;
 +-----------------------+-------+---------------+
 
 
------------------------------------------
++---------------------------------------+
 ; Slow 1100mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++--------+--------+---------------------+
+; Clock  ; Slack  ; End Point TNS       ;
++--------+--------+---------------------+
+; select ; -5.076 ; -15.223             ;
++--------+--------+---------------------+
 
 
-----------------------------------------
++--------------------------------------+
 ; Slow 1100mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++--------+-------+---------------------+
+; Clock  ; Slack ; End Point TNS       ;
++--------+-------+---------------------+
+; select ; 0.960 ; 0.000               ;
++--------+-------+---------------------+
 
 
 +--------------------------------------------------+
@@ -242,8 +272,10 @@ No paths to report.
 +-----------------------+--------+-----------------+
 ; Clock                 ; Slack  ; End Point TNS   ;
 +-----------------------+--------+-----------------+
-; clk                   ; -0.913 ; -7.394          ;
-; VGA:vga|pll:vgapll|c0 ; -0.394 ; -11.294         ;
+; clk                   ; -0.872 ; -7.323          ;
+; VGA:vga|pll:vgapll|c0 ; -0.394 ; -10.750         ;
+; select                ; -0.394 ; -1.686          ;
+; flag                  ; 0.271  ; 0.000           ;
 +-----------------------+--------+-----------------+
 
 
@@ -258,8 +290,10 @@ No synchronizer chains to report.
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; clk                   ; -3.236 ; -4.362        ;
-; VGA:vga|pll:vgapll|c0 ; -1.275 ; -27.893       ;
+; select                ; -4.760 ; -14.174       ;
+; flag                  ; -4.653 ; -12.615       ;
+; clk                   ; -3.157 ; -4.328        ;
+; VGA:vga|pll:vgapll|c0 ; -1.345 ; -27.918       ;
 +-----------------------+--------+---------------+
 
 
@@ -268,21 +302,29 @@ No synchronizer chains to report.
 +-----------------------+-------+---------------+
 ; Clock                 ; Slack ; End Point TNS ;
 +-----------------------+-------+---------------+
-; clk                   ; 0.187 ; 0.000         ;
-; VGA:vga|pll:vgapll|c0 ; 0.361 ; 0.000         ;
+; clk                   ; 0.182 ; 0.000         ;
+; VGA:vga|pll:vgapll|c0 ; 0.360 ; 0.000         ;
+; flag                  ; 0.368 ; 0.000         ;
+; select                ; 0.838 ; 0.000         ;
 +-----------------------+-------+---------------+
 
 
-------------------------------------------
++----------------------------------------+
 ; Fast 1100mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; select ; -3.319 ; -9.956               ;
++--------+--------+----------------------+
 
 
------------------------------------------
++---------------------------------------+
 ; Fast 1100mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
++--------+-------+----------------------+
+; Clock  ; Slack ; End Point TNS        ;
++--------+-------+----------------------+
+; select ; 1.361 ; 0.000                ;
++--------+-------+----------------------+
 
 
 +---------------------------------------------------+
@@ -290,8 +332,10 @@ No paths to report.
 +-----------------------+--------+------------------+
 ; Clock                 ; Slack  ; End Point TNS    ;
 +-----------------------+--------+------------------+
-; clk                   ; -0.819 ; -2.103           ;
-; VGA:vga|pll:vgapll|c0 ; 0.157  ; 0.000            ;
+; clk                   ; -0.762 ; -1.978           ;
+; select                ; -0.359 ; -1.484           ;
+; flag                  ; 0.001  ; 0.000            ;
+; VGA:vga|pll:vgapll|c0 ; 0.119  ; 0.000            ;
 +-----------------------+--------+------------------+
 
 
@@ -306,8 +350,10 @@ No synchronizer chains to report.
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; clk                   ; -2.792 ; -3.672        ;
-; VGA:vga|pll:vgapll|c0 ; -1.171 ; -25.434       ;
+; flag                  ; -4.384 ; -11.819       ;
+; select                ; -3.972 ; -11.803       ;
+; clk                   ; -2.764 ; -3.592        ;
+; VGA:vga|pll:vgapll|c0 ; -1.247 ; -25.669       ;
 +-----------------------+--------+---------------+
 
 
@@ -316,21 +362,29 @@ No synchronizer chains to report.
 +-----------------------+-------+---------------+
 ; Clock                 ; Slack ; End Point TNS ;
 +-----------------------+-------+---------------+
-; clk                   ; 0.178 ; 0.000         ;
-; VGA:vga|pll:vgapll|c0 ; 0.325 ; 0.000         ;
+; clk                   ; 0.169 ; 0.000         ;
+; VGA:vga|pll:vgapll|c0 ; 0.328 ; 0.000         ;
+; flag                  ; 0.349 ; 0.000         ;
+; select                ; 0.530 ; 0.000         ;
 +-----------------------+-------+---------------+
 
 
------------------------------------------
++---------------------------------------+
 ; Fast 1100mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++--------+--------+---------------------+
+; Clock  ; Slack  ; End Point TNS       ;
++--------+--------+---------------------+
+; select ; -2.720 ; -8.159              ;
++--------+--------+---------------------+
 
 
-----------------------------------------
++--------------------------------------+
 ; Fast 1100mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++--------+-------+---------------------+
+; Clock  ; Slack ; End Point TNS       ;
++--------+-------+---------------------+
+; select ; 0.971 ; 0.000               ;
++--------+-------+---------------------+
 
 
 +--------------------------------------------------+
@@ -338,8 +392,10 @@ No paths to report.
 +-----------------------+--------+-----------------+
 ; Clock                 ; Slack  ; End Point TNS   ;
 +-----------------------+--------+-----------------+
-; clk                   ; -0.764 ; -1.994          ;
-; VGA:vga|pll:vgapll|c0 ; 0.158  ; 0.000           ;
+; clk                   ; -0.731 ; -1.928          ;
+; select                ; -0.346 ; -1.374          ;
+; flag                  ; -0.004 ; -0.004          ;
+; VGA:vga|pll:vgapll|c0 ; 0.131  ; 0.000           ;
 +-----------------------+--------+-----------------+
 
 
@@ -354,12 +410,16 @@ No synchronizer chains to report.
 +------------------------+---------+-------+----------+---------+---------------------+
 ; Clock                  ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack       ; -4.135  ; 0.178 ; N/A      ; N/A     ; -0.925              ;
-;  VGA:vga|pll:vgapll|c0 ; -3.037  ; 0.325 ; N/A      ; N/A     ; -0.394              ;
-;  clk                   ; -4.135  ; 0.178 ; N/A      ; N/A     ; -0.925              ;
-; Design-wide TNS        ; -76.058 ; 0.0   ; 0.0      ; 0.0     ; -18.688             ;
-;  VGA:vga|pll:vgapll|c0 ; -65.949 ; 0.000 ; N/A      ; N/A     ; -11.337             ;
-;  clk                   ; -10.109 ; 0.000 ; N/A      ; N/A     ; -7.394              ;
+; Worst-case Slack       ; -7.917  ; 0.169 ; -5.492   ; 0.960   ; -0.875              ;
+;  VGA:vga|pll:vgapll|c0 ; -3.013  ; 0.328 ; N/A      ; N/A     ; -0.394              ;
+;  clk                   ; -3.886  ; 0.169 ; N/A      ; N/A     ; -0.875              ;
+;  flag                  ; -7.917  ; 0.349 ; N/A      ; N/A     ; -0.004              ;
+;  select                ; -7.509  ; 0.499 ; -5.492   ; 0.960   ; -0.394              ;
+; Design-wide TNS        ; -117.21 ; 0.0   ; -16.472  ; 0.0     ; -19.759             ;
+;  VGA:vga|pll:vgapll|c0 ; -62.575 ; 0.000 ; N/A      ; N/A     ; -10.771             ;
+;  clk                   ; -9.770  ; 0.000 ; N/A      ; N/A     ; -7.323              ;
+;  flag                  ; -23.034 ; 0.000 ; N/A      ; N/A     ; -0.004              ;
+;  select                ; -22.525 ; 0.000 ; -16.472  ; 0.000   ; -1.686              ;
 +------------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -400,18 +460,27 @@ No synchronizer chains to report.
 +---------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
-+--------------------------------------------------------------+
-; Input Transition Times                                       ;
-+-----------+--------------+-----------------+-----------------+
-; Pin       ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
-+-----------+--------------+-----------------+-----------------+
-; clk       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; derecha   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; izquierda ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; abajo     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; arriba    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; reset     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-+-----------+--------------+-----------------+-----------------+
++---------------------------------------------------------------------+
+; Input Transition Times                                              ;
++------------------+--------------+-----------------+-----------------+
+; Pin              ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++------------------+--------------+-----------------+-----------------+
+; numero_bombas[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; numero_bombas[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; numero_bombas[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; numero_bombas[3] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; numero_bombas[4] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; numero_bombas[5] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst_1            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; derecha          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; izquierda        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; abajo            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; arriba           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst_2            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; select           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; flag             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++------------------+--------------+-----------------+-----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -567,9 +636,13 @@ No synchronizer chains to report.
 +-----------------------+-----------------------+----------+----------+----------+----------+
 ; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
-; clk                   ; clk                   ; 39       ; 0        ; 0        ; 0        ;
+; clk                   ; clk                   ; 46       ; 0        ; 0        ; 0        ;
 ; VGA:vga|pll:vgapll|c0 ; clk                   ; 1        ; 1        ; 0        ; 0        ;
-; VGA:vga|pll:vgapll|c0 ; VGA:vga|pll:vgapll|c0 ; 1932     ; 0        ; 0        ; 0        ;
+; flag                  ; flag                  ; 2        ; 5        ; 2        ; 0        ;
+; select                ; flag                  ; 0        ; 1        ; 0        ; 2        ;
+; flag                  ; select                ; 0        ; 0        ; 9        ; 15       ;
+; select                ; select                ; 0        ; 0        ; 0        ; 3        ;
+; VGA:vga|pll:vgapll|c0 ; VGA:vga|pll:vgapll|c0 ; 1875     ; 0        ; 0        ; 0        ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -579,10 +652,34 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------+-----------------------+----------+----------+----------+----------+
 ; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
-; clk                   ; clk                   ; 39       ; 0        ; 0        ; 0        ;
+; clk                   ; clk                   ; 46       ; 0        ; 0        ; 0        ;
 ; VGA:vga|pll:vgapll|c0 ; clk                   ; 1        ; 1        ; 0        ; 0        ;
-; VGA:vga|pll:vgapll|c0 ; VGA:vga|pll:vgapll|c0 ; 1932     ; 0        ; 0        ; 0        ;
+; flag                  ; flag                  ; 2        ; 5        ; 2        ; 0        ;
+; select                ; flag                  ; 0        ; 1        ; 0        ; 2        ;
+; flag                  ; select                ; 0        ; 0        ; 9        ; 15       ;
+; select                ; select                ; 0        ; 0        ; 0        ; 3        ;
+; VGA:vga|pll:vgapll|c0 ; VGA:vga|pll:vgapll|c0 ; 1875     ; 0        ; 0        ; 0        ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; flag       ; select   ; 0        ; 0        ; 3        ; 3        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; flag       ; select   ; 0        ; 0        ; 3        ; 3        ;
++------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -605,10 +702,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 32    ; 32   ;
-; Unconstrained Output Ports      ; 27    ; 27   ;
-; Unconstrained Output Port Paths ; 655   ; 655  ;
+; Unconstrained Input Ports       ; 7     ; 7    ;
+; Unconstrained Input Port Paths  ; 56    ; 56   ;
+; Unconstrained Output Ports      ; 28    ; 28   ;
+; Unconstrained Output Port Paths ; 660   ; 660  ;
 +---------------------------------+-------+------+
 
 
@@ -619,6 +716,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-----------------------+-----------------------+------+-------------+
 ; VGA:vga|pll:vgapll|c0 ; VGA:vga|pll:vgapll|c0 ; Base ; Constrained ;
 ; clk                   ; clk                   ; Base ; Constrained ;
+; flag                  ; flag                  ; Base ; Constrained ;
+; select                ; select                ; Base ; Constrained ;
 +-----------------------+-----------------------+------+-------------+
 
 
@@ -630,8 +729,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; abajo      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; arriba     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; derecha    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; flag       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; izquierda  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_1      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_2      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -641,7 +742,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
 ; b[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; b[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -659,9 +759,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; g[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; sync_b      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -678,8 +780,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; abajo      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; arriba     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; derecha    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; flag       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; izquierda  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_1      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_2      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -689,7 +793,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
 ; b[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; b[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -707,9 +810,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; g[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; r[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[7]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; sync_b      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -724,114 +829,170 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Mon Oct 16 16:49:30 2023
+    Info: Processing started: Tue Oct 17 02:53:07 2023
 Info: Command: quartus_sta buscaminas -c buscaminas
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
+Warning (335093): The Timing Analyzer is analyzing 5 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'buscaminas.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name VGA:vga|pll:vgapll|c0 VGA:vga|pll:vgapll|c0
     Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name flag flag
+    Info (332105): create_clock -period 1.000 -name select select
+Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (332126): Node "cl|matrizJuego[0][0][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~0|dataf"
+    Warning (332126): Node "cl|matrizJuego~0|combout"
+    Warning (332126): Node "cl|matrizJuego[0][0][1]~2|datad"
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.135
+Info (332146): Worst-case setup slack is -7.917
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.135             -10.021 clk 
-    Info (332119):    -2.974             -65.181 VGA:vga|pll:vgapll|c0 
-Info (332146): Worst-case hold slack is 0.388
+    Info (332119):    -7.917             -23.034 flag 
+    Info (332119):    -7.509             -22.525 select 
+    Info (332119):    -3.886              -9.760 clk 
+    Info (332119):    -2.986             -61.891 VGA:vga|pll:vgapll|c0 
+Info (332146): Worst-case hold slack is 0.373
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.388               0.000 clk 
-    Info (332119):     0.694               0.000 VGA:vga|pll:vgapll|c0 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.925
+    Info (332119):     0.373               0.000 clk 
+    Info (332119):     0.689               0.000 VGA:vga|pll:vgapll|c0 
+    Info (332119):     0.699               0.000 select 
+    Info (332119):     0.731               0.000 flag 
+Info (332146): Worst-case recovery slack is -5.492
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.925              -6.844 clk 
-    Info (332119):    -0.394             -11.337 VGA:vga|pll:vgapll|c0 
+    Info (332119):    -5.492             -16.472 select 
+Info (332146): Worst-case removal slack is 1.161
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.161               0.000 select 
+Info (332146): Worst-case minimum pulse width slack is -0.875
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.875              -6.734 clk 
+    Info (332119):    -0.394             -10.771 VGA:vga|pll:vgapll|c0 
+    Info (332119):    -0.394              -1.618 select 
+    Info (332119):     0.276               0.000 flag 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.057
+Info (332146): Worst-case setup slack is -7.731
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.057             -10.109 clk 
-    Info (332119):    -3.037             -65.949 VGA:vga|pll:vgapll|c0 
-Info (332146): Worst-case hold slack is 0.405
+    Info (332119):    -7.731             -22.619 flag 
+    Info (332119):    -7.025             -21.075 select 
+    Info (332119):    -3.803              -9.770 clk 
+    Info (332119):    -3.013             -62.575 VGA:vga|pll:vgapll|c0 
+Info (332146): Worst-case hold slack is 0.389
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.405               0.000 clk 
-    Info (332119):     0.678               0.000 VGA:vga|pll:vgapll|c0 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.913
+    Info (332119):     0.389               0.000 clk 
+    Info (332119):     0.499               0.000 select 
+    Info (332119):     0.683               0.000 VGA:vga|pll:vgapll|c0 
+    Info (332119):     0.712               0.000 flag 
+Info (332146): Worst-case recovery slack is -5.076
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.913              -7.394 clk 
-    Info (332119):    -0.394             -11.294 VGA:vga|pll:vgapll|c0 
+    Info (332119):    -5.076             -15.223 select 
+Info (332146): Worst-case removal slack is 0.960
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.960               0.000 select 
+Info (332146): Worst-case minimum pulse width slack is -0.872
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.872              -7.323 clk 
+    Info (332119):    -0.394             -10.750 VGA:vga|pll:vgapll|c0 
+    Info (332119):    -0.394              -1.686 select 
+    Info (332119):     0.271               0.000 flag 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.236
+Info (332146): Worst-case setup slack is -4.760
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.236              -4.362 clk 
-    Info (332119):    -1.275             -27.893 VGA:vga|pll:vgapll|c0 
-Info (332146): Worst-case hold slack is 0.187
+    Info (332119):    -4.760             -14.174 select 
+    Info (332119):    -4.653             -12.615 flag 
+    Info (332119):    -3.157              -4.328 clk 
+    Info (332119):    -1.345             -27.918 VGA:vga|pll:vgapll|c0 
+Info (332146): Worst-case hold slack is 0.182
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.187               0.000 clk 
-    Info (332119):     0.361               0.000 VGA:vga|pll:vgapll|c0 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.819
+    Info (332119):     0.182               0.000 clk 
+    Info (332119):     0.360               0.000 VGA:vga|pll:vgapll|c0 
+    Info (332119):     0.368               0.000 flag 
+    Info (332119):     0.838               0.000 select 
+Info (332146): Worst-case recovery slack is -3.319
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.819              -2.103 clk 
-    Info (332119):     0.157               0.000 VGA:vga|pll:vgapll|c0 
+    Info (332119):    -3.319              -9.956 select 
+Info (332146): Worst-case removal slack is 1.361
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.361               0.000 select 
+Info (332146): Worst-case minimum pulse width slack is -0.762
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.762              -1.978 clk 
+    Info (332119):    -0.359              -1.484 select 
+    Info (332119):     0.001               0.000 flag 
+    Info (332119):     0.119               0.000 VGA:vga|pll:vgapll|c0 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.792
+Info (332146): Worst-case setup slack is -4.384
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.792              -3.672 clk 
-    Info (332119):    -1.171             -25.434 VGA:vga|pll:vgapll|c0 
-Info (332146): Worst-case hold slack is 0.178
+    Info (332119):    -4.384             -11.819 flag 
+    Info (332119):    -3.972             -11.803 select 
+    Info (332119):    -2.764              -3.592 clk 
+    Info (332119):    -1.247             -25.669 VGA:vga|pll:vgapll|c0 
+Info (332146): Worst-case hold slack is 0.169
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.178               0.000 clk 
-    Info (332119):     0.325               0.000 VGA:vga|pll:vgapll|c0 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.764
+    Info (332119):     0.169               0.000 clk 
+    Info (332119):     0.328               0.000 VGA:vga|pll:vgapll|c0 
+    Info (332119):     0.349               0.000 flag 
+    Info (332119):     0.530               0.000 select 
+Info (332146): Worst-case recovery slack is -2.720
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.764              -1.994 clk 
-    Info (332119):     0.158               0.000 VGA:vga|pll:vgapll|c0 
+    Info (332119):    -2.720              -8.159 select 
+Info (332146): Worst-case removal slack is 0.971
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.971               0.000 select 
+Info (332146): Worst-case minimum pulse width slack is -0.731
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.731              -1.928 clk 
+    Info (332119):    -0.346              -1.374 select 
+    Info (332119):    -0.004              -0.004 flag 
+    Info (332119):     0.131               0.000 VGA:vga|pll:vgapll|c0 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5248 megabytes
-    Info: Processing ended: Mon Oct 16 16:49:35 2023
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 5278 megabytes
+    Info: Processing ended: Tue Oct 17 02:53:13 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 

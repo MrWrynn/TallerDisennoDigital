@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/simulation/modelsim
 va_graycounter
-Z1 !s110 1697523100
+Z1 !s110 1697533213
 !i10b 1
 !s100 dbSQenUhE^>zo5H5zAI>X2
 Ih0H`IoVd?ckECfX:8UkUE3
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1697523098.000000
+Z7 !s108 1697533212.000000
 Z8 !s107 d:/quartus/quartus/eda/sim_lib/altera_mf.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|altera_mf_ver|d:/quartus/quartus/eda/sim_lib/altera_mf.v|
 !i113 1
@@ -240,7 +240,7 @@ R9
 R10
 R11
 valtaccumulate
-R1
+Z12 !s110 1697533212
 !i10b 1
 !s100 Jan6B:jGUPnJI3ocn6Fc32
 IW5F3OZ=h67`VXHdCoU;Oi0
@@ -366,7 +366,7 @@ R9
 R10
 R11
 vALTERA_DEVICE_FAMILIES
-Z12 !s110 1697523099
+R12
 !i10b 1
 !s100 Ie0_`X3Yi6=65^n?0c5aN3
 I35Sg@`z31`nQB5N394<U<0
@@ -474,7 +474,7 @@ R9
 R10
 R11
 valtera_syncram_derived
-R1
+R12
 !i10b 1
 !s100 WhJLiZgMJ>@CXFJk^7UYe1
 I;X2^IgPF^m_cAdPT@b1a31
@@ -495,7 +495,7 @@ R9
 R10
 R11
 valtera_syncram_derived_forwarding_logic
-R1
+R12
 !i10b 1
 !s100 >2clE14XI0V=k]HRz[bo01
 I8=h5k1W^CclTfZSMR3h5j3
@@ -579,7 +579,7 @@ R9
 R10
 R11
 valtmult_accum
-R1
+R12
 !i10b 1
 !s100 ENCHQ]fGgSZ?2P6oS9FjU1
 IcW73O7ae5Ab[B5dj6aPUM0
@@ -978,7 +978,7 @@ R9
 R10
 R11
 vdcfifo
-R1
+R12
 !i10b 1
 !s100 n]iiNP?fcdCOg48mhG>K10
 I]=SGXZcGV>OIcDgXdOS?b1
