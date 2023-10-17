@@ -1,5 +1,5 @@
 Timing Analyzer report for buscaminas
-Tue Oct 17 02:53:13 2023
+Tue Oct 17 04:23:12 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -102,22 +102,22 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.44        ;
+; Average used               ; 2.44        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.4%      ;
-;     Processor 3            ;   4.3%      ;
-;     Processor 4            ;   4.3%      ;
-;     Processor 5            ;   3.9%      ;
-;     Processor 6            ;   3.9%      ;
-;     Processor 7            ;   3.9%      ;
-;     Processor 8            ;   3.9%      ;
-;     Processor 9            ;   3.9%      ;
-;     Processor 10           ;   3.9%      ;
-;     Processor 11           ;   3.8%      ;
-;     Processor 12           ;   3.8%      ;
+;     Processor 2            ;  22.8%      ;
+;     Processor 3            ;  18.7%      ;
+;     Processor 4            ;  18.5%      ;
+;     Processor 5            ;  10.8%      ;
+;     Processor 6            ;  10.7%      ;
+;     Processor 7            ;  10.7%      ;
+;     Processor 8            ;  10.5%      ;
+;     Processor 9            ;  10.3%      ;
+;     Processor 10           ;  10.3%      ;
+;     Processor 11           ;  10.2%      ;
+;     Processor 12           ;  10.2%      ;
 +----------------------------+-------------+
 
 
@@ -133,16 +133,16 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                                                                          ;
-+------------+-----------------+-----------------------+------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name            ; Note                                                 ;
-+------------+-----------------+-----------------------+------------------------------------------------------+
-; 100.28 MHz ; 100.28 MHz      ; flag                  ;                                                      ;
-; 124.36 MHz ; 124.36 MHz      ; select                ;                                                      ;
-; 250.88 MHz ; 250.88 MHz      ; VGA:vga|pll:vgapll|c0 ;                                                      ;
-; 437.83 MHz ; 363.64 MHz      ; clk                   ; limit due to low minimum pulse width violation (tcl) ;
-+------------+-----------------+-----------------------+------------------------------------------------------+
++-------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                          ;
++------------+-----------------+-----------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name            ; Note ;
++------------+-----------------+-----------------------+------+
+; 58.71 MHz  ; 58.71 MHz       ; flag                  ;      ;
+; 119.85 MHz ; 119.85 MHz      ; select                ;      ;
+; 230.04 MHz ; 230.04 MHz      ; clk                   ;      ;
+; 243.9 MHz  ; 243.9 MHz       ; VGA:vga|pll:vgapll|c0 ;      ;
++------------+-----------------+-----------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -152,46 +152,46 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
++-------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary             ;
++-----------------------+---------+---------------+
+; Clock                 ; Slack   ; End Point TNS ;
++-----------------------+---------+---------------+
+; flag                  ; -12.537 ; -1764.078     ;
+; select                ; -9.168  ; -1532.150     ;
+; clk                   ; -3.347  ; -710.375      ;
+; VGA:vga|pll:vgapll|c0 ; -3.100  ; -74.152       ;
++-----------------------+---------+---------------+
+
+
 +------------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary            ;
+; Slow 1100mV 85C Model Hold Summary             ;
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; flag                  ; -7.917 ; -23.034       ;
-; select                ; -7.509 ; -22.525       ;
-; clk                   ; -3.886 ; -9.760        ;
-; VGA:vga|pll:vgapll|c0 ; -2.986 ; -61.891       ;
+; select                ; -4.910 ; -877.517      ;
+; clk                   ; -3.294 ; -3.294        ;
+; flag                  ; -1.470 ; -23.888       ;
+; VGA:vga|pll:vgapll|c0 ; 0.664  ; 0.000         ;
 +-----------------------+--------+---------------+
-
-
-+-----------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary            ;
-+-----------------------+-------+---------------+
-; Clock                 ; Slack ; End Point TNS ;
-+-----------------------+-------+---------------+
-; clk                   ; 0.373 ; 0.000         ;
-; VGA:vga|pll:vgapll|c0 ; 0.689 ; 0.000         ;
-; select                ; 0.699 ; 0.000         ;
-; flag                  ; 0.731 ; 0.000         ;
-+-----------------------+-------+---------------+
 
 
 +----------------------------------------+
 ; Slow 1100mV 85C Model Recovery Summary ;
-+--------+--------+----------------------+
-; Clock  ; Slack  ; End Point TNS        ;
-+--------+--------+----------------------+
-; select ; -5.492 ; -16.472              ;
-+--------+--------+----------------------+
++--------+-------+-----------------------+
+; Clock  ; Slack ; End Point TNS         ;
++--------+-------+-----------------------+
+; select ; 0.031 ; 0.000                 ;
++--------+-------+-----------------------+
 
 
 +---------------------------------------+
 ; Slow 1100mV 85C Model Removal Summary ;
-+--------+-------+----------------------+
-; Clock  ; Slack ; End Point TNS        ;
-+--------+-------+----------------------+
-; select ; 1.161 ; 0.000                ;
-+--------+-------+----------------------+
++--------+--------+---------------------+
+; Clock  ; Slack  ; End Point TNS       ;
++--------+--------+---------------------+
+; select ; -4.364 ; -771.659            ;
++--------+--------+---------------------+
 
 
 +---------------------------------------------------+
@@ -199,10 +199,10 @@ HTML report is unavailable in plain text report export.
 +-----------------------+--------+------------------+
 ; Clock                 ; Slack  ; End Point TNS    ;
 +-----------------------+--------+------------------+
-; clk                   ; -0.875 ; -6.734           ;
-; VGA:vga|pll:vgapll|c0 ; -0.394 ; -10.771          ;
-; select                ; -0.394 ; -1.618           ;
-; flag                  ; 0.276  ; 0.000            ;
+; clk                   ; -0.394 ; -199.884         ;
+; select                ; -0.394 ; -115.079         ;
+; VGA:vga|pll:vgapll|c0 ; -0.394 ; -12.543          ;
+; flag                  ; -0.245 ; -3.412           ;
 +-----------------------+--------+------------------+
 
 
@@ -212,59 +212,59 @@ HTML report is unavailable in plain text report export.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                                                                           ;
-+------------+-----------------+-----------------------+------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name            ; Note                                                 ;
-+------------+-----------------+-----------------------+------------------------------------------------------+
-; 102.21 MHz ; 102.21 MHz      ; flag                  ;                                                      ;
-; 133.37 MHz ; 133.37 MHz      ; select                ;                                                      ;
-; 249.19 MHz ; 249.19 MHz      ; VGA:vga|pll:vgapll|c0 ;                                                      ;
-; 435.54 MHz ; 364.43 MHz      ; clk                   ; limit due to low minimum pulse width violation (tcl) ;
-+------------+-----------------+-----------------------+------------------------------------------------------+
++-------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                           ;
++------------+-----------------+-----------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name            ; Note ;
++------------+-----------------+-----------------------+------+
+; 61.95 MHz  ; 61.95 MHz       ; flag                  ;      ;
+; 125.45 MHz ; 125.45 MHz      ; select                ;      ;
+; 228.73 MHz ; 228.73 MHz      ; clk                   ;      ;
+; 240.56 MHz ; 240.56 MHz      ; VGA:vga|pll:vgapll|c0 ;      ;
++------------+-----------------+-----------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
++-------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary              ;
++-----------------------+---------+---------------+
+; Clock                 ; Slack   ; End Point TNS ;
++-----------------------+---------+---------------+
+; flag                  ; -11.994 ; -1708.180     ;
+; select                ; -8.733  ; -1462.321     ;
+; clk                   ; -3.372  ; -703.253      ;
+; VGA:vga|pll:vgapll|c0 ; -3.157  ; -74.876       ;
++-----------------------+---------+---------------+
+
+
 +------------------------------------------------+
-; Slow 1100mV 0C Model Setup Summary             ;
+; Slow 1100mV 0C Model Hold Summary              ;
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; flag                  ; -7.731 ; -22.619       ;
-; select                ; -7.025 ; -21.075       ;
-; clk                   ; -3.803 ; -9.770        ;
-; VGA:vga|pll:vgapll|c0 ; -3.013 ; -62.575       ;
+; select                ; -4.822 ; -855.738      ;
+; clk                   ; -3.133 ; -3.133        ;
+; flag                  ; -1.510 ; -20.992       ;
+; VGA:vga|pll:vgapll|c0 ; 0.661  ; 0.000         ;
 +-----------------------+--------+---------------+
-
-
-+-----------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary             ;
-+-----------------------+-------+---------------+
-; Clock                 ; Slack ; End Point TNS ;
-+-----------------------+-------+---------------+
-; clk                   ; 0.389 ; 0.000         ;
-; select                ; 0.499 ; 0.000         ;
-; VGA:vga|pll:vgapll|c0 ; 0.683 ; 0.000         ;
-; flag                  ; 0.712 ; 0.000         ;
-+-----------------------+-------+---------------+
 
 
 +---------------------------------------+
 ; Slow 1100mV 0C Model Recovery Summary ;
-+--------+--------+---------------------+
-; Clock  ; Slack  ; End Point TNS       ;
-+--------+--------+---------------------+
-; select ; -5.076 ; -15.223             ;
-+--------+--------+---------------------+
++--------+-------+----------------------+
+; Clock  ; Slack ; End Point TNS        ;
++--------+-------+----------------------+
+; select ; 0.128 ; 0.000                ;
++--------+-------+----------------------+
 
 
 +--------------------------------------+
 ; Slow 1100mV 0C Model Removal Summary ;
-+--------+-------+---------------------+
-; Clock  ; Slack ; End Point TNS       ;
-+--------+-------+---------------------+
-; select ; 0.960 ; 0.000               ;
-+--------+-------+---------------------+
++--------+--------+--------------------+
+; Clock  ; Slack  ; End Point TNS      ;
++--------+--------+--------------------+
+; select ; -4.296 ; -763.255           ;
++--------+--------+--------------------+
 
 
 +--------------------------------------------------+
@@ -272,10 +272,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------+--------+-----------------+
 ; Clock                 ; Slack  ; End Point TNS   ;
 +-----------------------+--------+-----------------+
-; clk                   ; -0.872 ; -7.323          ;
-; VGA:vga|pll:vgapll|c0 ; -0.394 ; -10.750         ;
-; select                ; -0.394 ; -1.686          ;
-; flag                  ; 0.271  ; 0.000           ;
+; clk                   ; -0.394 ; -218.038        ;
+; select                ; -0.394 ; -110.357        ;
+; VGA:vga|pll:vgapll|c0 ; -0.394 ; -12.408         ;
+; flag                  ; -0.242 ; -4.407          ;
 +-----------------------+--------+-----------------+
 
 
@@ -290,23 +290,23 @@ No synchronizer chains to report.
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; select                ; -4.760 ; -14.174       ;
-; flag                  ; -4.653 ; -12.615       ;
-; clk                   ; -3.157 ; -4.328        ;
-; VGA:vga|pll:vgapll|c0 ; -1.345 ; -27.918       ;
+; flag                  ; -6.917 ; -892.088      ;
+; select                ; -6.355 ; -1054.360     ;
+; clk                   ; -1.568 ; -311.595      ;
+; VGA:vga|pll:vgapll|c0 ; -1.358 ; -32.128       ;
 +-----------------------+--------+---------------+
 
 
-+-----------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary            ;
-+-----------------------+-------+---------------+
-; Clock                 ; Slack ; End Point TNS ;
-+-----------------------+-------+---------------+
-; clk                   ; 0.182 ; 0.000         ;
-; VGA:vga|pll:vgapll|c0 ; 0.360 ; 0.000         ;
-; flag                  ; 0.368 ; 0.000         ;
-; select                ; 0.838 ; 0.000         ;
-+-----------------------+-------+---------------+
++------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary             ;
++-----------------------+--------+---------------+
+; Clock                 ; Slack  ; End Point TNS ;
++-----------------------+--------+---------------+
+; select                ; -2.727 ; -489.791      ;
+; clk                   ; -1.933 ; -1.933        ;
+; flag                  ; -1.005 ; -39.635       ;
+; VGA:vga|pll:vgapll|c0 ; 0.348  ; 0.000         ;
++-----------------------+--------+---------------+
 
 
 +----------------------------------------+
@@ -314,17 +314,17 @@ No synchronizer chains to report.
 +--------+--------+----------------------+
 ; Clock  ; Slack  ; End Point TNS        ;
 +--------+--------+----------------------+
-; select ; -3.319 ; -9.956               ;
+; select ; -0.430 ; -21.799              ;
 +--------+--------+----------------------+
 
 
 +---------------------------------------+
 ; Fast 1100mV 85C Model Removal Summary ;
-+--------+-------+----------------------+
-; Clock  ; Slack ; End Point TNS        ;
-+--------+-------+----------------------+
-; select ; 1.361 ; 0.000                ;
-+--------+-------+----------------------+
++--------+--------+---------------------+
+; Clock  ; Slack  ; End Point TNS       ;
++--------+--------+---------------------+
+; select ; -2.452 ; -428.975            ;
++--------+--------+---------------------+
 
 
 +---------------------------------------------------+
@@ -332,10 +332,10 @@ No synchronizer chains to report.
 +-----------------------+--------+------------------+
 ; Clock                 ; Slack  ; End Point TNS    ;
 +-----------------------+--------+------------------+
-; clk                   ; -0.762 ; -1.978           ;
-; select                ; -0.359 ; -1.484           ;
-; flag                  ; 0.001  ; 0.000            ;
-; VGA:vga|pll:vgapll|c0 ; 0.119  ; 0.000            ;
+; flag                  ; -0.478 ; -84.202          ;
+; clk                   ; -0.389 ; -33.252          ;
+; select                ; -0.311 ; -58.204          ;
+; VGA:vga|pll:vgapll|c0 ; 0.129  ; 0.000            ;
 +-----------------------+--------+------------------+
 
 
@@ -350,23 +350,23 @@ No synchronizer chains to report.
 +-----------------------+--------+---------------+
 ; Clock                 ; Slack  ; End Point TNS ;
 +-----------------------+--------+---------------+
-; flag                  ; -4.384 ; -11.819       ;
-; select                ; -3.972 ; -11.803       ;
-; clk                   ; -2.764 ; -3.592        ;
-; VGA:vga|pll:vgapll|c0 ; -1.247 ; -25.669       ;
+; flag                  ; -6.213 ; -818.372      ;
+; select                ; -5.548 ; -921.986      ;
+; clk                   ; -1.373 ; -259.810      ;
+; VGA:vga|pll:vgapll|c0 ; -1.222 ; -29.161       ;
 +-----------------------+--------+---------------+
 
 
-+-----------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary             ;
-+-----------------------+-------+---------------+
-; Clock                 ; Slack ; End Point TNS ;
-+-----------------------+-------+---------------+
-; clk                   ; 0.169 ; 0.000         ;
-; VGA:vga|pll:vgapll|c0 ; 0.328 ; 0.000         ;
-; flag                  ; 0.349 ; 0.000         ;
-; select                ; 0.530 ; 0.000         ;
-+-----------------------+-------+---------------+
++------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary              ;
++-----------------------+--------+---------------+
+; Clock                 ; Slack  ; End Point TNS ;
++-----------------------+--------+---------------+
+; select                ; -2.671 ; -476.924      ;
+; clk                   ; -1.831 ; -1.831        ;
+; flag                  ; -0.918 ; -29.772       ;
+; VGA:vga|pll:vgapll|c0 ; 0.320  ; 0.000         ;
++-----------------------+--------+---------------+
 
 
 +---------------------------------------+
@@ -374,17 +374,17 @@ No synchronizer chains to report.
 +--------+--------+---------------------+
 ; Clock  ; Slack  ; End Point TNS       ;
 +--------+--------+---------------------+
-; select ; -2.720 ; -8.159              ;
+; select ; -0.304 ; -10.590             ;
 +--------+--------+---------------------+
 
 
 +--------------------------------------+
 ; Fast 1100mV 0C Model Removal Summary ;
-+--------+-------+---------------------+
-; Clock  ; Slack ; End Point TNS       ;
-+--------+-------+---------------------+
-; select ; 0.971 ; 0.000               ;
-+--------+-------+---------------------+
++--------+--------+--------------------+
+; Clock  ; Slack  ; End Point TNS      ;
++--------+--------+--------------------+
+; select ; -2.413 ; -425.700           ;
++--------+--------+--------------------+
 
 
 +--------------------------------------------------+
@@ -392,10 +392,10 @@ No synchronizer chains to report.
 +-----------------------+--------+-----------------+
 ; Clock                 ; Slack  ; End Point TNS   ;
 +-----------------------+--------+-----------------+
-; clk                   ; -0.731 ; -1.928          ;
-; select                ; -0.346 ; -1.374          ;
-; flag                  ; -0.004 ; -0.004          ;
-; VGA:vga|pll:vgapll|c0 ; 0.131  ; 0.000           ;
+; clk                   ; -0.401 ; -33.610         ;
+; flag                  ; -0.391 ; -74.900         ;
+; select                ; -0.305 ; -57.522         ;
+; VGA:vga|pll:vgapll|c0 ; 0.139  ; 0.000           ;
 +-----------------------+--------+-----------------+
 
 
@@ -405,22 +405,22 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                 ;
-+------------------------+---------+-------+----------+---------+---------------------+
-; Clock                  ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack       ; -7.917  ; 0.169 ; -5.492   ; 0.960   ; -0.875              ;
-;  VGA:vga|pll:vgapll|c0 ; -3.013  ; 0.328 ; N/A      ; N/A     ; -0.394              ;
-;  clk                   ; -3.886  ; 0.169 ; N/A      ; N/A     ; -0.875              ;
-;  flag                  ; -7.917  ; 0.349 ; N/A      ; N/A     ; -0.004              ;
-;  select                ; -7.509  ; 0.499 ; -5.492   ; 0.960   ; -0.394              ;
-; Design-wide TNS        ; -117.21 ; 0.0   ; -16.472  ; 0.0     ; -19.759             ;
-;  VGA:vga|pll:vgapll|c0 ; -62.575 ; 0.000 ; N/A      ; N/A     ; -10.771             ;
-;  clk                   ; -9.770  ; 0.000 ; N/A      ; N/A     ; -7.323              ;
-;  flag                  ; -23.034 ; 0.000 ; N/A      ; N/A     ; -0.004              ;
-;  select                ; -22.525 ; 0.000 ; -16.472  ; 0.000   ; -1.686              ;
-+------------------------+---------+-------+----------+---------+---------------------+
++-------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                       ;
++------------------------+-----------+----------+----------+----------+---------------------+
+; Clock                  ; Setup     ; Hold     ; Recovery ; Removal  ; Minimum Pulse Width ;
++------------------------+-----------+----------+----------+----------+---------------------+
+; Worst-case Slack       ; -12.537   ; -4.910   ; -0.430   ; -4.364   ; -0.478              ;
+;  VGA:vga|pll:vgapll|c0 ; -3.157    ; 0.320    ; N/A      ; N/A      ; -0.394              ;
+;  clk                   ; -3.372    ; -3.294   ; N/A      ; N/A      ; -0.401              ;
+;  flag                  ; -12.537   ; -1.510   ; N/A      ; N/A      ; -0.478              ;
+;  select                ; -9.168    ; -4.910   ; -0.430   ; -4.364   ; -0.394              ;
+; Design-wide TNS        ; -4080.755 ; -904.699 ; -21.799  ; -771.659 ; -345.21             ;
+;  VGA:vga|pll:vgapll|c0 ; -74.876   ; 0.000    ; N/A      ; N/A      ; -12.543             ;
+;  clk                   ; -710.375  ; -3.294   ; N/A      ; N/A      ; -218.038            ;
+;  flag                  ; -1764.078 ; -39.635  ; N/A      ; N/A      ; -84.202             ;
+;  select                ; -1532.150 ; -877.517 ; -21.799  ; -771.659 ; -115.079            ;
++------------------------+-----------+----------+----------+----------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -465,12 +465,6 @@ No synchronizer chains to report.
 +------------------+--------------+-----------------+-----------------+
 ; Pin              ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +------------------+--------------+-----------------+-----------------+
-; numero_bombas[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; numero_bombas[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; numero_bombas[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; numero_bombas[3] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; numero_bombas[4] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; numero_bombas[5] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clk              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; rst_1            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; derecha          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -478,6 +472,12 @@ No synchronizer chains to report.
 ; abajo            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; arriba           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; rst_2            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; numero_bombas[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; numero_bombas[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; numero_bombas[2] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; numero_bombas[3] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; numero_bombas[4] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; numero_bombas[5] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; select           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; flag             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +------------------+--------------+-----------------+-----------------+
@@ -636,13 +636,15 @@ No synchronizer chains to report.
 +-----------------------+-----------------------+----------+----------+----------+----------+
 ; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
-; clk                   ; clk                   ; 46       ; 0        ; 0        ; 0        ;
+; clk                   ; clk                   ; 11887    ; 0        ; 0        ; 0        ;
 ; VGA:vga|pll:vgapll|c0 ; clk                   ; 1        ; 1        ; 0        ; 0        ;
-; flag                  ; flag                  ; 2        ; 5        ; 2        ; 0        ;
-; select                ; flag                  ; 0        ; 1        ; 0        ; 2        ;
-; flag                  ; select                ; 0        ; 0        ; 9        ; 15       ;
-; select                ; select                ; 0        ; 0        ; 0        ; 3        ;
-; VGA:vga|pll:vgapll|c0 ; VGA:vga|pll:vgapll|c0 ; 1875     ; 0        ; 0        ; 0        ;
+; clk                   ; flag                  ; 0        ; 0        ; 300160   ; 0        ;
+; flag                  ; flag                  ; 0        ; 0        ; 45056    ; 90112    ;
+; select                ; flag                  ; 0        ; 0        ; 45056    ; 0        ;
+; clk                   ; select                ; 874624   ; 0        ; 0        ; 0        ;
+; flag                  ; select                ; 131072   ; 262336   ; 0        ; 0        ;
+; select                ; select                ; 131072   ; 0        ; 0        ; 0        ;
+; VGA:vga|pll:vgapll|c0 ; VGA:vga|pll:vgapll|c0 ; 1996     ; 0        ; 0        ; 0        ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -652,13 +654,15 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------+-----------------------+----------+----------+----------+----------+
 ; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
-; clk                   ; clk                   ; 46       ; 0        ; 0        ; 0        ;
+; clk                   ; clk                   ; 11887    ; 0        ; 0        ; 0        ;
 ; VGA:vga|pll:vgapll|c0 ; clk                   ; 1        ; 1        ; 0        ; 0        ;
-; flag                  ; flag                  ; 2        ; 5        ; 2        ; 0        ;
-; select                ; flag                  ; 0        ; 1        ; 0        ; 2        ;
-; flag                  ; select                ; 0        ; 0        ; 9        ; 15       ;
-; select                ; select                ; 0        ; 0        ; 0        ; 3        ;
-; VGA:vga|pll:vgapll|c0 ; VGA:vga|pll:vgapll|c0 ; 1875     ; 0        ; 0        ; 0        ;
+; clk                   ; flag                  ; 0        ; 0        ; 300160   ; 0        ;
+; flag                  ; flag                  ; 0        ; 0        ; 45056    ; 90112    ;
+; select                ; flag                  ; 0        ; 0        ; 45056    ; 0        ;
+; clk                   ; select                ; 874624   ; 0        ; 0        ; 0        ;
+; flag                  ; select                ; 131072   ; 262336   ; 0        ; 0        ;
+; select                ; select                ; 131072   ; 0        ; 0        ; 0        ;
+; VGA:vga|pll:vgapll|c0 ; VGA:vga|pll:vgapll|c0 ; 1996     ; 0        ; 0        ; 0        ;
 +-----------------------+-----------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -668,7 +672,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; flag       ; select   ; 0        ; 0        ; 3        ; 3        ;
+; flag       ; select   ; 192      ; 192      ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -678,7 +682,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; flag       ; select   ; 0        ; 0        ; 3        ; 3        ;
+; flag       ; select   ; 192      ; 192      ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -695,18 +699,18 @@ No dedicated SERDES Transmitter circuitry present in device or used in design
 No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
 
 
-+------------------------------------------------+
-; Unconstrained Paths Summary                    ;
-+---------------------------------+-------+------+
-; Property                        ; Setup ; Hold ;
-+---------------------------------+-------+------+
-; Illegal Clocks                  ; 0     ; 0    ;
-; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 7     ; 7    ;
-; Unconstrained Input Port Paths  ; 56    ; 56   ;
-; Unconstrained Output Ports      ; 28    ; 28   ;
-; Unconstrained Output Port Paths ; 660   ; 660  ;
-+---------------------------------+-------+------+
++-------------------------------------------------+
+; Unconstrained Paths Summary                     ;
++---------------------------------+-------+-------+
+; Property                        ; Setup ; Hold  ;
++---------------------------------+-------+-------+
+; Illegal Clocks                  ; 0     ; 0     ;
+; Unconstrained Clocks            ; 0     ; 0     ;
+; Unconstrained Input Ports       ; 13    ; 13    ;
+; Unconstrained Input Port Paths  ; 1264  ; 1264  ;
+; Unconstrained Output Ports      ; 29    ; 29    ;
+; Unconstrained Output Port Paths ; 15767 ; 15767 ;
++---------------------------------+-------+-------+
 
 
 +--------------------------------------------------------------------+
@@ -721,19 +725,25 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-----------------------+-----------------------+------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; abajo      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; arriba     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; derecha    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; flag       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; izquierda  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rst_1      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rst_2      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                               ;
++------------------+--------------------------------------------------------------------------------------+
+; Input Port       ; Comment                                                                              ;
++------------------+--------------------------------------------------------------------------------------+
+; abajo            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; arriba           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; derecha          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; flag             ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; izquierda        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; numero_bombas[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; numero_bombas[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; numero_bombas[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; numero_bombas[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; numero_bombas[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; numero_bombas[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_1            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_2            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -742,6 +752,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
 ; b[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; b[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -772,19 +783,25 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; abajo      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; arriba     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; derecha    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; flag       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; izquierda  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rst_1      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rst_2      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                               ;
++------------------+--------------------------------------------------------------------------------------+
+; Input Port       ; Comment                                                                              ;
++------------------+--------------------------------------------------------------------------------------+
+; abajo            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; arriba           ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; derecha          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; flag             ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; izquierda        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; numero_bombas[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; numero_bombas[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; numero_bombas[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; numero_bombas[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; numero_bombas[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; numero_bombas[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_1            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst_2            ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -793,6 +810,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
 ; b[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; b[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -829,170 +847,1524 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Tue Oct 17 02:53:07 2023
+    Info: Processing started: Tue Oct 17 04:22:59 2023
 Info: Command: quartus_sta buscaminas -c buscaminas
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 5 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 192 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'buscaminas.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name VGA:vga|pll:vgapll|c0 VGA:vga|pll:vgapll|c0
     Info (332105): create_clock -period 1.000 -name clk clk
-    Info (332105): create_clock -period 1.000 -name flag flag
     Info (332105): create_clock -period 1.000 -name select select
-Warning (332125): Found combinational loop of 4 nodes File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (332126): Node "cl|matrizJuego[0][0][1]~2|combout"
-    Warning (332126): Node "cl|matrizJuego~0|dataf"
-    Warning (332126): Node "cl|matrizJuego~0|combout"
+    Info (332105): create_clock -period 1.000 -name flag flag
+Warning (332125): Found combinational loop of 501 nodes File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (332126): Node "cl|matrizJuego~193|datag"
+    Warning (332126): Node "cl|matrizJuego~193|combout"
+    Warning (332126): Node "cl|matrizJuego~94|datad"
+    Warning (332126): Node "cl|matrizJuego~94|combout"
+    Warning (332126): Node "cl|matrizJuego[4][6][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][6][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~94|datac"
+    Warning (332126): Node "cl|Mux34~3|dataa"
+    Warning (332126): Node "cl|Mux34~3|combout"
+    Warning (332126): Node "cl|Mux34~4|datae"
+    Warning (332126): Node "cl|Mux34~4|combout"
+    Warning (332126): Node "cl|Mux34~20|datab"
+    Warning (332126): Node "cl|Mux34~20|combout"
+    Warning (332126): Node "cl|Equal1~0|datac"
+    Warning (332126): Node "cl|Equal1~0|combout"
+    Warning (332126): Node "cl|matrizJuego~94|datab"
+    Warning (332126): Node "cl|matrizJuego~118|dataa"
+    Warning (332126): Node "cl|matrizJuego~118|combout"
+    Warning (332126): Node "cl|matrizJuego[6][6][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][6][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~118|dataf"
+    Warning (332126): Node "cl|Mux34~3|datab"
+    Warning (332126): Node "cl|matrizJuego~19|datad"
+    Warning (332126): Node "cl|matrizJuego~19|combout"
+    Warning (332126): Node "cl|matrizJuego[2][6][1]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[2][6][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~19|datab"
+    Warning (332126): Node "cl|Mux34~3|datac"
+    Warning (332126): Node "cl|matrizJuego~46|datab"
+    Warning (332126): Node "cl|matrizJuego~46|combout"
+    Warning (332126): Node "cl|matrizJuego[0][6][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[0][6][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~46|dataf"
+    Warning (332126): Node "cl|Mux34~3|datad"
+    Warning (332126): Node "cl|matrizJuego~70|datac"
+    Warning (332126): Node "cl|matrizJuego~70|combout"
+    Warning (332126): Node "cl|matrizJuego[1][6][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[1][6][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~70|dataa"
+    Warning (332126): Node "cl|Mux34~12|dataa"
+    Warning (332126): Node "cl|Mux34~12|combout"
+    Warning (332126): Node "cl|Mux34~14|dataa"
+    Warning (332126): Node "cl|Mux34~14|combout"
+    Warning (332126): Node "cl|matrizJuego~193|dataa"
+    Warning (332126): Node "cl|Mux34~20|dataa"
+    Warning (332126): Node "cl|matrizJuego~91|datad"
+    Warning (332126): Node "cl|matrizJuego~91|combout"
+    Warning (332126): Node "cl|matrizJuego[3][6][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[3][6][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~91|datac"
+    Warning (332126): Node "cl|Mux34~12|datac"
+    Warning (332126): Node "cl|matrizJuego~58|dataf"
+    Warning (332126): Node "cl|matrizJuego~58|combout"
+    Warning (332126): Node "cl|matrizJuego[1][2][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][2][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~58|datac"
+    Warning (332126): Node "cl|Mux34~12|datae"
+    Warning (332126): Node "cl|matrizJuego~82|datad"
+    Warning (332126): Node "cl|matrizJuego~82|combout"
+    Warning (332126): Node "cl|matrizJuego[3][2][1]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[3][2][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~82|datab"
+    Warning (332126): Node "cl|Mux34~12|dataf"
+    Warning (332126): Node "cl|matrizJuego~151|dataf"
+    Warning (332126): Node "cl|matrizJuego~151|combout"
+    Warning (332126): Node "cl|matrizJuego[5][0][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[5][0][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~151|datab"
+    Warning (332126): Node "cl|Mux34~11|datab"
+    Warning (332126): Node "cl|Mux34~11|combout"
+    Warning (332126): Node "cl|Mux34~14|datab"
+    Warning (332126): Node "cl|matrizJuego~121|datad"
+    Warning (332126): Node "cl|matrizJuego~121|combout"
+    Warning (332126): Node "cl|matrizJuego[7][0][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][0][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~121|datac"
+    Warning (332126): Node "cl|Mux34~11|datac"
+    Warning (332126): Node "cl|matrizJuego~136|datac"
+    Warning (332126): Node "cl|matrizJuego~136|combout"
+    Warning (332126): Node "cl|matrizJuego[7][4][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][4][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~136|datab"
+    Warning (332126): Node "cl|Mux34~11|datad"
+    Warning (332126): Node "cl|matrizJuego~166|datad"
+    Warning (332126): Node "cl|matrizJuego~166|combout"
+    Warning (332126): Node "cl|matrizJuego[5][4][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][4][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~166|dataa"
+    Warning (332126): Node "cl|Mux34~11|dataf"
+    Warning (332126): Node "cl|matrizJuego~130|dataa"
+    Warning (332126): Node "cl|matrizJuego~130|combout"
+    Warning (332126): Node "cl|matrizJuego[7][2][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][2][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~130|datac"
+    Warning (332126): Node "cl|Mux34~13|datab"
+    Warning (332126): Node "cl|Mux34~13|combout"
+    Warning (332126): Node "cl|Mux34~14|datac"
+    Warning (332126): Node "cl|matrizJuego~145|dataa"
+    Warning (332126): Node "cl|matrizJuego~145|combout"
+    Warning (332126): Node "cl|matrizJuego[5][6][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][6][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~145|datab"
+    Warning (332126): Node "cl|Mux34~13|datac"
+    Warning (332126): Node "cl|matrizJuego~142|datac"
+    Warning (332126): Node "cl|matrizJuego~142|combout"
+    Warning (332126): Node "cl|matrizJuego[7][6][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[7][6][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~142|datae"
+    Warning (332126): Node "cl|Mux34~13|datad"
+    Warning (332126): Node "cl|matrizJuego~160|datad"
+    Warning (332126): Node "cl|matrizJuego~160|combout"
+    Warning (332126): Node "cl|matrizJuego[5][2][1]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[5][2][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~160|dataa"
+    Warning (332126): Node "cl|Mux34~13|datae"
+    Warning (332126): Node "cl|matrizJuego~64|datac"
+    Warning (332126): Node "cl|matrizJuego~64|combout"
+    Warning (332126): Node "cl|matrizJuego[1][4][1]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[1][4][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~64|dataa"
+    Warning (332126): Node "cl|Mux34~10|dataa"
+    Warning (332126): Node "cl|Mux34~10|combout"
+    Warning (332126): Node "cl|Mux34~14|datad"
+    Warning (332126): Node "cl|matrizJuego~76|dataa"
+    Warning (332126): Node "cl|matrizJuego~76|combout"
+    Warning (332126): Node "cl|matrizJuego[3][0][1]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[3][0][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~76|datad"
+    Warning (332126): Node "cl|Mux34~10|datab"
+    Warning (332126): Node "cl|matrizJuego~49|dataf"
+    Warning (332126): Node "cl|matrizJuego~49|combout"
+    Warning (332126): Node "cl|matrizJuego[1][0][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][0][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~49|datac"
+    Warning (332126): Node "cl|Mux34~10|datac"
+    Warning (332126): Node "cl|matrizJuego~88|datad"
+    Warning (332126): Node "cl|matrizJuego~88|combout"
+    Warning (332126): Node "cl|matrizJuego[3][4][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[3][4][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~88|datac"
+    Warning (332126): Node "cl|Mux34~10|datad"
+    Warning (332126): Node "cl|matrizJuego~13|datad"
+    Warning (332126): Node "cl|matrizJuego~13|combout"
+    Warning (332126): Node "cl|matrizJuego[2][4][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[2][4][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~13|dataa"
+    Warning (332126): Node "cl|Mux34~1|dataa"
+    Warning (332126): Node "cl|Mux34~1|combout"
+    Warning (332126): Node "cl|matrizJuego~192|datad"
+    Warning (332126): Node "cl|matrizJuego~192|combout"
+    Warning (332126): Node "cl|Mux34~4|datab"
+    Warning (332126): Node "cl|matrizJuego~37|dataa"
+    Warning (332126): Node "cl|matrizJuego~37|combout"
+    Warning (332126): Node "cl|matrizJuego[0][4][1]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[0][4][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~37|datab"
+    Warning (332126): Node "cl|Mux34~1|datab"
+    Warning (332126): Node "cl|matrizJuego~187|datac"
+    Warning (332126): Node "cl|matrizJuego~187|combout"
+    Warning (332126): Node "cl|matrizJuego[4][4][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[4][4][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~187|dataa"
+    Warning (332126): Node "cl|Mux34~1|datac"
+    Warning (332126): Node "cl|matrizJuego~109|dataa"
+    Warning (332126): Node "cl|matrizJuego~109|combout"
+    Warning (332126): Node "cl|matrizJuego[6][4][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[6][4][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~109|datad"
+    Warning (332126): Node "cl|Mux34~1|datad"
+    Warning (332126): Node "cl|matrizJuego~4|datab"
+    Warning (332126): Node "cl|matrizJuego~4|combout"
+    Warning (332126): Node "cl|matrizJuego[2][0][1]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[2][0][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~4|datac"
+    Warning (332126): Node "cl|Mux34~0|dataa"
+    Warning (332126): Node "cl|Mux34~0|combout"
+    Warning (332126): Node "cl|matrizJuego~192|datab"
+    Warning (332126): Node "cl|Mux34~4|datad"
+    Warning (332126): Node "cl|matrizJuego~26|datad"
+    Warning (332126): Node "cl|matrizJuego~26|combout"
     Warning (332126): Node "cl|matrizJuego[0][0][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[0][0][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~26|datab"
+    Warning (332126): Node "cl|Mux34~0|datab"
+    Warning (332126): Node "cl|matrizJuego~172|datab"
+    Warning (332126): Node "cl|matrizJuego~172|combout"
+    Warning (332126): Node "cl|matrizJuego[4][0][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[4][0][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~172|datad"
+    Warning (332126): Node "cl|Mux34~0|datac"
+    Warning (332126): Node "cl|matrizJuego~100|dataa"
+    Warning (332126): Node "cl|matrizJuego~100|combout"
+    Warning (332126): Node "cl|matrizJuego[6][0][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][0][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~100|datac"
+    Warning (332126): Node "cl|Mux34~0|datad"
+    Warning (332126): Node "cl|matrizJuego~7|dataf"
+    Warning (332126): Node "cl|matrizJuego~7|combout"
+    Warning (332126): Node "cl|matrizJuego[2][2][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[2][2][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~7|dataa"
+    Warning (332126): Node "cl|Mux34~2|dataa"
+    Warning (332126): Node "cl|Mux34~2|combout"
+    Warning (332126): Node "cl|matrizJuego~192|dataa"
+    Warning (332126): Node "cl|Mux34~4|dataf"
+    Warning (332126): Node "cl|matrizJuego~181|datac"
+    Warning (332126): Node "cl|matrizJuego~181|combout"
+    Warning (332126): Node "cl|matrizJuego[4][2][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][2][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~181|datab"
+    Warning (332126): Node "cl|Mux34~2|datab"
+    Warning (332126): Node "cl|matrizJuego~31|datad"
+    Warning (332126): Node "cl|matrizJuego~31|combout"
+    Warning (332126): Node "cl|matrizJuego[0][2][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[0][2][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~31|dataa"
+    Warning (332126): Node "cl|Mux34~2|datad"
+    Warning (332126): Node "cl|matrizJuego~103|datab"
+    Warning (332126): Node "cl|matrizJuego~103|combout"
+    Warning (332126): Node "cl|matrizJuego[6][2][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][2][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~103|datad"
+    Warning (332126): Node "cl|Mux34~2|dataf"
+    Warning (332126): Node "cl|matrizJuego~133|datab"
+    Warning (332126): Node "cl|matrizJuego~133|combout"
+    Warning (332126): Node "cl|matrizJuego[7][3][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][3][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~133|datac"
+    Warning (332126): Node "cl|Mux34~17|dataa"
+    Warning (332126): Node "cl|Mux34~17|combout"
+    Warning (332126): Node "cl|Mux34~19|datab"
+    Warning (332126): Node "cl|Mux34~19|combout"
+    Warning (332126): Node "cl|matrizJuego~193|datac"
+    Warning (332126): Node "cl|Mux34~20|datac"
+    Warning (332126): Node "cl|matrizJuego~79|datab"
+    Warning (332126): Node "cl|matrizJuego~79|combout"
+    Warning (332126): Node "cl|matrizJuego[3][3][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[3][3][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~79|datac"
+    Warning (332126): Node "cl|Mux34~17|datac"
+    Warning (332126): Node "cl|matrizJuego~73|dataa"
+    Warning (332126): Node "cl|matrizJuego~73|combout"
+    Warning (332126): Node "cl|matrizJuego[3][1][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[3][1][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~73|datac"
+    Warning (332126): Node "cl|Mux34~17|datad"
+    Warning (332126): Node "cl|matrizJuego~127|dataa"
+    Warning (332126): Node "cl|matrizJuego~127|combout"
+    Warning (332126): Node "cl|matrizJuego[7][1][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][1][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~127|datad"
+    Warning (332126): Node "cl|Mux34~17|datae"
+    Warning (332126): Node "cl|matrizJuego~115|dataa"
+    Warning (332126): Node "cl|matrizJuego~115|combout"
+    Warning (332126): Node "cl|matrizJuego[7][7][1]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[7][7][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~115|datad"
+    Warning (332126): Node "cl|Mux34~18|datab"
+    Warning (332126): Node "cl|Mux34~18|combout"
+    Warning (332126): Node "cl|Mux34~19|datac"
+    Warning (332126): Node "cl|matrizJuego~139|datad"
+    Warning (332126): Node "cl|matrizJuego~139|combout"
+    Warning (332126): Node "cl|matrizJuego[7][5][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][5][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~139|datab"
+    Warning (332126): Node "cl|Mux34~18|datac"
+    Warning (332126): Node "cl|matrizJuego~175|datac"
+    Warning (332126): Node "cl|matrizJuego~175|combout"
+    Warning (332126): Node "cl|matrizJuego[3][7][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[3][7][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~175|datab"
+    Warning (332126): Node "cl|Mux34~18|datad"
+    Warning (332126): Node "cl|matrizJuego~85|datab"
+    Warning (332126): Node "cl|matrizJuego~85|combout"
+    Warning (332126): Node "cl|matrizJuego[3][5][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[3][5][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~85|datac"
+    Warning (332126): Node "cl|Mux34~18|datae"
+    Warning (332126): Node "cl|matrizJuego~157|datad"
+    Warning (332126): Node "cl|matrizJuego~157|combout"
+    Warning (332126): Node "cl|matrizJuego[5][1][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][1][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~157|datab"
+    Warning (332126): Node "cl|Mux34~15|dataa"
+    Warning (332126): Node "cl|Mux34~15|combout"
+    Warning (332126): Node "cl|Mux34~19|datad"
+    Warning (332126): Node "cl|matrizJuego~55|dataa"
+    Warning (332126): Node "cl|matrizJuego~55|combout"
+    Warning (332126): Node "cl|matrizJuego[1][1][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][1][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~55|datac"
+    Warning (332126): Node "cl|Mux34~15|datab"
+    Warning (332126): Node "cl|matrizJuego~163|dataa"
+    Warning (332126): Node "cl|matrizJuego~163|combout"
+    Warning (332126): Node "cl|matrizJuego[5][3][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[5][3][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~163|dataf"
+    Warning (332126): Node "cl|Mux34~15|datad"
+    Warning (332126): Node "cl|matrizJuego~61|datac"
+    Warning (332126): Node "cl|matrizJuego~61|combout"
+    Warning (332126): Node "cl|matrizJuego[1][3][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][3][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~61|datab"
+    Warning (332126): Node "cl|Mux34~15|dataf"
+    Warning (332126): Node "cl|matrizJuego~169|datab"
+    Warning (332126): Node "cl|matrizJuego~169|combout"
+    Warning (332126): Node "cl|matrizJuego[5][5][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][5][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~169|datad"
+    Warning (332126): Node "cl|Mux34~16|dataa"
+    Warning (332126): Node "cl|Mux34~16|combout"
+    Warning (332126): Node "cl|Mux34~19|datae"
+    Warning (332126): Node "cl|matrizJuego~67|datab"
+    Warning (332126): Node "cl|matrizJuego~67|combout"
+    Warning (332126): Node "cl|matrizJuego[1][5][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][5][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~67|datae"
+    Warning (332126): Node "cl|Mux34~16|datab"
+    Warning (332126): Node "cl|matrizJuego~43|dataa"
+    Warning (332126): Node "cl|matrizJuego~43|combout"
+    Warning (332126): Node "cl|matrizJuego[1][7][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[1][7][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~43|datac"
+    Warning (332126): Node "cl|Mux34~16|datae"
+    Warning (332126): Node "cl|matrizJuego~148|datad"
+    Warning (332126): Node "cl|matrizJuego~148|combout"
+    Warning (332126): Node "cl|matrizJuego[5][7][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][7][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~148|dataa"
+    Warning (332126): Node "cl|Mux34~16|dataf"
+    Warning (332126): Node "cl|matrizJuego~154|datad"
+    Warning (332126): Node "cl|matrizJuego~154|combout"
+    Warning (332126): Node "cl|matrizJuego[4][7][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[4][7][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~154|dataa"
+    Warning (332126): Node "cl|Mux34~6|dataa"
+    Warning (332126): Node "cl|Mux34~6|combout"
+    Warning (332126): Node "cl|Mux34~9|datab"
+    Warning (332126): Node "cl|Mux34~9|combout"
+    Warning (332126): Node "cl|matrizJuego~193|datad"
+    Warning (332126): Node "cl|Mux34~20|datad"
+    Warning (332126): Node "cl|matrizJuego~52|datac"
+    Warning (332126): Node "cl|matrizJuego~52|combout"
+    Warning (332126): Node "cl|matrizJuego[0][7][1]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[0][7][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~52|dataa"
+    Warning (332126): Node "cl|Mux34~6|datac"
+    Warning (332126): Node "cl|matrizJuego~40|datac"
+    Warning (332126): Node "cl|matrizJuego~40|combout"
+    Warning (332126): Node "cl|matrizJuego[0][5][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[0][5][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~40|dataa"
+    Warning (332126): Node "cl|Mux34~6|datad"
+    Warning (332126): Node "cl|matrizJuego~190|datad"
+    Warning (332126): Node "cl|matrizJuego~190|combout"
+    Warning (332126): Node "cl|matrizJuego[4][5][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[4][5][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~190|datac"
+    Warning (332126): Node "cl|Mux34~6|datae"
+    Warning (332126): Node "cl|matrizJuego~106|dataf"
+    Warning (332126): Node "cl|matrizJuego~106|combout"
+    Warning (332126): Node "cl|matrizJuego[6][3][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[6][3][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~106|datab"
+    Warning (332126): Node "cl|Mux34~7|dataa"
+    Warning (332126): Node "cl|Mux34~7|combout"
+    Warning (332126): Node "cl|Mux34~9|datac"
+    Warning (332126): Node "cl|matrizJuego~10|datab"
+    Warning (332126): Node "cl|matrizJuego~10|combout"
+    Warning (332126): Node "cl|matrizJuego[2][3][1]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[2][3][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~10|datac"
+    Warning (332126): Node "cl|Mux34~7|datab"
+    Warning (332126): Node "cl|matrizJuego~97|datad"
+    Warning (332126): Node "cl|matrizJuego~97|combout"
+    Warning (332126): Node "cl|matrizJuego[6][1][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][1][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~97|dataa"
+    Warning (332126): Node "cl|Mux34~7|datad"
+    Warning (332126): Node "cl|matrizJuego~1|datac"
+    Warning (332126): Node "cl|matrizJuego~1|combout"
+    Warning (332126): Node "cl|matrizJuego[2][1][1]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[2][1][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~1|dataa"
+    Warning (332126): Node "cl|Mux34~7|datae"
+    Warning (332126): Node "cl|matrizJuego~184|dataa"
+    Warning (332126): Node "cl|matrizJuego~184|combout"
+    Warning (332126): Node "cl|matrizJuego[4][3][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[4][3][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~184|datac"
+    Warning (332126): Node "cl|Mux34~5|dataa"
+    Warning (332126): Node "cl|Mux34~5|combout"
+    Warning (332126): Node "cl|Mux34~9|datae"
+    Warning (332126): Node "cl|matrizJuego~34|datad"
+    Warning (332126): Node "cl|matrizJuego~34|combout"
+    Warning (332126): Node "cl|matrizJuego[0][3][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[0][3][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~34|dataa"
+    Warning (332126): Node "cl|Mux34~5|datab"
+    Warning (332126): Node "cl|matrizJuego~178|datac"
+    Warning (332126): Node "cl|matrizJuego~178|combout"
+    Warning (332126): Node "cl|matrizJuego[4][1][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][1][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~178|datad"
+    Warning (332126): Node "cl|Mux34~5|datad"
+    Warning (332126): Node "cl|matrizJuego~28|datac"
+    Warning (332126): Node "cl|matrizJuego~28|combout"
+    Warning (332126): Node "cl|matrizJuego[0][1][1]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[0][1][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~28|datab"
+    Warning (332126): Node "cl|Mux34~5|datae"
+    Warning (332126): Node "cl|matrizJuego~16|dataa"
+    Warning (332126): Node "cl|matrizJuego~16|combout"
+    Warning (332126): Node "cl|matrizJuego[2][5][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[2][5][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~16|dataf"
+    Warning (332126): Node "cl|Mux34~8|dataa"
+    Warning (332126): Node "cl|Mux34~8|combout"
+    Warning (332126): Node "cl|Mux34~9|dataf"
+    Warning (332126): Node "cl|matrizJuego~124|datac"
+    Warning (332126): Node "cl|matrizJuego~124|combout"
+    Warning (332126): Node "cl|matrizJuego[6][7][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][7][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~124|dataa"
+    Warning (332126): Node "cl|Mux34~8|datab"
+    Warning (332126): Node "cl|matrizJuego~112|datad"
+    Warning (332126): Node "cl|matrizJuego~112|combout"
+    Warning (332126): Node "cl|matrizJuego[6][5][1]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][5][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~112|dataa"
+    Warning (332126): Node "cl|Mux34~8|datad"
+    Warning (332126): Node "cl|matrizJuego~22|datad"
+    Warning (332126): Node "cl|matrizJuego~22|combout"
+    Warning (332126): Node "cl|matrizJuego[2][7][1]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[2][7][1]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~22|datac"
+    Warning (332126): Node "cl|Mux34~8|datae"
+    Warning (332126): Node "cl|matrizJuego~192|datae"
+    Warning (332126): Node "cl|matrizJuego~118|datac"
+    Warning (332126): Node "cl|matrizJuego~19|datac"
+    Warning (332126): Node "cl|matrizJuego~46|datac"
+    Warning (332126): Node "cl|matrizJuego~70|datad"
+    Warning (332126): Node "cl|matrizJuego~91|datab"
+    Warning (332126): Node "cl|matrizJuego~58|datab"
+    Warning (332126): Node "cl|matrizJuego~82|datac"
+    Warning (332126): Node "cl|matrizJuego~151|datac"
+    Warning (332126): Node "cl|matrizJuego~121|dataa"
+    Warning (332126): Node "cl|matrizJuego~136|datad"
+    Warning (332126): Node "cl|matrizJuego~166|datac"
+    Warning (332126): Node "cl|matrizJuego~130|datad"
+    Warning (332126): Node "cl|matrizJuego~145|dataf"
+    Warning (332126): Node "cl|matrizJuego~142|dataa"
+    Warning (332126): Node "cl|matrizJuego~160|datac"
+    Warning (332126): Node "cl|matrizJuego~64|datad"
+    Warning (332126): Node "cl|matrizJuego~76|datac"
+    Warning (332126): Node "cl|matrizJuego~49|dataa"
+    Warning (332126): Node "cl|matrizJuego~88|datab"
+    Warning (332126): Node "cl|matrizJuego~13|datac"
+    Warning (332126): Node "cl|matrizJuego~37|datac"
+    Warning (332126): Node "cl|matrizJuego~187|dataf"
+    Warning (332126): Node "cl|matrizJuego~109|datac"
+    Warning (332126): Node "cl|matrizJuego~4|datad"
+    Warning (332126): Node "cl|matrizJuego~26|datac"
+    Warning (332126): Node "cl|matrizJuego~172|datac"
+    Warning (332126): Node "cl|matrizJuego~100|datae"
+    Warning (332126): Node "cl|matrizJuego~7|datac"
+    Warning (332126): Node "cl|matrizJuego~181|datad"
+    Warning (332126): Node "cl|matrizJuego~31|dataf"
+    Warning (332126): Node "cl|matrizJuego~103|datac"
+    Warning (332126): Node "cl|matrizJuego~133|datad"
+    Warning (332126): Node "cl|matrizJuego~79|datad"
+    Warning (332126): Node "cl|matrizJuego~73|datad"
+    Warning (332126): Node "cl|matrizJuego~127|datac"
+    Warning (332126): Node "cl|matrizJuego~115|datac"
+    Warning (332126): Node "cl|matrizJuego~139|datac"
+    Warning (332126): Node "cl|matrizJuego~175|datae"
+    Warning (332126): Node "cl|matrizJuego~85|datad"
+    Warning (332126): Node "cl|matrizJuego~157|datac"
+    Warning (332126): Node "cl|matrizJuego~55|datad"
+    Warning (332126): Node "cl|matrizJuego~163|datac"
+    Warning (332126): Node "cl|matrizJuego~61|datad"
+    Warning (332126): Node "cl|matrizJuego~169|datac"
+    Warning (332126): Node "cl|matrizJuego~67|datac"
+    Warning (332126): Node "cl|matrizJuego~43|datad"
+    Warning (332126): Node "cl|matrizJuego~148|datac"
+    Warning (332126): Node "cl|matrizJuego~154|datac"
+    Warning (332126): Node "cl|matrizJuego~52|datad"
+    Warning (332126): Node "cl|matrizJuego~40|datad"
+    Warning (332126): Node "cl|matrizJuego~190|dataa"
+    Warning (332126): Node "cl|matrizJuego~106|datad"
+    Warning (332126): Node "cl|matrizJuego~10|datad"
+    Warning (332126): Node "cl|matrizJuego~97|dataf"
+    Warning (332126): Node "cl|matrizJuego~1|dataf"
+    Warning (332126): Node "cl|matrizJuego~184|datad"
+    Warning (332126): Node "cl|matrizJuego~34|datac"
+    Warning (332126): Node "cl|matrizJuego~178|datae"
+    Warning (332126): Node "cl|matrizJuego~28|datad"
+    Warning (332126): Node "cl|matrizJuego~16|datac"
+    Warning (332126): Node "cl|matrizJuego~124|datad"
+    Warning (332126): Node "cl|matrizJuego~112|datac"
+    Warning (332126): Node "cl|matrizJuego~22|dataa"
+Critical Warning (332081): Design contains combinational loop of 501 nodes. Estimating the delays through the loop.
+Warning (332125): Found combinational loop of 854 nodes File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 27
+    Warning (332126): Node "cl|Mux35~20|combout"
+    Warning (332126): Node "cl|matrizJuego~0|dataa"
+    Warning (332126): Node "cl|matrizJuego~0|combout"
+    Warning (332126): Node "cl|matrizJuego[2][1][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[2][1][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~0|datad"
+    Warning (332126): Node "cl|Mux32~5|datad"
+    Warning (332126): Node "cl|Mux32~5|combout"
+    Warning (332126): Node "cl|Mux32~9|datac"
+    Warning (332126): Node "cl|Mux32~9|combout"
+    Warning (332126): Node "cl|Mux32~20|dataa"
+    Warning (332126): Node "cl|Mux32~20|combout"
+    Warning (332126): Node "cl|matrizJuego~0|datac"
+    Warning (332126): Node "cl|Equal0~0|dataf"
+    Warning (332126): Node "cl|Equal0~0|combout"
+    Warning (332126): Node "cl|matrizJuego~87|datac"
+    Warning (332126): Node "cl|matrizJuego~87|combout"
+    Warning (332126): Node "cl|matrizJuego[3][4][2]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[3][4][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~87|datad"
+    Warning (332126): Node "cl|Mux32~7|dataa"
+    Warning (332126): Node "cl|Mux32~7|combout"
+    Warning (332126): Node "cl|Mux32~9|dataa"
+    Warning (332126): Node "cl|matrizJuego~84|datad"
+    Warning (332126): Node "cl|matrizJuego~84|combout"
+    Warning (332126): Node "cl|matrizJuego[3][5][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[3][5][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~84|datac"
+    Warning (332126): Node "cl|Mux32~7|datab"
+    Warning (332126): Node "cl|matrizJuego~15|datad"
+    Warning (332126): Node "cl|matrizJuego~15|combout"
+    Warning (332126): Node "cl|matrizJuego[2][5][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[2][5][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~15|datac"
+    Warning (332126): Node "cl|Mux32~7|datac"
+    Warning (332126): Node "cl|matrizJuego~12|datad"
+    Warning (332126): Node "cl|matrizJuego~12|combout"
+    Warning (332126): Node "cl|matrizJuego[2][4][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[2][4][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~12|dataf"
+    Warning (332126): Node "cl|Mux32~7|datad"
+    Warning (332126): Node "cl|matrizJuego~135|datad"
+    Warning (332126): Node "cl|matrizJuego~135|combout"
+    Warning (332126): Node "cl|matrizJuego[7][4][2]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[7][4][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~135|datac"
+    Warning (332126): Node "cl|Mux32~8|dataa"
+    Warning (332126): Node "cl|Mux32~8|combout"
+    Warning (332126): Node "cl|Mux32~9|datab"
+    Warning (332126): Node "cl|matrizJuego~111|datab"
+    Warning (332126): Node "cl|matrizJuego~111|combout"
+    Warning (332126): Node "cl|matrizJuego[6][5][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][5][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~111|datac"
+    Warning (332126): Node "cl|Mux32~8|datab"
+    Warning (332126): Node "cl|matrizJuego~138|datac"
+    Warning (332126): Node "cl|matrizJuego~138|combout"
+    Warning (332126): Node "cl|matrizJuego[7][5][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][5][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~138|datab"
+    Warning (332126): Node "cl|Mux32~8|datac"
+    Warning (332126): Node "cl|matrizJuego~108|datac"
+    Warning (332126): Node "cl|matrizJuego~108|combout"
+    Warning (332126): Node "cl|matrizJuego[6][4][2]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[6][4][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~108|datab"
+    Warning (332126): Node "cl|Mux32~8|datad"
+    Warning (332126): Node "cl|matrizJuego~3|datae"
+    Warning (332126): Node "cl|matrizJuego~3|combout"
+    Warning (332126): Node "cl|matrizJuego[2][0][2]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[2][0][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~3|datac"
+    Warning (332126): Node "cl|Mux32~5|dataa"
+    Warning (332126): Node "cl|matrizJuego~72|datad"
+    Warning (332126): Node "cl|matrizJuego~72|combout"
+    Warning (332126): Node "cl|matrizJuego[3][1][2]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[3][1][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~72|datac"
+    Warning (332126): Node "cl|Mux32~5|datab"
+    Warning (332126): Node "cl|matrizJuego~75|datac"
+    Warning (332126): Node "cl|matrizJuego~75|combout"
+    Warning (332126): Node "cl|matrizJuego[3][0][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[3][0][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~75|datad"
+    Warning (332126): Node "cl|Mux32~5|datac"
+    Warning (332126): Node "cl|matrizJuego~99|datad"
+    Warning (332126): Node "cl|matrizJuego~99|combout"
+    Warning (332126): Node "cl|matrizJuego[6][0][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][0][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~99|datab"
+    Warning (332126): Node "cl|Mux32~6|dataa"
+    Warning (332126): Node "cl|Mux32~6|combout"
+    Warning (332126): Node "cl|Mux32~9|datad"
+    Warning (332126): Node "cl|matrizJuego~120|datac"
+    Warning (332126): Node "cl|matrizJuego~120|combout"
+    Warning (332126): Node "cl|matrizJuego[7][0][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][0][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~120|datab"
+    Warning (332126): Node "cl|Mux32~6|datab"
+    Warning (332126): Node "cl|matrizJuego~96|datad"
+    Warning (332126): Node "cl|matrizJuego~96|combout"
+    Warning (332126): Node "cl|matrizJuego[6][1][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][1][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~96|datac"
+    Warning (332126): Node "cl|Mux32~6|datac"
+    Warning (332126): Node "cl|matrizJuego~126|datad"
+    Warning (332126): Node "cl|matrizJuego~126|combout"
+    Warning (332126): Node "cl|matrizJuego[7][1][2]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[7][1][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~126|datac"
+    Warning (332126): Node "cl|Mux32~6|datad"
+    Warning (332126): Node "cl|matrizJuego~21|datad"
+    Warning (332126): Node "cl|matrizJuego~21|combout"
+    Warning (332126): Node "cl|matrizJuego[2][7][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[2][7][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~21|dataa"
+    Warning (332126): Node "cl|Mux32~15|dataa"
+    Warning (332126): Node "cl|Mux32~15|combout"
+    Warning (332126): Node "cl|Mux32~19|datab"
+    Warning (332126): Node "cl|Mux32~19|combout"
+    Warning (332126): Node "cl|Mux32~20|datab"
+    Warning (332126): Node "cl|matrizJuego~6|datad"
+    Warning (332126): Node "cl|matrizJuego~6|combout"
+    Warning (332126): Node "cl|matrizJuego[2][2][2]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[2][2][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~6|datac"
+    Warning (332126): Node "cl|Mux32~15|datab"
+    Warning (332126): Node "cl|matrizJuego~9|datac"
+    Warning (332126): Node "cl|matrizJuego~9|combout"
+    Warning (332126): Node "cl|matrizJuego[2][3][2]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[2][3][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~9|datad"
+    Warning (332126): Node "cl|Mux32~15|datac"
+    Warning (332126): Node "cl|matrizJuego~18|datad"
+    Warning (332126): Node "cl|matrizJuego~18|combout"
+    Warning (332126): Node "cl|matrizJuego[2][6][2]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[2][6][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~18|datac"
+    Warning (332126): Node "cl|Mux32~15|datad"
+    Warning (332126): Node "cl|matrizJuego~114|datac"
+    Warning (332126): Node "cl|matrizJuego~114|combout"
+    Warning (332126): Node "cl|matrizJuego[7][7][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][7][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~114|datad"
+    Warning (332126): Node "cl|Mux32~18|dataa"
+    Warning (332126): Node "cl|Mux32~18|combout"
+    Warning (332126): Node "cl|Mux32~19|datac"
+    Warning (332126): Node "cl|matrizJuego~141|datac"
+    Warning (332126): Node "cl|matrizJuego~141|combout"
+    Warning (332126): Node "cl|matrizJuego[7][6][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][6][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~141|datab"
+    Warning (332126): Node "cl|Mux32~18|datab"
+    Warning (332126): Node "cl|matrizJuego~132|datad"
+    Warning (332126): Node "cl|matrizJuego~132|combout"
+    Warning (332126): Node "cl|matrizJuego[7][3][2]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[7][3][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~132|datac"
+    Warning (332126): Node "cl|Mux32~18|datac"
+    Warning (332126): Node "cl|matrizJuego~129|datac"
+    Warning (332126): Node "cl|matrizJuego~129|combout"
+    Warning (332126): Node "cl|matrizJuego[7][2][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][2][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~129|datab"
+    Warning (332126): Node "cl|Mux32~18|datad"
+    Warning (332126): Node "cl|matrizJuego~117|datad"
+    Warning (332126): Node "cl|matrizJuego~117|combout"
+    Warning (332126): Node "cl|matrizJuego[6][6][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][6][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~117|datac"
+    Warning (332126): Node "cl|Mux32~16|dataa"
+    Warning (332126): Node "cl|Mux32~16|combout"
+    Warning (332126): Node "cl|Mux32~19|datad"
+    Warning (332126): Node "cl|matrizJuego~123|datac"
+    Warning (332126): Node "cl|matrizJuego~123|combout"
+    Warning (332126): Node "cl|matrizJuego[6][7][2]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[6][7][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~123|datad"
+    Warning (332126): Node "cl|Mux32~16|datab"
+    Warning (332126): Node "cl|matrizJuego~102|datac"
+    Warning (332126): Node "cl|matrizJuego~102|combout"
+    Warning (332126): Node "cl|matrizJuego[6][2][2]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[6][2][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~102|dataa"
+    Warning (332126): Node "cl|Mux32~16|datac"
+    Warning (332126): Node "cl|matrizJuego~105|datac"
+    Warning (332126): Node "cl|matrizJuego~105|combout"
+    Warning (332126): Node "cl|matrizJuego[6][3][2]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[6][3][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~105|datad"
+    Warning (332126): Node "cl|Mux32~16|datad"
+    Warning (332126): Node "cl|matrizJuego~90|datad"
+    Warning (332126): Node "cl|matrizJuego~90|combout"
+    Warning (332126): Node "cl|matrizJuego[3][6][2]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[3][6][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~90|datac"
+    Warning (332126): Node "cl|Mux32~17|dataa"
+    Warning (332126): Node "cl|Mux32~17|combout"
+    Warning (332126): Node "cl|Mux32~19|datae"
+    Warning (332126): Node "cl|matrizJuego~174|datab"
+    Warning (332126): Node "cl|matrizJuego~174|combout"
+    Warning (332126): Node "cl|matrizJuego[3][7][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[3][7][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~174|datad"
+    Warning (332126): Node "cl|Mux32~17|datab"
+    Warning (332126): Node "cl|matrizJuego~81|datad"
+    Warning (332126): Node "cl|matrizJuego~81|combout"
+    Warning (332126): Node "cl|matrizJuego[3][2][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[3][2][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~81|datac"
+    Warning (332126): Node "cl|Mux32~17|datac"
+    Warning (332126): Node "cl|matrizJuego~78|datad"
+    Warning (332126): Node "cl|matrizJuego~78|combout"
+    Warning (332126): Node "cl|matrizJuego[3][3][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[3][3][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~78|dataf"
+    Warning (332126): Node "cl|Mux32~17|datad"
+    Warning (332126): Node "cl|matrizJuego~39|dataa"
+    Warning (332126): Node "cl|matrizJuego~39|combout"
+    Warning (332126): Node "cl|matrizJuego[0][5][2]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[0][5][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~39|datad"
+    Warning (332126): Node "cl|Mux32~2|dataa"
+    Warning (332126): Node "cl|Mux32~2|combout"
+    Warning (332126): Node "cl|Mux32~4|dataa"
+    Warning (332126): Node "cl|Mux32~4|combout"
+    Warning (332126): Node "cl|Mux32~20|datad"
+    Warning (332126): Node "cl|matrizJuego~63|datad"
+    Warning (332126): Node "cl|matrizJuego~63|combout"
+    Warning (332126): Node "cl|matrizJuego[1][4][2]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[1][4][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~63|datac"
+    Warning (332126): Node "cl|Mux32~2|datab"
+    Warning (332126): Node "cl|matrizJuego~36|dataf"
+    Warning (332126): Node "cl|matrizJuego~36|combout"
+    Warning (332126): Node "cl|matrizJuego[0][4][2]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[0][4][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~36|datad"
+    Warning (332126): Node "cl|Mux32~2|datac"
+    Warning (332126): Node "cl|matrizJuego~66|datad"
+    Warning (332126): Node "cl|matrizJuego~66|combout"
+    Warning (332126): Node "cl|matrizJuego[1][5][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][5][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~66|datac"
+    Warning (332126): Node "cl|Mux32~2|datad"
+    Warning (332126): Node "cl|matrizJuego~165|dataa"
+    Warning (332126): Node "cl|matrizJuego~165|combout"
+    Warning (332126): Node "cl|matrizJuego[5][4][2]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[5][4][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~165|datac"
+    Warning (332126): Node "cl|Mux32~3|dataa"
+    Warning (332126): Node "cl|Mux32~3|combout"
+    Warning (332126): Node "cl|Mux32~4|datab"
+    Warning (332126): Node "cl|matrizJuego~186|dataa"
+    Warning (332126): Node "cl|matrizJuego~186|combout"
+    Warning (332126): Node "cl|matrizJuego[4][4][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][4][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~186|datad"
+    Warning (332126): Node "cl|Mux32~3|datab"
+    Warning (332126): Node "cl|matrizJuego~168|datab"
+    Warning (332126): Node "cl|matrizJuego~168|combout"
+    Warning (332126): Node "cl|matrizJuego[5][5][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][5][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~168|datad"
+    Warning (332126): Node "cl|Mux32~3|datad"
+    Warning (332126): Node "cl|matrizJuego~189|datab"
+    Warning (332126): Node "cl|matrizJuego~189|combout"
+    Warning (332126): Node "cl|matrizJuego[4][5][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][5][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~189|datac"
+    Warning (332126): Node "cl|Mux32~3|datae"
+    Warning (332126): Node "cl|matrizJuego~48|datad"
+    Warning (332126): Node "cl|matrizJuego~48|combout"
+    Warning (332126): Node "cl|matrizJuego[1][0][2]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[1][0][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~48|dataa"
+    Warning (332126): Node "cl|Mux32~0|dataa"
+    Warning (332126): Node "cl|Mux32~0|combout"
+    Warning (332126): Node "cl|Mux32~4|datad"
+    Warning (332126): Node "cl|matrizJuego~25|datad"
+    Warning (332126): Node "cl|matrizJuego~25|combout"
+    Warning (332126): Node "cl|matrizJuego[0][0][2]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[0][0][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~25|datac"
+    Warning (332126): Node "cl|Mux32~0|datab"
+    Warning (332126): Node "cl|matrizJuego~54|datac"
+    Warning (332126): Node "cl|matrizJuego~54|combout"
+    Warning (332126): Node "cl|matrizJuego[1][1][2]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[1][1][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~54|datad"
+    Warning (332126): Node "cl|Mux32~0|datac"
+    Warning (332126): Node "cl|matrizJuego~27|datac"
+    Warning (332126): Node "cl|matrizJuego~27|combout"
+    Warning (332126): Node "cl|matrizJuego[0][1][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[0][1][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~27|dataa"
+    Warning (332126): Node "cl|Mux32~0|datad"
+    Warning (332126): Node "cl|matrizJuego~177|datae"
+    Warning (332126): Node "cl|matrizJuego~177|combout"
+    Warning (332126): Node "cl|matrizJuego[4][1][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][1][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~177|datac"
+    Warning (332126): Node "cl|Mux32~1|dataa"
+    Warning (332126): Node "cl|Mux32~1|combout"
+    Warning (332126): Node "cl|Mux32~4|datae"
+    Warning (332126): Node "cl|matrizJuego~156|datad"
+    Warning (332126): Node "cl|matrizJuego~156|combout"
+    Warning (332126): Node "cl|matrizJuego[5][1][2]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[5][1][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~156|datac"
+    Warning (332126): Node "cl|Mux32~1|datab"
+    Warning (332126): Node "cl|matrizJuego~171|datad"
+    Warning (332126): Node "cl|matrizJuego~171|combout"
+    Warning (332126): Node "cl|matrizJuego[4][0][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][0][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~171|datac"
+    Warning (332126): Node "cl|Mux32~1|datac"
+    Warning (332126): Node "cl|matrizJuego~150|datad"
+    Warning (332126): Node "cl|matrizJuego~150|combout"
+    Warning (332126): Node "cl|matrizJuego[5][0][2]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[5][0][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~150|datac"
+    Warning (332126): Node "cl|Mux32~1|datad"
+    Warning (332126): Node "cl|matrizJuego~60|datac"
+    Warning (332126): Node "cl|matrizJuego~60|combout"
+    Warning (332126): Node "cl|matrizJuego[1][3][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][3][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~60|datad"
+    Warning (332126): Node "cl|Mux32~10|dataa"
+    Warning (332126): Node "cl|Mux32~10|combout"
+    Warning (332126): Node "cl|Mux32~14|dataa"
+    Warning (332126): Node "cl|Mux32~14|combout"
+    Warning (332126): Node "cl|Mux32~20|dataf"
+    Warning (332126): Node "cl|matrizJuego~33|datad"
+    Warning (332126): Node "cl|matrizJuego~33|combout"
+    Warning (332126): Node "cl|matrizJuego[0][3][2]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[0][3][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~33|datab"
+    Warning (332126): Node "cl|Mux32~10|datab"
+    Warning (332126): Node "cl|matrizJuego~57|datad"
+    Warning (332126): Node "cl|matrizJuego~57|combout"
+    Warning (332126): Node "cl|matrizJuego[1][2][2]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[1][2][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~57|datac"
+    Warning (332126): Node "cl|Mux32~10|datac"
+    Warning (332126): Node "cl|matrizJuego~30|datac"
+    Warning (332126): Node "cl|matrizJuego~30|combout"
+    Warning (332126): Node "cl|matrizJuego[0][2][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[0][2][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~30|datad"
+    Warning (332126): Node "cl|Mux32~10|datad"
+    Warning (332126): Node "cl|matrizJuego~183|datab"
+    Warning (332126): Node "cl|matrizJuego~183|combout"
+    Warning (332126): Node "cl|matrizJuego[4][3][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][3][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~183|datac"
+    Warning (332126): Node "cl|Mux32~11|dataa"
+    Warning (332126): Node "cl|Mux32~11|combout"
+    Warning (332126): Node "cl|Mux32~14|datab"
+    Warning (332126): Node "cl|matrizJuego~159|datad"
+    Warning (332126): Node "cl|matrizJuego~159|combout"
+    Warning (332126): Node "cl|matrizJuego[5][2][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][2][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~159|datac"
+    Warning (332126): Node "cl|Mux32~11|datab"
+    Warning (332126): Node "cl|matrizJuego~180|datac"
+    Warning (332126): Node "cl|matrizJuego~180|combout"
+    Warning (332126): Node "cl|matrizJuego[4][2][2]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[4][2][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~180|dataf"
+    Warning (332126): Node "cl|Mux32~11|datac"
+    Warning (332126): Node "cl|matrizJuego~162|datac"
+    Warning (332126): Node "cl|matrizJuego~162|combout"
+    Warning (332126): Node "cl|matrizJuego[5][3][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][3][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~162|dataf"
+    Warning (332126): Node "cl|Mux32~11|datad"
+    Warning (332126): Node "cl|matrizJuego~153|datad"
+    Warning (332126): Node "cl|matrizJuego~153|combout"
+    Warning (332126): Node "cl|matrizJuego[4][7][2]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[4][7][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~153|datac"
+    Warning (332126): Node "cl|Mux32~13|dataa"
+    Warning (332126): Node "cl|Mux32~13|combout"
+    Warning (332126): Node "cl|Mux32~14|datad"
+    Warning (332126): Node "cl|matrizJuego~93|datac"
+    Warning (332126): Node "cl|matrizJuego~93|combout"
+    Warning (332126): Node "cl|matrizJuego[4][6][2]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[4][6][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~93|datae"
+    Warning (332126): Node "cl|Mux32~13|datab"
+    Warning (332126): Node "cl|matrizJuego~144|datad"
+    Warning (332126): Node "cl|matrizJuego~144|combout"
+    Warning (332126): Node "cl|matrizJuego[5][6][2]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[5][6][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~144|datac"
+    Warning (332126): Node "cl|Mux32~13|datac"
+    Warning (332126): Node "cl|matrizJuego~147|datac"
+    Warning (332126): Node "cl|matrizJuego~147|combout"
+    Warning (332126): Node "cl|matrizJuego[5][7][2]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[5][7][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~147|datab"
+    Warning (332126): Node "cl|Mux32~13|datad"
+    Warning (332126): Node "cl|matrizJuego~69|datad"
+    Warning (332126): Node "cl|matrizJuego~69|combout"
+    Warning (332126): Node "cl|matrizJuego[1][6][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][6][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~69|dataa"
+    Warning (332126): Node "cl|Mux32~12|dataa"
+    Warning (332126): Node "cl|Mux32~12|combout"
+    Warning (332126): Node "cl|Mux32~14|datae"
+    Warning (332126): Node "cl|matrizJuego~45|datac"
+    Warning (332126): Node "cl|matrizJuego~45|combout"
+    Warning (332126): Node "cl|matrizJuego[0][6][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[0][6][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~45|datab"
+    Warning (332126): Node "cl|Mux32~12|datab"
+    Warning (332126): Node "cl|matrizJuego~51|datac"
+    Warning (332126): Node "cl|matrizJuego~51|combout"
+    Warning (332126): Node "cl|matrizJuego[0][7][2]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[0][7][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~51|dataf"
+    Warning (332126): Node "cl|Mux32~12|datac"
+    Warning (332126): Node "cl|matrizJuego~65|datac"
+    Warning (332126): Node "cl|matrizJuego~65|combout"
+    Warning (332126): Node "cl|matrizJuego[1][4][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][4][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~65|datad"
+    Warning (332126): Node "cl|Mux35~3|dataa"
+    Warning (332126): Node "cl|Mux35~3|combout"
+    Warning (332126): Node "cl|Mux35~4|dataa"
+    Warning (332126): Node "cl|Mux35~4|combout"
+    Warning (332126): Node "cl|Mux35~20|dataa"
+    Warning (332126): Node "cl|matrizJuego~89|datae"
+    Warning (332126): Node "cl|matrizJuego~89|combout"
+    Warning (332126): Node "cl|matrizJuego[3][4][0]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[3][4][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~89|datad"
+    Warning (332126): Node "cl|Mux35~3|datab"
+    Warning (332126): Node "cl|matrizJuego~92|datad"
+    Warning (332126): Node "cl|matrizJuego~92|combout"
+    Warning (332126): Node "cl|matrizJuego[3][6][0]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[3][6][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~92|dataf"
+    Warning (332126): Node "cl|Mux35~3|datad"
+    Warning (332126): Node "cl|matrizJuego~71|datac"
+    Warning (332126): Node "cl|matrizJuego~71|combout"
+    Warning (332126): Node "cl|matrizJuego[1][6][0]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[1][6][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~71|datad"
+    Warning (332126): Node "cl|Mux35~3|dataf"
+    Warning (332126): Node "cl|matrizJuego~5|datad"
+    Warning (332126): Node "cl|matrizJuego~5|combout"
+    Warning (332126): Node "cl|matrizJuego[2][0][0]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[2][0][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~5|datac"
+    Warning (332126): Node "cl|Mux35~0|dataa"
+    Warning (332126): Node "cl|Mux35~0|combout"
+    Warning (332126): Node "cl|Mux35~4|datab"
+    Warning (332126): Node "cl|matrizJuego~24|datac"
+    Warning (332126): Node "cl|matrizJuego~24|combout"
+    Warning (332126): Node "cl|matrizJuego[0][0][0]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[0][0][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~24|datad"
+    Warning (332126): Node "cl|Mux35~0|datab"
+    Warning (332126): Node "cl|matrizJuego~32|datac"
+    Warning (332126): Node "cl|matrizJuego~32|combout"
+    Warning (332126): Node "cl|matrizJuego[0][2][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[0][2][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~32|datad"
+    Warning (332126): Node "cl|Mux35~0|datac"
+    Warning (332126): Node "cl|matrizJuego~8|dataa"
+    Warning (332126): Node "cl|matrizJuego~8|combout"
+    Warning (332126): Node "cl|matrizJuego[2][2][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[2][2][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~8|datab"
+    Warning (332126): Node "cl|Mux35~0|datad"
+    Warning (332126): Node "cl|matrizJuego~14|datad"
+    Warning (332126): Node "cl|matrizJuego~14|combout"
+    Warning (332126): Node "cl|matrizJuego[2][4][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[2][4][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~14|datac"
+    Warning (332126): Node "cl|Mux35~2|dataa"
+    Warning (332126): Node "cl|Mux35~2|combout"
+    Warning (332126): Node "cl|Mux35~4|datad"
+    Warning (332126): Node "cl|matrizJuego~20|dataa"
+    Warning (332126): Node "cl|matrizJuego~20|combout"
+    Warning (332126): Node "cl|matrizJuego[2][6][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[2][6][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~20|datac"
+    Warning (332126): Node "cl|Mux35~2|datab"
+    Warning (332126): Node "cl|matrizJuego~38|datad"
+    Warning (332126): Node "cl|matrizJuego~38|combout"
+    Warning (332126): Node "cl|matrizJuego[0][4][0]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[0][4][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~38|datae"
+    Warning (332126): Node "cl|Mux35~2|datac"
+    Warning (332126): Node "cl|matrizJuego~47|datad"
+    Warning (332126): Node "cl|matrizJuego~47|combout"
+    Warning (332126): Node "cl|matrizJuego[0][6][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[0][6][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~47|dataa"
+    Warning (332126): Node "cl|Mux35~2|datad"
+    Warning (332126): Node "cl|matrizJuego~77|datac"
+    Warning (332126): Node "cl|matrizJuego~77|combout"
+    Warning (332126): Node "cl|matrizJuego[3][0][0]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[3][0][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~77|datab"
+    Warning (332126): Node "cl|Mux35~1|dataa"
+    Warning (332126): Node "cl|Mux35~1|combout"
+    Warning (332126): Node "cl|Mux35~4|datae"
+    Warning (332126): Node "cl|matrizJuego~59|datad"
+    Warning (332126): Node "cl|matrizJuego~59|combout"
+    Warning (332126): Node "cl|matrizJuego[1][2][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][2][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~59|datac"
+    Warning (332126): Node "cl|Mux35~1|datab"
+    Warning (332126): Node "cl|matrizJuego~50|datad"
+    Warning (332126): Node "cl|matrizJuego~50|combout"
+    Warning (332126): Node "cl|matrizJuego[1][0][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][0][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~50|datab"
+    Warning (332126): Node "cl|Mux35~1|datad"
+    Warning (332126): Node "cl|matrizJuego~83|datad"
+    Warning (332126): Node "cl|matrizJuego~83|combout"
+    Warning (332126): Node "cl|matrizJuego[3][2][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[3][2][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~83|dataa"
+    Warning (332126): Node "cl|Mux35~1|datae"
+    Warning (332126): Node "cl|matrizJuego~137|datac"
+    Warning (332126): Node "cl|matrizJuego~137|combout"
+    Warning (332126): Node "cl|matrizJuego[7][4][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][4][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~137|datad"
+    Warning (332126): Node "cl|Mux35~12|dataa"
+    Warning (332126): Node "cl|Mux35~12|combout"
+    Warning (332126): Node "cl|Mux35~14|dataa"
+    Warning (332126): Node "cl|Mux35~14|combout"
+    Warning (332126): Node "cl|Mux35~20|datab"
+    Warning (332126): Node "cl|matrizJuego~110|datac"
+    Warning (332126): Node "cl|matrizJuego~110|combout"
+    Warning (332126): Node "cl|matrizJuego[6][4][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][4][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~110|datad"
+    Warning (332126): Node "cl|Mux35~12|datab"
+    Warning (332126): Node "cl|matrizJuego~101|datad"
+    Warning (332126): Node "cl|matrizJuego~101|combout"
+    Warning (332126): Node "cl|matrizJuego[6][0][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][0][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~101|datac"
+    Warning (332126): Node "cl|Mux35~12|datac"
+    Warning (332126): Node "cl|matrizJuego~122|datac"
+    Warning (332126): Node "cl|matrizJuego~122|combout"
+    Warning (332126): Node "cl|matrizJuego[7][0][0]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[7][0][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~122|datad"
+    Warning (332126): Node "cl|Mux35~12|datad"
+    Warning (332126): Node "cl|matrizJuego~131|datac"
+    Warning (332126): Node "cl|matrizJuego~131|combout"
+    Warning (332126): Node "cl|matrizJuego[7][2][0]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[7][2][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~131|datab"
+    Warning (332126): Node "cl|Mux35~13|dataa"
+    Warning (332126): Node "cl|Mux35~13|combout"
+    Warning (332126): Node "cl|Mux35~14|datab"
+    Warning (332126): Node "cl|matrizJuego~104|dataa"
+    Warning (332126): Node "cl|matrizJuego~104|combout"
+    Warning (332126): Node "cl|matrizJuego[6][2][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][2][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~104|datac"
+    Warning (332126): Node "cl|Mux35~13|datab"
+    Warning (332126): Node "cl|matrizJuego~119|dataa"
+    Warning (332126): Node "cl|matrizJuego~119|combout"
+    Warning (332126): Node "cl|matrizJuego[6][6][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][6][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~119|datac"
+    Warning (332126): Node "cl|Mux35~13|datac"
+    Warning (332126): Node "cl|matrizJuego~143|dataa"
+    Warning (332126): Node "cl|matrizJuego~143|combout"
+    Warning (332126): Node "cl|matrizJuego[7][6][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][6][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~143|datac"
+    Warning (332126): Node "cl|Mux35~13|datad"
+    Warning (332126): Node "cl|matrizJuego~188|dataf"
+    Warning (332126): Node "cl|matrizJuego~188|combout"
+    Warning (332126): Node "cl|matrizJuego[4][4][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][4][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~188|datac"
+    Warning (332126): Node "cl|Mux35~10|dataa"
+    Warning (332126): Node "cl|Mux35~10|combout"
+    Warning (332126): Node "cl|Mux35~14|datac"
+    Warning (332126): Node "cl|matrizJuego~152|datad"
+    Warning (332126): Node "cl|matrizJuego~152|combout"
+    Warning (332126): Node "cl|matrizJuego[5][0][0]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[5][0][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~152|datac"
+    Warning (332126): Node "cl|Mux35~10|datab"
+    Warning (332126): Node "cl|matrizJuego~173|datad"
+    Warning (332126): Node "cl|matrizJuego~173|combout"
+    Warning (332126): Node "cl|matrizJuego[4][0][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][0][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~173|datac"
+    Warning (332126): Node "cl|Mux35~10|datac"
+    Warning (332126): Node "cl|matrizJuego~167|dataa"
+    Warning (332126): Node "cl|matrizJuego~167|combout"
+    Warning (332126): Node "cl|matrizJuego[5][4][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][4][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~167|datac"
+    Warning (332126): Node "cl|Mux35~10|datae"
+    Warning (332126): Node "cl|matrizJuego~146|datac"
+    Warning (332126): Node "cl|matrizJuego~146|combout"
+    Warning (332126): Node "cl|matrizJuego[5][6][0]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[5][6][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~146|dataa"
+    Warning (332126): Node "cl|Mux35~11|dataa"
+    Warning (332126): Node "cl|Mux35~11|combout"
+    Warning (332126): Node "cl|Mux35~14|datad"
+    Warning (332126): Node "cl|matrizJuego~161|datad"
+    Warning (332126): Node "cl|matrizJuego~161|combout"
+    Warning (332126): Node "cl|matrizJuego[5][2][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][2][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~161|datac"
+    Warning (332126): Node "cl|Mux35~11|datab"
+    Warning (332126): Node "cl|matrizJuego~182|datac"
+    Warning (332126): Node "cl|matrizJuego~182|combout"
+    Warning (332126): Node "cl|matrizJuego[4][2][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][2][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~182|dataf"
+    Warning (332126): Node "cl|Mux35~11|datac"
+    Warning (332126): Node "cl|matrizJuego~95|datab"
+    Warning (332126): Node "cl|matrizJuego~95|combout"
+    Warning (332126): Node "cl|matrizJuego[4][6][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][6][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~95|datad"
+    Warning (332126): Node "cl|Mux35~11|datad"
+    Warning (332126): Node "cl|matrizJuego~140|dataa"
+    Warning (332126): Node "cl|matrizJuego~140|combout"
+    Warning (332126): Node "cl|matrizJuego[7][5][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][5][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~140|datac"
+    Warning (332126): Node "cl|Mux35~18|dataa"
+    Warning (332126): Node "cl|Mux35~18|combout"
+    Warning (332126): Node "cl|Mux35~19|dataa"
+    Warning (332126): Node "cl|Mux35~19|combout"
+    Warning (332126): Node "cl|Mux35~20|datad"
+    Warning (332126): Node "cl|matrizJuego~116|datad"
+    Warning (332126): Node "cl|matrizJuego~116|combout"
+    Warning (332126): Node "cl|matrizJuego[7][7][0]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[7][7][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~116|datac"
+    Warning (332126): Node "cl|Mux35~18|datab"
+    Warning (332126): Node "cl|matrizJuego~170|datad"
+    Warning (332126): Node "cl|matrizJuego~170|combout"
+    Warning (332126): Node "cl|matrizJuego[5][5][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][5][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~170|datab"
+    Warning (332126): Node "cl|Mux35~18|datac"
+    Warning (332126): Node "cl|matrizJuego~149|datad"
+    Warning (332126): Node "cl|matrizJuego~149|combout"
+    Warning (332126): Node "cl|matrizJuego[5][7][0]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[5][7][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~149|datac"
+    Warning (332126): Node "cl|Mux35~18|datad"
+    Warning (332126): Node "cl|matrizJuego~125|datac"
+    Warning (332126): Node "cl|matrizJuego~125|combout"
+    Warning (332126): Node "cl|matrizJuego[6][7][0]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[6][7][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~125|datad"
+    Warning (332126): Node "cl|Mux35~17|datab"
+    Warning (332126): Node "cl|Mux35~17|combout"
+    Warning (332126): Node "cl|Mux35~19|datab"
+    Warning (332126): Node "cl|matrizJuego~191|datac"
+    Warning (332126): Node "cl|matrizJuego~191|combout"
+    Warning (332126): Node "cl|matrizJuego[4][5][0]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[4][5][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~191|datad"
+    Warning (332126): Node "cl|Mux35~17|datac"
+    Warning (332126): Node "cl|matrizJuego~113|datac"
+    Warning (332126): Node "cl|matrizJuego~113|combout"
+    Warning (332126): Node "cl|matrizJuego[6][5][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][5][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~113|datad"
+    Warning (332126): Node "cl|Mux35~17|datad"
+    Warning (332126): Node "cl|matrizJuego~155|datad"
+    Warning (332126): Node "cl|matrizJuego~155|combout"
+    Warning (332126): Node "cl|matrizJuego[4][7][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][7][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~155|dataa"
+    Warning (332126): Node "cl|Mux35~17|datae"
+    Warning (332126): Node "cl|matrizJuego~164|dataa"
+    Warning (332126): Node "cl|matrizJuego~164|combout"
+    Warning (332126): Node "cl|matrizJuego[5][3][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][3][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~164|dataf"
+    Warning (332126): Node "cl|Mux35~16|dataa"
+    Warning (332126): Node "cl|Mux35~16|combout"
+    Warning (332126): Node "cl|Mux35~19|datad"
+    Warning (332126): Node "cl|matrizJuego~158|datad"
+    Warning (332126): Node "cl|matrizJuego~158|combout"
+    Warning (332126): Node "cl|matrizJuego[5][1][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[5][1][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~158|datab"
+    Warning (332126): Node "cl|Mux35~16|datab"
+    Warning (332126): Node "cl|matrizJuego~134|datad"
+    Warning (332126): Node "cl|matrizJuego~134|combout"
+    Warning (332126): Node "cl|matrizJuego[7][3][0]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[7][3][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~134|datac"
+    Warning (332126): Node "cl|Mux35~16|datac"
+    Warning (332126): Node "cl|matrizJuego~128|datac"
+    Warning (332126): Node "cl|matrizJuego~128|combout"
+    Warning (332126): Node "cl|matrizJuego[7][1][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[7][1][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~128|datad"
+    Warning (332126): Node "cl|Mux35~16|datad"
+    Warning (332126): Node "cl|matrizJuego~179|datae"
+    Warning (332126): Node "cl|matrizJuego~179|combout"
+    Warning (332126): Node "cl|matrizJuego[4][1][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][1][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~179|datac"
+    Warning (332126): Node "cl|Mux35~15|dataa"
+    Warning (332126): Node "cl|Mux35~15|combout"
+    Warning (332126): Node "cl|Mux35~19|datae"
+    Warning (332126): Node "cl|matrizJuego~185|datad"
+    Warning (332126): Node "cl|matrizJuego~185|combout"
+    Warning (332126): Node "cl|matrizJuego[4][3][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[4][3][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~185|datac"
+    Warning (332126): Node "cl|Mux35~15|datab"
+    Warning (332126): Node "cl|matrizJuego~107|datac"
+    Warning (332126): Node "cl|matrizJuego~107|combout"
+    Warning (332126): Node "cl|matrizJuego[6][3][0]~2|datab"
+    Warning (332126): Node "cl|matrizJuego[6][3][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~107|datad"
+    Warning (332126): Node "cl|Mux35~15|datac"
+    Warning (332126): Node "cl|matrizJuego~98|dataa"
+    Warning (332126): Node "cl|matrizJuego~98|combout"
+    Warning (332126): Node "cl|matrizJuego[6][1][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[6][1][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~98|datad"
+    Warning (332126): Node "cl|Mux35~15|datad"
+    Warning (332126): Node "cl|matrizJuego~23|dataa"
+    Warning (332126): Node "cl|matrizJuego~23|combout"
+    Warning (332126): Node "cl|matrizJuego[2][7][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[2][7][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~23|datac"
+    Warning (332126): Node "cl|Mux35~7|dataa"
+    Warning (332126): Node "cl|Mux35~7|combout"
+    Warning (332126): Node "cl|Mux35~9|dataa"
+    Warning (332126): Node "cl|Mux35~9|combout"
+    Warning (332126): Node "cl|Mux35~20|datae"
+    Warning (332126): Node "cl|matrizJuego~53|datac"
+    Warning (332126): Node "cl|matrizJuego~53|combout"
+    Warning (332126): Node "cl|matrizJuego[0][7][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[0][7][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~53|datad"
+    Warning (332126): Node "cl|Mux35~7|datab"
+    Warning (332126): Node "cl|matrizJuego~41|datac"
+    Warning (332126): Node "cl|matrizJuego~41|combout"
+    Warning (332126): Node "cl|matrizJuego[0][5][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[0][5][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~41|datad"
+    Warning (332126): Node "cl|Mux35~7|datac"
+    Warning (332126): Node "cl|matrizJuego~17|datad"
+    Warning (332126): Node "cl|matrizJuego~17|combout"
+    Warning (332126): Node "cl|matrizJuego[2][5][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[2][5][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~17|datac"
+    Warning (332126): Node "cl|Mux35~7|datad"
+    Warning (332126): Node "cl|matrizJuego~68|datad"
+    Warning (332126): Node "cl|matrizJuego~68|combout"
+    Warning (332126): Node "cl|matrizJuego[1][5][0]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[1][5][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~68|datac"
+    Warning (332126): Node "cl|Mux35~8|dataa"
+    Warning (332126): Node "cl|Mux35~8|combout"
+    Warning (332126): Node "cl|Mux35~9|datab"
+    Warning (332126): Node "cl|matrizJuego~44|datac"
+    Warning (332126): Node "cl|matrizJuego~44|combout"
+    Warning (332126): Node "cl|matrizJuego[1][7][0]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[1][7][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~44|datad"
+    Warning (332126): Node "cl|Mux35~8|datab"
+    Warning (332126): Node "cl|matrizJuego~86|datad"
+    Warning (332126): Node "cl|matrizJuego~86|combout"
+    Warning (332126): Node "cl|matrizJuego[3][5][0]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[3][5][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~86|datac"
+    Warning (332126): Node "cl|Mux35~8|datac"
+    Warning (332126): Node "cl|matrizJuego~176|datad"
+    Warning (332126): Node "cl|matrizJuego~176|combout"
+    Warning (332126): Node "cl|matrizJuego[3][7][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[3][7][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~176|datab"
+    Warning (332126): Node "cl|Mux35~8|datad"
+    Warning (332126): Node "cl|matrizJuego~56|datac"
+    Warning (332126): Node "cl|matrizJuego~56|combout"
+    Warning (332126): Node "cl|matrizJuego[1][1][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][1][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~56|datad"
+    Warning (332126): Node "cl|Mux35~6|dataa"
+    Warning (332126): Node "cl|Mux35~6|combout"
+    Warning (332126): Node "cl|Mux35~9|datac"
+    Warning (332126): Node "cl|matrizJuego~62|datac"
+    Warning (332126): Node "cl|matrizJuego~62|combout"
+    Warning (332126): Node "cl|matrizJuego[1][3][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][3][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~62|datad"
+    Warning (332126): Node "cl|Mux35~6|datab"
+    Warning (332126): Node "cl|matrizJuego~74|datad"
+    Warning (332126): Node "cl|matrizJuego~74|combout"
+    Warning (332126): Node "cl|matrizJuego[3][1][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[3][1][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~74|datac"
+    Warning (332126): Node "cl|Mux35~6|datac"
+    Warning (332126): Node "cl|matrizJuego~80|datac"
+    Warning (332126): Node "cl|matrizJuego~80|combout"
+    Warning (332126): Node "cl|matrizJuego[3][3][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[3][3][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~80|datad"
+    Warning (332126): Node "cl|Mux35~6|datad"
+    Warning (332126): Node "cl|matrizJuego~11|datad"
+    Warning (332126): Node "cl|matrizJuego~11|combout"
+    Warning (332126): Node "cl|matrizJuego[2][3][0]~2|datad"
+    Warning (332126): Node "cl|matrizJuego[2][3][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~11|datac"
+    Warning (332126): Node "cl|Mux35~5|dataa"
+    Warning (332126): Node "cl|Mux35~5|combout"
+    Warning (332126): Node "cl|Mux35~9|datad"
+    Warning (332126): Node "cl|matrizJuego~29|datac"
+    Warning (332126): Node "cl|matrizJuego~29|combout"
+    Warning (332126): Node "cl|matrizJuego[0][1][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[0][1][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~29|datad"
+    Warning (332126): Node "cl|Mux35~5|datab"
+    Warning (332126): Node "cl|matrizJuego~35|datac"
+    Warning (332126): Node "cl|matrizJuego~35|combout"
+    Warning (332126): Node "cl|matrizJuego[0][3][0]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[0][3][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~35|datad"
+    Warning (332126): Node "cl|Mux35~5|datac"
+    Warning (332126): Node "cl|matrizJuego~2|dataf"
+    Warning (332126): Node "cl|matrizJuego~2|combout"
+    Warning (332126): Node "cl|matrizJuego[2][1][0]~2|dataa"
+    Warning (332126): Node "cl|matrizJuego[2][1][0]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~2|datac"
+    Warning (332126): Node "cl|Mux35~5|datad"
+    Warning (332126): Node "cl|matrizJuego~42|datad"
+    Warning (332126): Node "cl|matrizJuego~42|combout"
+    Warning (332126): Node "cl|matrizJuego[1][7][2]~2|datac"
+    Warning (332126): Node "cl|matrizJuego[1][7][2]~2|combout"
+    Warning (332126): Node "cl|matrizJuego~42|dataa"
+    Warning (332126): Node "cl|Mux32~12|datad"
+    Warning (332126): Node "cl|Equal0~0|datac"
+Critical Warning (332081): Design contains combinational loop of 854 nodes. Estimating the delays through the loop.
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.917
+Info (332146): Worst-case setup slack is -12.537
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.917             -23.034 flag 
-    Info (332119):    -7.509             -22.525 select 
-    Info (332119):    -3.886              -9.760 clk 
-    Info (332119):    -2.986             -61.891 VGA:vga|pll:vgapll|c0 
-Info (332146): Worst-case hold slack is 0.373
+    Info (332119):   -12.537           -1764.078 flag 
+    Info (332119):    -9.168           -1532.150 select 
+    Info (332119):    -3.347            -710.375 clk 
+    Info (332119):    -3.100             -74.152 VGA:vga|pll:vgapll|c0 
+Info (332146): Worst-case hold slack is -4.910
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.373               0.000 clk 
-    Info (332119):     0.689               0.000 VGA:vga|pll:vgapll|c0 
-    Info (332119):     0.699               0.000 select 
-    Info (332119):     0.731               0.000 flag 
-Info (332146): Worst-case recovery slack is -5.492
+    Info (332119):    -4.910            -877.517 select 
+    Info (332119):    -3.294              -3.294 clk 
+    Info (332119):    -1.470             -23.888 flag 
+    Info (332119):     0.664               0.000 VGA:vga|pll:vgapll|c0 
+Info (332146): Worst-case recovery slack is 0.031
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.492             -16.472 select 
-Info (332146): Worst-case removal slack is 1.161
+    Info (332119):     0.031               0.000 select 
+Info (332146): Worst-case removal slack is -4.364
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.161               0.000 select 
-Info (332146): Worst-case minimum pulse width slack is -0.875
+    Info (332119):    -4.364            -771.659 select 
+Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.875              -6.734 clk 
-    Info (332119):    -0.394             -10.771 VGA:vga|pll:vgapll|c0 
-    Info (332119):    -0.394              -1.618 select 
-    Info (332119):     0.276               0.000 flag 
+    Info (332119):    -0.394            -199.884 clk 
+    Info (332119):    -0.394            -115.079 select 
+    Info (332119):    -0.394             -12.543 VGA:vga|pll:vgapll|c0 
+    Info (332119):    -0.245              -3.412 flag 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.731
+Info (332146): Worst-case setup slack is -11.994
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.731             -22.619 flag 
-    Info (332119):    -7.025             -21.075 select 
-    Info (332119):    -3.803              -9.770 clk 
-    Info (332119):    -3.013             -62.575 VGA:vga|pll:vgapll|c0 
-Info (332146): Worst-case hold slack is 0.389
+    Info (332119):   -11.994           -1708.180 flag 
+    Info (332119):    -8.733           -1462.321 select 
+    Info (332119):    -3.372            -703.253 clk 
+    Info (332119):    -3.157             -74.876 VGA:vga|pll:vgapll|c0 
+Info (332146): Worst-case hold slack is -4.822
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.389               0.000 clk 
-    Info (332119):     0.499               0.000 select 
-    Info (332119):     0.683               0.000 VGA:vga|pll:vgapll|c0 
-    Info (332119):     0.712               0.000 flag 
-Info (332146): Worst-case recovery slack is -5.076
+    Info (332119):    -4.822            -855.738 select 
+    Info (332119):    -3.133              -3.133 clk 
+    Info (332119):    -1.510             -20.992 flag 
+    Info (332119):     0.661               0.000 VGA:vga|pll:vgapll|c0 
+Info (332146): Worst-case recovery slack is 0.128
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.076             -15.223 select 
-Info (332146): Worst-case removal slack is 0.960
+    Info (332119):     0.128               0.000 select 
+Info (332146): Worst-case removal slack is -4.296
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.960               0.000 select 
-Info (332146): Worst-case minimum pulse width slack is -0.872
+    Info (332119):    -4.296            -763.255 select 
+Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.872              -7.323 clk 
-    Info (332119):    -0.394             -10.750 VGA:vga|pll:vgapll|c0 
-    Info (332119):    -0.394              -1.686 select 
-    Info (332119):     0.271               0.000 flag 
+    Info (332119):    -0.394            -218.038 clk 
+    Info (332119):    -0.394            -110.357 select 
+    Info (332119):    -0.394             -12.408 VGA:vga|pll:vgapll|c0 
+    Info (332119):    -0.242              -4.407 flag 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.760
+Info (332146): Worst-case setup slack is -6.917
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.760             -14.174 select 
-    Info (332119):    -4.653             -12.615 flag 
-    Info (332119):    -3.157              -4.328 clk 
-    Info (332119):    -1.345             -27.918 VGA:vga|pll:vgapll|c0 
-Info (332146): Worst-case hold slack is 0.182
+    Info (332119):    -6.917            -892.088 flag 
+    Info (332119):    -6.355           -1054.360 select 
+    Info (332119):    -1.568            -311.595 clk 
+    Info (332119):    -1.358             -32.128 VGA:vga|pll:vgapll|c0 
+Info (332146): Worst-case hold slack is -2.727
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.182               0.000 clk 
-    Info (332119):     0.360               0.000 VGA:vga|pll:vgapll|c0 
-    Info (332119):     0.368               0.000 flag 
-    Info (332119):     0.838               0.000 select 
-Info (332146): Worst-case recovery slack is -3.319
+    Info (332119):    -2.727            -489.791 select 
+    Info (332119):    -1.933              -1.933 clk 
+    Info (332119):    -1.005             -39.635 flag 
+    Info (332119):     0.348               0.000 VGA:vga|pll:vgapll|c0 
+Info (332146): Worst-case recovery slack is -0.430
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.319              -9.956 select 
-Info (332146): Worst-case removal slack is 1.361
+    Info (332119):    -0.430             -21.799 select 
+Info (332146): Worst-case removal slack is -2.452
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.361               0.000 select 
-Info (332146): Worst-case minimum pulse width slack is -0.762
+    Info (332119):    -2.452            -428.975 select 
+Info (332146): Worst-case minimum pulse width slack is -0.478
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.762              -1.978 clk 
-    Info (332119):    -0.359              -1.484 select 
-    Info (332119):     0.001               0.000 flag 
-    Info (332119):     0.119               0.000 VGA:vga|pll:vgapll|c0 
+    Info (332119):    -0.478             -84.202 flag 
+    Info (332119):    -0.389             -33.252 clk 
+    Info (332119):    -0.311             -58.204 select 
+    Info (332119):     0.129               0.000 VGA:vga|pll:vgapll|c0 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.384
+Info (332146): Worst-case setup slack is -6.213
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.384             -11.819 flag 
-    Info (332119):    -3.972             -11.803 select 
-    Info (332119):    -2.764              -3.592 clk 
-    Info (332119):    -1.247             -25.669 VGA:vga|pll:vgapll|c0 
-Info (332146): Worst-case hold slack is 0.169
+    Info (332119):    -6.213            -818.372 flag 
+    Info (332119):    -5.548            -921.986 select 
+    Info (332119):    -1.373            -259.810 clk 
+    Info (332119):    -1.222             -29.161 VGA:vga|pll:vgapll|c0 
+Info (332146): Worst-case hold slack is -2.671
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.169               0.000 clk 
-    Info (332119):     0.328               0.000 VGA:vga|pll:vgapll|c0 
-    Info (332119):     0.349               0.000 flag 
-    Info (332119):     0.530               0.000 select 
-Info (332146): Worst-case recovery slack is -2.720
+    Info (332119):    -2.671            -476.924 select 
+    Info (332119):    -1.831              -1.831 clk 
+    Info (332119):    -0.918             -29.772 flag 
+    Info (332119):     0.320               0.000 VGA:vga|pll:vgapll|c0 
+Info (332146): Worst-case recovery slack is -0.304
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.720              -8.159 select 
-Info (332146): Worst-case removal slack is 0.971
+    Info (332119):    -0.304             -10.590 select 
+Info (332146): Worst-case removal slack is -2.413
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.971               0.000 select 
-Info (332146): Worst-case minimum pulse width slack is -0.731
+    Info (332119):    -2.413            -425.700 select 
+Info (332146): Worst-case minimum pulse width slack is -0.401
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.731              -1.928 clk 
-    Info (332119):    -0.346              -1.374 select 
-    Info (332119):    -0.004              -0.004 flag 
-    Info (332119):     0.131               0.000 VGA:vga|pll:vgapll|c0 
+    Info (332119):    -0.401             -33.610 clk 
+    Info (332119):    -0.391             -74.900 flag 
+    Info (332119):    -0.305             -57.522 select 
+    Info (332119):     0.139               0.000 VGA:vga|pll:vgapll|c0 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 5278 megabytes
-    Info: Processing ended: Tue Oct 17 02:53:13 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1366 warnings
+    Info: Peak virtual memory: 5332 megabytes
+    Info: Processing ended: Tue Oct 17 04:23:12 2023
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:19
 
 

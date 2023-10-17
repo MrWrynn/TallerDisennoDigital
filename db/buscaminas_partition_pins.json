@@ -92,6 +92,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
 					"name" : "b[2]",
 					"strict" : false
 				},
@@ -120,6 +124,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "rst_1",
+					"strict" : false
+				},
+				{
 					"name" : "derecha",
 					"strict" : false
 				},
@@ -140,7 +148,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst_1",
+					"name" : "numero_bombas[0]",
+					"strict" : false
+				},
+				{
+					"name" : "numero_bombas[1]",
+					"strict" : false
+				},
+				{
+					"name" : "numero_bombas[2]",
+					"strict" : false
+				},
+				{
+					"name" : "numero_bombas[3]",
+					"strict" : false
+				},
+				{
+					"name" : "numero_bombas[4]",
+					"strict" : false
+				},
+				{
+					"name" : "numero_bombas[5]",
 					"strict" : false
 				},
 				{

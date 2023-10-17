@@ -31,6 +31,7 @@ logic [7:0][7:0][3:0] matrizJuego = {8'h00};
   
   contarBombas nums (
 	clk,
+	rst_1,
 	matrizBombastic,
 	matrizNumeros
   );

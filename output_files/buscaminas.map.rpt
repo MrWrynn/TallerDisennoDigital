@@ -1,5 +1,5 @@
 Analysis & Synthesis report for buscaminas
-Tue Oct 17 03:06:16 2023
+Tue Oct 17 04:14:06 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -15,13 +15,14 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
   9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: VGA:vga|vgaController:vgaCont
- 12. Port Connectivity Checks: "colocarBombas:bomb1"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: VGA:vga|vgaController:vgaCont
+ 13. Port Connectivity Checks: "colocarBombas:bomb1"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,13 +49,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 17 03:06:16 2023          ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 17 04:14:06 2023          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; buscaminas                                     ;
 ; Top-level Entity Name           ; gameLogic                                      ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 223                                            ;
+; Total registers                 ; 578                                            ;
 ; Total pins                      ; 44                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -163,18 +164,17 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.10        ;
+; Average used               ; 1.06        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.3%      ;
-;     Processor 3            ;   1.0%      ;
-;     Processor 4            ;   0.9%      ;
-;     Processor 5            ;   0.9%      ;
-;     Processor 6            ;   0.9%      ;
-;     Processor 7            ;   0.9%      ;
-;     Processors 8-12        ;   0.9%      ;
+;     Processor 2            ;   0.6%      ;
+;     Processor 3            ;   0.6%      ;
+;     Processor 4            ;   0.6%      ;
+;     Processor 5            ;   0.5%      ;
+;     Processor 6            ;   0.5%      ;
+;     Processors 7-12        ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -202,25 +202,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 813         ;
+; Estimate of Logic utilization (ALMs needed) ; 2502        ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 1372        ;
-;     -- 7 input functions                    ; 7           ;
-;     -- 6 input functions                    ; 246         ;
-;     -- 5 input functions                    ; 371         ;
-;     -- 4 input functions                    ; 472         ;
-;     -- <=3 input functions                  ; 276         ;
+; Combinational ALUT usage for logic          ; 4017        ;
+;     -- 7 input functions                    ; 50          ;
+;     -- 6 input functions                    ; 932         ;
+;     -- 5 input functions                    ; 603         ;
+;     -- 4 input functions                    ; 1826        ;
+;     -- <=3 input functions                  ; 606         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 223         ;
+; Dedicated logic registers                   ; 578         ;
 ;                                             ;             ;
 ; I/O pins                                    ; 44          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; rst_1~input ;
-; Maximum fan-out                             ; 386         ;
-; Total fan-out                               ; 6897        ;
-; Average fan-out                             ; 4.10        ;
+; Maximum fan-out                             ; 741         ;
+; Total fan-out                               ; 19791       ;
+; Average fan-out                             ; 4.23        ;
 +---------------------------------------------+-------------+
 
 
@@ -229,89 +229,288 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name   ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------+--------------+
-; |gameLogic                    ; 1372 (0)            ; 223 (0)                   ; 0                 ; 0          ; 44   ; 0            ; |gameLogic                                           ; gameLogic     ; work         ;
-;    |VGA:vga|                  ; 525 (0)             ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|VGA:vga                                   ; VGA           ; work         ;
+; |gameLogic                    ; 4017 (0)            ; 578 (0)                   ; 0                 ; 0          ; 44   ; 0            ; |gameLogic                                           ; gameLogic     ; work         ;
+;    |VGA:vga|                  ; 2649 (0)            ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|VGA:vga                                   ; VGA           ; work         ;
 ;       |pll:vgapll|            ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|VGA:vga|pll:vgapll                        ; pll           ; work         ;
-;       |vgaController:vgaCont| ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|VGA:vga|vgaController:vgaCont             ; vgaController ; work         ;
-;       |videoGen:videoGen|     ; 494 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|VGA:vga|videoGen:videoGen                 ; videoGen      ; work         ;
-;          |rectgen:rectgen|    ; 494 (494)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|VGA:vga|videoGen:videoGen|rectgen:rectgen ; rectgen       ; work         ;
-;    |click:cl|                 ; 836 (836)           ; 192 (192)                 ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|click:cl                                  ; click         ; work         ;
+;       |vgaController:vgaCont| ; 29 (29)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|VGA:vga|vgaController:vgaCont             ; vgaController ; work         ;
+;       |videoGen:videoGen|     ; 2619 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|VGA:vga|videoGen:videoGen                 ; videoGen      ; work         ;
+;          |rectgen:rectgen|    ; 2619 (2619)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|VGA:vga|videoGen:videoGen|rectgen:rectgen ; rectgen       ; work         ;
+;    |click:cl|                 ; 837 (837)           ; 192 (192)                 ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|click:cl                                  ; click         ; work         ;
+;    |colocarBombas:bomb1|      ; 134 (120)           ; 103 (77)                  ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|colocarBombas:bomb1                       ; colocarBombas ; work         ;
+;       |random:ram|            ; 14 (14)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|colocarBombas:bomb1|random:ram            ; random        ; work         ;
+;    |contarBombas:nums|        ; 386 (386)           ; 252 (252)                 ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|contarBombas:nums                         ; contarBombas  ; work         ;
 ;    |moverse:mov|              ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |gameLogic|moverse:mov                               ; moverse       ; work         ;
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                 ;
-+----------------------------------------+-------------------------------------------+
-; Register name                          ; Reason for Removal                        ;
-+----------------------------------------+-------------------------------------------+
-; click:cl|matrizJuego[0][0][3]          ; Merged with click:cl|matrizJuego[0][0][2] ;
-; click:cl|matrizJuego[0][1][3]          ; Merged with click:cl|matrizJuego[0][1][2] ;
-; click:cl|matrizJuego[0][2][3]          ; Merged with click:cl|matrizJuego[0][2][2] ;
-; click:cl|matrizJuego[0][3][3]          ; Merged with click:cl|matrizJuego[0][3][2] ;
-; click:cl|matrizJuego[0][4][3]          ; Merged with click:cl|matrizJuego[0][4][2] ;
-; click:cl|matrizJuego[0][5][3]          ; Merged with click:cl|matrizJuego[0][5][2] ;
-; click:cl|matrizJuego[0][6][3]          ; Merged with click:cl|matrizJuego[0][6][2] ;
-; click:cl|matrizJuego[0][7][3]          ; Merged with click:cl|matrizJuego[0][7][2] ;
-; click:cl|matrizJuego[1][0][3]          ; Merged with click:cl|matrizJuego[1][0][2] ;
-; click:cl|matrizJuego[1][1][3]          ; Merged with click:cl|matrizJuego[1][1][2] ;
-; click:cl|matrizJuego[1][2][3]          ; Merged with click:cl|matrizJuego[1][2][2] ;
-; click:cl|matrizJuego[1][3][3]          ; Merged with click:cl|matrizJuego[1][3][2] ;
-; click:cl|matrizJuego[1][4][3]          ; Merged with click:cl|matrizJuego[1][4][2] ;
-; click:cl|matrizJuego[1][5][3]          ; Merged with click:cl|matrizJuego[1][5][2] ;
-; click:cl|matrizJuego[1][6][3]          ; Merged with click:cl|matrizJuego[1][6][2] ;
-; click:cl|matrizJuego[1][7][3]          ; Merged with click:cl|matrizJuego[1][7][2] ;
-; click:cl|matrizJuego[2][0][3]          ; Merged with click:cl|matrizJuego[2][0][2] ;
-; click:cl|matrizJuego[2][1][3]          ; Merged with click:cl|matrizJuego[2][1][2] ;
-; click:cl|matrizJuego[2][2][3]          ; Merged with click:cl|matrizJuego[2][2][2] ;
-; click:cl|matrizJuego[2][3][3]          ; Merged with click:cl|matrizJuego[2][3][2] ;
-; click:cl|matrizJuego[2][4][3]          ; Merged with click:cl|matrizJuego[2][4][2] ;
-; click:cl|matrizJuego[2][5][3]          ; Merged with click:cl|matrizJuego[2][5][2] ;
-; click:cl|matrizJuego[2][6][3]          ; Merged with click:cl|matrizJuego[2][6][2] ;
-; click:cl|matrizJuego[2][7][3]          ; Merged with click:cl|matrizJuego[2][7][2] ;
-; click:cl|matrizJuego[3][0][3]          ; Merged with click:cl|matrizJuego[3][0][2] ;
-; click:cl|matrizJuego[3][1][3]          ; Merged with click:cl|matrizJuego[3][1][2] ;
-; click:cl|matrizJuego[3][2][3]          ; Merged with click:cl|matrizJuego[3][2][2] ;
-; click:cl|matrizJuego[3][3][3]          ; Merged with click:cl|matrizJuego[3][3][2] ;
-; click:cl|matrizJuego[3][4][3]          ; Merged with click:cl|matrizJuego[3][4][2] ;
-; click:cl|matrizJuego[3][5][3]          ; Merged with click:cl|matrizJuego[3][5][2] ;
-; click:cl|matrizJuego[3][6][3]          ; Merged with click:cl|matrizJuego[3][6][2] ;
-; click:cl|matrizJuego[3][7][3]          ; Merged with click:cl|matrizJuego[3][7][2] ;
-; click:cl|matrizJuego[4][0][3]          ; Merged with click:cl|matrizJuego[4][0][2] ;
-; click:cl|matrizJuego[4][1][3]          ; Merged with click:cl|matrizJuego[4][1][2] ;
-; click:cl|matrizJuego[4][2][3]          ; Merged with click:cl|matrizJuego[4][2][2] ;
-; click:cl|matrizJuego[4][3][3]          ; Merged with click:cl|matrizJuego[4][3][2] ;
-; click:cl|matrizJuego[4][4][3]          ; Merged with click:cl|matrizJuego[4][4][2] ;
-; click:cl|matrizJuego[4][5][3]          ; Merged with click:cl|matrizJuego[4][5][2] ;
-; click:cl|matrizJuego[4][6][3]          ; Merged with click:cl|matrizJuego[4][6][2] ;
-; click:cl|matrizJuego[4][7][3]          ; Merged with click:cl|matrizJuego[4][7][2] ;
-; click:cl|matrizJuego[5][0][3]          ; Merged with click:cl|matrizJuego[5][0][2] ;
-; click:cl|matrizJuego[5][1][3]          ; Merged with click:cl|matrizJuego[5][1][2] ;
-; click:cl|matrizJuego[5][2][3]          ; Merged with click:cl|matrizJuego[5][2][2] ;
-; click:cl|matrizJuego[5][3][3]          ; Merged with click:cl|matrizJuego[5][3][2] ;
-; click:cl|matrizJuego[5][4][3]          ; Merged with click:cl|matrizJuego[5][4][2] ;
-; click:cl|matrizJuego[5][5][3]          ; Merged with click:cl|matrizJuego[5][5][2] ;
-; click:cl|matrizJuego[5][6][3]          ; Merged with click:cl|matrizJuego[5][6][2] ;
-; click:cl|matrizJuego[5][7][3]          ; Merged with click:cl|matrizJuego[5][7][2] ;
-; click:cl|matrizJuego[6][0][3]          ; Merged with click:cl|matrizJuego[6][0][2] ;
-; click:cl|matrizJuego[6][1][3]          ; Merged with click:cl|matrizJuego[6][1][2] ;
-; click:cl|matrizJuego[6][2][3]          ; Merged with click:cl|matrizJuego[6][2][2] ;
-; click:cl|matrizJuego[6][3][3]          ; Merged with click:cl|matrizJuego[6][3][2] ;
-; click:cl|matrizJuego[6][4][3]          ; Merged with click:cl|matrizJuego[6][4][2] ;
-; click:cl|matrizJuego[6][5][3]          ; Merged with click:cl|matrizJuego[6][5][2] ;
-; click:cl|matrizJuego[6][6][3]          ; Merged with click:cl|matrizJuego[6][6][2] ;
-; click:cl|matrizJuego[6][7][3]          ; Merged with click:cl|matrizJuego[6][7][2] ;
-; click:cl|matrizJuego[7][0][3]          ; Merged with click:cl|matrizJuego[7][0][2] ;
-; click:cl|matrizJuego[7][1][3]          ; Merged with click:cl|matrizJuego[7][1][2] ;
-; click:cl|matrizJuego[7][2][3]          ; Merged with click:cl|matrizJuego[7][2][2] ;
-; click:cl|matrizJuego[7][3][3]          ; Merged with click:cl|matrizJuego[7][3][2] ;
-; click:cl|matrizJuego[7][4][3]          ; Merged with click:cl|matrizJuego[7][4][2] ;
-; click:cl|matrizJuego[7][5][3]          ; Merged with click:cl|matrizJuego[7][5][2] ;
-; click:cl|matrizJuego[7][6][3]          ; Merged with click:cl|matrizJuego[7][6][2] ;
-; click:cl|matrizJuego[7][7][3]          ; Merged with click:cl|matrizJuego[7][7][2] ;
-; Total Number of Removed Registers = 64 ;                                           ;
-+----------------------------------------+-------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                      ;
++----------------------------------------------+----------------------------------------------------------+
+; Register name                                ; Reason for Removal                                       ;
++----------------------------------------------+----------------------------------------------------------+
+; click:cl|matrizJuego[0][0][3]                ; Merged with click:cl|matrizJuego[0][0][2]                ;
+; click:cl|matrizJuego[0][1][3]                ; Merged with click:cl|matrizJuego[0][1][2]                ;
+; click:cl|matrizJuego[0][2][3]                ; Merged with click:cl|matrizJuego[0][2][2]                ;
+; click:cl|matrizJuego[0][3][3]                ; Merged with click:cl|matrizJuego[0][3][2]                ;
+; click:cl|matrizJuego[0][4][3]                ; Merged with click:cl|matrizJuego[0][4][2]                ;
+; click:cl|matrizJuego[0][5][3]                ; Merged with click:cl|matrizJuego[0][5][2]                ;
+; click:cl|matrizJuego[0][6][3]                ; Merged with click:cl|matrizJuego[0][6][2]                ;
+; click:cl|matrizJuego[0][7][3]                ; Merged with click:cl|matrizJuego[0][7][2]                ;
+; click:cl|matrizJuego[1][0][3]                ; Merged with click:cl|matrizJuego[1][0][2]                ;
+; click:cl|matrizJuego[1][1][3]                ; Merged with click:cl|matrizJuego[1][1][2]                ;
+; click:cl|matrizJuego[1][2][3]                ; Merged with click:cl|matrizJuego[1][2][2]                ;
+; click:cl|matrizJuego[1][3][3]                ; Merged with click:cl|matrizJuego[1][3][2]                ;
+; click:cl|matrizJuego[1][4][3]                ; Merged with click:cl|matrizJuego[1][4][2]                ;
+; click:cl|matrizJuego[1][5][3]                ; Merged with click:cl|matrizJuego[1][5][2]                ;
+; click:cl|matrizJuego[1][6][3]                ; Merged with click:cl|matrizJuego[1][6][2]                ;
+; click:cl|matrizJuego[1][7][3]                ; Merged with click:cl|matrizJuego[1][7][2]                ;
+; click:cl|matrizJuego[2][0][3]                ; Merged with click:cl|matrizJuego[2][0][2]                ;
+; click:cl|matrizJuego[2][1][3]                ; Merged with click:cl|matrizJuego[2][1][2]                ;
+; click:cl|matrizJuego[2][2][3]                ; Merged with click:cl|matrizJuego[2][2][2]                ;
+; click:cl|matrizJuego[2][3][3]                ; Merged with click:cl|matrizJuego[2][3][2]                ;
+; click:cl|matrizJuego[2][4][3]                ; Merged with click:cl|matrizJuego[2][4][2]                ;
+; click:cl|matrizJuego[2][5][3]                ; Merged with click:cl|matrizJuego[2][5][2]                ;
+; click:cl|matrizJuego[2][6][3]                ; Merged with click:cl|matrizJuego[2][6][2]                ;
+; click:cl|matrizJuego[2][7][3]                ; Merged with click:cl|matrizJuego[2][7][2]                ;
+; click:cl|matrizJuego[3][0][3]                ; Merged with click:cl|matrizJuego[3][0][2]                ;
+; click:cl|matrizJuego[3][1][3]                ; Merged with click:cl|matrizJuego[3][1][2]                ;
+; click:cl|matrizJuego[3][2][3]                ; Merged with click:cl|matrizJuego[3][2][2]                ;
+; click:cl|matrizJuego[3][3][3]                ; Merged with click:cl|matrizJuego[3][3][2]                ;
+; click:cl|matrizJuego[3][4][3]                ; Merged with click:cl|matrizJuego[3][4][2]                ;
+; click:cl|matrizJuego[3][5][3]                ; Merged with click:cl|matrizJuego[3][5][2]                ;
+; click:cl|matrizJuego[3][6][3]                ; Merged with click:cl|matrizJuego[3][6][2]                ;
+; click:cl|matrizJuego[3][7][3]                ; Merged with click:cl|matrizJuego[3][7][2]                ;
+; click:cl|matrizJuego[4][0][3]                ; Merged with click:cl|matrizJuego[4][0][2]                ;
+; click:cl|matrizJuego[4][1][3]                ; Merged with click:cl|matrizJuego[4][1][2]                ;
+; click:cl|matrizJuego[4][2][3]                ; Merged with click:cl|matrizJuego[4][2][2]                ;
+; click:cl|matrizJuego[4][3][3]                ; Merged with click:cl|matrizJuego[4][3][2]                ;
+; click:cl|matrizJuego[4][4][3]                ; Merged with click:cl|matrizJuego[4][4][2]                ;
+; click:cl|matrizJuego[4][5][3]                ; Merged with click:cl|matrizJuego[4][5][2]                ;
+; click:cl|matrizJuego[4][6][3]                ; Merged with click:cl|matrizJuego[4][6][2]                ;
+; click:cl|matrizJuego[4][7][3]                ; Merged with click:cl|matrizJuego[4][7][2]                ;
+; click:cl|matrizJuego[5][0][3]                ; Merged with click:cl|matrizJuego[5][0][2]                ;
+; click:cl|matrizJuego[5][1][3]                ; Merged with click:cl|matrizJuego[5][1][2]                ;
+; click:cl|matrizJuego[5][2][3]                ; Merged with click:cl|matrizJuego[5][2][2]                ;
+; click:cl|matrizJuego[5][3][3]                ; Merged with click:cl|matrizJuego[5][3][2]                ;
+; click:cl|matrizJuego[5][4][3]                ; Merged with click:cl|matrizJuego[5][4][2]                ;
+; click:cl|matrizJuego[5][5][3]                ; Merged with click:cl|matrizJuego[5][5][2]                ;
+; click:cl|matrizJuego[5][6][3]                ; Merged with click:cl|matrizJuego[5][6][2]                ;
+; click:cl|matrizJuego[5][7][3]                ; Merged with click:cl|matrizJuego[5][7][2]                ;
+; click:cl|matrizJuego[6][0][3]                ; Merged with click:cl|matrizJuego[6][0][2]                ;
+; click:cl|matrizJuego[6][1][3]                ; Merged with click:cl|matrizJuego[6][1][2]                ;
+; click:cl|matrizJuego[6][2][3]                ; Merged with click:cl|matrizJuego[6][2][2]                ;
+; click:cl|matrizJuego[6][3][3]                ; Merged with click:cl|matrizJuego[6][3][2]                ;
+; click:cl|matrizJuego[6][4][3]                ; Merged with click:cl|matrizJuego[6][4][2]                ;
+; click:cl|matrizJuego[6][5][3]                ; Merged with click:cl|matrizJuego[6][5][2]                ;
+; click:cl|matrizJuego[6][6][3]                ; Merged with click:cl|matrizJuego[6][6][2]                ;
+; click:cl|matrizJuego[6][7][3]                ; Merged with click:cl|matrizJuego[6][7][2]                ;
+; click:cl|matrizJuego[7][0][3]                ; Merged with click:cl|matrizJuego[7][0][2]                ;
+; click:cl|matrizJuego[7][1][3]                ; Merged with click:cl|matrizJuego[7][1][2]                ;
+; click:cl|matrizJuego[7][2][3]                ; Merged with click:cl|matrizJuego[7][2][2]                ;
+; click:cl|matrizJuego[7][3][3]                ; Merged with click:cl|matrizJuego[7][3][2]                ;
+; click:cl|matrizJuego[7][4][3]                ; Merged with click:cl|matrizJuego[7][4][2]                ;
+; click:cl|matrizJuego[7][5][3]                ; Merged with click:cl|matrizJuego[7][5][2]                ;
+; click:cl|matrizJuego[7][6][3]                ; Merged with click:cl|matrizJuego[7][6][2]                ;
+; click:cl|matrizJuego[7][7][3]                ; Merged with click:cl|matrizJuego[7][7][2]                ;
+; colocarBombas:bomb1|matrizBombastic[0][0][1] ; Merged with colocarBombas:bomb1|matrizBombastic[0][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][0][2] ; Merged with colocarBombas:bomb1|matrizBombastic[0][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][0][3] ; Merged with colocarBombas:bomb1|matrizBombastic[0][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][1][1] ; Merged with colocarBombas:bomb1|matrizBombastic[0][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][1][2] ; Merged with colocarBombas:bomb1|matrizBombastic[0][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][1][3] ; Merged with colocarBombas:bomb1|matrizBombastic[0][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][0][1] ; Merged with colocarBombas:bomb1|matrizBombastic[1][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][0][2] ; Merged with colocarBombas:bomb1|matrizBombastic[1][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][0][3] ; Merged with colocarBombas:bomb1|matrizBombastic[1][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][1][1] ; Merged with colocarBombas:bomb1|matrizBombastic[1][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][1][2] ; Merged with colocarBombas:bomb1|matrizBombastic[1][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][1][3] ; Merged with colocarBombas:bomb1|matrizBombastic[1][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][2][1] ; Merged with colocarBombas:bomb1|matrizBombastic[0][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][2][2] ; Merged with colocarBombas:bomb1|matrizBombastic[0][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][2][3] ; Merged with colocarBombas:bomb1|matrizBombastic[0][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][2][1] ; Merged with colocarBombas:bomb1|matrizBombastic[1][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][2][2] ; Merged with colocarBombas:bomb1|matrizBombastic[1][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][2][3] ; Merged with colocarBombas:bomb1|matrizBombastic[1][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][3][1] ; Merged with colocarBombas:bomb1|matrizBombastic[0][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][3][2] ; Merged with colocarBombas:bomb1|matrizBombastic[0][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][3][3] ; Merged with colocarBombas:bomb1|matrizBombastic[0][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][3][1] ; Merged with colocarBombas:bomb1|matrizBombastic[1][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][3][2] ; Merged with colocarBombas:bomb1|matrizBombastic[1][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][3][3] ; Merged with colocarBombas:bomb1|matrizBombastic[1][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][4][1] ; Merged with colocarBombas:bomb1|matrizBombastic[0][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][4][2] ; Merged with colocarBombas:bomb1|matrizBombastic[0][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][4][3] ; Merged with colocarBombas:bomb1|matrizBombastic[0][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][4][1] ; Merged with colocarBombas:bomb1|matrizBombastic[1][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][4][2] ; Merged with colocarBombas:bomb1|matrizBombastic[1][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][4][3] ; Merged with colocarBombas:bomb1|matrizBombastic[1][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][5][1] ; Merged with colocarBombas:bomb1|matrizBombastic[0][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][5][2] ; Merged with colocarBombas:bomb1|matrizBombastic[0][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][5][3] ; Merged with colocarBombas:bomb1|matrizBombastic[0][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][5][1] ; Merged with colocarBombas:bomb1|matrizBombastic[1][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][5][2] ; Merged with colocarBombas:bomb1|matrizBombastic[1][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][5][3] ; Merged with colocarBombas:bomb1|matrizBombastic[1][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][6][1] ; Merged with colocarBombas:bomb1|matrizBombastic[0][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][6][2] ; Merged with colocarBombas:bomb1|matrizBombastic[0][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][6][3] ; Merged with colocarBombas:bomb1|matrizBombastic[0][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][6][1] ; Merged with colocarBombas:bomb1|matrizBombastic[1][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][6][2] ; Merged with colocarBombas:bomb1|matrizBombastic[1][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][6][3] ; Merged with colocarBombas:bomb1|matrizBombastic[1][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][7][1] ; Merged with colocarBombas:bomb1|matrizBombastic[0][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][7][2] ; Merged with colocarBombas:bomb1|matrizBombastic[0][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[0][7][3] ; Merged with colocarBombas:bomb1|matrizBombastic[0][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][7][1] ; Merged with colocarBombas:bomb1|matrizBombastic[1][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][7][2] ; Merged with colocarBombas:bomb1|matrizBombastic[1][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[1][7][3] ; Merged with colocarBombas:bomb1|matrizBombastic[1][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][0][1] ; Merged with colocarBombas:bomb1|matrizBombastic[2][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][0][2] ; Merged with colocarBombas:bomb1|matrizBombastic[2][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][0][3] ; Merged with colocarBombas:bomb1|matrizBombastic[2][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][1][1] ; Merged with colocarBombas:bomb1|matrizBombastic[2][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][1][2] ; Merged with colocarBombas:bomb1|matrizBombastic[2][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][1][3] ; Merged with colocarBombas:bomb1|matrizBombastic[2][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][2][1] ; Merged with colocarBombas:bomb1|matrizBombastic[2][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][2][2] ; Merged with colocarBombas:bomb1|matrizBombastic[2][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][2][3] ; Merged with colocarBombas:bomb1|matrizBombastic[2][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][3][1] ; Merged with colocarBombas:bomb1|matrizBombastic[2][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][3][2] ; Merged with colocarBombas:bomb1|matrizBombastic[2][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][3][3] ; Merged with colocarBombas:bomb1|matrizBombastic[2][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][4][1] ; Merged with colocarBombas:bomb1|matrizBombastic[2][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][4][2] ; Merged with colocarBombas:bomb1|matrizBombastic[2][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][4][3] ; Merged with colocarBombas:bomb1|matrizBombastic[2][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][5][1] ; Merged with colocarBombas:bomb1|matrizBombastic[2][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][5][2] ; Merged with colocarBombas:bomb1|matrizBombastic[2][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][5][3] ; Merged with colocarBombas:bomb1|matrizBombastic[2][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][6][1] ; Merged with colocarBombas:bomb1|matrizBombastic[2][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][6][2] ; Merged with colocarBombas:bomb1|matrizBombastic[2][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][6][3] ; Merged with colocarBombas:bomb1|matrizBombastic[2][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][7][1] ; Merged with colocarBombas:bomb1|matrizBombastic[2][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][7][2] ; Merged with colocarBombas:bomb1|matrizBombastic[2][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[2][7][3] ; Merged with colocarBombas:bomb1|matrizBombastic[2][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][0][1] ; Merged with colocarBombas:bomb1|matrizBombastic[3][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][0][2] ; Merged with colocarBombas:bomb1|matrizBombastic[3][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][0][3] ; Merged with colocarBombas:bomb1|matrizBombastic[3][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][1][1] ; Merged with colocarBombas:bomb1|matrizBombastic[3][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][1][2] ; Merged with colocarBombas:bomb1|matrizBombastic[3][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][1][3] ; Merged with colocarBombas:bomb1|matrizBombastic[3][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][2][1] ; Merged with colocarBombas:bomb1|matrizBombastic[3][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][2][2] ; Merged with colocarBombas:bomb1|matrizBombastic[3][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][2][3] ; Merged with colocarBombas:bomb1|matrizBombastic[3][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][3][1] ; Merged with colocarBombas:bomb1|matrizBombastic[3][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][3][2] ; Merged with colocarBombas:bomb1|matrizBombastic[3][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][3][3] ; Merged with colocarBombas:bomb1|matrizBombastic[3][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][4][1] ; Merged with colocarBombas:bomb1|matrizBombastic[3][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][4][2] ; Merged with colocarBombas:bomb1|matrizBombastic[3][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][4][3] ; Merged with colocarBombas:bomb1|matrizBombastic[3][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][5][1] ; Merged with colocarBombas:bomb1|matrizBombastic[3][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][5][2] ; Merged with colocarBombas:bomb1|matrizBombastic[3][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][5][3] ; Merged with colocarBombas:bomb1|matrizBombastic[3][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][6][1] ; Merged with colocarBombas:bomb1|matrizBombastic[3][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][6][2] ; Merged with colocarBombas:bomb1|matrizBombastic[3][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][6][3] ; Merged with colocarBombas:bomb1|matrizBombastic[3][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][7][1] ; Merged with colocarBombas:bomb1|matrizBombastic[3][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][7][2] ; Merged with colocarBombas:bomb1|matrizBombastic[3][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[3][7][3] ; Merged with colocarBombas:bomb1|matrizBombastic[3][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][0][1] ; Merged with colocarBombas:bomb1|matrizBombastic[4][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][0][2] ; Merged with colocarBombas:bomb1|matrizBombastic[4][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][0][3] ; Merged with colocarBombas:bomb1|matrizBombastic[4][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][1][1] ; Merged with colocarBombas:bomb1|matrizBombastic[4][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][1][2] ; Merged with colocarBombas:bomb1|matrizBombastic[4][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][1][3] ; Merged with colocarBombas:bomb1|matrizBombastic[4][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][2][1] ; Merged with colocarBombas:bomb1|matrizBombastic[4][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][2][2] ; Merged with colocarBombas:bomb1|matrizBombastic[4][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][2][3] ; Merged with colocarBombas:bomb1|matrizBombastic[4][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][3][1] ; Merged with colocarBombas:bomb1|matrizBombastic[4][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][3][2] ; Merged with colocarBombas:bomb1|matrizBombastic[4][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][3][3] ; Merged with colocarBombas:bomb1|matrizBombastic[4][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][4][1] ; Merged with colocarBombas:bomb1|matrizBombastic[4][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][4][2] ; Merged with colocarBombas:bomb1|matrizBombastic[4][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][4][3] ; Merged with colocarBombas:bomb1|matrizBombastic[4][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][5][1] ; Merged with colocarBombas:bomb1|matrizBombastic[4][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][5][2] ; Merged with colocarBombas:bomb1|matrizBombastic[4][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][5][3] ; Merged with colocarBombas:bomb1|matrizBombastic[4][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][6][1] ; Merged with colocarBombas:bomb1|matrizBombastic[4][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][6][2] ; Merged with colocarBombas:bomb1|matrizBombastic[4][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][6][3] ; Merged with colocarBombas:bomb1|matrizBombastic[4][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][7][1] ; Merged with colocarBombas:bomb1|matrizBombastic[4][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][7][2] ; Merged with colocarBombas:bomb1|matrizBombastic[4][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[4][7][3] ; Merged with colocarBombas:bomb1|matrizBombastic[4][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][0][1] ; Merged with colocarBombas:bomb1|matrizBombastic[5][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][0][2] ; Merged with colocarBombas:bomb1|matrizBombastic[5][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][0][3] ; Merged with colocarBombas:bomb1|matrizBombastic[5][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][1][1] ; Merged with colocarBombas:bomb1|matrizBombastic[5][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][1][2] ; Merged with colocarBombas:bomb1|matrizBombastic[5][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][1][3] ; Merged with colocarBombas:bomb1|matrizBombastic[5][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][2][1] ; Merged with colocarBombas:bomb1|matrizBombastic[5][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][2][2] ; Merged with colocarBombas:bomb1|matrizBombastic[5][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][2][3] ; Merged with colocarBombas:bomb1|matrizBombastic[5][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][3][1] ; Merged with colocarBombas:bomb1|matrizBombastic[5][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][3][2] ; Merged with colocarBombas:bomb1|matrizBombastic[5][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][3][3] ; Merged with colocarBombas:bomb1|matrizBombastic[5][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][4][1] ; Merged with colocarBombas:bomb1|matrizBombastic[5][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][4][2] ; Merged with colocarBombas:bomb1|matrizBombastic[5][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][4][3] ; Merged with colocarBombas:bomb1|matrizBombastic[5][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][5][1] ; Merged with colocarBombas:bomb1|matrizBombastic[5][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][5][2] ; Merged with colocarBombas:bomb1|matrizBombastic[5][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][5][3] ; Merged with colocarBombas:bomb1|matrizBombastic[5][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][6][1] ; Merged with colocarBombas:bomb1|matrizBombastic[5][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][6][2] ; Merged with colocarBombas:bomb1|matrizBombastic[5][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][6][3] ; Merged with colocarBombas:bomb1|matrizBombastic[5][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][7][1] ; Merged with colocarBombas:bomb1|matrizBombastic[5][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][7][2] ; Merged with colocarBombas:bomb1|matrizBombastic[5][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[5][7][3] ; Merged with colocarBombas:bomb1|matrizBombastic[5][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][0][1] ; Merged with colocarBombas:bomb1|matrizBombastic[6][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][0][2] ; Merged with colocarBombas:bomb1|matrizBombastic[6][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][0][3] ; Merged with colocarBombas:bomb1|matrizBombastic[6][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][1][1] ; Merged with colocarBombas:bomb1|matrizBombastic[6][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][1][2] ; Merged with colocarBombas:bomb1|matrizBombastic[6][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][1][3] ; Merged with colocarBombas:bomb1|matrizBombastic[6][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][2][1] ; Merged with colocarBombas:bomb1|matrizBombastic[6][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][2][2] ; Merged with colocarBombas:bomb1|matrizBombastic[6][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][2][3] ; Merged with colocarBombas:bomb1|matrizBombastic[6][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][3][1] ; Merged with colocarBombas:bomb1|matrizBombastic[6][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][3][2] ; Merged with colocarBombas:bomb1|matrizBombastic[6][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][3][3] ; Merged with colocarBombas:bomb1|matrizBombastic[6][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][4][1] ; Merged with colocarBombas:bomb1|matrizBombastic[6][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][4][2] ; Merged with colocarBombas:bomb1|matrizBombastic[6][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][4][3] ; Merged with colocarBombas:bomb1|matrizBombastic[6][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][5][1] ; Merged with colocarBombas:bomb1|matrizBombastic[6][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][5][2] ; Merged with colocarBombas:bomb1|matrizBombastic[6][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][5][3] ; Merged with colocarBombas:bomb1|matrizBombastic[6][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][6][1] ; Merged with colocarBombas:bomb1|matrizBombastic[6][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][6][2] ; Merged with colocarBombas:bomb1|matrizBombastic[6][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][6][3] ; Merged with colocarBombas:bomb1|matrizBombastic[6][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][7][1] ; Merged with colocarBombas:bomb1|matrizBombastic[6][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][7][2] ; Merged with colocarBombas:bomb1|matrizBombastic[6][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[6][7][3] ; Merged with colocarBombas:bomb1|matrizBombastic[6][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][0][1] ; Merged with colocarBombas:bomb1|matrizBombastic[7][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][0][2] ; Merged with colocarBombas:bomb1|matrizBombastic[7][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][0][3] ; Merged with colocarBombas:bomb1|matrizBombastic[7][0][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][1][1] ; Merged with colocarBombas:bomb1|matrizBombastic[7][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][1][2] ; Merged with colocarBombas:bomb1|matrizBombastic[7][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][1][3] ; Merged with colocarBombas:bomb1|matrizBombastic[7][1][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][2][1] ; Merged with colocarBombas:bomb1|matrizBombastic[7][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][2][2] ; Merged with colocarBombas:bomb1|matrizBombastic[7][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][2][3] ; Merged with colocarBombas:bomb1|matrizBombastic[7][2][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][3][1] ; Merged with colocarBombas:bomb1|matrizBombastic[7][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][3][2] ; Merged with colocarBombas:bomb1|matrizBombastic[7][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][3][3] ; Merged with colocarBombas:bomb1|matrizBombastic[7][3][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][4][1] ; Merged with colocarBombas:bomb1|matrizBombastic[7][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][4][2] ; Merged with colocarBombas:bomb1|matrizBombastic[7][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][4][3] ; Merged with colocarBombas:bomb1|matrizBombastic[7][4][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][5][1] ; Merged with colocarBombas:bomb1|matrizBombastic[7][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][5][2] ; Merged with colocarBombas:bomb1|matrizBombastic[7][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][5][3] ; Merged with colocarBombas:bomb1|matrizBombastic[7][5][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][6][1] ; Merged with colocarBombas:bomb1|matrizBombastic[7][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][6][2] ; Merged with colocarBombas:bomb1|matrizBombastic[7][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][6][3] ; Merged with colocarBombas:bomb1|matrizBombastic[7][6][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][7][1] ; Merged with colocarBombas:bomb1|matrizBombastic[7][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][7][2] ; Merged with colocarBombas:bomb1|matrizBombastic[7][7][0] ;
+; colocarBombas:bomb1|matrizBombastic[7][7][3] ; Merged with colocarBombas:bomb1|matrizBombastic[7][7][0] ;
+; contarBombas:nums|matrizNumeros[7][7][3]     ; Merged with contarBombas:nums|matrizNumeros[7][7][2]     ;
+; contarBombas:nums|matrizNumeros[7][0][3]     ; Merged with contarBombas:nums|matrizNumeros[7][0][2]     ;
+; contarBombas:nums|matrizNumeros[0][0][3]     ; Merged with contarBombas:nums|matrizNumeros[0][0][2]     ;
+; contarBombas:nums|matrizNumeros[0][7][3]     ; Merged with contarBombas:nums|matrizNumeros[0][7][2]     ;
+; Total Number of Removed Registers = 260      ;                                                          ;
++----------------------------------------------+----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -319,27 +518,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 223   ;
+; Total registers                              ; 578   ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 198   ;
+; Number of registers using Asynchronous Clear ; 547   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 142   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |gameLogic|moverse:mov|pos_x[2]                                ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |gameLogic|moverse:mov|pos_y[2]                                ;
-; 64:1               ; 3 bits    ; 126 LEs       ; 126 LEs              ; 0 LEs                  ; No         ; |gameLogic|click:cl|Mux32                                      ;
-; 65:1               ; 2 bits    ; 86 LEs        ; 86 LEs               ; 0 LEs                  ; No         ; |gameLogic|VGA:vga|videoGen:videoGen|rectgen:rectgen|color[9]  ;
-; 129:1              ; 4 bits    ; 344 LEs       ; 344 LEs              ; 0 LEs                  ; No         ; |gameLogic|VGA:vga|videoGen:videoGen|rectgen:rectgen|color[17] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
++---------------------------------------------------------+
+; Inverted Register Statistics                            ;
++-----------------------------------------------+---------+
+; Inverted Register                             ; Fan out ;
++-----------------------------------------------+---------+
+; colocarBombas:bomb1|Q                         ; 4       ;
+; colocarBombas:bomb1|random:ram|random[3]      ; 2       ;
+; colocarBombas:bomb1|random:ram|random_next[3] ; 1       ;
+; colocarBombas:bomb1|random:ram|random_next[2] ; 1       ;
+; colocarBombas:bomb1|random:ram|random_next[0] ; 1       ;
+; colocarBombas:bomb1|random:ram|random[1]      ; 1       ;
+; colocarBombas:bomb1|random:ram|random_next[1] ; 1       ;
+; colocarBombas:bomb1|random:ram|random[10]     ; 1       ;
+; colocarBombas:bomb1|random:ram|random[7]      ; 1       ;
+; colocarBombas:bomb1|random:ram|random[5]      ; 1       ;
+; colocarBombas:bomb1|random:ram|random[4]      ; 1       ;
+; Total number of inverted registers = 11       ;         ;
++-----------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |gameLogic|moverse:mov|pos_x[2]                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |gameLogic|moverse:mov|pos_y[1]                               ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |gameLogic|colocarBombas:bomb1|pos_y[1]                       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |gameLogic|colocarBombas:bomb1|pos_x[1]                       ;
+; 64:1               ; 3 bits    ; 126 LEs       ; 126 LEs              ; 0 LEs                  ; No         ; |gameLogic|click:cl|Mux34                                     ;
+; 129:1              ; 2 bits    ; 172 LEs       ; 172 LEs              ; 0 LEs                  ; No         ; |gameLogic|VGA:vga|videoGen:videoGen|rectgen:rectgen|color[9] ;
+; 257:1              ; 20 bits   ; 3420 LEs      ; 3420 LEs             ; 0 LEs                  ; No         ; |gameLogic|VGA:vga|videoGen:videoGen|rectgen:rectgen|color[4] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------+
@@ -375,30 +596,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 223                         ;
-;     CLR               ; 70                          ;
+; arriav_ff             ; 578                         ;
+;     CLR               ; 419                         ;
 ;     ENA               ; 4                           ;
 ;     ENA CLR           ; 128                         ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 1374                        ;
+;     plain             ; 7                           ;
+; arriav_lcell_comb     ; 4018                        ;
 ;     arith             ; 20                          ;
 ;         1 data inputs ; 20                          ;
-;     extend            ; 7                           ;
-;         7 data inputs ; 7                           ;
-;     normal            ; 1347                        ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 53                          ;
-;         3 data inputs ; 202                         ;
-;         4 data inputs ; 472                         ;
-;         5 data inputs ; 371                         ;
-;         6 data inputs ; 246                         ;
+;     extend            ; 50                          ;
+;         7 data inputs ; 50                          ;
+;     normal            ; 3948                        ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 174                         ;
+;         3 data inputs ; 397                         ;
+;         4 data inputs ; 1826                        ;
+;         5 data inputs ; 603                         ;
+;         6 data inputs ; 932                         ;
 ; boundary_port         ; 44                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 4.03                        ;
+; Average LUT depth     ; 5.54                        ;
 +-----------------------+-----------------------------+
 
 
@@ -407,7 +627,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:12     ;
 +----------------+--------------+
 
 
@@ -417,7 +637,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Tue Oct 17 03:06:02 2023
+    Info: Processing started: Tue Oct 17 04:13:43 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off buscaminas -c buscaminas
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -481,29 +701,29 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (12128): Elaborating entity "random" for hierarchy "colocarBombas:bomb1|random:ram" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/colocarBombas.sv Line: 18
 Warning (10036): Verilog HDL or VHDL warning at random.sv(9): object "count" assigned a value but never read File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 9
 Warning (10036): Verilog HDL or VHDL warning at random.sv(9): object "count_next" assigned a value but never read File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 9
-Info (12128): Elaborating entity "contarBombas" for hierarchy "contarBombas:nums" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 36
-Warning (10230): Verilog HDL assignment warning at contarBombas.sv(14): truncated value with size 32 to match size of target (8) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 14
-Warning (10230): Verilog HDL assignment warning at contarBombas.sv(15): truncated value with size 32 to match size of target (8) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 15
-Warning (10230): Verilog HDL assignment warning at contarBombas.sv(16): truncated value with size 32 to match size of target (8) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 16
+Info (12128): Elaborating entity "contarBombas" for hierarchy "contarBombas:nums" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 37
 Warning (10230): Verilog HDL assignment warning at contarBombas.sv(17): truncated value with size 32 to match size of target (8) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 17
+Warning (10230): Verilog HDL assignment warning at contarBombas.sv(18): truncated value with size 32 to match size of target (8) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 18
 Warning (10230): Verilog HDL assignment warning at contarBombas.sv(19): truncated value with size 32 to match size of target (8) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 19
 Warning (10230): Verilog HDL assignment warning at contarBombas.sv(20): truncated value with size 32 to match size of target (8) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 20
-Warning (10230): Verilog HDL assignment warning at contarBombas.sv(21): truncated value with size 32 to match size of target (8) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 21
 Warning (10230): Verilog HDL assignment warning at contarBombas.sv(22): truncated value with size 32 to match size of target (8) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 22
-Warning (10230): Verilog HDL assignment warning at contarBombas.sv(25): truncated value with size 32 to match size of target (4) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at contarBombas.sv(23): truncated value with size 32 to match size of target (8) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at contarBombas.sv(24): truncated value with size 32 to match size of target (8) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at contarBombas.sv(25): truncated value with size 32 to match size of target (8) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at contarBombas.sv(28): truncated value with size 32 to match size of target (4) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/contarBombas.sv Line: 28
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrizBombastic" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrizNumeros" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrizBombastic" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrizNumeros" into its bus
-Info (12128): Elaborating entity "moverse" for hierarchy "moverse:mov" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 49
+Info (12128): Elaborating entity "moverse" for hierarchy "moverse:mov" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 50
 Warning (10230): Verilog HDL assignment warning at moverse.sv(33): truncated value with size 32 to match size of target (3) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/moverse.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at moverse.sv(36): truncated value with size 32 to match size of target (3) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/moverse.sv Line: 36
 Warning (10230): Verilog HDL assignment warning at moverse.sv(39): truncated value with size 32 to match size of target (3) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/moverse.sv Line: 39
 Warning (10230): Verilog HDL assignment warning at moverse.sv(42): truncated value with size 32 to match size of target (3) File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/moverse.sv Line: 42
-Info (12128): Elaborating entity "click" for hierarchy "click:cl" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 57
+Info (12128): Elaborating entity "click" for hierarchy "click:cl" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 58
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrizJuego" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "matrizJuego" into its bus
-Info (12128): Elaborating entity "VGA" for hierarchy "VGA:vga" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 73
+Info (12128): Elaborating entity "VGA" for hierarchy "VGA:vga" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 74
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "mNum" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "mJ" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "mNum" into its bus
@@ -520,6 +740,8 @@ Info (12128): Elaborating entity "rectgen" for hierarchy "VGA:vga|videoGen:video
 Warning (10235): Verilog HDL Always Construct warning at rectgen.sv(12): variable "pos_x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/rectgen.sv Line: 12
 Warning (10235): Verilog HDL Always Construct warning at rectgen.sv(12): variable "pos_y" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/rectgen.sv Line: 12
 Warning (10235): Verilog HDL Always Construct warning at rectgen.sv(15): variable "mJ" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/rectgen.sv Line: 15
+Warning (10235): Verilog HDL Always Construct warning at rectgen.sv(18): variable "mJ" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/rectgen.sv Line: 18
+Warning (10235): Verilog HDL Always Construct warning at rectgen.sv(19): variable "mNum" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/rectgen.sv Line: 19
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "mNum" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "mJ" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "mNum" into its bus
@@ -531,214 +753,216 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "click:cl|matrizJuego[6][6][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][6][2]~_emulated" and latch "click:cl|matrizJuego[6][6][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[6][6][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][6][1]~_emulated" and latch "click:cl|matrizJuego[6][6][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[6][6][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][6][0]~_emulated" and latch "click:cl|matrizJuego[6][6][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][4][2]~_emulated" and latch "click:cl|matrizJuego[6][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][4][1]~_emulated" and latch "click:cl|matrizJuego[6][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][4][0]~_emulated" and latch "click:cl|matrizJuego[6][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][2][2]~_emulated" and latch "click:cl|matrizJuego[6][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][2][1]~_emulated" and latch "click:cl|matrizJuego[6][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][2][0]~_emulated" and latch "click:cl|matrizJuego[6][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][0][2]~_emulated" and latch "click:cl|matrizJuego[6][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][0][1]~_emulated" and latch "click:cl|matrizJuego[6][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][0][0]~_emulated" and latch "click:cl|matrizJuego[6][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][1][2]~_emulated" and latch "click:cl|matrizJuego[6][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][1][1]~_emulated" and latch "click:cl|matrizJuego[6][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][1][0]~_emulated" and latch "click:cl|matrizJuego[6][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][3][2]~_emulated" and latch "click:cl|matrizJuego[6][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][3][1]~_emulated" and latch "click:cl|matrizJuego[6][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][3][0]~_emulated" and latch "click:cl|matrizJuego[6][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[6][5][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][5][2]~_emulated" and latch "click:cl|matrizJuego[6][5][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[6][5][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][5][1]~_emulated" and latch "click:cl|matrizJuego[6][5][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[6][5][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][5][0]~_emulated" and latch "click:cl|matrizJuego[6][5][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][4][2]~_emulated" and latch "click:cl|matrizJuego[6][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][4][1]~_emulated" and latch "click:cl|matrizJuego[6][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][4][0]~_emulated" and latch "click:cl|matrizJuego[6][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][3][2]~_emulated" and latch "click:cl|matrizJuego[6][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][3][1]~_emulated" and latch "click:cl|matrizJuego[6][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][3][0]~_emulated" and latch "click:cl|matrizJuego[6][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][2][2]~_emulated" and latch "click:cl|matrizJuego[6][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][2][1]~_emulated" and latch "click:cl|matrizJuego[6][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][2][0]~_emulated" and latch "click:cl|matrizJuego[6][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][1][2]~_emulated" and latch "click:cl|matrizJuego[6][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][1][1]~_emulated" and latch "click:cl|matrizJuego[6][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][1][0]~_emulated" and latch "click:cl|matrizJuego[6][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][0][2]~_emulated" and latch "click:cl|matrizJuego[6][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][0][1]~_emulated" and latch "click:cl|matrizJuego[6][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][0][0]~_emulated" and latch "click:cl|matrizJuego[6][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[7][6][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][6][2]~_emulated" and latch "click:cl|matrizJuego[7][6][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[7][6][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][6][1]~_emulated" and latch "click:cl|matrizJuego[7][6][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[7][6][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][6][0]~_emulated" and latch "click:cl|matrizJuego[7][6][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[7][5][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][5][2]~_emulated" and latch "click:cl|matrizJuego[7][5][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[7][5][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][5][1]~_emulated" and latch "click:cl|matrizJuego[7][5][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[7][5][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][5][0]~_emulated" and latch "click:cl|matrizJuego[7][5][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[7][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][3][2]~_emulated" and latch "click:cl|matrizJuego[7][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[7][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][3][1]~_emulated" and latch "click:cl|matrizJuego[7][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[7][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][3][0]~_emulated" and latch "click:cl|matrizJuego[7][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[7][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][1][2]~_emulated" and latch "click:cl|matrizJuego[7][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[7][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][1][1]~_emulated" and latch "click:cl|matrizJuego[7][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[7][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][1][0]~_emulated" and latch "click:cl|matrizJuego[7][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][7][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][7][2]~_emulated" and latch "click:cl|matrizJuego[6][7][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][7][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][7][1]~_emulated" and latch "click:cl|matrizJuego[6][7][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[6][7][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][7][0]~_emulated" and latch "click:cl|matrizJuego[6][7][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[7][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][0][2]~_emulated" and latch "click:cl|matrizJuego[7][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[7][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][0][1]~_emulated" and latch "click:cl|matrizJuego[7][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[7][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][0][0]~_emulated" and latch "click:cl|matrizJuego[7][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[7][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][2][2]~_emulated" and latch "click:cl|matrizJuego[7][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[7][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][2][1]~_emulated" and latch "click:cl|matrizJuego[7][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[7][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][2][0]~_emulated" and latch "click:cl|matrizJuego[7][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[7][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][4][2]~_emulated" and latch "click:cl|matrizJuego[7][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[7][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][4][1]~_emulated" and latch "click:cl|matrizJuego[7][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[7][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][4][0]~_emulated" and latch "click:cl|matrizJuego[7][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[7][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][3][2]~_emulated" and latch "click:cl|matrizJuego[7][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[7][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][3][1]~_emulated" and latch "click:cl|matrizJuego[7][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[7][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][3][0]~_emulated" and latch "click:cl|matrizJuego[7][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[7][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][2][2]~_emulated" and latch "click:cl|matrizJuego[7][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[7][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][2][1]~_emulated" and latch "click:cl|matrizJuego[7][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[7][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][2][0]~_emulated" and latch "click:cl|matrizJuego[7][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[7][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][1][2]~_emulated" and latch "click:cl|matrizJuego[7][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[7][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][1][1]~_emulated" and latch "click:cl|matrizJuego[7][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[7][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][1][0]~_emulated" and latch "click:cl|matrizJuego[7][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[7][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][0][2]~_emulated" and latch "click:cl|matrizJuego[7][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[7][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][0][1]~_emulated" and latch "click:cl|matrizJuego[7][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[7][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[7][0][0]~_emulated" and latch "click:cl|matrizJuego[7][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][7][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][7][2]~_emulated" and latch "click:cl|matrizJuego[6][7][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][7][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][7][1]~_emulated" and latch "click:cl|matrizJuego[6][7][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[6][7][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[6][7][0]~_emulated" and latch "click:cl|matrizJuego[6][7][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[5][7][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][7][2]~_emulated" and latch "click:cl|matrizJuego[5][7][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[5][7][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][7][1]~_emulated" and latch "click:cl|matrizJuego[5][7][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[5][7][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][7][0]~_emulated" and latch "click:cl|matrizJuego[5][7][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][5][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][5][2]~_emulated" and latch "click:cl|matrizJuego[5][5][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][5][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][5][1]~_emulated" and latch "click:cl|matrizJuego[5][5][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][5][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][5][0]~_emulated" and latch "click:cl|matrizJuego[5][5][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][3][2]~_emulated" and latch "click:cl|matrizJuego[5][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][3][1]~_emulated" and latch "click:cl|matrizJuego[5][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][3][0]~_emulated" and latch "click:cl|matrizJuego[5][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][1][2]~_emulated" and latch "click:cl|matrizJuego[5][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][1][1]~_emulated" and latch "click:cl|matrizJuego[5][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][1][0]~_emulated" and latch "click:cl|matrizJuego[5][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][7][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][7][2]~_emulated" and latch "click:cl|matrizJuego[4][7][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][7][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][7][1]~_emulated" and latch "click:cl|matrizJuego[4][7][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][7][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][7][0]~_emulated" and latch "click:cl|matrizJuego[4][7][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][0][2]~_emulated" and latch "click:cl|matrizJuego[5][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][0][1]~_emulated" and latch "click:cl|matrizJuego[5][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][0][0]~_emulated" and latch "click:cl|matrizJuego[5][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][2][2]~_emulated" and latch "click:cl|matrizJuego[5][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][2][1]~_emulated" and latch "click:cl|matrizJuego[5][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][2][0]~_emulated" and latch "click:cl|matrizJuego[5][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][4][2]~_emulated" and latch "click:cl|matrizJuego[5][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][4][1]~_emulated" and latch "click:cl|matrizJuego[5][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[5][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][4][0]~_emulated" and latch "click:cl|matrizJuego[5][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[5][6][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][6][2]~_emulated" and latch "click:cl|matrizJuego[5][6][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[5][6][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][6][1]~_emulated" and latch "click:cl|matrizJuego[5][6][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[5][6][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][6][0]~_emulated" and latch "click:cl|matrizJuego[5][6][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][5][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][5][2]~_emulated" and latch "click:cl|matrizJuego[5][5][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][5][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][5][1]~_emulated" and latch "click:cl|matrizJuego[5][5][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][5][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][5][0]~_emulated" and latch "click:cl|matrizJuego[5][5][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][4][2]~_emulated" and latch "click:cl|matrizJuego[5][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][4][1]~_emulated" and latch "click:cl|matrizJuego[5][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][4][0]~_emulated" and latch "click:cl|matrizJuego[5][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][3][2]~_emulated" and latch "click:cl|matrizJuego[5][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][3][1]~_emulated" and latch "click:cl|matrizJuego[5][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][3][0]~_emulated" and latch "click:cl|matrizJuego[5][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][2][2]~_emulated" and latch "click:cl|matrizJuego[5][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][2][1]~_emulated" and latch "click:cl|matrizJuego[5][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][2][0]~_emulated" and latch "click:cl|matrizJuego[5][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][1][2]~_emulated" and latch "click:cl|matrizJuego[5][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][1][1]~_emulated" and latch "click:cl|matrizJuego[5][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][1][0]~_emulated" and latch "click:cl|matrizJuego[5][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][0][2]~_emulated" and latch "click:cl|matrizJuego[5][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][0][1]~_emulated" and latch "click:cl|matrizJuego[5][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[5][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[5][0][0]~_emulated" and latch "click:cl|matrizJuego[5][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][7][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][7][2]~_emulated" and latch "click:cl|matrizJuego[4][7][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][7][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][7][1]~_emulated" and latch "click:cl|matrizJuego[4][7][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][7][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][7][0]~_emulated" and latch "click:cl|matrizJuego[4][7][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[4][6][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][6][2]~_emulated" and latch "click:cl|matrizJuego[4][6][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[4][6][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][6][1]~_emulated" and latch "click:cl|matrizJuego[4][6][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[4][6][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][6][0]~_emulated" and latch "click:cl|matrizJuego[4][6][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[4][5][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][5][2]~_emulated" and latch "click:cl|matrizJuego[4][5][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[4][5][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][5][1]~_emulated" and latch "click:cl|matrizJuego[4][5][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[4][5][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][5][0]~_emulated" and latch "click:cl|matrizJuego[4][5][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][3][2]~_emulated" and latch "click:cl|matrizJuego[4][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][3][1]~_emulated" and latch "click:cl|matrizJuego[4][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][3][0]~_emulated" and latch "click:cl|matrizJuego[4][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][1][2]~_emulated" and latch "click:cl|matrizJuego[4][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][1][1]~_emulated" and latch "click:cl|matrizJuego[4][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][1][0]~_emulated" and latch "click:cl|matrizJuego[4][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][7][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][7][2]~_emulated" and latch "click:cl|matrizJuego[3][7][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][7][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][7][1]~_emulated" and latch "click:cl|matrizJuego[3][7][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][7][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][7][0]~_emulated" and latch "click:cl|matrizJuego[3][7][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][0][2]~_emulated" and latch "click:cl|matrizJuego[4][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][0][1]~_emulated" and latch "click:cl|matrizJuego[4][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][0][0]~_emulated" and latch "click:cl|matrizJuego[4][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][2][2]~_emulated" and latch "click:cl|matrizJuego[4][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][2][1]~_emulated" and latch "click:cl|matrizJuego[4][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[4][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][2][0]~_emulated" and latch "click:cl|matrizJuego[4][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[4][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][4][2]~_emulated" and latch "click:cl|matrizJuego[4][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[4][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][4][1]~_emulated" and latch "click:cl|matrizJuego[4][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[4][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][4][0]~_emulated" and latch "click:cl|matrizJuego[4][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][6][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][6][2]~_emulated" and latch "click:cl|matrizJuego[2][6][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][6][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][6][1]~_emulated" and latch "click:cl|matrizJuego[2][6][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][6][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][6][0]~_emulated" and latch "click:cl|matrizJuego[2][6][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][4][2]~_emulated" and latch "click:cl|matrizJuego[2][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][4][1]~_emulated" and latch "click:cl|matrizJuego[2][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][4][0]~_emulated" and latch "click:cl|matrizJuego[2][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][2][2]~_emulated" and latch "click:cl|matrizJuego[2][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][2][1]~_emulated" and latch "click:cl|matrizJuego[2][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][2][0]~_emulated" and latch "click:cl|matrizJuego[2][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][0][2]~_emulated" and latch "click:cl|matrizJuego[2][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][0][1]~_emulated" and latch "click:cl|matrizJuego[2][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][0][0]~_emulated" and latch "click:cl|matrizJuego[2][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][1][2]~_emulated" and latch "click:cl|matrizJuego[2][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][1][1]~_emulated" and latch "click:cl|matrizJuego[2][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][1][0]~_emulated" and latch "click:cl|matrizJuego[2][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][3][2]~_emulated" and latch "click:cl|matrizJuego[2][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][3][1]~_emulated" and latch "click:cl|matrizJuego[2][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][3][0]~_emulated" and latch "click:cl|matrizJuego[2][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][5][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][5][2]~_emulated" and latch "click:cl|matrizJuego[2][5][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][5][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][5][1]~_emulated" and latch "click:cl|matrizJuego[2][5][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[2][5][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][5][0]~_emulated" and latch "click:cl|matrizJuego[2][5][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][3][2]~_emulated" and latch "click:cl|matrizJuego[4][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][3][1]~_emulated" and latch "click:cl|matrizJuego[4][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][3][0]~_emulated" and latch "click:cl|matrizJuego[4][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][2][2]~_emulated" and latch "click:cl|matrizJuego[4][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][2][1]~_emulated" and latch "click:cl|matrizJuego[4][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][2][0]~_emulated" and latch "click:cl|matrizJuego[4][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][1][2]~_emulated" and latch "click:cl|matrizJuego[4][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][1][1]~_emulated" and latch "click:cl|matrizJuego[4][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][1][0]~_emulated" and latch "click:cl|matrizJuego[4][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][0][2]~_emulated" and latch "click:cl|matrizJuego[4][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][0][1]~_emulated" and latch "click:cl|matrizJuego[4][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[4][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[4][0][0]~_emulated" and latch "click:cl|matrizJuego[4][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][7][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][7][2]~_emulated" and latch "click:cl|matrizJuego[3][7][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][7][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][7][1]~_emulated" and latch "click:cl|matrizJuego[3][7][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][7][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][7][0]~_emulated" and latch "click:cl|matrizJuego[3][7][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[2][7][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][7][2]~_emulated" and latch "click:cl|matrizJuego[2][7][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[2][7][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][7][1]~_emulated" and latch "click:cl|matrizJuego[2][7][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[2][7][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][7][0]~_emulated" and latch "click:cl|matrizJuego[2][7][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][6][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][6][2]~_emulated" and latch "click:cl|matrizJuego[2][6][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][6][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][6][1]~_emulated" and latch "click:cl|matrizJuego[2][6][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][6][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][6][0]~_emulated" and latch "click:cl|matrizJuego[2][6][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][5][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][5][2]~_emulated" and latch "click:cl|matrizJuego[2][5][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][5][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][5][1]~_emulated" and latch "click:cl|matrizJuego[2][5][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][5][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][5][0]~_emulated" and latch "click:cl|matrizJuego[2][5][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][4][2]~_emulated" and latch "click:cl|matrizJuego[2][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][4][1]~_emulated" and latch "click:cl|matrizJuego[2][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][4][0]~_emulated" and latch "click:cl|matrizJuego[2][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][3][2]~_emulated" and latch "click:cl|matrizJuego[2][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][3][1]~_emulated" and latch "click:cl|matrizJuego[2][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][3][0]~_emulated" and latch "click:cl|matrizJuego[2][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][2][2]~_emulated" and latch "click:cl|matrizJuego[2][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][2][1]~_emulated" and latch "click:cl|matrizJuego[2][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][2][0]~_emulated" and latch "click:cl|matrizJuego[2][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][1][2]~_emulated" and latch "click:cl|matrizJuego[2][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][1][1]~_emulated" and latch "click:cl|matrizJuego[2][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][1][0]~_emulated" and latch "click:cl|matrizJuego[2][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][0][2]~_emulated" and latch "click:cl|matrizJuego[2][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][0][1]~_emulated" and latch "click:cl|matrizJuego[2][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[2][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[2][0][0]~_emulated" and latch "click:cl|matrizJuego[2][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[1][7][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][7][2]~_emulated" and latch "click:cl|matrizJuego[1][7][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[1][7][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][7][1]~_emulated" and latch "click:cl|matrizJuego[1][7][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[1][7][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][7][0]~_emulated" and latch "click:cl|matrizJuego[1][7][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[0][6][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][6][2]~_emulated" and latch "click:cl|matrizJuego[0][6][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[0][6][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][6][1]~_emulated" and latch "click:cl|matrizJuego[0][6][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[0][6][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][6][0]~_emulated" and latch "click:cl|matrizJuego[0][6][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][4][2]~_emulated" and latch "click:cl|matrizJuego[0][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][4][1]~_emulated" and latch "click:cl|matrizJuego[0][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][4][0]~_emulated" and latch "click:cl|matrizJuego[0][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][2][2]~_emulated" and latch "click:cl|matrizJuego[0][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][2][1]~_emulated" and latch "click:cl|matrizJuego[0][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][2][0]~_emulated" and latch "click:cl|matrizJuego[0][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][0][0]~_emulated" and latch "click:cl|matrizJuego[0][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][0][2]~_emulated" and latch "click:cl|matrizJuego[0][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][0][1]~_emulated" and latch "click:cl|matrizJuego[0][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][1][2]~_emulated" and latch "click:cl|matrizJuego[0][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][1][1]~_emulated" and latch "click:cl|matrizJuego[0][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][1][0]~_emulated" and latch "click:cl|matrizJuego[0][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][3][2]~_emulated" and latch "click:cl|matrizJuego[0][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][3][1]~_emulated" and latch "click:cl|matrizJuego[0][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][3][0]~_emulated" and latch "click:cl|matrizJuego[0][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[0][5][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][5][2]~_emulated" and latch "click:cl|matrizJuego[0][5][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[0][5][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][5][1]~_emulated" and latch "click:cl|matrizJuego[0][5][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[0][5][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][5][0]~_emulated" and latch "click:cl|matrizJuego[0][5][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][4][2]~_emulated" and latch "click:cl|matrizJuego[0][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][4][1]~_emulated" and latch "click:cl|matrizJuego[0][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][4][0]~_emulated" and latch "click:cl|matrizJuego[0][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][3][2]~_emulated" and latch "click:cl|matrizJuego[0][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][3][1]~_emulated" and latch "click:cl|matrizJuego[0][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][3][0]~_emulated" and latch "click:cl|matrizJuego[0][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][2][2]~_emulated" and latch "click:cl|matrizJuego[0][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][2][1]~_emulated" and latch "click:cl|matrizJuego[0][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][2][0]~_emulated" and latch "click:cl|matrizJuego[0][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][1][2]~_emulated" and latch "click:cl|matrizJuego[0][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][1][1]~_emulated" and latch "click:cl|matrizJuego[0][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][1][0]~_emulated" and latch "click:cl|matrizJuego[0][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][0][0]~_emulated" and latch "click:cl|matrizJuego[0][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][0][2]~_emulated" and latch "click:cl|matrizJuego[0][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][0][1]~_emulated" and latch "click:cl|matrizJuego[0][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[1][6][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][6][2]~_emulated" and latch "click:cl|matrizJuego[1][6][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[1][6][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][6][1]~_emulated" and latch "click:cl|matrizJuego[1][6][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[1][6][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][6][0]~_emulated" and latch "click:cl|matrizJuego[1][6][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[1][5][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][5][2]~_emulated" and latch "click:cl|matrizJuego[1][5][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[1][5][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][5][1]~_emulated" and latch "click:cl|matrizJuego[1][5][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[1][5][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][5][0]~_emulated" and latch "click:cl|matrizJuego[1][5][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[1][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][3][2]~_emulated" and latch "click:cl|matrizJuego[1][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[1][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][3][1]~_emulated" and latch "click:cl|matrizJuego[1][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[1][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][3][0]~_emulated" and latch "click:cl|matrizJuego[1][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[1][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][1][2]~_emulated" and latch "click:cl|matrizJuego[1][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[1][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][1][1]~_emulated" and latch "click:cl|matrizJuego[1][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[1][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][1][0]~_emulated" and latch "click:cl|matrizJuego[1][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][7][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][7][2]~_emulated" and latch "click:cl|matrizJuego[0][7][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][7][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][7][1]~_emulated" and latch "click:cl|matrizJuego[0][7][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[0][7][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][7][0]~_emulated" and latch "click:cl|matrizJuego[0][7][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[1][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][0][2]~_emulated" and latch "click:cl|matrizJuego[1][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[1][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][0][1]~_emulated" and latch "click:cl|matrizJuego[1][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[1][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][0][0]~_emulated" and latch "click:cl|matrizJuego[1][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[1][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][2][2]~_emulated" and latch "click:cl|matrizJuego[1][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[1][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][2][1]~_emulated" and latch "click:cl|matrizJuego[1][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[1][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][2][0]~_emulated" and latch "click:cl|matrizJuego[1][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[1][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][4][2]~_emulated" and latch "click:cl|matrizJuego[1][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[1][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][4][1]~_emulated" and latch "click:cl|matrizJuego[1][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[1][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][4][0]~_emulated" and latch "click:cl|matrizJuego[1][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[1][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][3][2]~_emulated" and latch "click:cl|matrizJuego[1][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[1][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][3][1]~_emulated" and latch "click:cl|matrizJuego[1][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[1][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][3][0]~_emulated" and latch "click:cl|matrizJuego[1][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[1][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][2][2]~_emulated" and latch "click:cl|matrizJuego[1][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[1][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][2][1]~_emulated" and latch "click:cl|matrizJuego[1][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[1][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][2][0]~_emulated" and latch "click:cl|matrizJuego[1][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[1][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][1][2]~_emulated" and latch "click:cl|matrizJuego[1][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[1][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][1][1]~_emulated" and latch "click:cl|matrizJuego[1][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[1][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][1][0]~_emulated" and latch "click:cl|matrizJuego[1][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[1][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][0][2]~_emulated" and latch "click:cl|matrizJuego[1][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[1][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][0][1]~_emulated" and latch "click:cl|matrizJuego[1][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[1][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[1][0][0]~_emulated" and latch "click:cl|matrizJuego[1][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][7][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][7][2]~_emulated" and latch "click:cl|matrizJuego[0][7][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][7][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][7][1]~_emulated" and latch "click:cl|matrizJuego[0][7][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[0][7][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[0][7][0]~_emulated" and latch "click:cl|matrizJuego[0][7][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[3][6][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][6][2]~_emulated" and latch "click:cl|matrizJuego[3][6][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[3][6][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][6][1]~_emulated" and latch "click:cl|matrizJuego[3][6][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[3][6][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][6][0]~_emulated" and latch "click:cl|matrizJuego[3][6][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][4][2]~_emulated" and latch "click:cl|matrizJuego[3][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][4][1]~_emulated" and latch "click:cl|matrizJuego[3][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][4][0]~_emulated" and latch "click:cl|matrizJuego[3][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][2][2]~_emulated" and latch "click:cl|matrizJuego[3][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][2][1]~_emulated" and latch "click:cl|matrizJuego[3][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][2][0]~_emulated" and latch "click:cl|matrizJuego[3][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][0][2]~_emulated" and latch "click:cl|matrizJuego[3][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][0][1]~_emulated" and latch "click:cl|matrizJuego[3][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][0][0]~_emulated" and latch "click:cl|matrizJuego[3][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][1][2]~_emulated" and latch "click:cl|matrizJuego[3][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][1][1]~_emulated" and latch "click:cl|matrizJuego[3][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][1][0]~_emulated" and latch "click:cl|matrizJuego[3][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][3][2]~_emulated" and latch "click:cl|matrizJuego[3][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][3][1]~_emulated" and latch "click:cl|matrizJuego[3][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-    Warning (13310): Register "click:cl|matrizJuego[3][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][3][0]~_emulated" and latch "click:cl|matrizJuego[3][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[3][5][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][5][2]~_emulated" and latch "click:cl|matrizJuego[3][5][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[3][5][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][5][1]~_emulated" and latch "click:cl|matrizJuego[3][5][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
     Warning (13310): Register "click:cl|matrizJuego[3][5][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][5][0]~_emulated" and latch "click:cl|matrizJuego[3][5][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "b[1]" is stuck at VCC File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 3
+    Warning (13310): Register "click:cl|matrizJuego[3][4][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][4][2]~_emulated" and latch "click:cl|matrizJuego[3][4][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][4][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][4][1]~_emulated" and latch "click:cl|matrizJuego[3][4][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][4][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][4][0]~_emulated" and latch "click:cl|matrizJuego[3][4][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][3][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][3][2]~_emulated" and latch "click:cl|matrizJuego[3][3][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][3][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][3][1]~_emulated" and latch "click:cl|matrizJuego[3][3][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][3][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][3][0]~_emulated" and latch "click:cl|matrizJuego[3][3][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][2][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][2][2]~_emulated" and latch "click:cl|matrizJuego[3][2][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][2][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][2][1]~_emulated" and latch "click:cl|matrizJuego[3][2][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][2][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][2][0]~_emulated" and latch "click:cl|matrizJuego[3][2][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][1][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][1][2]~_emulated" and latch "click:cl|matrizJuego[3][1][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][1][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][1][1]~_emulated" and latch "click:cl|matrizJuego[3][1][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][1][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][1][0]~_emulated" and latch "click:cl|matrizJuego[3][1][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][0][2]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][0][2]~_emulated" and latch "click:cl|matrizJuego[3][0][2]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][0][1]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][0][1]~_emulated" and latch "click:cl|matrizJuego[3][0][1]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
+    Warning (13310): Register "click:cl|matrizJuego[3][0][0]" is converted into an equivalent circuit using register "click:cl|matrizJuego[3][0][0]~_emulated" and latch "click:cl|matrizJuego[3][0][0]~1" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/click.sv Line: 9
 Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register colocarBombas:bomb1|random:ram|random[3] will power up to High File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 19
+    Critical Warning (18010): Register colocarBombas:bomb1|random:ram|random_next[3] will power up to High File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 19
+    Critical Warning (18010): Register colocarBombas:bomb1|random:ram|random_next[2] will power up to High File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 19
+    Critical Warning (18010): Register colocarBombas:bomb1|random:ram|random_next[0] will power up to High File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 19
+    Critical Warning (18010): Register colocarBombas:bomb1|random:ram|random[1] will power up to High File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 19
+    Critical Warning (18010): Register colocarBombas:bomb1|random:ram|random_next[1] will power up to High File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 19
+    Critical Warning (18010): Register colocarBombas:bomb1|random:ram|random[10] will power up to High File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 19
+    Critical Warning (18010): Register colocarBombas:bomb1|random:ram|random[7] will power up to High File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 19
+    Critical Warning (18010): Register colocarBombas:bomb1|random:ram|random[5] will power up to High File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 19
+    Critical Warning (18010): Register colocarBombas:bomb1|random:ram|random[4] will power up to High File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/random.sv Line: 19
 Info (144001): Generated suppressed messages file C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/output_files/buscaminas.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "numero_bombas[0]" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 8
-    Warning (15610): No output dependent on input pin "numero_bombas[1]" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 8
-    Warning (15610): No output dependent on input pin "numero_bombas[2]" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 8
-    Warning (15610): No output dependent on input pin "numero_bombas[3]" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 8
-    Warning (15610): No output dependent on input pin "numero_bombas[4]" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 8
-    Warning (15610): No output dependent on input pin "numero_bombas[5]" File: C:/Users/joedu/OneDrive/Escritorio/TallerDisennoDigital/gameLogic.sv Line: 8
-Info (21057): Implemented 1440 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4126 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 1396 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 235 warnings
-    Info: Peak virtual memory: 4954 megabytes
-    Info: Processing ended: Tue Oct 17 03:06:16 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:15
+    Info (21061): Implemented 4082 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 239 warnings
+    Info: Peak virtual memory: 4977 megabytes
+    Info: Processing ended: Tue Oct 17 04:14:06 2023
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+
